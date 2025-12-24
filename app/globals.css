@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 /* Local fonts from assets/fonts */
-@font-face {
+/* @font-face {
   font-family: "Satoshi Variable";
   src: url("/assets/fonts/Satoshi-Variable/Satoshi-Variable.ttf")
     format("truetype");
@@ -51,12 +51,11 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* Helper utility classes to apply fonts */
-.satoshi {
-  font-family: "Satoshi Variable", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
+/* .satoshi {
+  font-family: "Satoshi Variable", monospace;
 }
 
 .varien {
@@ -68,12 +67,12 @@
 }
 
 .instrument-sans {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Instrument Sans", 'Courier New', Courier, monospace;
 }
 
 .inter {
-  font-family: "Inter", sans-serif;
-}
+  font-family: "Inter", 'Courier New', Courier, monospace;
+} */
 
 :root {
   /* Figma palette */
@@ -84,12 +83,34 @@
   --color-electric-blue: #124ee0;
 
   /* App semantic tokens (defaults) */
-  --background: var(--color-pale-cyan);
-  --foreground: #1f2747;
+  --white_background: #F0FEFF;
 }
 
 body {
-  background: var(--background);
+  background: var(--white_background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Font utility classes (use these classNames in JSX) */
+.font-satoshi {
+  font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-varien {
+  font-family: var(--font-varien), serif;
+}
+
+.font-instrument {
+  font-family: var(--font-instrument-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1664px;
+  width: 100%;
+  margin: 0 32px;
 }

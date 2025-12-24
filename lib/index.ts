@@ -54,13 +54,15 @@ import voice3 from '../assets/images/voice3.png';
 import voice4 from '../assets/images/voice4.png';
 import notely_voice_logo_white from '../assets/images/notely_voice_logo_white.png';
 import notely_voice_logo from '../assets/images/notely_voice_logo.png';
+import notely_voice_icon_white from '../assets/icons/notely_voice_icon_white.svg';
+import notely_voice_icon from '../assets/icons/notely_voice_logo.svg';
 
 import type { StaticImageData } from 'next/image';
-import type React from 'react';
+// import type React from 'react';
 
-type Asset = string | StaticImageData | React.ComponentType<React.SVGProps<SVGSVGElement>>;
+// type Asset = string | StaticImageData | React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
-export const icons: Record<string, Asset> = {
+export const icons = {
   apple,
   center_align,
   check_filled_blue,
@@ -96,9 +98,11 @@ export const icons: Record<string, Asset> = {
   voice_blue,
   whatsapp,
   X_white,
+  notely_voice_icon_white,
+  notely_voice_icon,
 };
 
-export const images: Record<string, Asset> = {
+export const images = {
   down_dotted_line,
   person1,
   person2,

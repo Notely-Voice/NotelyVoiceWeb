@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layouts/Navbar";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -10,6 +12,26 @@ const instrumentSans = Instrument_Sans({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const satoshi = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Satoshi-Variable/Satoshi-Variable.ttf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
+});
+
+const varien = localFont({
+  src: [
+    { path: "../assets/fonts/varien-modern/WOFF/Varien.woff2", style: "normal" },
+    { path: "../assets/fonts/varien-modern/WOFF/Varien-Italic.woff2", style: "italic" },
+  ],
+  variable: "--font-varien",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -80,9 +102,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${instrumentSans.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} max-w-432 mx-auto`}>
+        <Navbar />
         {children}
       </body>
     </html>
