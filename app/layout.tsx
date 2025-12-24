@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -27,8 +28,14 @@ const satoshi = localFont({
 
 const varien = localFont({
   src: [
-    { path: "../assets/fonts/varien-modern/WOFF/Varien.woff2", style: "normal" },
-    { path: "../assets/fonts/varien-modern/WOFF/Varien-Italic.woff2", style: "italic" },
+    {
+      path: "../assets/fonts/varien-modern/WOFF/Varien.woff2",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/varien-modern/WOFF/Varien-Italic.woff2",
+      style: "italic",
+    },
   ],
   variable: "--font-varien",
   display: "swap",
@@ -102,9 +109,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} max-w-432 mx-auto`}>
-        <Navbar />
-        {children}
+      <body
+        className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} bg-white flex justify-center`}
+      >
+        <div className="mx-auto flex flex-col justify-between min-h-screen w-full">
+          <Navbar />
+          {children}
+          <Footer bgColor="bg-[#3E45FB]" />
+        </div>
       </body>
     </html>
   );
