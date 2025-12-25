@@ -108,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="custom-scrollbar">
       <body
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} bg-white flex justify-center`}
       >
