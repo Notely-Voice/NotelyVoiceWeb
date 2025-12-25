@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <div className="h-45.5 flex items-center justify-between shadow-md px-8">
+    <div className="h-45.5 flex items-center justify-between px-8">
       <div className="flex items-center justify-between w-full">
         <Logo className="ml-9" />
         <div className="flex items-center gap-9.25">

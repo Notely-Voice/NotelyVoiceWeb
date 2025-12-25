@@ -20,7 +20,7 @@ import Link from "next/link";
 
 const Footer = ({ bgColor }: { bgColor: string }) => {
   return (
-    <div className="pb-8 px-8">
+    <div className="pb-8 px-8 mt-40">
       <div
         className={`pr-[102px] pl-[125px] pt-[110px] pb-[93px] rounded-[40px] ${bgColor}`}
       >
@@ -54,17 +54,17 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           <p className="font-satoshi font-medium text-[32px] leading-[46px] tracking-[-6%] text-white">
             © {new Date().getFullYear()} Notely Voice. All rights reserved.
           </p>
-          <div className="flex gap-24">
+          <div className="flex items-center gap-24">
             {socialMediaLinks.map((social, i) => (
               <a
                 key={i}
                 href={social.href}
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:underline mr-4"
               >
                 {/* <RenderIcon icon={social.icon} /> */}
-                <Image src={social.icon} alt="" width={60} height={60} />
+                <Image src={social.icon} alt="" width={social.width} height={social.height} />
               </a>
             ))}
           </div>

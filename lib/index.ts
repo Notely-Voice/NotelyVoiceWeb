@@ -33,21 +33,24 @@ import twitter from '../assets/icons/twitter.svg';
 import voice_blue from '../assets/icons/voice_blue.svg';
 import whatsapp from '../assets/icons/whatsapp.svg';
 import X_white from '../assets/icons/X_white.svg';
+import down_dotted_icon from '../assets/icons/down_dotted_line.svg';
+import up_arrow_icon from '../assets/icons/up_arrow_line.svg';
+import slanted_phone from '../assets/icons/slant_phone.svg';
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
+import up_arrow_line from '../assets/images/up_arrow_line.png';
+import slant_phone from '../assets/images/slant_phone.png';
 import person1 from '../assets/images/person1.jpg';
 import person2 from '../assets/images/person2.jpg';
 import person3 from '../assets/images/person3.jpg';
 import person4 from '../assets/images/person4.jpg';
 import person5 from '../assets/images/person5.jpg';
-import slant_phone from '../assets/images/slant_phone.png';
 import speak1 from '../assets/images/speak1.png';
 import speak2 from '../assets/images/speak2.png';
 import speak3 from '../assets/images/speak3.png';
 import speak4 from '../assets/images/speak4.png';
 import speak5 from '../assets/images/speak5.png';
 import speak_full from '../assets/images/speak_full.png';
-import up_arrow_line from '../assets/images/up_arrow_line.png';
 import voice1 from '../assets/images/voice1.png';
 import voice2 from '../assets/images/voice2.png';
 import voice3 from '../assets/images/voice3.png';
@@ -100,23 +103,26 @@ export const icons = {
   X_white,
   notely_voice_icon_white,
   notely_voice_icon,
+  down_dotted_icon,
+  up_arrow_icon,
+  slanted_phone,
 };
 
 export const images = {
   down_dotted_line,
+  slant_phone,
+  up_arrow_line,
   person1,
   person2,
   person3,
   person4,
   person5,
-  slant_phone,
   speak1,
   speak2,
   speak3,
   speak4,
   speak5,
   speak_full,
-  up_arrow_line,
   voice1,
   voice2,
   voice3,

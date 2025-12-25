@@ -110,6 +110,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="custom-scrollbar">
       <body
+        suppressHydrationWarning
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} bg-white flex justify-center`}
       >
         <div className="mx-auto flex flex-col justify-between min-h-screen w-full">

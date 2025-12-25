@@ -1,79 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-/* Local fonts from assets/fonts */
-/* @font-face {
-  font-family: "Satoshi Variable";
-  src: url("/assets/fonts/Satoshi-Variable/Satoshi-Variable.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Varien";
-  src: url("/assets/fonts/varien-modern/WOFF/Varien.woff2") format("woff2"),
-    url("/assets/fonts/varien-modern/WOFF/Varien.woff") format("woff"),
-    url("/assets/fonts/varien-modern/TTF/Varien.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Varien";
-  src: url("/assets/fonts/varien-modern/WOFF/Varien-Italic.woff2")
-      format("woff2"),
-    url("/assets/fonts/varien-modern/WOFF/Varien-Italic.woff") format("woff"),
-    url("/assets/fonts/varien-modern/TTF/Varien-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Varien Outline";
-  src: url("/assets/fonts/varien-modern/WOFF/Varien\x20Outline.woff2")
-      format("woff2"),
-    url("/assets/fonts/varien-modern/WOFF/Varien\x20Outline.woff")
-      format("woff"),
-    url("/assets/fonts/varien-modern/TTF/Varien\x20Outline.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Watford";
-  src: url("/assets/fonts/watford-webfont/Watford-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* Helper utility classes to apply fonts */
-/* .satoshi {
-  font-family: "Satoshi Variable", monospace;
-}
-
-.varien {
-  font-family: "Varien", serif;
-}
-
-.watford {
-  font-family: "Watford", sans-serif;
-}
-
-.instrument-sans {
-  font-family: "Instrument Sans", 'Courier New', Courier, monospace;
-}
-
-.inter {
-  font-family: "Inter", 'Courier New', Courier, monospace;
-} */
-
 :root {
   /* Figma palette */
   --color-deep-navy: rgba(31, 39, 71, 0.55); /* #1F27478C (semi-transparent) */
@@ -83,16 +10,16 @@
   --color-electric-blue: #124ee0;
 
   /* App semantic tokens (defaults) */
-  --white_background: #F0FEFF;
+  --white_bg: #F0FEFF;
+  --blueBg: #3E45FB;
 }
 
 body {
-  background: var(--white_background);
+  background: var(--white_bg);
   color: var(--foreground);
   font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Font utility classes (use these classNames in JSX) */
 .font-satoshi {
   font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -124,13 +51,13 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-/* create a stylish scrollbar that is not too long */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  height: 20px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
@@ -138,4 +65,20 @@ body {
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Voice animation (global to avoid styled-jsx SSR hydration mismatches) */
+@keyframes nv-wave {
+  0% { transform: scaleY(1); }
+  25% { transform: scaleY(1.6); }
+  50% { transform: scaleY(1); }
+  75% { transform: scaleY(1.6); }
+  100% { transform: scaleY(1); }
+}
+
+.nv-bar {
+  transform-origin: center center;
+  will-change: transform;
+  animation: nv-wave 2200ms cubic-bezier(.2,.8,.2,1) infinite;
+  animation-delay: var(--delay, 0ms);
 }
