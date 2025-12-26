@@ -12,6 +12,8 @@ const HomeHero = () => {
         Perfect for students, pros & accessibility."
           headingStyle="max-w-[700px]"
           textStyle="max-w-[609px]"
+          isBtnWhite
+          btnText="Start for free"
         />
         <HomeHeroDesign />
       </div>

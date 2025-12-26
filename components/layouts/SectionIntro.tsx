@@ -1,3 +1,4 @@
+import { icons } from "@/lib";
 import Button from "../ui/Button";
 
 const SectionIntro = ({
@@ -6,12 +7,20 @@ const SectionIntro = ({
   headingStyle,
   textStyle,
   buttonBlockStyle,
+  isDownload,
+  isBtnWhite,
+  isBtnBlue,
+  btnText,
 }: {
   heading: string;
   text: string;
   headingStyle?: string;
   textStyle?: string;
   buttonBlockStyle?: string;
+  isDownload?: boolean;
+  isBtnWhite?: boolean;
+  isBtnBlue?: boolean;
+  btnText?: string;
 }) => {
   return (
     <div>
@@ -25,9 +34,34 @@ const SectionIntro = ({
       >
         {text}
       </p>
-      <div className={`${buttonBlockStyle}`}>
-        <Button btnText="Start for free" isWhite className={`w-fit`} />
-      </div>
+      {isDownload ? (
+        <div className={`${buttonBlockStyle}`}>
+          <Button
+            storeIcon={icons.Playstore}
+            doanloadCta="GET IT IN"
+            downloadStore="Google Play"
+            isWhite
+            isDownload
+            className={`w-fit`}
+          />
+          <Button
+            storeIcon={icons.apple}
+            doanloadCta="Download on the"
+            downloadStore="App Store"
+            isWhite
+            isDownload
+            className={`w-fit`}
+          />
+        </div>
+      ) : isBtnWhite ? (
+        <div className={`${buttonBlockStyle}`}>
+          <Button btnText={btnText} isWhite className={`w-fit`} />
+        </div>
+      ) : isBtnBlue ? (
+        <div className={`${buttonBlockStyle}`}>
+          <Button btnText={btnText} isWhite className={`w-fit`} />
+        </div>
+      ) : null}
     </div>
   );
 };

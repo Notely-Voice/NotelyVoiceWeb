@@ -1,3 +1,5 @@
+import { icons } from "@/lib";
+
 export const heroCommentsData = [
   {
     comment: "“Notely Voice is a fantastic productivity booster!”",
@@ -13,3 +15,16 @@ export const heroCommentsData = [
     author: "Marion Millikan",
   },
 ];
+
+export const socialsRowData = [
+  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+]
