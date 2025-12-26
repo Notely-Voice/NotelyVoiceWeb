@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "animate.css";
 @import "tailwindcss";
 
 :root {
@@ -39,7 +40,6 @@ body {
 .wrapper {
   max-width: 1664px;
   width: 100%;
-  margin: 0 32px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -81,4 +81,14 @@ body {
   will-change: transform;
   animation: nv-wave 2200ms cubic-bezier(.2,.8,.2,1) infinite;
   animation-delay: var(--delay, 0ms);
+}
+
+/* Horizontal scroll animation for testimonials */
+@keyframes nv-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.nv-scroll {
+  animation: nv-scroll 10s linear infinite;
 }
