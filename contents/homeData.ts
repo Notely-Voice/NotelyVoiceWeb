@@ -17,14 +17,14 @@ export const heroCommentsData = [
 ];
 
 export const socialsRowData = [
-  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
-  // icons.whatsapp, icons.messages, icons.slack, icons.telegram,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
+  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
 ]
