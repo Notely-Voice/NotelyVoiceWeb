@@ -3,6 +3,8 @@
 import SectionIntro from "../layouts/SectionIntro";
 import { useEffect, useState } from "react";
 import TextPhone from "../ui/TextPhone";
+import Image from "next/image";
+import { icons } from "@/lib";
 
 const HomeTyping = () => {
   const keyboardText =
@@ -45,7 +47,7 @@ const HomeTyping = () => {
           // className="px-9"
         />
 
-        <div className="grid grid-cols-2 gap-6 mt-20">
+        <div className="grid grid-cols-2 gap-6 mt-20 relative">
           <div className="pt-12 bg-black border-5 border-[#3E45FB] rounded-[40px] min-h-[700px] flex flex-col justify-start items-center gap-5">
             <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Keyboard
@@ -78,6 +80,7 @@ const HomeTyping = () => {
               Text revealed character-by-character
             </p>
           </div>
+
           <div className="py-12 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-[40px] min-h-[700px] flex flex-col justify-between items-center gap-5">
             <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Notely voice
@@ -90,6 +93,10 @@ const HomeTyping = () => {
             <p className="text-[#3E45FB] bg-white text-2xl leading-[50px] tracking-[-6%] font-medium px-[22.5px] border-5 border-[#F0FEFF] rounded-full">
               Entire sentence appears at once
             </p>
+          </div>
+
+          <div className="absolute bottom-16 left-[38%]">
+            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" />
           </div>
         </div>
       </div>
