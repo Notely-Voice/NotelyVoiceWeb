@@ -22,7 +22,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
   return (
     <div className="pb-8 px-8 mt-40">
       <div
-        className={`pr-[102px] pl-[125px] pt-[110px] pb-[93px] rounded-[40px] ${bgColor}`}
+        className={`pr-[102px] pl-[125px] pt-[110px] pb-[93px] wrapper mx-auto rounded-[40px] ${bgColor}`}
       >
         <div className="flex justify-between items-start mb-[70px]">
           {footerNavItems.map((section) => (

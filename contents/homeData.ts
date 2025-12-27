@@ -28,3 +28,7 @@ export const socialsRowData = [
   icons.telegram, icons.slack, icons.messages, icons.whatsapp,
   icons.telegram, icons.slack, icons.messages, icons.whatsapp,
 ]
+
+export const toolkitData = [
+  {}
+]

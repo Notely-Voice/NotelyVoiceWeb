@@ -14,8 +14,8 @@ const SectionIntro = ({
   className,
   bluetext,
 }: {
-  heading: string;
-  text: string;
+  heading?: string;
+  text?: string;
   headingStyle?: string;
   textStyle?: string;
   buttonBlockStyle?: string;
