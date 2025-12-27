@@ -1,11 +1,12 @@
 import { socialsRowData } from "@/contents/homeData";
 import SectionIntro from "../layouts/SectionIntro";
 import IconBox from "../ui/iconBox";
+import ChatPhone from "../ui/ChatPhone";
 
 const HomeDownload = () => {
   return (
     <div className="mt-[89px] pt-3.5 px-[36px] flex flex-col justify-center items-center relative">
-      <div className="wrapper bg-black pt-25.5 pb-[110px] rounded-[40px] flex flex-col z-20 relative overflow-hidden">
+      <div className="wrapper bg-black pt-25.5 pb-[110px] rounded-[40px] flex flex-col z-20 relative">
         <div className="pl-20 pr-12">
           <SectionIntro
             heading="Write faster in all your apps, on any device"
@@ -30,6 +31,9 @@ const HomeDownload = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="absolute -top-10 right-36">
+          <ChatPhone />
         </div>
       </div>
     </div>
