@@ -11,6 +11,8 @@ const SectionIntro = ({
   isBtnWhite,
   isBtnBlue,
   btnText,
+  className,
+  bluetext,
 }: {
   heading: string;
   text: string;
@@ -21,13 +23,15 @@ const SectionIntro = ({
   isBtnWhite?: boolean;
   isBtnBlue?: boolean;
   btnText?: string;
+  className?: string;
+  bluetext?: string;
 }) => {
   return (
-    <div>
+    <div className={className}>
       <h1
         className={`font-varien text-[#F2FFFF] text-[110px] leading-[100%] tracking-[-3%] font-normal mb-8 max-w-[700px] ${headingStyle}`}
       >
-        {heading}
+        {bluetext && <span className="text-[#3E45FB]">{bluetext}</span>} {heading}
       </h1>
       <p
         className={`font-medium text-[40px] leading-[41px] tracking-[-3%] text-[#F2FFFF] mb-[45px] ${textStyle}`}

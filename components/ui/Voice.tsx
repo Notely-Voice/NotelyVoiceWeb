@@ -4,11 +4,12 @@ import React from "react";
 type VoiceProps = {
   color?: string;
   className?: string;
+  barWidth?: number;
 };
 
 const HEIGHTS = [0.7, 0.5, 1, 0.6, 0.35, 0.5, 0.7];
 
-const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "" }) => {
+const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "", barWidth = 12 }) => {
   // compute unique heights in the order they appear so same-height bars animate together
   const uniqueHeights = Array.from(new Set(HEIGHTS));
 
@@ -23,7 +24,7 @@ const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "" }) => {
             className={`nv-bar rounded-full inline-block`} 
             style={{
               height: `${Math.round(h * 100)}%`,
-              width: `12px`,
+              width: `${barWidth}px`,
               backgroundColor: color,
               display: "inline-block",
               transformOrigin: "center center",

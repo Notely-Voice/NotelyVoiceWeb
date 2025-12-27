@@ -103,3 +103,23 @@ body {
   animation: sm-scroll 25s linear infinite;
 }
 
+/* Character-by-character text reveal animation */
+@keyframes charReveal {
+  0% { color: #494747; }
+  5% { color: white; }
+  95% { color: white; }
+  100% { color: white; }
+}
+
+@keyframes charReset {
+  0% { color: #494747; }
+}
+
+.char {
+  animation: charReveal 0.1s ease-out infinite;
+}
+
+.reset-char {
+  color: #494747 !important;
+}
+
