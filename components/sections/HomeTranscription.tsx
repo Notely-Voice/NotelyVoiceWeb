@@ -6,17 +6,26 @@ import SectionIntro from "../layouts/SectionIntro";
 import CreateNotesTool from "../ui/CreateNotesTool";
 import Button from "../ui/Button";
 import TextEditTool from "../ui/TextEditTool";
+import TranscribeTool from "../ui/TranscribeTool";
 
 const HomeTranscription = () => {
   const [selectedButtonIdx, setSelectedButtonIdx] = useState(0);
 
-  // Map button index to component, alternating between two components for now
+  // Map button index to component
   const getToolComponent = (index: number) => {
-    switch (index % 2) {
+    switch (index) {
       case 0:
         return <CreateNotesTool />;
       case 1:
         return <TextEditTool />;
+      case 2:
+        return <TranscribeTool />;
+      case 3:
+        return <CreateNotesTool />; // Reuse CreateNotesTool
+      case 4:
+        return <TextEditTool />; // Reuse TextEditTool
+      case 5:
+        return <TranscribeTool />; // Reuse TranscribeTool
       default:
         return <CreateNotesTool />;
     }
@@ -39,7 +48,7 @@ const HomeTranscription = () => {
                 key={idx}
                 hasThickBorder
                 onClick={() => setSelectedButtonIdx(idx)}
-                className={selectedButtonIdx === idx ? "ring-2 ring-blue-500" : ""}
+                className={selectedButtonIdx === idx ? "bg-[var(--blueBg)]" : ""}
               />
             ))}
 

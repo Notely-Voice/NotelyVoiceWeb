@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter, Instrument_Sans } from "next/font/google";
+import { Inter, Instrument_Sans, Noto_Serif_Tamil } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
@@ -13,6 +13,12 @@ const instrumentSans = Instrument_Sans({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+const notoSerifTamil = Noto_Serif_Tamil({
+  style: "italic",
+  variable: "--font-noto-serif-tamil",
+  subsets: ["tamil"],
 });
 
 const satoshi = localFont({
@@ -111,7 +117,7 @@ export default function RootLayout({
     <html lang="en" className="custom-scrollbar">
       <body
         suppressHydrationWarning
-        className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} bg-white flex justify-center`}
+        className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} ${notoSerifTamil.variable} bg-white flex justify-center`}
       >
         <div className="mx-auto flex flex-col justify-between min-h-screen w-full">
           <Navbar />

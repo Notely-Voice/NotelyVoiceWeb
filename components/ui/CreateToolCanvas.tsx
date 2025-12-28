@@ -1,7 +1,7 @@
 import { icons } from "@/lib"
 import Image from "next/image"
 
-const ToolCanvas = () => {
+const CreateToolCanvas = () => {
   return (
     <div  className="py-4 px-4 border-4 border-dashed border-[#3E45FB] bg-white rounded-4xl min-h-[180px] flex flex-col justify-between gap-6 w-[260px]">
       <p className="font-medium text-lg text-black">Life and inspiration</p>
@@ -14,4 +14,4 @@ const ToolCanvas = () => {
   )
 }
 
-export default ToolCanvas
+export default CreateToolCanvas
