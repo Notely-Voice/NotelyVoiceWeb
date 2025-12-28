@@ -33,7 +33,7 @@ const HomeDownload = () => {
           </div>
         </div>
         
-        <div className="absolute -top-10 right-36">
+        <div className="absolute -top-10 right-24">
           <ChatPhone />
         </div>
       </div>

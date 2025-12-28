@@ -48,7 +48,7 @@ const HomeTextBox = () => {
   const isInFadeOutPhase = hasListed && !hasFaded;
 
   return (
-    <div className="border-[5px] border-black h-[179px] w-[374px] bg-[#F0FEFF] py-[22px] px-[26px] rounded-[20px] overflow-hidden">
+    <div className="border-[5px] border-black h-[179px] min-w-[340px] bg-[#F0FEFF] py-[20px] px-[18px] rounded-[20px] overflow-hidden">
       <div className="flex flex-col gap-1">
         {lines.map((text, idx) => (
           <p

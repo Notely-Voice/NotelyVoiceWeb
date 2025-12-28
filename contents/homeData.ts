@@ -1,4 +1,6 @@
+import CreateNotesTool from "@/components/ui/CreateNotesTool";
 import { icons } from "@/lib";
+import { JSX } from "react";
 
 export const heroCommentsData = [
   {
@@ -17,18 +19,54 @@ export const heroCommentsData = [
 ];
 
 export const socialsRowData = [
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-  icons.telegram, icons.slack, icons.messages, icons.whatsapp,
-]
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+  icons.telegram,
+  icons.slack,
+  icons.messages,
+  icons.whatsapp,
+];
 
-export const toolkitData = [
-  {}
-]
+export const toolkitButtons: { btnText: string; showTool?: boolean }[] = [
+  { btnText: "create notes", showTool: true },
+  { btnText: "rich text editing", showTool: false },
+  { btnText: "transcribe audio", showTool: false },
+  { btnText: "Transcription Languages", showTool: false },
+  { btnText: "Audio Recorder & Share", showTool: false },
+  { btnText: "Custom theme", showTool: false },
+];
+

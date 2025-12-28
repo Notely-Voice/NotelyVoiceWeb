@@ -29,12 +29,12 @@ const SectionIntro = ({
   return (
     <div className={className}>
       <h1
-        className={`font-varien text-[#F2FFFF] text-[110px] leading-[100%] tracking-[-3%] font-normal mb-8 max-w-[700px] ${headingStyle}`}
+        className={`font-varien text-[#F2FFFF] text-[90px] leading-[100%] tracking-[-3%] font-normal mb-8 max-w-[700px] ${headingStyle}`}
       >
         {bluetext && <span className="text-[#3E45FB]">{bluetext}</span>} {heading}
       </h1>
       <p
-        className={`font-medium text-[40px] leading-[41px] tracking-[-3%] text-[#F2FFFF] mb-[45px] ${textStyle}`}
+        className={`font-medium text-[36px] leading-[41px] tracking-[-3%] text-[#F2FFFF] mb-[45px] ${textStyle}`}
       >
         {text}
       </p>
@@ -42,7 +42,7 @@ const SectionIntro = ({
         <div className={`${buttonBlockStyle}`}>
           <Button
             storeIcon={icons.Playstore}
-            doanloadCta="GET IT IN"
+            downloadCta="GET IT IN"
             downloadStore="Google Play"
             isWhite
             isDownload
@@ -50,7 +50,7 @@ const SectionIntro = ({
           />
           <Button
             storeIcon={icons.apple}
-            doanloadCta="Download on the"
+            downloadCta="Download on the"
             downloadStore="App Store"
             isWhite
             isDownload

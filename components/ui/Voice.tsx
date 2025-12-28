@@ -5,16 +5,17 @@ type VoiceProps = {
   color?: string;
   className?: string;
   barWidth?: number;
+  barHeight?: string;
 };
 
 const HEIGHTS = [0.7, 0.5, 1, 0.6, 0.35, 0.5, 0.7];
 
-const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "", barWidth = 12 }) => {
+const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "", barWidth = 12, barHeight = "h-20" }) => {
   // compute unique heights in the order they appear so same-height bars animate together
   const uniqueHeights = Array.from(new Set(HEIGHTS));
 
   return (
-    <div className={`flex items-center gap-2 h-20 ${className}`} aria-hidden>
+    <div className={`flex items-center gap-2 ${barHeight} ${className}`} aria-hidden>
       {HEIGHTS.map((h, i) => {
         const groupIndex = uniqueHeights.indexOf(h);
         const delay = `${groupIndex * 220}ms`;

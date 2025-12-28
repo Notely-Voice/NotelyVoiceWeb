@@ -5,7 +5,7 @@ import SectionIntro from "../layouts/SectionIntro";
 const HomeHero = () => {
   return (
     <div className="pt-3.5 px-[36px] flex flex-col justify-center items-center relative">
-      <div className="wrapper bg-[var(--blueBg)] pt-25.5 pb-[90px] pl-20 pr-12 rounded-[40px] flex gap-6 z-20 relative">
+      <div className="wrapper bg-[var(--blueBg)] pt-20 pb-[50px] pl-20 pr-12 rounded-[40px] flex gap-6 z-20 relative">
         <SectionIntro
           heading="Speak, Don't Type"
           text="100% private AI voice-to-text transcription, everything on-device.

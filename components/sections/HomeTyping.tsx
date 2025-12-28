@@ -96,7 +96,7 @@ const HomeTyping = () => {
           </div>
 
           <div className="absolute bottom-16 left-[38%]">
-            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" />
+            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" width={280} />
           </div>
         </div>
       </div>
