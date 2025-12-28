@@ -4,7 +4,7 @@ import ToolCanvas from "./CreateToolCanvas";
 
 const CreateNotesTool = () => {
   return (
-    <div className="border-[15px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto overflow-hidden">
+    <div className="border-[10px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto overflow-hidden">
       <p className="max-w-[500px] font-bold text-[28px] leading-8 tracking-[-6%] text-center">
         Quickly write down ideas, reminders, or thoughts. Keep everything in one
         place with a simple, distraction-free note-taking experience.

@@ -5,7 +5,7 @@ import TranscribeToolCanvas from "./TranscribeToolCanvas";
 
 const TranscribeTool = () => {
   return (
-    <div className="border-[15px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto relative overflow-hidden">
+    <div className="border-[10px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto relative overflow-hidden">
       <p className="max-w-[500px] font-bold text-[28px] leading-8 tracking-[-6%] text-center">
         Convert recorded audio into accurate, readable text. Perfect for
         interviews, lectures, or brainstorming sessions.

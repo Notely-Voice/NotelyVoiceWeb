@@ -4,7 +4,7 @@ import EditingToolCanvas from "./EditingToolCanvas";
 
 const TextEditTool = () => {
   return (
-    <div className="border-[15px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto overflow-hidden">
+    <div className="border-[10px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto overflow-hidden">
       <p className="max-w-[500px] font-bold text-[28px] leading-8 tracking-[-6%] text-center">
         Write freely with simple formatting tools like bold, italics, and
         underline. Keep your notes clean and readable without unnecessary

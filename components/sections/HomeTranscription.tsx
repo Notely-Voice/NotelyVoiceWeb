@@ -7,6 +7,7 @@ import CreateNotesTool from "../ui/CreateNotesTool";
 import Button from "../ui/Button";
 import TextEditTool from "../ui/TextEditTool";
 import TranscribeTool from "../ui/TranscribeTool";
+import LanguageTool from "../ui/LanguageTool";
 
 const HomeTranscription = () => {
   const [selectedButtonIdx, setSelectedButtonIdx] = useState(0);
@@ -21,7 +22,7 @@ const HomeTranscription = () => {
       case 2:
         return <TranscribeTool />;
       case 3:
-        return <CreateNotesTool />; // Reuse CreateNotesTool
+        return <LanguageTool />; 
       case 4:
         return <TextEditTool />; // Reuse TextEditTool
       case 5:
