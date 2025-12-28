@@ -8,6 +8,8 @@ import Button from "../ui/Button";
 import TextEditTool from "../ui/TextEditTool";
 import TranscribeTool from "../ui/TranscribeTool";
 import LanguageTool from "../ui/LanguageTool";
+import RecordShareTool from "../ui/RecordShareTool";
+import CustomTool from "../ui/CustomTool";
 
 const HomeTranscription = () => {
   const [selectedButtonIdx, setSelectedButtonIdx] = useState(0);
@@ -22,11 +24,11 @@ const HomeTranscription = () => {
       case 2:
         return <TranscribeTool />;
       case 3:
-        return <LanguageTool />; 
+        return <LanguageTool />;
       case 4:
-        return <TextEditTool />; // Reuse TextEditTool
+        return <RecordShareTool />;
       case 5:
-        return <TranscribeTool />; // Reuse TranscribeTool
+        return <CustomTool />;
       default:
         return <CreateNotesTool />;
     }
@@ -49,7 +51,9 @@ const HomeTranscription = () => {
                 key={idx}
                 hasThickBorder
                 onClick={() => setSelectedButtonIdx(idx)}
-                className={selectedButtonIdx === idx ? "bg-[var(--blueBg)]" : ""}
+                className={
+                  selectedButtonIdx === idx ? "bg-[var(--blueBg)]" : ""
+                }
               />
             ))}
 

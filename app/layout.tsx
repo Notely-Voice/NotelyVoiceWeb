@@ -16,7 +16,6 @@ const inter = Inter({
 });
 
 const notoSerifTamil = Noto_Serif_Tamil({
-  style: "italic",
   variable: "--font-noto-serif-tamil",
   subsets: ["tamil"],
 });

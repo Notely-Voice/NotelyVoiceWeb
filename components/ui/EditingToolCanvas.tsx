@@ -17,7 +17,7 @@ const EditingToolCanvas = () => {
 
       <div className="flex justify-between items-center bg-black rounded-full py-1.5 px-4">
         <p className="font-black text-2xl text-[#F0FEFF]">B</p>
-        <p className="font-noto-serif-tamil italic text-2xl text-[#F0FEFF]">I</p>
+        <p className="font-noto-serif-tamil italic! text-2xl text-[#F0FEFF]">I</p>
         <Image src={icons.left_align} alt="left align" />
         <Image src={icons.center_align} alt="center align" />
         <Image src={icons.right_align} alt="right align" />
