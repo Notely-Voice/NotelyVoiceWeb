@@ -29,55 +29,59 @@ const Button = ({
   return (
     <>
       {isRounded ? (
-        <div onClick={onClick}
-          className={`font-satoshi py-8 px-[61.5px] rounded-full ${
-            isWhite ? "bg-white" : "bg-[#2702C2]"
-          } text-[24px] leading-[100%] tracking-normal ${
-            isWhite ? "text-black" : "text-[#F0FEFF]"
+        <button onClick={onClick}
+          className={`font-satoshi py-4 px-6 rounded-full ${
+            isWhite
+              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border border-transparent hover:border-white focus:border-white"
+              : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border border-transparent hover:border-[#3E45FB] focus:border-[#3E45FB]"
+          } text-base leading-[100%] tracking-normal ${
+            isWhite
+              ? "text-black hover:text-white focus:text-white"
+              : "text-[#F2FFFF] hover:text-black focus:text-black"
           } font-black cursor-pointer ${className}`}
         >
           {btnText}
-        </div>
+        </button>
       ) : isDownload ? (
-        <div onClick={onClick}
-          className={`flex items-center py-4 pl-6 pr-10 bg-white rounded-[50px] border-[3px] border-[#3E45FB] cursor-pointer ${className}`}
+        <button onClick={onClick}
+          className={`flex items-center py-2.5 pl-6 pr-10 bg-white rounded-[50px] border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
         >
           <Image
             src={storeIcon || icons.Playstore}
             alt="icon"
-            width={48}
-            height={48}
+            width={32}
+            height={32}
           />
           <div className="ml-4.5 text-[#3E45FB]">
-            <p className="text-base font-semibold">{downloadCta}</p>
-            <h3 className="font-bold text-2xl leading-[100%]">
+            <p className="text-sm text-start font-semibold">{downloadCta}</p>
+            <h3 className="font-bold text-xl text-start leading-[100%]">
               {downloadStore}
             </h3>
           </div>
-        </div>
+        </button>
       ) : hasThickBorder ? (
         <button onClick={onClick}
           className={
-            "font-varien font-normal uppercase py-3.5 px-6 border-8 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-[32px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
+            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
             className
           }
         >
           {btnText}
         </button>
       ) : (
-        <div onClick={onClick}
-          className={`font-satoshi py-[26px] px-[61.5px] rounded-[25px] ${
+        <button onClick={onClick}
+          className={`font-satoshi py-4 px-6 rounded-xl ${
             isWhite
-              ? "bg-white hover:bg-[#2702C2]"
-              : "bg-[#2702C2] hover:bg-white"
-          } text-[28px] leading-[100%] tracking-normal ${
+              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"
+              : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border hover:border-[#3E45FB] focus:border-[#3E45FB]"
+          } text-base leading-[100%] tracking-normal ${
             isWhite
-              ? "text-[#3E45FB] hover:text-white"
-              : "text-[#F2FFFF] hover:text-[#3E45FB]"
+              ? "text-[#3E45FB] hover:text-white focus:text-white"
+              : "text-[#F2FFFF] hover:text-[#3E45FB] focus:text-[#3E45FB]"
           } font-black cursor-pointer ${className}`}
         >
           {btnText}
-        </div>
+        </button>
       )}
     </>
   );

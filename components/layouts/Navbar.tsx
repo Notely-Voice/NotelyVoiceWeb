@@ -5,12 +5,12 @@ import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <div className="h-45.5 flex items-center justify-between px-8">
+    <div className="sticky top-0 left-0 py-4 flex items-center justify-between px-8 z-50 bg-[var(--white_bg)]">
       <div className="flex items-center justify-between w-full wrapper mx-auto">
         <Logo className="ml-9" />
         <div className="flex items-center gap-9.25">
           {navbarItems.map((item) => (
-            <Link key={item.href} href={item.href} className="font-satoshi font-bold text-[28px] leading-[100%] tracking-normal text-black">
+            <Link key={item.href} href={item.href} className="font-satoshi font-bold text-lg leading-[100%] tracking-normal text-black hover:text-[var(--blueBg)] focus:text-[var(--blueBg)]">
               {item.label}
             </Link>
           ))}

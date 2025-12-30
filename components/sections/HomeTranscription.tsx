@@ -39,12 +39,12 @@ const HomeTranscription = () => {
       <div className="wrapper bg-[var(--white_bg)] rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="Your Smarter Transcription Toolkit"
-          headingStyle="text-black text-[80px]! leading-[100%] tracking-[-3%] max-w-[1200px]"
-          className="px-24 mb-6"
+          headingStyle="text-black text-[70px]! leading-[100%] tracking-[-3%] max-w-[1200px]"
+          className="px-20 mb-4"
         />
 
-        <div className="bg-black py-12 rounded-[40px] grid grid-cols-2 grid-rows-1 gap-3 z-20 relative">
-          <div className="flex flex-col justify-between items-center mx-auto mt-8">
+        <div className="bg-black py-10 rounded-[40px] grid grid-cols-2 grid-rows-1 gap-3 z-20 relative">
+          <div className="flex flex-col justify-center items-center gap-6 mx-auto mt-8">
             {toolkitButtons.map((btn, idx) => (
               <Button
                 btnText={btn.btnText}

@@ -31,7 +31,7 @@ export const footerNavItems: Array<{ heading: string; navList: Array<{ label: st
 ]
 
 export const socialMediaLinks: Array<{ icon: string; href: string, width: number, height: number }> = [
-  { icon: icons.linkedin, href: "https://www.linkedin.com/company/notelyvoice", width: 59, height: 59 },
-  { icon: icons.twitter, href: "https://x.com/notelyvoice", width: 41, height: 41 },
-  { icon: icons.instagram, href: "https://www.instagram.com/notelyvoice", width: 60, height: 60 },
+  { icon: icons.linkedin, href: "https://www.linkedin.com/company/notelyvoice", width: 40, height: 40 },
+  { icon: icons.twitter, href: "https://x.com/notelyvoice", width: 32, height: 32 },
+  { icon: icons.instagram, href: "https://www.instagram.com/notelyvoice", width: 40, height: 40 },
 ];

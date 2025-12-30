@@ -10,8 +10,8 @@ const HomeHero = () => {
           heading="Speak, Don't Type"
           text="100% private AI voice-to-text transcription, everything on-device.
         Perfect for students, pros & accessibility."
-          headingStyle="max-w-[700px]"
-          textStyle="max-w-[609px]"
+          headingStyle="max-w-[500px]!"
+          textStyle="max-w-[509px]!"
           isBtnWhite
           btnText="Start for free"
         />
@@ -22,7 +22,7 @@ const HomeHero = () => {
           {heroCommentsData.map((item, index) => (
             <div
               key={index}
-              className="py-14 font-inter text-[#F0FEFF] text-4xl leading-[100%] tracking-[-3%] flex gap-8 text-nowrap flex-shrink-0"
+              className="py-12 font-inter text-[#F0FEFF] text-2xl leading-[100%] tracking-[-3%] flex gap-8 text-nowrap flex-shrink-0"
             >
               <span className="font-semibold">{item.comment}</span>{" "}
               <span className="uppercase italic font-extrabold">
@@ -33,7 +33,7 @@ const HomeHero = () => {
           {heroCommentsData.map((item, index) => (
             <div
               key={`duplicate-${index}`}
-              className="py-14 font-inter text-[#F0FEFF] text-4xl leading-[100%] tracking-[-3%] flex gap-8 text-nowrap flex-shrink-0"
+              className="py-12 font-inter text-[#F0FEFF] text-2xl leading-[100%] tracking-[-3%] flex gap-8 text-nowrap flex-shrink-0"
             >
               <span className="font-semibold">{item.comment}</span>{" "}
               <span className="uppercase italic font-extrabold">

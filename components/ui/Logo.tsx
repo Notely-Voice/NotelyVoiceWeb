@@ -9,24 +9,24 @@ const Logo = ({ isWhite, className }: { isWhite?: boolean; className?: string })
         <Image
           src={images.notely_voice_logo_white}
           alt="Notely Voice Logo"
-          width={102}
-          height={102}
+          width={80}
+          height={80}
         />
       ) : (
         <Image
           src={images.notely_voice_logo}
           alt="Notely Voice Logo"
-          width={65}
-          height={60}
+          width={40}
+          height={40}
         />
       )}
 
       {isWhite ? (
-        <p className="font-bold font-instrument text-[100px] leading-23 tracking-[-3%] text-white ml-9">
+        <p className="font-bold font-instrument text-[70px] leading-23 tracking-[-3%] text-white ml-5">
           Notely Voice
         </p>
       ) : (
-        <p className="font-bold font-instrument text-[42px] leading-23 tracking-[-3%] text-black ml-3.5">
+        <p className="font-bold font-instrument text-[32px] leading-23 tracking-[-3%] text-black ml-3.5">
           Notely Voice
         </p>
       )}

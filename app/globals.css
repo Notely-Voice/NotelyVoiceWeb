@@ -42,7 +42,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1536px;
+  max-width: 1280px;
   width: 100%;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .sm-scroll {
-  animation: sm-scroll 25s linear infinite;
+  animation: sm-scroll 35s linear infinite;
 }
 
 /* Character-by-character text reveal animation */

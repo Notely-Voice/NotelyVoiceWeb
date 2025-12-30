@@ -22,7 +22,7 @@ const CustomTool = () => {
           />
         </div>
 
-        <div className="absolute top-[12%] -left-16 ">
+        <div className="absolute top-[12%] -left-16">
           <CustomToolCanvas />
         </div>
 
