@@ -7,13 +7,13 @@ const HomeDownload = () => {
   return (
     <div className="mt-[140px] px-[36px] flex flex-col justify-center items-center relative">
       <div className="wrapper bg-black pt-20 pb-20 rounded-[40px] flex flex-col z-20 relative">
-        <div className="pl-20 pr-12 w-fit">
+        <div className="pl-10 xl:pl-20 pr-12 w-fit">
           <SectionIntro
             heading="Write faster in all your apps, on any device"
             text="Seamless speech-to-text in every application on your iPhone or computer"
-            headingStyle="max-w-[565px] text-[60px]! mb-4!"
-            textStyle="max-w-[560px] mb-6!"
-            buttonBlockStyle="flex gap-8 items-center"
+            headingStyle="max-w-[480px] xl:max-w-[565px] text-[48px]! xl:text-[60px]! mb-4!"
+            textStyle="max-w-[480px] xl:max-w-[560px] mb-6!"
+            buttonBlockStyle="flex gap-4 items-center"
             isDownload
           />
         </div>
@@ -33,7 +33,7 @@ const HomeDownload = () => {
           </div>
         </div>
         
-        <div className="absolute -top-10 right-24">
+        <div className="absolute -top-10 right-10 xl:right-24">
           <ChatPhone />
         </div>
       </div>

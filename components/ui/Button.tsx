@@ -44,17 +44,16 @@ const Button = ({
         </button>
       ) : isDownload ? (
         <button onClick={onClick}
-          className={`flex items-center py-2.5 pl-6 pr-10 bg-white rounded-[50px] border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
+          className={`flex items-center py-2.5 pl-6 pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
         >
           <Image
             src={storeIcon || icons.Playstore}
             alt="icon"
-            width={32}
-            height={32}
+            className="w-6 xl:w-8"
           />
           <div className="ml-4.5 text-[#3E45FB]">
-            <p className="text-sm text-start font-semibold">{downloadCta}</p>
-            <h3 className="font-bold text-xl text-start leading-[100%]">
+            <p className="text-xs xl:text-sm text-start font-semibold whitespace-nowrap">{downloadCta}</p>
+            <h3 className="font-bold text-lg xl:text-xl text-start leading-[100%] whitespace-nowrap">
               {downloadStore}
             </h3>
           </div>
@@ -62,7 +61,7 @@ const Button = ({
       ) : hasThickBorder ? (
         <button onClick={onClick}
           className={
-            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
+            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
             className
           }
         >

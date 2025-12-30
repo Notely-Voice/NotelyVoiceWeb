@@ -48,12 +48,12 @@ const HomeTextBox = () => {
   const isInFadeOutPhase = hasListed && !hasFaded;
 
   return (
-    <div className="border-[5px] border-black h-max min-w-max bg-[#F0FEFF] py-[20px] px-[18px] rounded-[20px] overflow-hidden">
-      <div className="flex flex-col gap-1">
+    <div className="border-[5px] border-black h-max min-w-max bg-[#F0FEFF] py-2.5 xl:py-4 px-3 xl:px-5 rounded-[20px] overflow-hidden">
+      <div className="flex flex-col xl:gap-1">
         {lines.map((text, idx) => (
           <p
             key={idx}
-            className={`animate__animated font-medium text-base leading-[18px] tracking-normal text-[#3E45FB] ${
+            className={`animate__animated font-medium text-sm lg:text-xs xl:text-base leading-[18px] tracking-normal text-[#3E45FB] ${
               isInFadeOutPhase ? "animate__fadeOut" : "animate__fadeInDown"
             }`}
             style={{

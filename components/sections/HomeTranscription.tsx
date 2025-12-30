@@ -43,7 +43,7 @@ const HomeTranscription = () => {
           className="px-20 mb-4"
         />
 
-        <div className="bg-black py-10 rounded-[40px] grid grid-cols-2 grid-rows-1 gap-3 z-20 relative">
+        <div className="bg-black py-10 px-5 rounded-[40px] grid grid-cols-2 grid-rows-1 gap-3 z-20 relative">
           <div className="flex flex-col justify-center items-center gap-6 mx-auto mt-8">
             {toolkitButtons.map((btn, idx) => (
               <Button
@@ -59,7 +59,9 @@ const HomeTranscription = () => {
 
             <SectionIntro
               isDownload
-              buttonBlockStyle="flex gap-8 items-center"
+              buttonBlockStyle="flex gap-4 items-center"
+              // headingStyle="mb-0!"
+              textStyle="mb-0!"
             />
           </div>
 

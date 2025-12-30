@@ -6,6 +6,7 @@ import curly_dotted_line_black from '../assets/icons/curly_dotted_line_black.svg
 import curly_dotted_line_horizontal from '../assets/icons/curly_dotted_line_horizontal.svg';
 import curly_dotted_line_long from '../assets/icons/curly_dotted_line_long.svg';
 import curly_dotted_line_white from '../assets/icons/curly_dotted_line_white.svg';
+import curly_dotted_line_extended from '../assets/icons/curly_dotted_line_extended.svg';
 import day from '../assets/icons/day.svg';
 import delete_white from '../assets/icons/delete_white.svg';
 import globe_blue from '../assets/icons/globe_blue.svg';
@@ -74,6 +75,7 @@ export const icons = {
   curly_dotted_line_horizontal,
   curly_dotted_line_long,
   curly_dotted_line_white,
+  curly_dotted_line_extended,
   day,
   delete_white,
   globe_blue,

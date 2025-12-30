@@ -29,12 +29,12 @@ const SectionIntro = ({
   return (
     <div className={className}>
       <h1
-        className={`font-varien text-[#F2FFFF] text-[80px] leading-[100%] tracking-[-3%] font-normal mb-8 max-w-[500px] ${headingStyle}`}
+        className={`font-varien text-[#F2FFFF] xl:text-[80px] leading-[100%] tracking-[-3%] font-normal mb-8 max-w-[500px] ${headingStyle}`}
       >
         {bluetext && <span className="text-[#3E45FB]">{bluetext}</span>} {heading}
       </h1>
       <p
-        className={`font-medium text-3xl leading-[36px] tracking-[-3%] text-[#F2FFFF] mb-[45px] max-w-[509px] ${textStyle}`}
+        className={`font-medium xl:text-3xl xl:leading-[36px] tracking-[-3%] text-[#F2FFFF] mb-[45px] max-w-[509px] ${textStyle}`}
       >
         {text}
       </p>

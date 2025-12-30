@@ -15,7 +15,13 @@ const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "", barWid
   const uniqueHeights = Array.from(new Set(HEIGHTS));
 
   return (
-    <div className={`flex items-center gap-2 ${barHeight} ${className}`} aria-hidden>
+    <div 
+      className={`flex items-center gap-2 ${barHeight} ${className}`} 
+      aria-hidden
+      style={{
+        "--bar-width": `${barWidth}px`,
+      } as React.CSSProperties}
+    >
       {HEIGHTS.map((h, i) => {
         const groupIndex = uniqueHeights.indexOf(h);
         const delay = `${groupIndex * 220}ms`;
@@ -25,7 +31,7 @@ const Voice: React.FC<VoiceProps> = ({ color = "#4758FF", className = "", barWid
             className={`nv-bar rounded-full inline-block`} 
             style={{
               height: `${Math.round(h * 100)}%`,
-              width: `${barWidth}px`,
+              width: `var(--bar-width)`,
               backgroundColor: color,
               display: "inline-block",
               transformOrigin: "center center",

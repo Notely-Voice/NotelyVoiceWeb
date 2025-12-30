@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const EditingToolCanvas = () => {
   return (
-    <div className="py-4 px-4 border-4 border-dashed border-[#3E45FB] bg-white rounded-4xl min-h-[180px] flex flex-col justify-between gap-2.5 w-[260px]">
+    <div className="py-4 px-4 border-4 border-dashed border-[#3E45FB] bg-white rounded-4xl min-h-[180px] flex flex-col justify-between gap-2.5 w-[260px] xl:w-[280px]">
       <div className="flex flex-col items-end">
         <Image src={icons.language} alt="language icon" />
         <Image src={icons.microphone_rounded} alt="microphone icon" width={32} className="mt-1" />

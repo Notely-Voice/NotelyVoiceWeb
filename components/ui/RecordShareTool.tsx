@@ -6,8 +6,8 @@ import RecordShareToolCanvas from "./RecordShareToolCanvas";
 
 const RecordShareTool = () => {
   return (
-    <div className="border-[10px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto relative overflow-hidden">
-      <p className="max-w-[500px] font-bold text-[28px] leading-8 tracking-[-6%] text-center">
+    <div className="border-8 border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-7 px-8 mx-auto relative overflow-hidden">
+      <p className="font-bold text-[26px] leading-7 tracking-[-6%] text-center">
         Convert recorded audio into accurate, readable text. Perfect for
         interviews, lectures, or brainstorming sessions.
       </p>
@@ -22,10 +22,10 @@ const RecordShareTool = () => {
       </div> */}
 
 
-      <div className="mt-20 -mb-20 min-h-[580px] w-[320px] bg-[var(--blueBg)] border-8 border-black rounded-[70px] py-5 px-5 flex flex-col justify-start relative">
+      <div className="mt-20 -mb-20 min-h-[560px] xl:min-h-[580px] w-[260px] xl:w-[280px] bg-[var(--blueBg)] border-8 border-black rounded-[50px] py-5 px-5 flex flex-col justify-start items-center relative">
         <div className="bg-[#F0FEFF] rounded-full mt-1.5 w-[105px] h-7 mx-auto"></div>
 
-        <p className="font-black text-base text-white mt-12">
+        <p className="font-black text-sm text-white mt-12">
           Convert recorded audio into accurate, readable text. Perfect for
           interviews, lectures, or brainstorming sessions.
         </p>

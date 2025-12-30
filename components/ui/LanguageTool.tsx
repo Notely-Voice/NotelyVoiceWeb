@@ -52,25 +52,23 @@ const LanguageTool: React.FC = () => {
   }, [query]);
 
   return (
-    <div className="border-[10px] border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-10 px-12 mx-auto overflow-hidden">
-      <p className="max-w-[500px] font-bold text-[28px] leading-8 tracking-[-6%] text-center">
+    <div className="border-8 border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-[50px] pt-7 px-8 mx-auto overflow-hidden">
+      <p className="font-bold text-[26px] leading-7 tracking-[-6%] text-center">
         Transcribe audio in multiple languages with built-in multilingual
         support. Ideal for international teams, language learners, and global
         content creators.
       </p>
 
-      <div className="mt-20 -mb-20 w-[320px] rounded-[50px] relative">
         <div
-          className={`bg-[var(--blueBg)] min-h-[580px] border-8 border-black rounded-[50px] py-5 px-5 flex flex-col justify-start relative transition-all duration-600 ease-in-out `}
+          className={`mt-16 -mb-20 -ml-5 bg-[var(--blueBg)] min-h-[560px] xl:min-h-[580px] w-[260px] xl:w-[280px] border-8 border-black rounded-[50px] py-5 px-5 flex flex-col justify-start relative transition-all duration-600 ease-in-out `}
         >
           <div className="bg-[#F0FEFF] rounded-full mt-1.5 w-[105px] h-7 mx-auto"></div>
 
-          <div className="absolute top-20 -right-30 mx-auto w-fit pointer-events-none z-10">
+          <div className="absolute top-20 -right-26 mx-auto w-fit pointer-events-none z-10">
             <Image
               src={icons.curly_dotted_line_black}
               alt="curly dotted line pointing towards what's on the phone"
-              width={150}
-              height={340}
+              width={120}
             />
           </div>
 
@@ -130,7 +128,6 @@ const LanguageTool: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
