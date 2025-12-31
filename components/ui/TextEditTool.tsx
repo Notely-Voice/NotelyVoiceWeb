@@ -15,11 +15,11 @@ const TextEditTool = () => {
       <div className="mt-16 -mb-20 min-h-[580px] w-[300px] bg-[var(--blueBg)] border-8 border-black rounded-[50px] py-5 px-5 flex flex-col justify-start relative">
         <div className="bg-[#F0FEFF] rounded-full mt-1.5 w-[105px] h-7 mx-auto"></div>
 
-        <div className="absolute -top-12 -right-36 mx-auto w-fit">
+        <div className="absolute -top-12 rotate-2 -right-44 lg:-right-36 mx-auto w-fit">
           <Image
             src={icons.curly_dotted_line_long}
             alt="curly dotted line pointing towards what's on the phone"
-            width={180}
+            className="w-[220px] lg:w-[180px]"
             height={10}
           />
         </div>

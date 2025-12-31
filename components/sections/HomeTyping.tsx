@@ -36,18 +36,18 @@ const HomeTyping = () => {
   }, [isAllWhite]);
 
   return (
-    <div className="my-[100px] pt-3.5 px-[36px] flex flex-col justify-center items-center relative">
-      <div className="wrapper bg-[var(--white_bg)] px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
+    <div className="my-25 pt-3.5 px-6 xl:px-9 flex flex-col justify-center items-center relative">
+      <div className="wrapper bg-[var(--white_bg)] px-6 lg:px-10 xl:px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="4x faster"
           heading="than typing"
           text="After 150 years of using the same keyboard, voice that actually works is finally here. When you create, code, and respond faster, you free up time for more. Speak naturally at the speed you think and let Flow handle the rest."
-          headingStyle="text-black text-[70px]! max-w-full mb-6!"
-          textStyle="text-black text-[28px]! max-w-full mb-0!"
+          headingStyle="text-black text-[52px] lg:text-[70px] max-w-full mb-4! lg:mb-6!"
+          textStyle="text-black text-xl md:text-2xl max-w-full mb-0!"
           // className="px-9"
         />
 
-        <div className="grid grid-cols-2 gap-6 mt-16 relative">
+        <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-2 lg:grid-rows-1 gap-5 lg:gap-6 mt-12 lg:mt-16 relative">
           <div className="pt-10 px-5 bg-black border-4 border-[#3E45FB] rounded-[40px] flex flex-col justify-start items-center gap-5">
             <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Keyboard
@@ -76,9 +76,13 @@ const HomeTyping = () => {
               </p>
             </div>
 
-            <p className="text-white text-lg leading-[50px] tracking-[-6%] font-medium px-[22.5px] border-4 border-[#F0FEFF] rounded-full">
+            <p className="text-white text-sm sm:text-lg leading-6 tracking-[-6%] font-medium py-1.5 lg-py-0 px-[22.5px] border-4 border-[#F0FEFF] rounded-full">
               Text revealed character-by-character
             </p>
+          </div>          
+          
+          <div className="inline lg:hidden absolute top-[47%] -right-[4%] rotate-[105deg]">
+            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" className="w-[260px] lg:w-[180px] xl:w-[220px]" />
           </div>
 
           <div className="py-10 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-[40px] min-h-[420px] flex flex-col justify-start items-center gap-6">
@@ -88,14 +92,13 @@ const HomeTyping = () => {
 
             <div>
               <TextPhone />
-            <p className="text-[#3E45FB] bg-white text-lg leading-[30px] tracking-[-6%] font-medium px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
+            <p className="text-[#3E45FB] bg-white text-sm sm:text-lg leading-[30px] tracking-[-6%] font-medium sm:py-0 px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
               Entire sentence appears at once
             </p>
             </div>
 
           </div>
-
-          <div className="absolute bottom-16 left-[38%]">
+          <div className="hidden lg:inline absolute bottom-16 left-[38%]">
             <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" className="w-[180px] xl:w-[220px]" />
           </div>
         </div>

@@ -4,20 +4,20 @@ import Voice from "./Voice";
 
 const ChatPhone = () => {
   return (
-    <div className="min-h-[680px] w-[360px] bg-[var(--blueBg)] border-6 border-[#F0FEFF] rounded-[60px] pt-5 px-3 pb-3 flex flex-col justify-between">
-      <div className="bg-[#F0FEFF] rounded-full w-[145px] h-8 mx-auto"></div>
+    <div className="min-h-[640px] md:min-h-[660px] lg:min-h-[620px] xl:min-h-[680px] w-[360px] lg:w-80 xl:w-[360px] bg-[var(--blueBg)] border-6 border-[#F0FEFF] rounded-[60px] pt-5 px-3 pb-3 flex flex-col justify-between">
+      <div className="bg-[#F0FEFF] rounded-full w-[120px] xl:w-[145px] h-7 xl:h-8 mx-auto"></div>
 
       <div className="flex flex-col gap-3">
-        <p className="py-2.5 px-5 max-w-[271px] text-white text-sm bg-[#1C00C4] rounded-[15px]">
+        <p className="py-2.5 px-5 max-w-[271px] text-white text-sm bg-[#1C00C4] rounded-xl xl:rounded-[15px]">
           Hey, I need help setting up my account.
         </p>
         <div className="flex justify-end">
-          <p className="py-2.5 px-5 max-w-[260px] text-white text-sm bg-[#1C00C4] rounded-[15px]">
+          <p className="py-2.5 px-5 max-w-[260px] text-white text-sm bg-[#1C00C4] rounded-xl xl:rounded-[15px]">
             Sure! I can help with that. Are you creating a new account or
             updating an existing one?
           </p>
         </div>
-        <p className="py-2.5 px-5 max-w-[271px] text-white text-sm bg-[#1C00C4] rounded-[15px]">
+        <p className="py-2.5 px-5 max-w-[271px] text-white text-sm bg-[#1C00C4] rounded-xl xl:rounded-[15px]">
           Creating a new one.
         </p>
       </div>

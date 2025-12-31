@@ -30,11 +30,11 @@ const Button = ({
     <>
       {isRounded ? (
         <button onClick={onClick}
-          className={`font-satoshi py-4 px-6 rounded-full ${
+          className={`font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-full ${
             isWhite
               ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border border-transparent hover:border-white focus:border-white"
               : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border border-transparent hover:border-[#3E45FB] focus:border-[#3E45FB]"
-          } text-base leading-[100%] tracking-normal ${
+          } text-sm lg:text-base leading-[100%] tracking-normal ${
             isWhite
               ? "text-black hover:text-white focus:text-white"
               : "text-[#F2FFFF] hover:text-black focus:text-black"
@@ -61,7 +61,7 @@ const Button = ({
       ) : hasThickBorder ? (
         <button onClick={onClick}
           className={
-            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
+            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-lg lg:text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
             className
           }
         >
@@ -69,11 +69,11 @@ const Button = ({
         </button>
       ) : (
         <button onClick={onClick}
-          className={`font-satoshi py-4 px-6 rounded-xl ${
+          className={`font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-xl ${
             isWhite
               ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"
               : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border hover:border-[#3E45FB] focus:border-[#3E45FB]"
-          } text-base leading-[100%] tracking-normal ${
+          } text-sm lg:text-base leading-[100%] tracking-normal ${
             isWhite
               ? "text-[#3E45FB] hover:text-white focus:text-white"
               : "text-[#F2FFFF] hover:text-[#3E45FB] focus:text-[#3E45FB]"

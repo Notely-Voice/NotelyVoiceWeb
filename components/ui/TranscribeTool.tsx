@@ -11,7 +11,7 @@ const TranscribeTool = () => {
         interviews, lectures, or brainstorming sessions.
       </p>
 
-      <div className="absolute top-46 xl:top-36 -left-48 xl:-left-36 mx-auto w-fit -rotate-[75deg]">
+      <div className="absolute top-36 md:top-32 lg:top-46 xl:top-36 -left-36 md:-left-32 lg:-left-48 xl:-left-36 mx-auto w-fit -rotate-[75deg] md:-rotate-[90deg] lg:-rotate-[75deg]">
         <Image
           src={icons.curly_dotted_line_black}
           alt="curly dotted line pointing towards what's on the phone"
@@ -22,7 +22,7 @@ const TranscribeTool = () => {
 
 
       <div className="mt-16 -mb-20 min-h-[560px] xl:min-h-[580px] w-[260px] xl:w-[280px] bg-[var(--blueBg)] border-8 border-black rounded-[50px] py-5 px-5 flex flex-col justify-start relative">
-        <div className="bg-[#F0FEFF] rounded-full mt-1.5 w-[105px] h-7 mx-auto"></div>
+        <div className="bg-[#F0FEFF] rounded-full w-[105px] h-7 mx-auto"></div>
 
         <p className="font-black text-base text-white mt-12">
           Convert recorded audio into accurate, readable text. Perfect for

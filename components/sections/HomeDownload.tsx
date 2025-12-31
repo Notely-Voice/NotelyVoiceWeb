@@ -5,20 +5,24 @@ import ChatPhone from "../ui/ChatPhone";
 
 const HomeDownload = () => {
   return (
-    <div className="mt-[140px] px-[36px] flex flex-col justify-center items-center relative">
+    <div className="mt-24 lg:mt-[140px] px-6 xl:px-8 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-black pt-20 pb-20 rounded-[40px] flex flex-col z-20 relative">
         <div className="pl-10 xl:pl-20 pr-12 w-fit">
           <SectionIntro
             heading="Write faster in all your apps, on any device"
             text="Seamless speech-to-text in every application on your iPhone or computer"
-            headingStyle="max-w-[480px] xl:max-w-[565px] text-[48px]! xl:text-[60px]! mb-4!"
-            textStyle="max-w-[480px] xl:max-w-[560px] mb-6!"
+            headingStyle="max-w-full lg:max-w-[480px] xl:max-w-[565px] text-[48px]! xl:text-[60px]! mb-4!"
+            textStyle="max-w-full lg:max-w-[480px] xl:max-w-[560px] text-xl mb-6!"
             buttonBlockStyle="flex gap-4 items-center"
             isDownload
           />
         </div>
+        
+        <div className="lg:absolute mx-auto -mb-30 mt-10 lg:mt-0 lg:-mb-0 lg:mx-0 lg:-top-10 lg:right-10 xl:right-24 z-10">
+          <ChatPhone />
+        </div>
 
-        <div className="bg-[#F0FEFF] py-4.5 mt-16 overflow-hidden">
+        <div className="bg-[#F0FEFF] py-4.5 lg:mt-16 overflow-hidden">
           <div className="sm-scroll flex gap-4.5 w-max">
             {socialsRowData.map((item, index) => (
               <div key={index} className="flex-shrink-0">
@@ -31,10 +35,6 @@ const HomeDownload = () => {
               </div>
             ))}
           </div>
-        </div>
-        
-        <div className="absolute -top-10 right-10 xl:right-24">
-          <ChatPhone />
         </div>
       </div>
     </div>
