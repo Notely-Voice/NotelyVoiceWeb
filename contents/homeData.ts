@@ -70,3 +70,12 @@ export const toolkitButtons: { btnText: string; showTool?: boolean }[] = [
   { btnText: "Custom theme", showTool: false },
 ];
 
+
+export const useCaseButtons: { btnText: string; showTool?: boolean }[] = [
+  { btnText: "Students", showTool: true },
+  { btnText: "Creators & Podcasters", showTool: false },
+  { btnText: "Teams & Business Meetings", showTool: false },
+  { btnText: "Accessibility", showTool: false },
+  { btnText: "Journalists", showTool: false },
+];
+

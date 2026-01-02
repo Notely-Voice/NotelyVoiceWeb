@@ -1,5 +1,8 @@
+"use client";
+
 import { icons } from "@/lib";
 import Image from "next/image";
+import { useState } from "react";
 
 const Button = ({
   isRounded,
@@ -13,6 +16,7 @@ const Button = ({
   downloadStore,
   storeIcon,
   onClick,
+  isActive,
 }: {
   isRounded?: boolean;
   isFlashy?: boolean;
@@ -25,11 +29,18 @@ const Button = ({
   downloadStore?: string;
   storeIcon?: string;
   onClick?: () => void;
+  isActive?: boolean;
 }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const showGlow = isHovering || isFocused || isActive;
+
   return (
     <>
       {isRounded ? (
-        <button onClick={onClick}
+        <button
+          onClick={onClick}
           className={`font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-full ${
             isWhite
               ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border border-transparent hover:border-white focus:border-white"
@@ -42,8 +53,38 @@ const Button = ({
         >
           {btnText}
         </button>
+      ) : isFlashy ? (
+        <div
+          className="relative inline-block"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          {/* Blue glow background that appears on hover or focus */}
+          {showGlow && (
+            <div
+              className="absolute rounded-full pointer-events-none transition-all duration-300"
+              style={{
+                background: "#3E45FB",
+                top: "-4px",
+                left: "-4px",
+                right: "-4px",
+                bottom: "-9px",
+                zIndex: 1,
+              }}
+            />
+          )}
+          <button
+            onClick={onClick}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            className={`z-10 relative font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-full bg-black border border-transparent text-sm lg:text-base leading-[100%] tracking-normal text-[#F2FFFF] font-black cursor-pointer transition-all duration-300 ${className}`}
+          >
+            {btnText}
+          </button>
+        </div>
       ) : isDownload ? (
-        <button onClick={onClick}
+        <button
+          onClick={onClick}
           className={`flex items-center py-2.5 pl-6 pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
         >
           <Image
@@ -52,14 +93,17 @@ const Button = ({
             className="w-6 xl:w-8"
           />
           <div className="ml-4.5 text-[#3E45FB]">
-            <p className="text-xs xl:text-sm text-start font-semibold whitespace-nowrap">{downloadCta}</p>
+            <p className="text-xs xl:text-sm text-start font-semibold whitespace-nowrap">
+              {downloadCta}
+            </p>
             <h3 className="font-bold text-lg xl:text-xl text-start leading-[100%] whitespace-nowrap">
               {downloadStore}
             </h3>
           </div>
         </button>
       ) : hasThickBorder ? (
-        <button onClick={onClick}
+        <button
+          onClick={onClick}
           className={
             "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-lg lg:text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
             className
@@ -68,7 +112,8 @@ const Button = ({
           {btnText}
         </button>
       ) : (
-        <button onClick={onClick}
+        <button
+          onClick={onClick}
           className={`font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-xl ${
             isWhite
               ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"

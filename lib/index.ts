@@ -37,6 +37,7 @@ import X_white from '../assets/icons/X_white.svg';
 import down_dotted_icon from '../assets/icons/down_dotted_line.svg';
 import up_arrow_icon from '../assets/icons/up_arrow_line.svg';
 import slanted_phone from '../assets/icons/slant_phone.svg';
+import dashed_line from '../assets/icons/dashed_line.svg';
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
 import up_arrow_line from '../assets/images/up_arrow_line.png';
@@ -77,6 +78,7 @@ export const icons = {
   curly_dotted_line_white,
   curly_dotted_line_extended,
   day,
+  dashed_line,
   delete_white,
   globe_blue,
   instagram,
