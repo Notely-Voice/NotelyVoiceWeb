@@ -4,7 +4,7 @@ import Image from "next/image";
 const NotesBox = ({ className }: { className?: string }) => {
   return (
     <div className={`border-4 border-[#3E45FB] rounded-2xl bg-black pt-6 min-h-[300px] flex flex-col justify-between items-start min-w-[320px] xl:min-w-[360px] max-w-[460px] ${className}`}>
-      <p className="text-sm lg:text-base text-[#F0FEFF] max-w-[330px] py-4 px-4">
+      <p className="text-sm sm:text-xl md:text-xl lg:text-base text-[#F0FEFF] md:max-w-[600px]  lg:max-w-[330px] py-4 px-4">
         Quickly write down ideas, reminders, or thoughts. Keep everything in one
         place with a simple, distraction-free note-taking experience.
       </p>
