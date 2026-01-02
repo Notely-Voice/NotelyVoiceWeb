@@ -3,8 +3,8 @@ import GreetingPhone from "../ui/GreetingPhone";
 
 const HomeLanguage = () => {
   return (
-    <div className="px-6 xl:px-9 my-24 flex flex-col justify-center items-center relative">
-      <div className="bg-black py-10 px-5 rounded-[40px] grid lg:grid-cols-2 lg:grid-rows-1 gap-3 z-20 relative max-w-[90%] overflow-hidden">
+    <div className="px-6 xl:px-9 my-24 flex flex-col justify-center items-center relative w-full">
+      <div className="wrapper bg-black py-10 px-5 rounded-[40px] grid lg:grid-cols-2 lg:grid-rows-1 gap-3 z-20 relative max-w-[85%]! lg:max-w-[90%]! xl:max-w-[1100px]! overflow-hidden">
         <div className="pl-12 xl:pl-16 py-5 w-fit">
           <SectionIntro
             heading="100+ languages"
