@@ -4,6 +4,7 @@ import HomeLanguage from "@/components/sections/HomeLanguage";
 import HomeTranscription from "@/components/sections/HomeTranscription";
 import HomeTyping from "@/components/sections/HomeTyping";
 import HomeWork from "@/components/sections/HomeWork";
+import HomeTestimonials from "@/components/sections/HomeTestimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeTranscription />
       <HomeWork />
       <HomeLanguage />
+      <HomeTestimonials />
     </div>
   );
 }
