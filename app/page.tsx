@@ -5,6 +5,7 @@ import HomeTranscription from "@/components/sections/HomeTranscription";
 import HomeTyping from "@/components/sections/HomeTyping";
 import HomeWork from "@/components/sections/HomeWork";
 import HomeTestimonials from "@/components/sections/HomeTestimonials";
+import HomeNumbers from "@/components/sections/HomeNumbers";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HomeWork />
       <HomeLanguage />
       <HomeTestimonials />
+      <HomeNumbers />
     </div>
   );
 }

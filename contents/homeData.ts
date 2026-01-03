@@ -56,6 +56,29 @@ export const testimonialData = [
   },
 ];
 
+export const numberStatsData = [
+  {
+    number: "98.5%",
+    label: "Average Accuracy Rate",
+    isRounded: true,
+  },
+  {
+    number: "500k+",
+    label: "Active Users",
+    isRounded: false,
+  },
+  {
+    number: "50M+",
+    label: "Minutes Transcribed",
+    isRounded: true,
+  },
+  {
+    number: "100+",
+    label: "Languages Supported",
+    isRounded: false,
+  },
+];
+
 export const socialsRowData = [
   icons.telegram,
   icons.slack,

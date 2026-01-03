@@ -61,8 +61,10 @@ import notely_voice_logo_white from '../assets/images/notely_voice_logo_white.pn
 import notely_voice_logo from '../assets/images/notely_voice_logo.png';
 import notely_voice_icon_white from '../assets/icons/notely_voice_icon_white.svg';
 import notely_voice_icon from '../assets/icons/notely_voice_logo.svg';
+import curly_border_circle from '../assets/images/curly_border_circle.png';
+import rounded_rectangle from '../assets/images/rounded_rectangle.png';
 
-import type { StaticImageData } from 'next/image';
+// import type { StaticImageData } from 'next/image';
 // import type React from 'react';
 
 // type Asset = string | StaticImageData | React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -133,6 +135,8 @@ export const images = {
   voice4,
   notely_voice_logo_white,
   notely_voice_logo,
+  curly_border_circle,
+  rounded_rectangle,
 };
 
 export default { icons, images };
