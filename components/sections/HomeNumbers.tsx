@@ -22,7 +22,7 @@ const HomeNumbers = () => {
           />
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4  w-full max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 npm w-full max-w-5xl mx-auto">
           {numberStatsData.map((stat, index) => {
             const shapeImage = getShapeImage(index);
             const isRectangle = index % 2 === 0;

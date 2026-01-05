@@ -1,10 +1,10 @@
 "use client";
 
 import SectionIntro from "../layouts/SectionIntro";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import TextPhone from "../ui/TextPhone";
 import Image from "next/image";
-import { icons } from "@/lib";
+import {icons} from "@/lib";
 
 const HomeTyping = () => {
   const keyboardText =
@@ -37,7 +37,8 @@ const HomeTyping = () => {
 
   return (
     <div className="my-25 pt-3.5 px-6 xl:px-9 flex flex-col justify-center items-center relative">
-      <div className="wrapper bg-[var(--white_bg)] px-6 lg:px-10 xl:px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
+      <div
+        className="wrapper bg-[var(--white_bg)] px-6 lg:px-10 xl:px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="4x faster"
           heading="than typing"
@@ -47,8 +48,10 @@ const HomeTyping = () => {
           // className="px-9"
         />
 
-        <div className="grid lg:grid-cols-2 grid-cols-1 grid-rows-2 lg:grid-rows-1 gap-5 lg:gap-6 mt-12 lg:mt-16 relative">
-          <div className="pt-10 px-5 bg-black border-4 border-[#3E45FB] rounded-[40px] flex flex-col justify-start items-center gap-5">
+        <div
+          className="grid lg:grid-cols-2 grid-cols-1 grid-rows-2 lg:grid-rows-1 gap-5 lg:gap-6 mt-12 lg:mt-16 relative">
+          <div
+            className="pt-10 px-5 bg-black border-4 border-[#3E45FB] rounded-[40px] flex flex-col justify-start items-center gap-5">
             <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Keyboard
             </h2>
@@ -56,7 +59,7 @@ const HomeTyping = () => {
             <div className="border-7 border-white rounded-[40px] pt-10 pb-12 px-12 max-w-[400px]">
               <p
                 className="text-base leading-6"
-                style={{ minHeight: "150px" }}
+                style={{minHeight: "150px"}}
                 key={cycleKey}
               >
                 {keyboardText.split("").map((char, idx) => (
@@ -76,30 +79,37 @@ const HomeTyping = () => {
               </p>
             </div>
 
-            <p className="text-white text-sm sm:text-lg leading-6 tracking-[-6%] font-medium py-1.5 lg-py-0 px-[22.5px] border-4 border-[#F0FEFF] rounded-full">
+            <p
+              className="text-white text-sm sm:text-lg leading-6 tracking-[-6%] font-medium py-1.5 lg-py-0 px-[22.5px] border-4 border-[#F0FEFF] rounded-full">
               Text revealed character-by-character
             </p>
-          </div>          
-          
-          <div className="inline lg:hidden absolute top-[47%] -right-[4%] rotate-[105deg]">
-            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" className="w-[260px] lg:w-[180px] xl:w-[220px]" />
           </div>
 
-          <div className="py-10 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-[40px] min-h-[420px] flex flex-col justify-start items-center gap-6">
+          <div className="inline lg:hidden absolute top-[47%] -right-[4%] rotate-[105deg]">
+            <Image src={icons.curly_dotted_line_white}
+                   alt="dotted line showing relationship between keyboard and notely voice"
+                   className="w-[260px] lg:w-[180px] xl:w-[220px]"/>
+          </div>
+
+          <div
+            className="py-10 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-[40px] min-h-[420px] flex flex-col justify-start items-center gap-6">
             <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Notely voice
             </h2>
 
             <div>
-              <TextPhone />
-            <p className="text-[#3E45FB] bg-white text-sm sm:text-lg leading-[30px] tracking-[-6%] font-medium sm:py-0 px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
-              Entire sentence appears at once
-            </p>
+              <TextPhone/>
+              <p
+                className="text-[#3E45FB] bg-white text-sm sm:text-lg leading-[30px] tracking-[-6%] font-medium sm:py-0 px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
+                Entire sentence appears at once
+              </p>
             </div>
 
           </div>
           <div className="hidden lg:inline absolute bottom-16 left-[38%]">
-            <Image src={icons.curly_dotted_line_white} alt="dotted line showing relationship between keyboard and notely voice" className="w-[180px] xl:w-[220px]" />
+            <Image src={icons.curly_dotted_line_white}
+                   alt="dotted line showing relationship between keyboard and notely voice"
+                   className="w-[180px] xl:w-[220px]"/>
           </div>
         </div>
       </div>

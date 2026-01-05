@@ -6,6 +6,7 @@ import HomeTyping from "@/components/sections/HomeTyping";
 import HomeWork from "@/components/sections/HomeWork";
 import HomeTestimonials from "@/components/sections/HomeTestimonials";
 import HomeNumbers from "@/components/sections/HomeNumbers";
+import StartSpeaking from "@/components/sections/StartSpeaking";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HomeLanguage />
       <HomeTestimonials />
       <HomeNumbers />
+      <StartSpeaking bgColor="black" cardBgColor="#3E45FB" />
     </div>
   );
 }

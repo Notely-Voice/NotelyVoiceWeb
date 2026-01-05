@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export type BreakpointSize =  'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type BreakpointSize =  'xxs' | 'xs' | 'sm' | 'md' | 'lmd' | 'lg' | 'xl';
 
 export const useResponsive = () => {
   const [screenSize, setScreenSize] = useState<BreakpointSize>('sm');
@@ -11,18 +11,20 @@ export const useResponsive = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       
-      if (width >= 1536) {
-        setScreenSize('2xl');
-      } else if (width >= 1280) {
+      if (width >= 1280) {
         setScreenSize('xl');
       } else if (width >= 1024) {
         setScreenSize('lg');
+      } else if (width >= 860) {
+        setScreenSize('lmd');
       } else if (width >= 768) {
         setScreenSize('md');
-      } else if (width >= 640) {
+      }  else if (width >= 640) {
         setScreenSize('sm');
-      } else {
+      } else if (width >= 420) {
         setScreenSize('xs');
+      } else {
+        setScreenSize('xxs');
       }
     };
 
@@ -37,3 +39,7 @@ export const useResponsive = () => {
 
   return screenSize;
 };
+
+// Helper type for optional styles per breakpoint
+export type ResponsiveStyles<T> = Partial<Record<BreakpointSize, T>>;
+

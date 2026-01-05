@@ -62,9 +62,9 @@ const HomeWork = () => {
           </div>
 
           {/* Mobile/Tablet layout: SpeakBox + ListenVoiceBox in container above NotesBox */}
-          <div className="lg:hidden flex flex-col gap-4 bg-[var(--white_bg)] border-t-4 border-[#3E45FB] rounded-[40px] pt-10 pb-6 px-7 overflow-hidden w-[104%]">
-            <div className="bg-white border-4 border-dashed border-[#3E45FB] rounded-[40px] py-4 px-6 grid grid-cols-2 justify-center items-center gap-6">
-              <SpeakBox minWidth="min-w-[140px]" />
+          <div className="lg:hidden flex flex-col gap-4 bg-[var(--white_bg)] border-t-4 border-[#3E45FB] rounded-[40px] pt-10 pb-6 px-4 sm:px-7 overflow-hidden w-[104%]">
+            <div className="bg-white border-4 border-dashed border-[#3E45FB] rounded-[40px] py-4 px-3 sm:px-6 grid grid-cols-2 justify-center items-center gap-4 sm:gap-6">
+              <SpeakBox minWidth="sm:min-w-[140px]" />
               <ListenVoiceBox />
             </div>
             <NotesBox className="max-w-full" />

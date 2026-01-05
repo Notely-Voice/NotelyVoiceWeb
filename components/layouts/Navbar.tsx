@@ -15,7 +15,7 @@ const Navbar = () => {
   const shouldShowNavItems = screenSize !== 'xs' && screenSize !== 'sm';
 
   return (
-    <div className="sticky top-0 left-0 py-4 lg:py-6 xl:py-8 flex items-center justify-between px-6 xl:px-8 z-50 bg-[var(--white_bg)]">
+    <div className="sticky top-0 left-0 py-4 lg:py-6 xl:py-8 flex items-center justify-between px-4 sm:px-6 xl:px-8 z-50 bg-[var(--white_bg)]">
       <div className="flex items-center justify-between gap-6 md:gap-10 w-full wrapper mx-auto">
         <Logo className="lg:ml-9" />
         

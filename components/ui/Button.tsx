@@ -114,7 +114,7 @@ const Button = ({
       ) : (
         <button
           onClick={onClick}
-          className={`font-satoshi py-2.5 px-3.5 lg:py-4 lg:px-6 rounded-xl ${
+          className={`font-satoshi py-3 px-3.5 lg:py-4 lg:px-6 rounded-xl ${
             isWhite
               ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"
               : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border hover:border-[#3E45FB] focus:border-[#3E45FB]"

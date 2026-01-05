@@ -24,7 +24,7 @@ const Logo = ({ isWhite, className }: { isWhite?: boolean; className?: string })
           Notely Voice
         </p>
       ) : (
-        <p className="font-bold font-instrument text-2xl lg:text-[32px] leading-8 lg:leading-10 tracking-[-3%] text-black ml-2 lg:ml-3.5 whitespace-nowrap">
+        <p className="font-bold font-instrument text-xl sm:text-2xl lg:text-[32px] leading-8 lg:leading-10 tracking-[-3%] text-black ml-1 sm:ml-2 lg:ml-3.5 whitespace-nowrap">
           Notely Voice
         </p>
       )}

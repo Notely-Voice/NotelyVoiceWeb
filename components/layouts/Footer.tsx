@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const Footer = ({ bgColor }: { bgColor: string }) => {
   return (
-    <div className="pb-8 px-6 xl:px-8 md:mt-20 lg:mt-32">
+    <div className="pb-8 px-6 xl:px-8 mt-10 md:mt-20 lg:mt-32">
       <div
         className={`py-16 px-6 md:px-10 lg:px-16 xl:px-28 wrapper mx-auto rounded-4xl xl:rounded-[40px] ${bgColor}`}
       >
-        <div className="flex justify-between items-start gap-6 mb-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-6 mb-10">
           {footerNavItems.map((section) => (
             <div key={section.heading}>
               <h3 className="font-varien font-normal text-3xl md:text-[32px] lg:text-[40px] xl:text-5xl leading-[100%] tracking-[-3%] text-white mb-4 xl:mb-7">
@@ -31,11 +31,11 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-5">
           <Logo isWhite />
           <Button btnText="Start for free" isWhite />
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex sm:flex-row flex-col-reverse justify-between sm:items-center gap-4">
           <p className="font-satoshi font-medium text-lg lg:text-xl lg:leading-[100%] xl:text-2xl xl:leading-[46px] tracking-[-6%] text-white">
             © {new Date().getFullYear()} Notely Voice. All rights reserved.
           </p>
