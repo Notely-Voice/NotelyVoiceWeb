@@ -18,7 +18,7 @@ const HomeHero = () => {
         />
         <HomeHeroDesign />
       </div>
-      <div className="wrapper bg-black pt-[40px] rounded-b-[40px] -mt-14! relative z-10 overflow-hidden">
+      <div className="wrapper bg-black pt-[40px] rounded-b-[20px] sm:rounded-b-[40px] -mt-14! relative z-10 overflow-hidden">
         <div className="nv-scroll flex items-center gap-[50px]">
           {heroCommentsData.map((item, index) => (
             <div

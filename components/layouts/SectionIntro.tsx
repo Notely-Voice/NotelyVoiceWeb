@@ -46,7 +46,7 @@ const SectionIntro = ({
             downloadStore="Google Play"
             isWhite
             isDownload
-            className={`w-fit`}
+            className={`w-full sm:w-fit`}
           />
           <Button
             storeIcon={icons.apple}
@@ -54,7 +54,7 @@ const SectionIntro = ({
             downloadStore="App Store"
             isWhite
             isDownload
-            className={`w-fit`}
+            className={`w-full sm:w-fit`}
           />
         </div>
       ) : isBtnWhite ? (

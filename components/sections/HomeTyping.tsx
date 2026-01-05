@@ -36,30 +36,30 @@ const HomeTyping = () => {
   }, [isAllWhite]);
 
   return (
-    <div className="my-25 pt-3.5 px-6 xl:px-9 flex flex-col justify-center items-center relative">
+    <div className="my-12 sm:my-25 pt-3.5 px-4 sm:px-6 xl:px-9 flex flex-col justify-center items-center relative">
       <div
-        className="wrapper bg-[var(--white_bg)] px-6 lg:px-10 xl:px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
+        className="wrapper bg-[var(--white_bg)] px-0 sm:px-6 lg:px-10 xl:px-14 rounded-3xl sm:rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="4x faster"
           heading="than typing"
           text="After 150 years of using the same keyboard, voice that actually works is finally here. When you create, code, and respond faster, you free up time for more. Speak naturally at the speed you think and let Flow handle the rest."
-          headingStyle="text-black text-[52px] lg:text-[70px] max-w-full mb-4! lg:mb-6!"
-          textStyle="text-black text-xl md:text-2xl max-w-full mb-0!"
+          headingStyle="text-black text-[42px] sm:text-[52px] lg:text-[70px] max-w-full mb-4! lg:mb-6!"
+          textStyle="text-black text-base sm:text-xl md:text-2xl max-w-full mb-0!"
           // className="px-9"
         />
 
         <div
-          className="grid lg:grid-cols-2 grid-cols-1 grid-rows-2 lg:grid-rows-1 gap-5 lg:gap-6 mt-12 lg:mt-16 relative">
+          className="flex flex-col sm:grid lg:grid-cols-2 grid-cols-1 grid-rows-2 lg:grid-rows-1 gap-3 sm:gap-5 lg:gap-6 mt-12 lg:mt-16 relative mx-6">
           <div
-            className="pt-10 px-5 bg-black border-4 border-[#3E45FB] rounded-[40px] flex flex-col justify-start items-center gap-5">
-            <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
+            className="pt-4 px-5 sm:pt-10 sm:px-5 bg-black border-4 border-[#3E45FB] rounded-3xl sm:rounded-[40px] flex flex-col justify-start items-center gap-5 min-h-[360px]">
+            <h2 className="text-2xl sm:text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
               Keyboard
             </h2>
 
-            <div className="border-7 border-white rounded-[40px] pt-10 pb-12 px-12 max-w-[400px]">
+            <div className="border-4 sm:border-7 border-white rounded-3xl sm:rounded-[40px] pt-4 pb-5 px-5 sm:pt-10 sm:pb-12 sm:px-12 max-w-[400px]">
               <p
-                className="text-base leading-6"
-                style={{minHeight: "150px"}}
+                className="text-[10px] sm:text-base sm:leading-6 min-h-[120px] sm:min-h-[150px]"
+                // style={{minHeight: "150px"}}
                 key={cycleKey}
               >
                 {keyboardText.split("").map((char, idx) => (
@@ -80,27 +80,27 @@ const HomeTyping = () => {
             </div>
 
             <p
-              className="text-white text-sm sm:text-lg leading-6 tracking-[-6%] font-medium py-1.5 lg-py-0 px-[22.5px] border-4 border-[#F0FEFF] rounded-full">
+              className="text-white text-[10px] sm:text-lg sm:leading-6 tracking-[-6%] font-medium py-1.5 lg-py-0 px-3 sm:px-[22.5px] border-2 sm:border-4 border-[#F0FEFF] rounded-full">
               Text revealed character-by-character
             </p>
           </div>
 
-          <div className="inline lg:hidden absolute top-[47%] -right-[4%] rotate-[105deg]">
+          <div className="inline lg:hidden absolute top-[41%] sm:top-[47%] -right-[4%] rotate-[105deg]">
             <Image src={icons.curly_dotted_line_white}
                    alt="dotted line showing relationship between keyboard and notely voice"
-                   className="w-[260px] lg:w-[180px] xl:w-[220px]"/>
+                   className="w-[100px] sm:w-[260px] lg:w-[180px] xl:w-[220px]"/>
           </div>
 
           <div
-            className="py-10 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-[40px] min-h-[420px] flex flex-col justify-start items-center gap-6">
-            <h2 className="text-[40px] text-white leading-[50px] tracking-[-6%] font-bold">
+            className="py-4 px-5 sm:py-10 bg-[#3E45FB] border-5 border-[#3E45FB] rounded-3xl sm:rounded-[40px] flex flex-col justify-start items-center gap-6 min-h-[360px]">
+            <h2 className="text-2xl sm:text-[40px] text-white sm:leading-[50px] tracking-[-6%] font-bold">
               Notely voice
             </h2>
 
             <div>
               <TextPhone/>
               <p
-                className="text-[#3E45FB] bg-white text-sm sm:text-lg leading-[30px] tracking-[-6%] font-medium sm:py-0 px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
+                className="text-[#3E45FB] bg-white text-[10px] sm:text-lg sm:leading-[30px] tracking-[-6%] font-medium sm:py-0 px-[22.5px] border-5 border-[#F0FEFF] rounded-full mt-3">
                 Entire sentence appears at once
               </p>
             </div>

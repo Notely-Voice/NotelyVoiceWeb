@@ -85,18 +85,18 @@ const Button = ({
       ) : isDownload ? (
         <button
           onClick={onClick}
-          className={`flex items-center py-2.5 pl-6 pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
+          className={`flex items-center py-2 pl-2 pr-10 sm:py-2.5 sm:pl-6 sm:pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
         >
           <Image
             src={storeIcon || icons.Playstore}
             alt="icon"
-            className="w-6 xl:w-8"
+            className="w-4 sm:w-6 xl:w-8"
           />
-          <div className="ml-4.5 text-[#3E45FB]">
-            <p className="text-xs xl:text-sm text-start font-semibold whitespace-nowrap">
+          <div className="ml-2 sm:ml-4.5 text-[#3E45FB]">
+            <p className="text-[10px] sm:text-xs xl:text-sm text-start font-semibold whitespace-nowrap">
               {downloadCta}
             </p>
-            <h3 className="font-bold text-lg xl:text-xl text-start leading-[100%] whitespace-nowrap">
+            <h3 className="font-bold text-sm sm:text-lg xl:text-xl text-start leading-[100%] whitespace-nowrap">
               {downloadStore}
             </h3>
           </div>
