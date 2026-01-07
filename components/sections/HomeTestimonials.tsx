@@ -3,13 +3,15 @@
 import { testimonialData } from "@/contents/homeData";
 import { icons } from "@/lib";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import SectionIntro from "../layouts/SectionIntro";
 import { useResponsive } from "@/hooks/useResponsive";
 
 const HomeTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const screenSize = useResponsive();
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonialData.length);
@@ -19,6 +21,30 @@ const HomeTestimonials = () => {
     setCurrentIndex((prev) =>
       prev === 0 ? testimonialData.length - 1 : prev - 1
     );
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const swipeThreshold = 50;
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swiped left, show next
+        handleNext();
+      } else {
+        // Swiped right, show previous
+        handlePrev();
+      }
+    }
   };
 
   const getVisibleIndices = () => {
@@ -47,6 +73,72 @@ const HomeTestimonials = () => {
     return (position - 2) * (offsetMap[screenSize] || 150);
   };
 
+  // Mobile view for screens < sm (640px)
+  if (screenSize === 'xxs' || screenSize === 'xs') {
+    return (
+      <div className="px-4 flex flex-col justify-center items-center relative">
+        <div 
+          className="wrapper bg-[var(--blueBg)] pt-8 pb-8 px-6 rounded-[32px] flex flex-col justify-center z-20 relative"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          
+          {/* Heading */}
+          <div className="flex flex-col justify-center items-center mb-8">
+            <SectionIntro
+              heading="Trusted by Pros"
+              text={`(if "accuracy" is implied)`}
+              headingStyle="text-white text-[32px] leading-[100%] max-w-full tracking-[-3%] mb-3!"
+              textStyle="text-white text-sm italic font-medium font-varien leading-[100%]! text-center max-w-full mb-0!"
+              className="text-center"
+            />
+          </div>
+
+          {/* Profile Image */}
+          <div className="flex justify-center items-center mb-6">
+            <div className="relative w-32 h-32 rounded-full border-4 border-white overflow-hidden flex-shrink-0">
+              <Image
+                src={currentTestimonial.image}
+                alt={currentTestimonial.name}
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Testimonial Card */}
+          <div className="w-full bg-[#F0FEFF] border-4 border-black rounded-[24px] py-5 px-5 flex flex-col gap-4 items-center text-center transition-all duration-500 mb-6">
+            <div>
+              <p className="text-black text-base font-bold leading-[150%] mb-3">
+                {currentTestimonial.comment}
+              </p>
+              <h3 className="text-black text-base font-black font-satoshi">
+                {currentTestimonial.name}, {currentTestimonial.role}
+              </h3>
+            </div>
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex gap-2 justify-center items-center">
+            {testimonialData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? "w-8 h-2 bg-white"
+                    : "w-2 h-2 bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Desktop view for screens >= sm (640px)
   return (
     <div className="pt-3.5 px-[36px] flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[var(--blueBg)] pt-12 xl:pt-14 pb-12 lg:pb-[50px] pl-10 lg:pl-12 xl:pl-20 pr-10 rounded-[40px] flex flex-col justify-center z-20 relative">
@@ -70,7 +162,7 @@ const HomeTestimonials = () => {
             {/* Left pointer button */}
             <button
               onClick={handlePrev}
-              className="absolute -left-6 md:-left-0 md:left-0 xl:left-10 z-40 p-2 hover:scale-110 transition-transform duration-200 flex-shrink-0 mt-20"
+              className="absolute -left-6 md:left-0 xl:left-10 z-40 p-2 hover:scale-110 transition-transform duration-200 shrink-0 mt-20"
               aria-label="Previous testimonial"
             >
               <Image
@@ -123,7 +215,7 @@ const HomeTestimonials = () => {
             {/* Right pointer button */}
             <button
               onClick={handleNext}
-              className="absolute -right-6 md:-right-0 md:right-0 xl:right-10 z-40 p-2 hover:scale-110 transition-transform duration-200 flex-shrink-0 mt-20"
+              className="absolute -right-6 md:right-0 xl:right-10 z-40 p-2 hover:scale-110 transition-transform duration-200 shrink-0 mt-20"
               aria-label="Next testimonial"
             >
               <Image
@@ -165,7 +257,7 @@ const HomeTestimonials = () => {
           {/*      aria-label={`Go to testimonial ${index + 1}`}*/}
           {/*    />*/}
           {/*  ))}*/}
-          {/*</div>*/}
+          {/*</div> */}
         </div>
       </div>
     </div>

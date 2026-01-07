@@ -34,7 +34,7 @@ const Navbar = () => {
 
         
         {/* Mobile Hamburger Menu & CTA */}
-        <div className="flex items-center gap-4 md:gap-0">
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-0">
           {/* CTA Button */}
           <Button btnText="Start for free" className="inline-block md:hidden" />
 

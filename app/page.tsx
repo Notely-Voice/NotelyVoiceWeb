@@ -10,7 +10,7 @@ import StartSpeaking from "@/components/sections/StartSpeaking";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <HomeHero  />
       <HomeDownload />
       <HomeTyping />

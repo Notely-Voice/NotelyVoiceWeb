@@ -35,18 +35,19 @@ const HomeWork = () => {
   };
 
   return (
-    <div className="px-6 xl:px-9 flex flex-col justify-center items-center relative">
+    <div className="px-3 sm:px-6 xl:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[var(--white_bg)] rounded-[40px] flex flex-col justify-center relative">
         <SectionIntro
           bluetext="Built for How You Work"
-          headingStyle="text-black text-[48px] lg:text-[64px] xl:text-[70px] leading-[100%] max-w-full tracking-[-3%] max-w-[1200px] mb-0! lg:mb-6!"
-          className="px-10 lg:px-16 xl:px-20 lg:mb-4"
+          headingStyle="text-black text-3xl sm:text-[48px] lg:text-[64px] xl:text-[70px] leading-[100%] max-w-full tracking-[-3%] max-w-[1200px] mb-0! lg:mb-6!"
+          textStyle="mb-0"
+          className="px-5 sm:px-10 lg:px-16 xl:px-20 mb-0 lg:mb-4"
         />
 
-        <div className="border-4 border-[#3E45FB] bg-white rounded-[40px] overflow-hidden flex justfy-center items-center lg:flex-col flex-col-reverse z-20 relative">
+        <div className="border-4 border-[#3E45FB] bg-white rounded-3xl sm:rounded-[40px] overflow-hidden flex justify-center items-center lg:flex-col flex-col-reverse z-20 relative">
           {/* Desktop layout: all in one row with dashed lines */}
-          <div className="hidden lg:flex bg-[var(--white_bg)] border-b-4 border-[#3E45FB] rounded-[55px] xl:rounded-[65px] py-4 lg:px-10 xl:px-12 justify-start items-center w-[104%]">
-            <SpeakBox minWidth="min-w-[200px]" />
+          <div className="hidden lg:flex bg-[var(--white_bg)] border-b-4 border-[#3E45FB] rounded-[24px] sm:rounded-[55px] xl:rounded-[65px] py-2.5 sm:py-4 lg:px-10 xl:px-12 justify-start items-center w-[104%]">
+            <SpeakBox minWidth="min-w-[160px] sm:min-w-[200px]" />
 
             <div className="mx-3 min-w-14">
               <Image src={icons.dashed_line} alt="dashed line" />
@@ -62,7 +63,7 @@ const HomeWork = () => {
           </div>
 
           {/* Mobile/Tablet layout: SpeakBox + ListenVoiceBox in container above NotesBox */}
-          <div className="lg:hidden flex flex-col gap-4 bg-[var(--white_bg)] border-t-4 border-[#3E45FB] rounded-[40px] pt-10 pb-6 px-4 sm:px-7 overflow-hidden w-[104%]">
+          <div className="lg:hidden flex flex-col gap-4 bg-[var(--white_bg)] border-t-4 border-[#3E45FB] rounded-2xl sm:rounded-[40px] pt-10 pb-6 px-4 sm:px-7 overflow-hidden w-[104%]">
             <div className="bg-white border-4 border-dashed border-[#3E45FB] rounded-[40px] py-4 px-3 sm:px-6 grid grid-cols-2 justify-center items-center gap-4 sm:gap-6">
               <SpeakBox minWidth="sm:min-w-[140px]" />
               <ListenVoiceBox />
@@ -70,7 +71,7 @@ const HomeWork = () => {
             <NotesBox className="max-w-full" />
           </div>
 
-          <div className="bg-white py-10 px-8 grid lg:grid-cols-2 gap-5 justify-center lg:justify-between items-center w-full border-[#3E45FB] rounded-b-[40px]">
+          <div className="bg-white py-10 px-6 sm:px-8 grid lg:grid-cols-2 gap-5 justify-center lg:justify-between items-center w-full border-[#3E45FB] rounded-b-[40px]">
             {/* Desktop buttons (visible on lg and above) */}
             <div className="hidden lg:flex flex-wrap justify-start items-center gap-4 lg:gap-6 mx-auto mt-8 max-w-[480px]">
               {useCaseButtons.map((btn, idx) => (

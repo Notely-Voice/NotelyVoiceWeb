@@ -11,7 +11,7 @@ const HomeNumbers = () => {
   };
 
   return (
-    <div className="pt-3.5 px-6 xl:px-9 flex flex-col justify-center items-center relative">
+    <div className="pt-3.5  sm:px-6 xl:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper w-[80%]! bg-[var(--white_bg)] pt-12 lg:pt-16 xl:pt-20 pb-12 lg:pb-16 xl:pb-20 px-6 lg:px-10 xl:px-14 rounded-[40px] flex flex-col justify-center z-20 relative">
         
           <SectionIntro
@@ -30,15 +30,15 @@ const HomeNumbers = () => {
             return (
               <div 
                 key={index} 
-                className="flex justify-center items-center"
+                className={`flex justify-center items-center ${index === 2 || index === 3 ? "-mt-36 md:mt-0" : ""}`}
               >
                 <div className="relative w-full flex items-center">
                   {/* Background Image */}
                   <div
                     className={`relative flex items-center justify-center ${
                       isRectangle
-                        ? "w-64 sm:w-56 h-60 md:h-48 lg:h-56 mb-[40%] -ml-1 xl:-ml-1.5"
-                        : "w-56 sm:w-48 md:w-52 lg:w-64 xl:w-72 h-56 sm:h-48 md:h-52 lg:h-64 xl:h-72 mt-[40%] -ml-4 sm:-ml-20 md:-ml-5 lg:-ml-7"
+                        ? "w-64 sm:w-56 h-60 md:h-48 lg:h-56 mb-[65%] sm:mb-[40%] -ml-4 sm:-ml-1 xl:-ml-1.5"
+                        : "w-56 sm:w-48 md:w-52 lg:w-64 xl:w-72 h-56 sm:h-48 md:h-52 lg:h-64 xl:h-72 mt-[30%] sm:mt-[40%] -ml-4 sm:-ml-12 md:-ml-5 lg:-ml-7"
                     }`}
                   >
                     <Image
@@ -51,10 +51,10 @@ const HomeNumbers = () => {
 
                     {/* Text Content - Centered on Image */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                      <p className="text-2xl sm:text-2xl lg:text-2xl xl:text-4xl font-black text-black">
+                      <p className="text-base sm:text-2xl lg:text-2xl xl:text-4xl font-black text-black">
                         {stat.number}
                       </p>
-                      <p className="text-sm lg:text-base xl:text-lg font-medium text-black">
+                      <p className="text-[10px] sm:text-sm lg:text-base xl:text-lg leading-tight font-medium text-black">
                         {stat.label}
                       </p>
                     </div>
