@@ -28,11 +28,11 @@ const CreateNotesTool = () => {
           <CreateToolCanvas />
         </div>
 
-        <div className="border-2 sm:border-4 border-white py-2 sm:py-4 px-3 sm:px-6 mb-6 sm:mb-12 rounded-2xl sm:rounded-[40px] min-h-[100px] sm:min-h-[190px] relative flex flex-col justify-between">
-          <p className="font-black text-xs sm:text-base text-white">Space exploration</p>
+        <div className="border-2 sm:border-4 border-white py-2 sm:py-4 px-3 sm:px-6 mb-6 sm:mb-12 rounded-2xl sm:rounded-[40px] min-h-[90px] sm:min-h-[190px] relative flex flex-col justify-between">
+          <p className="font-black text-[10px] sm:text-base text-white">Space exploration</p>
 
           <div className="flex justify-between items-end">
-            <div className="bg-white rounded-full text-black py-1 sm:py-2 px-3 sm:px-6 text-xs sm:text-base font-bold w-fit">
+            <div className="bg-white rounded-full text-black py-0.5 sm:py-2 px-3 sm:px-6 text-[10px] sm:text-base font-bold w-fit">
               Note
             </div>
           </div>

@@ -10,14 +10,14 @@ const CustomTool = () => {
       </p>
 
       {/* <div className="mt-6"> */}
-      <div className="mt-8 sm:mt-16 -mb-10 sm:-mb-20 min-h-[280px] sm:min-h-[560px] w-[160px] sm:w-[320px] bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[40px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-between relative">
+      <div className="mt-8 sm:mt-16 -mb-10 sm:-mb-20 min-h-[280px] sm:min-h-[560px] w-[160px] sm:w-[320px] bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[30px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-between relative">
         <div className="bg-[#F0FEFF] rounded-full w-16 sm:w-[105px] h-3 sm:h-7 mx-auto"></div>
 
         <div className="absolute -top-8 sm:-top-16 -right-12 sm:-right-24 mx-auto z-10">
           <Image
             src={icons.curly_dotted_line_extended}
             alt="curly dotted line pointing towards what's on the phone"
-            className="w-16 sm:w-[240px]"
+            className="w-24 sm:w-[240px]"
           />
         </div>
 
@@ -25,11 +25,11 @@ const CustomTool = () => {
           <CustomToolCanvas />
         </div>
 
-        <div className="border-2 sm:border-4 border-white py-2 sm:py-4 px-3 sm:px-6 mb-8 sm:mb-16 rounded-2xl sm:rounded-[30px] min-h-[100px] sm:min-h-[180px] relative flex flex-col justify-between">
-          <p className="font-black text-base text-white">Space exploration</p>
+        <div className="border-2 sm:border-4 border-white py-2 sm:py-4 px-3 sm:px-6 mb-8 sm:mb-16 rounded-2xl sm:rounded-[30px] min-h-[90px] sm:min-h-[180px] relative flex flex-col justify-between">
+          <p className="font-black  text-[10px] sm:text-base text-white">Space exploration</p>
 
           <div className="flex justify-between items-end">
-            <div className="bg-white rounded-full text-black py-2 px-6 text-base font-bold w-fit">
+            <div className="bg-white rounded-full text-black py-0.5 sm:py-2 px-3 sm:px-6 text-[10px] sm:text-base font-bold w-fit">
               Note
             </div>
           </div>

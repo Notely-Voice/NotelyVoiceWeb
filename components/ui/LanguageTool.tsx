@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { icons } from "@/lib";
 import Image from "next/image";
+import { useResponsive } from "@/hooks/useResponsive";
 
 const languagesAll = [
   "English",
@@ -16,6 +17,17 @@ const LanguageTool: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const [query, setQuery] = useState<string>("");
   const intervalRef = useRef<number | null>(null);
+  const screenSize = useResponsive();
+
+  // Calculate offset based on screen size (button height + gap)
+  const getItemOffset = () => {
+    if (screenSize === 'xxs' || screenSize === 'xs') {
+      // Mobile: text-sm (14px) + py-1.5 (12px) + gap-2 (8px) = ~34px
+      return 40;
+    }
+    // Desktop: text-lg (18px) + py-1.5 (12px) + gap-3 (12px) = ~52px
+    return 52;
+  };
 
   useEffect(() => {
     // timings (ms)
@@ -52,7 +64,7 @@ const LanguageTool: React.FC = () => {
   }, [query]);
 
   return (
-    <div className="border-4 sm:border-8 border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-2xl sm:rounded-[50px] pt-4 sm:pt-7 px-4 sm:px-8 mx-auto overflow-hidden">
+    <div className="border-4 sm:border-8 border-[#C3FBFF] bg-white w-fit flex flex-col justify-center items-center rounded-2xl sm:rounded-[50px] pt-4 sm:pt-7 px-2 sm:px-8 mx-auto overflow-hidden">
       <p className="font-bold text-base sm:text-[26px] leading-5 sm:leading-7 tracking-[-6%] text-center">
         Transcribe audio in multiple languages with built-in multilingual
         support. Ideal for international teams, language learners, and global
@@ -60,16 +72,16 @@ const LanguageTool: React.FC = () => {
       </p>
 
         <div
-          className={`mt-8 sm:mt-16 -mb-10 sm:-mb-20 -ml-2 sm:-ml-5 bg-[var(--blueBg)] min-h-[280px] sm:min-h-[560px] xl:min-h-[580px] w-[130px] sm:w-[260px] xl:w-[280px] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-start relative transition-all duration-600 ease-in-out `}
+          className={`mt-8 sm:mt-16 -mb-10 sm:-mb-20 -ml-2 sm:-ml-5 bg-[var(--blueBg)] min-h-[280px] sm:min-h-[560px] xl:min-h-[580px] w-[180px] sm:w-[260px] xl:w-[280px] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-start relative transition-all duration-600 ease-in-out `}
         >
           <div className="bg-[#F0FEFF] rounded-full mt-1 sm:mt-1.5 w-8 sm:w-[105px] h-2 sm:h-7 mx-auto"></div>
 
-          <div className="absolute top-10 sm:top-20 -right-16 sm:-right-26 mx-auto w-fit pointer-events-none z-10">
+          <div className="absolute top-16 sm:top-20 -right-8 sm:-right-26 mx-auto w-fit pointer-events-none z-10">
             <Image
               src={icons.curly_dotted_line_black}
               alt="curly dotted line pointing towards what's on the phone"
               width={120}
-              className="w-8 sm:w-full"
+              className="w-16 sm:w-full"
             />
           </div>
 
@@ -95,13 +107,13 @@ const LanguageTool: React.FC = () => {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search"
-                  className="bg-transparent focus:outline-none w-full text-white placeholder-white/80"
+                  className="bg-transparent focus:outline-none w-full text-white placeholder-white/80 text-xs sm:text-sm"
                 />
               </div>
             </div>
 
             <div className="w-full px-2 pt-4 overflow-hidden">
-              <ul className="flex flex-col gap-3 absolute left-0 right-0 mx-auto">
+              <ul className="flex flex-col gap-2 sm:gap-3 absolute left-0 right-0 mx-auto">
                 {filtered.map((lang, idx) => (
                   <li key={lang}>
                     <button
@@ -110,12 +122,12 @@ const LanguageTool: React.FC = () => {
                         setExpanded(false);
                         setQuery("");
                       }}
-                      className="bg-[#F0FEFF] text-start text-black text-lg tracking-[-3%] rounded-full px-6 py-1.5 w-full font-medium"
+                      className="bg-[#F0FEFF] text-start text-black text-sm sm:text-lg tracking-[-3%] rounded-full px-6 py-1.5 w-full font-medium"
                       style={{
                         zIndex: `${idx === 0 && 20}`,
                         transform: expanded
                           ? "translateY(0)"
-                          : `translateY(${-idx * 52}px)`,
+                          : `translateY(${-idx * getItemOffset()}px)`,
                         transition: `transform 600ms cubic-bezier(.2,.8,.2,1) ${
                           expanded ? idx * 30 : (filtered.length - 1 - idx) * 30
                         }ms`,

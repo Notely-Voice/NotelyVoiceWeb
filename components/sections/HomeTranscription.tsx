@@ -38,14 +38,14 @@ const HomeTranscription = () => {
 
   return (
     <div className="px-4 sm:px-6 xl:px-9 mb-12 sm:mb-24 flex flex-col justify-center items-center relative">
-      <div className="wrapper bg-[var(--white_bg)] rounded-3xl sm:rounded-[40px] flex flex-col justify-center z-20 relative">
+      <div className="wrapper bg-[var(--white_bg)] rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="Your Smarter Transcription Toolkit"
           headingStyle="text-black text-[32px] sm:text-[48px] lg:text-[64px] xl:text-[70px] leading-[100%] max-w-full tracking-[-3%] max-w-[1200px] mb-0! sm:mb-6! lg:mb-6!"
           className="px-5 sm:px-10 lg:px-16 xl:px-20 lg:mb-4"
         />
 
-        <div className="bg-black py-6 sm:py-10 px-4 sm:px-5 rounded-2xl sm:rounded-[40px] grid lg:grid-cols-2 lg:grid-rows-1 gap-3 z-20 relative">
+        <div className="bg-black py-6 sm:py-10 px-3 sm:px-5 rounded-3xl sm:rounded-[40px] grid lg:grid-cols-2 lg:grid-rows-1 gap-3 z-20 relative">
           <div className="flex flex-wrap lg:flex-col justify-center items-center gap-2 sm:gap-4 lg:gap-6 mx-auto mt-4 sm:mt-8 order-2 lg:order-1">
             {toolkitButtons.map((btn, idx) => (
               <Button

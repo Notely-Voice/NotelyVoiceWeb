@@ -30,12 +30,12 @@ const CustomToolCanvas = () => {
       </p>
 
       <div
-        className={`w-18 sm:w-36 flex ${isNightMode && "flex-row-reverse"} justify-between items-center gap-1 sm:gap-3 py-0.5 sm:py-1 ${isNightMode ? "px-1 sm:px-1.5" : "pl-2 sm:pl-5 pr-1 sm:pr-1.5"} border-2 sm:border-[3px] border-[#F0FEFF] rounded-full w-fit transition-all duration-700 ${
+        className={`w-max sm:w-max flex ${isNightMode && "flex-row-reverse"} justify-between items-center gap-1 sm:gap-3 py-0.5 sm:py-1 ${isNightMode ? "px-1 sm:px-1.5" : "pl-2 sm:pl-5 pr-1 sm:pr-1.5"} border-2 sm:border-[3px] border-[#F0FEFF] rounded-full w-fit transition-all duration-700 ${
           isNightMode ? "bg-[#3E45FB]" : "bg-black"
         }`}
       >
         <p
-          className={`text-[10px] sm:text-base font-bold w-fit transition-colors duration-700 ${
+          className={`text-[10px] sm:text-base font-bold w-max transition-colors duration-700 ${
             isNightMode ? "text-white" : "text-[#F0FEFF]"
           }`}
         >

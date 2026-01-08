@@ -12,10 +12,10 @@ const TextEditTool = () => {
       </p>
 
       {/* <div className="mt-6"> */}
-      <div className="mt-8 sm:mt-16 -mb-10 sm:-mb-20 min-h-[280px] sm:min-h-[580px] w-[150px] sm:w-[300px] bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-start relative">
+      <div className="mt-8 sm:mt-16 -mb-10 sm:-mb-20 min-h-[280px] sm:min-h-[580px] w-[170px] sm:w-[300px] bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-start relative">
         <div className="bg-[#F0FEFF] rounded-full mt-1 sm:mt-1.5 w-16 sm:w-[105px] h-3 sm:h-7 mx-auto"></div>
 
-        <div className="absolute -top-6 sm:-top-12 rotate-2 -right-20 sm:-right-44 lg:-right-36 mx-auto w-fit">
+        <div className="absolute -top-6 sm:-top-12 rotate-2 -right-10 sm:-right-44 lg:-right-36 mx-auto w-fit">
           <Image
             src={icons.curly_dotted_line_long}
             alt="curly dotted line pointing towards what's on the phone"
@@ -24,13 +24,13 @@ const TextEditTool = () => {
           />
         </div>
 
-        <p className="font-black text-xs sm:text-sm text-white mt-6 sm:mt-10">
+        <p className="font-black text-[8px] sm:text-sm text-white mt-6 sm:mt-10">
           Write freely with simple formatting tools like bold, italics, and
           underline. Keep your notes clean and readable without unnecessary
           clutter.
         </p>
 
-        <div className="absolute top-[40%] -left-8 sm:-left-12 xl:-left-16">
+        <div className="absolute top-[45%] sm:top-[40%] -left-8 sm:-left-12 xl:-left-16">
           <EditingToolCanvas />
         </div>
 
