@@ -94,9 +94,24 @@ const HomeTestimonials = () => {
             />
           </div>
 
-          {/* Profile Image */}
-          <div className="flex justify-center items-center mb-6">
-            <div className="relative w-32 h-32 rounded-full border-4 border-white overflow-hidden flex-shrink-0">
+          {/* Profile Image with Navigation */}
+          <div className="relative flex justify-center items-center mb-6">
+            {/* Left pointer button */}
+            <button
+              onClick={handlePrev}
+              className="absolute -left-4 z-40 p-1 hover:scale-110 transition-transform duration-200 shrink-0"
+              aria-label="Previous testimonial"
+            >
+              <Image
+                src={icons.left_pointer}
+                alt="Previous"
+                width={40}
+                height={40}
+                className="w-8 h-8"
+              />
+            </button>
+
+            <div className="relative w-32 h-32 rounded-full border-4 border-white overflow-hidden shrink-0">
               <Image
                 src={currentTestimonial.image}
                 alt={currentTestimonial.name}
@@ -104,6 +119,21 @@ const HomeTestimonials = () => {
                 className="rounded-full object-cover"
               />
             </div>
+
+            {/* Right pointer button */}
+            <button
+              onClick={handleNext}
+              className="absolute -right-4 z-40 p-1 hover:scale-110 transition-transform duration-200 shrink-0"
+              aria-label="Next testimonial"
+            >
+              <Image
+                src={icons.right_pointer}
+                alt="Next"
+                width={40}
+                height={40}
+                className="w-8 h-8"
+              />
+            </button>
           </div>
 
           {/* Testimonial Card */}

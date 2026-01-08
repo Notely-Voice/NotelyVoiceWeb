@@ -85,7 +85,7 @@ const Button = ({
       ) : isDownload ? (
         <button
           onClick={onClick}
-          className={`flex items-center py-2 pl-2 pr-10 sm:py-2.5 sm:pl-6 sm:pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
+          className={`flex items-center justify-center py-2 pl-3.5 pr-4 sm:py-2.5 sm:pl-6 sm:pr-10 bg-[#F0F8FF] rounded-full border-[3px] hover:border-[#3E45FB] focus:border-[#3E45FB] cursor-pointer ${className}`}
         >
           <Image
             src={storeIcon || icons.Playstore}
@@ -105,7 +105,7 @@ const Button = ({
         <button
           onClick={onClick}
           className={
-            "font-varien font-normal uppercase py-3.5 px-6 border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-lg lg:text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
+            "font-varien font-normal uppercase py-2.5 px-3 sm:py-3.5 sm:px-6 border-4 sm:border-7 border-white rounded-full hover:bg-[var(--blueBg)] focus:bg-[var(--blueBg)] text-[10px] sm:text-lg lg:text-2xl xl:text-[28px] text-white leading-[100%] tracking-[-3%] cursor-pointer " +
             className
           }
         >

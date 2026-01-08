@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = ({ bgColor }: { bgColor: string }) => {
   return (
-    <div className="pb-8 px-6 xl:px-8 mt-10 md:mt-20 lg:mt-32">
+    <div className="pb-8 px-4 sm:px-6 xl:px-8 mt-10 md:mt-20 lg:mt-32">
       <div
         className={`py-16 px-6 md:px-10 lg:px-16 xl:px-28 wrapper mx-auto rounded-4xl xl:rounded-[40px] ${bgColor}`}
       >
