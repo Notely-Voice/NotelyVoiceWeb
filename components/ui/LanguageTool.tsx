@@ -74,7 +74,7 @@ const LanguageTool: React.FC = () => {
         <div
           className={`mt-8 sm:mt-16 -mb-10 sm:-mb-20 -ml-2 sm:-ml-5 bg-[var(--blueBg)] min-h-[280px] sm:min-h-[560px] xl:min-h-[580px] w-[180px] sm:w-[260px] xl:w-[280px] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[50px] py-3 sm:py-5 px-3 sm:px-5 flex flex-col justify-start relative transition-all duration-600 ease-in-out `}
         >
-          <div className="bg-[#F0FEFF] rounded-full mt-1 sm:mt-1.5 w-8 sm:w-[105px] h-2 sm:h-7 mx-auto"></div>
+          <div className="bg-[#F0FEFF] rounded-full w-8 sm:w-[105px] h-2 sm:h-7 mx-auto"></div>
 
           <div className="absolute top-16 sm:top-20 -right-8 sm:-right-26 mx-auto w-fit pointer-events-none z-10">
             <Image
@@ -140,6 +140,7 @@ const LanguageTool: React.FC = () => {
               </ul>
             </div>
           </div>
+
         </div>
     </div>
   );
