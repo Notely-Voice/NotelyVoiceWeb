@@ -47,6 +47,8 @@ import appstore from '../assets/icons/appstore.svg';
 import linkedin_blue from '../assets/icons/linkedin_blue.svg';
 import instagram_blue from '../assets/icons/instagram_blue.svg';
 import twitter_blue from '../assets/icons/twitter_blue.svg';
+import copy from '../assets/icons/copy.svg';
+import share from '../assets/icons/share.svg';
 
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
@@ -132,6 +134,8 @@ export const icons = {
   linkedin_blue,
   instagram_blue,
   twitter_blue,
+  copy,
+  share,
 };
 
 export const images = {

@@ -143,7 +143,7 @@ const FeaturesHero = () => {
             </div> */}
 
             <div className="w-full px-2 pt-2 sm:pt-4 overflow-hidden">
-              <ul className="flex flex-col gap-1 sm:gap-2 lg:gap-3 absolute left-0 right-0 mx-auto">
+              <ul className="flex flex-col gap-1 sm:gap-2 lg:gap-3 absolute left-0 right-0 mx-auto overflow-y-hidden">
                 {filtered.map((item, idx) => (
                   <li key={item.href}>
                     <a

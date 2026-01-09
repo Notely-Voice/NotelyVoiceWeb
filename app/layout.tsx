@@ -114,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="custom-scrollbar">
+    <html lang="en" className="custom-scrollbar scroll-smooth">
       <body
         suppressHydrationWarning
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} ${notoSerifTamil.variable} bg-white flex justify-center`}

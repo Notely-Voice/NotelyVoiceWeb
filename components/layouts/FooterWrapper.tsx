@@ -9,16 +9,19 @@ const FooterWrapper = () => {
   const dynamicColors = [
     {
       bgColor: "bg-[#3E45FB]",
+      wrapperBgColor: "bg-[#F0FEFF]",
       textColor: "text-white",
       isWhiteButton: true,
     },
     {
       bgColor: "bg-black",
+      wrapperBgColor: "bg-white",
       textColor: "text-white",
       isBlackText: true, 
     },
     {
       bgColor: "bg-white",
+      wrapperBgColor: "bg-[#3E45FB]",
       textColor: "text-[#3E45FB]",
       isBlueButton: true,
       isBlueLogo: true,
@@ -26,11 +29,13 @@ const FooterWrapper = () => {
     },
     {
       bgColor: "bg-black",
+      wrapperBgColor: "bg-[#F0FEFF]",
       textColor: "text-white",
       isBlackText: true,
     },
     {
       bgColor: "bg-[#F0FEFF]",
+      wrapperBgColor: "bg-black",
       textColor: "text-[#3E45FB]",
       isBlueText: true,
       isBlueLogo: true,
@@ -38,6 +43,7 @@ const FooterWrapper = () => {
     },
     {
       bgColor: "bg-[#3E45FB]",
+      wrapperBgColor: "bg-white",
       textColor: "text-white",
       isWhiteButton: true,
     },
@@ -77,6 +83,7 @@ const FooterWrapper = () => {
       isWhiteButton={footerProps.isWhiteButton}
       isBlueLogo={footerProps.isBlueLogo}
       isSocialBlue={footerProps.isSocialBlue}
+      wrapperBgColor={footerProps.wrapperBgColor}
     />
   );
 };
