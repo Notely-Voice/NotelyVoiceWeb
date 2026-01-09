@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter, Instrument_Sans, Noto_Serif_Tamil } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layouts/Navbar";
+import NavbarWrapper from "@/components/layouts/NavbarWrapper";
 import Footer from "@/components/layouts/Footer";
+import FooterWrapper from "@/components/layouts/FooterWrapper";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -119,9 +120,9 @@ export default function RootLayout({
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} ${notoSerifTamil.variable} bg-white flex justify-center`}
       >
         <div className="mx-auto flex flex-col justify-between min-h-screen w-full">
-          <Navbar />
+          <NavbarWrapper />
           {children}
-          <Footer bgColor="bg-[#3E45FB]" />
+          <FooterWrapper />
         </div>
       </body>
     </html>

@@ -10,6 +10,7 @@ const Button = ({
   hasThickBorder,
   isDownload,
   isWhite,
+  isBlackText,
   btnText,
   className,
   downloadCta,
@@ -23,6 +24,7 @@ const Button = ({
   hasThickBorder?: boolean;
   isDownload?: boolean;
   isWhite?: boolean;
+  isBlackText?: boolean;
   btnText?: string;
   className?: string;
   downloadCta?: string;
@@ -116,11 +118,15 @@ const Button = ({
           onClick={onClick}
           className={`font-satoshi py-2.5 px-2.5 sm:py-3 sm:px-3.5 lg:py-4 lg:px-6 rounded-xl ${
             isWhite
-              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"
+              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-wh7ite focus:border-white"
+              : isBlackText
+              ? "bg-white hover:bg-transparent border hover:border-white focus:border-white"  
               : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border hover:border-[#3E45FB] focus:border-[#3E45FB]"
           } text-xs sm:text-sm lg:text-base leading-[100%] tracking-normal ${
             isWhite
               ? "text-[#3E45FB] hover:text-white focus:text-white"
+              : isBlackText
+              ? "text-black hover:text-white focus:text-white"
               : "text-[#F2FFFF] hover:text-[#3E45FB] focus:text-[#3E45FB]"
           } font-black cursor-pointer ${className}`}
         >

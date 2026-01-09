@@ -39,6 +39,15 @@ import down_dotted_icon from '../assets/icons/down_dotted_line.svg';
 import up_arrow_icon from '../assets/icons/up_arrow_line.svg';
 import slanted_phone from '../assets/icons/slant_phone.svg';
 import dashed_line from '../assets/icons/dashed_line.svg';
+import windows from '../assets/icons/windows.svg';
+import linux from '../assets/icons/linux.svg';
+import android from '../assets/icons/android.svg';
+import apple_white from '../assets/icons/apple_white.svg';
+import appstore from '../assets/icons/appstore.svg';
+import linkedin_blue from '../assets/icons/linkedin_blue.svg';
+import instagram_blue from '../assets/icons/instagram_blue.svg';
+import twitter_blue from '../assets/icons/twitter_blue.svg';
+
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
 import up_arrow_line from '../assets/images/up_arrow_line.png';
@@ -59,6 +68,7 @@ import voice2 from '../assets/images/voice2.png';
 import voice3 from '../assets/images/voice3.png';
 import voice4 from '../assets/images/voice4.png';
 import notely_voice_logo_white from '../assets/images/notely_voice_logo_white.png';
+import notely_voice_logo_blue from '../assets/images/notely_voice_logo_blue.png';
 import notely_voice_logo from '../assets/images/notely_voice_logo.png';
 import notely_voice_icon_white from '../assets/icons/notely_voice_icon_white.svg';
 import notely_voice_icon from '../assets/icons/notely_voice_logo.svg';
@@ -114,6 +124,14 @@ export const icons = {
   down_dotted_icon,
   up_arrow_icon,
   slanted_phone,
+  windows,
+  linux,
+  android,
+  apple_white,
+  appstore,
+  linkedin_blue,
+  instagram_blue,
+  twitter_blue,
 };
 
 export const images = {
@@ -137,6 +155,7 @@ export const images = {
   voice4,
   notely_voice_logo_white,
   notely_voice_logo,
+  notely_voice_logo_blue,
   curly_border_circle,
   rounded_rectangle,
 };

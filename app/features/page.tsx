@@ -1,7 +1,11 @@
+import FeaturesHero from "@/components/sections/FeaturesHero";
+
 function Features() {
   return (
-    <div>Features</div>
-  )
+    <div className="bg-white">
+      <FeaturesHero />
+    </div>
+  );
 }
 
-export default Features
+export default Features;

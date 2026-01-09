@@ -35,3 +35,9 @@ export const socialMediaLinks: Array<{ icon: string; href: string, width: number
   { icon: icons.twitter, href: "https://x.com/notelyvoice", width: 32, height: 32 },
   { icon: icons.instagram, href: "https://www.instagram.com/notelyvoice", width: 40, height: 40 },
 ];
+
+export const blueSocialMediaLinks: Array<{ icon: string; href: string, width: number, height: number }> = [
+  { icon: icons.linkedin_blue, href: "https://www.linkedin.com/company/notelyvoice", width: 40, height: 40 },
+  { icon: icons.twitter_blue, href: "https://x.com/notelyvoice", width: 32, height: 32 },
+  { icon: icons.instagram_blue, href: "https://www.instagram.com/notelyvoice", width: 40, height: 40 },
+];

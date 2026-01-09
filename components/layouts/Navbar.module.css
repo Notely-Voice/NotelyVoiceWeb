@@ -1,0 +1,35 @@
+.navLink {
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+/* Black text variant - blue underline */
+.navLinkBlack::after {
+  background-color: var(--blueBg);
+}
+
+/* White text variant - white underline */
+.navLinkWhite::after {
+  background-color: white;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLink:focus::after {
+  transform: scaleX(1);
+}
