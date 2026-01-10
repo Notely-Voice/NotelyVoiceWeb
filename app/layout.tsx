@@ -119,7 +119,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} ${notoSerifTamil.variable} bg-white flex justify-center`}
       >
-        <div className="mx-auto flex flex-col justify-between min-h-screen w-full">
+        <div className="mx-auto flex flex-col justify-between min-h-screen w-full relative">
           <NavbarWrapper />
           {children}
           <FooterWrapper />
