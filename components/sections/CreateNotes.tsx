@@ -1,5 +1,7 @@
 import Button from "../ui/Button";
 import RoundedNotesBox from "../ui/RoundedNotesBox";
+import {createNotesCardsData} from "@/contents/featuresData";
+import Image from "next/image";
 
 const CreateNotes = () => {
   return (
@@ -7,7 +9,7 @@ const CreateNotes = () => {
       id="create-notes"
       className="pt-3.5 px-4 sm:px-9 flex flex-col justify-center items-center relative scroll-mt-20"
     >
-      <div className="wrapper overflow-hidden bg-black py-12 xl:py-20 px-6 sm:px-10 lg:px-12 xl:px-24 border-4 border-black rounded-[20px] sm:rounded-[40px] flex flex-col lg:flex-row z-20 relative">
+      <div className="wrapper overflow-hidden bg-black py-12 xl:py-20 px-6 sm:px-10 lg:px-12 xl:px-20 border-4 border-black rounded-[20px] sm:rounded-[40px] flex flex-col z-20 relative">
 
         <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10">
           <div>
@@ -37,7 +39,34 @@ const CreateNotes = () => {
           <RoundedNotesBox />
         </div>
 
-        <div></div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 w-full mt-20">
+          {createNotesCardsData.map((card, i) => (
+            <div key={i}
+                 className={`flex flex-col items-start gap-2.5 py-4 sm:py-6 px-3 sm:px-6 border-4 border-[#7C7C7C] rounded-2xl sm:rounded-[24px]`}>
+                {/* <div
+                  className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 flex justify-center items-center rounded-full flex-shrink-0`}
+                > */}
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    className={`w-6 sm:w-10 h-6 sm:h-10`}
+                  />
+                {/* </div> */}
+                <div>
+                  <h3
+                    className={`font-varien text-[#F0FEFF] font-normal text-sm sm:text-xl lg:text-lg xl:text-2xl leading-[120%] tracking-[-1.5%] mb-2`}
+                  >
+                    {card.title}
+                  </h3>
+                  <p
+                    className={`font-medium text-[8px] sm:text-base lg:text-sm xl:text-base leading-[130%] tracking-[-1.5%] text-gray-300`}
+                  >
+                    {card.description}
+                  </p>
+                </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

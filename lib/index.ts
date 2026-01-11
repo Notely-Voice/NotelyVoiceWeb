@@ -49,6 +49,10 @@ import instagram_blue from '../assets/icons/instagram_blue.svg';
 import twitter_blue from '../assets/icons/twitter_blue.svg';
 import copy from '../assets/icons/copy.svg';
 import share from '../assets/icons/share.svg';
+import search_white from '../assets/icons/search.svg';
+import microphone from '../assets/icons/microphone.svg';
+import star from '../assets/icons/star.svg';
+import recent from '../assets/icons/recent.svg';
 
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
@@ -136,6 +140,10 @@ export const icons = {
   twitter_blue,
   copy,
   share,
+  search_white,
+  microphone,
+  star,
+  recent,
 };
 
 export const images = {
