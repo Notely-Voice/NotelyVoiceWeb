@@ -77,8 +77,7 @@ const TextEdit = () => {
           <Button
             btnText="create notes"
             isRounded
-            className={`px-6 sm:px-12 py-3.5 lg:px-12 w-fit font-varien font-regular text-xs sm:text-sm lg:text-base hover:text-black! hover:bg-white! focus:text-black! focus:bg-white! cursor-text transition-all`}
-          />
+            className={`px-6 sm:px-12 py-3.5 lg:px-12 w-fit font-varien font-regular text-xs sm:text-sm lg:text-base bg-black! hover:text-white! hover:bg-black! focus:text-white! focus:bg-black! cursor-text transition-all`} />
 
           <h1
             className={`font-varien leading-[100%] tracking-[-3%] font-normal text-left md:text-right text-black lg:max-w-100 xl:max-w-128 text-[40px] sm:text-[68px] md:text-[48px] lg:text-[52px] xl:text-[72px]`}

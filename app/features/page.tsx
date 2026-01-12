@@ -1,6 +1,7 @@
 import CreateNotes from "@/components/sections/CreateNotes";
 import FeaturesHero from "@/components/sections/FeaturesHero";
 import TextEdit from "@/components/sections/TextEdit";
+import TranscribeAudio from "@/components/sections/TranscribeAudio";
 
 function Features() {
   return (
@@ -8,6 +9,7 @@ function Features() {
       <FeaturesHero />
       <CreateNotes />
       <TextEdit />
+      <TranscribeAudio />
     </div>
   );
 }
