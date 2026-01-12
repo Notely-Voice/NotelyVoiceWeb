@@ -102,7 +102,7 @@ const TranscribeAudio = () => {
 
         {/* </div> */}
 
-          <div className="min-h-[480px] sm:min-h-[560px] xl:min-h-[620px] max-w-70 w-fit bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[60px] py-3 sm:py-5 px-2.5 sm:px-5 flex flex-col justify-between relative">
+          <div className="min-h-[480px] sm:min-h-[560px] xl:min-h-[620px] max-w-70 sm:max-w-fit w-fit bg-[var(--blueBg)] border-4 sm:border-8 border-black rounded-[35px] sm:rounded-[60px] py-3 sm:py-5 px-2.5 sm:px-5 flex flex-col justify-between relative">
             <div className="bg-[#F0FEFF] rounded-full w-[90px] h-5 sm:h-7 mx-auto"></div>
 
             <p className="font-black text-xs sm:text-sm text-white max-w-[300px] py-16 sm:py-18 px-6 sm:px-10 bg-[#1C00C4] rounded-4xl sm:rounded-[40px] mt-6 sm:mt-12 mb-10">
