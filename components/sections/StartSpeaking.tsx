@@ -115,7 +115,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
                 color: bgColor === "black" ? "black" : "white",
               }}
             >
-              <div className="text-sm font-semibold tracking-[-3%] font-instrument whitespace-nowrap">
+              <div className={`text-sm font-semibold tracking-[-3%] font-instrument whitespace-nowrap`}>
                 Listening
               </div>
               <Image
@@ -134,7 +134,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
                 color: bgColor === "black" ? "black" : "#F0FEFF",
               }}
             >
-              <div className="text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap">
+                <div className={"text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap"}>
                 Transcribed
               </div>
               <Image

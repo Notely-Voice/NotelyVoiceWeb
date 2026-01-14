@@ -26,7 +26,7 @@ const CustomToolCanvas = () => {
           isNightMode ? "text-[#F0FEFF]" : "text-black"
         }`}
       >
-        Choose what the app fools like
+        Choose what the app feels like
       </p>
 
       <div

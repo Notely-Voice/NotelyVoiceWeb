@@ -5,6 +5,7 @@ import TranscribeAudio from "@/components/sections/TranscribeAudio";
 import Languages from "@/components/sections/Languages";
 import AudioRecorder from "@/components/sections/AudioRecorder";
 import StartSpeaking from "@/components/sections/StartSpeaking";
+import CustomTheme from "@/components/sections/CustomTheme";
 
 function Features() {
   return (
@@ -15,6 +16,7 @@ function Features() {
       <TranscribeAudio />
       <Languages />
       <AudioRecorder />
+      <CustomTheme />
       <StartSpeaking
         bgColor="#F0FEFF"
         borderColor="black"
