@@ -2,6 +2,9 @@ import CreateNotes from "@/components/sections/CreateNotes";
 import FeaturesHero from "@/components/sections/FeaturesHero";
 import TextEdit from "@/components/sections/TextEdit";
 import TranscribeAudio from "@/components/sections/TranscribeAudio";
+import Languages from "@/components/sections/Languages";
+import AudioRecorder from "@/components/sections/AudioRecorder";
+import StartSpeaking from "@/components/sections/StartSpeaking";
 
 function Features() {
   return (
@@ -10,6 +13,16 @@ function Features() {
       <CreateNotes />
       <TextEdit />
       <TranscribeAudio />
+      <Languages />
+      <AudioRecorder />
+      <StartSpeaking
+        bgColor="#F0FEFF"
+        borderColor="black"
+        titleColor="black"
+        textColor="black"
+        cardBgColor="blue"
+        isLineBlack
+      />
     </div>
   );
 }

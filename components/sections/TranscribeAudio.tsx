@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react";
 const TranscribeAudio = () => {
   const [expandedItem, setExpandedItem] = useState<string | null>("append");
   return (
-    <div className="pt-3.5 px-4 sm:px-9 flex flex-col justify-center items-center relative">
+    <div id="transcribe-audio" className="pt-3.5 px-4 sm:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper overflow-hidden bg-[#F0FEFF] py-12 xl:py-16 px-6 sm:px-12 lg:px-10 xl:px-20 border-4 border-black rounded-[20px] sm:rounded-[40px] flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-15 lg:gap-10 z-20 relative">
         {/* <div> */}
           <div className="flex flex-col gap-6 ml-0 md:ml-5">
@@ -19,12 +19,12 @@ const TranscribeAudio = () => {
             />
 
             <h1
-              className={`font-varien leading-[100%] tracking-[-3%] font-normal text-black md:max-w-135 lg:max-w-100 xl:max-w-128 text-[40px] sm:text-[68px] md:text-[64px] lg:text-[52px] xl:text-[72px]`}
+              className={`font-varien leading-[100%] tracking-[-3%] font-normal text-black md:max-w-135 lg:max-w-100 xl:max-w-lg text-[40px] sm:text-[68px] md:text-[64px] lg:text-[52px] xl:text-[72px]`}
             >
               Turn Any Audio Into Text
             </h1>
             <p
-              className={`font-medium text-lg md:text-2xl lg:text-2xl xl:text-3xl xl:leading-9 tracking-[-3%] text-black md:max-w-128 lg:max-w-120 xl:max-w-132 md:mb-8 lg:mb-7`}
+              className={`font-medium text-lg md:text-2xl lg:text-2xl xl:text-3xl xl:leading-9 tracking-[-3%] text-black md:max-w-lg lg:max-w-120 xl:max-w-132 md:mb-8 lg:mb-7`}
             >
               Upload recordings, voice memos, or audio files and watch them
               transform into accurate, editable transcripts.

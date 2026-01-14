@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 
 const TextEdit = () => {
   return (
-    <div className="pt-3.5 px-4 sm:px-6 xl:px-9 flex flex-col justify-center items-center relative">
+    <div id="text-editing" className="pt-3.5 px-4 sm:px-6 xl:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper px-0 sm:px-6 lg:px-10 xl:px-14 rounded-3xl sm:rounded-[40px] md:grid lg:grid-rows-1 md:grid-cols-2 flex flex-col-reverse gap-10 md:gap-6 lg:gap-10 justify-center items-center z-20 relative">
         <div className="border-4 sm:border-5 border-dashed border-black bg-[#F0FEFF] w-fit flex flex-col items-center rounded-2xl sm:rounded-[40px] py-8 md:py-8 lg:py-12 xl:py-16 px-4 sm:px-6 md:px-8 lg:px-8 xl:px-14 mx-auto overflow-hidden">
           <div className="flex flex-col gap-4">
@@ -75,9 +75,10 @@ const TextEdit = () => {
 
         <div className="flex flex-col items-start md:items-end gap-6 ml-0 md:ml-5">
           <Button
-            btnText="create notes"
+            btnText="Rich Text Editing"
             isRounded
-            className={`px-6 sm:px-12 py-3.5 lg:px-12 w-fit font-varien font-regular text-xs sm:text-sm lg:text-base bg-black! hover:text-white! hover:bg-black! focus:text-white! focus:bg-black! cursor-text transition-all`} />
+            className={`px-6 sm:px-12 py-3.5 lg:px-12 w-fit font-varien font-regular text-xs sm:text-sm lg:text-base bg-[#3E45FB]! text-white hover:text-white! hover:bg-[#3E45FB]! focus:text-white! focus:bg-[#3E45FB]! cursor-text transition-all`}
+          />
 
           <h1
             className={`font-varien leading-[100%] tracking-[-3%] font-normal text-left md:text-right text-black lg:max-w-100 xl:max-w-128 text-[40px] sm:text-[68px] md:text-[48px] lg:text-[52px] xl:text-[72px]`}
