@@ -53,6 +53,9 @@ import search_white from '../assets/icons/search.svg';
 import microphone from '../assets/icons/microphone.svg';
 import star from '../assets/icons/star.svg';
 import recent from '../assets/icons/recent.svg';
+import voice_white from '../assets/icons/voice_white.svg';
+import check_filled_white from '../assets/icons/check_filled_white.svg';
+import curly_reverse_dotted_line_black from '../assets/icons/curly_reverse_dotted_line_black.svg';
 
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
@@ -97,6 +100,7 @@ export const icons = {
   curly_dotted_line_white,
   curly_dotted_line_extended,
   curly_reverse_dotted_line_white,
+  curly_reverse_dotted_line_black,
   day,
   dashed_line,
   delete_white,
@@ -144,6 +148,8 @@ export const icons = {
   microphone,
   star,
   recent,
+  voice_white,
+  check_filled_white,
 };
 
 export const images = {

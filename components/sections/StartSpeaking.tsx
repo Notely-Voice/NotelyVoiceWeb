@@ -17,6 +17,10 @@ interface StartSpeakingProps {
   buttonText?: string; // Custom button text color
   useWhiteButton?: boolean; // Use white button variant
   isLineBlack?: boolean; // Determine line color
+  listeningTextColor?: string; // Custom listening label text
+  transcribedTextColor?: string; // Custom transcribed label text
+  voiceIconColor?: "blue" | "white"; // Voice icon color variant
+  checkIconColor?: "blue" | "white"; // Check icon color variant
 }
 
 const StartSpeaking: React.FC<StartSpeakingProps> = ({
@@ -29,6 +33,10 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
   buttonText = "#3E45FB",
   useWhiteButton = true,
   isLineBlack = false,
+  listeningTextColor = "black",
+  transcribedTextColor = "blue",
+  voiceIconColor = "blue",
+  checkIconColor = "blue",
 }) => {
   const bgClass =
     bgColor === "white"
@@ -66,6 +74,20 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
       ? "text-[#F0FEFF]!"
       : "text-black!";
 
+  const listenTextClass =
+    listeningTextColor === "white"
+      ? "text-white"
+      : listeningTextColor === "blue"
+      ? "text-[#3E45FB]"
+      : "text-black";
+
+  const transcribedTextClass =
+    transcribedTextColor === "white"
+      ? "text-white"
+      : transcribedTextColor === "blue"
+      ? "text-[#3E45FB]"
+      : "text-black";
+
   return (
     <div className={`px-6 xl:px-9 flex justify-center items-center relative`}>
       <div
@@ -82,7 +104,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
           </div>
 
           {/* Decorative Dotted Lines */}
-          {isLineBlack ? (
+          {/* {isLineBlack ? (
             <Image
               src={icons.curly_dotted_line_black}
               alt="dotted line"
@@ -94,18 +116,26 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
               alt="dotted line"
               className="absolute hidden lg:inline-block top-24 lg:right-16 xl:right-36 rotate-10 z-30 w-[120px] lg:w-[120px] xl:w-[150px]"
             />
-          )}
+          )} */}
 
           {/* Main Card Section */}
           <div className="relative">
             {/* Decorative Dotted Lines */}
-            <Image
-              src={icons.curly_reverse_dotted_line_white}
-              alt="dotted line"
-              className="absolute lg:hidden inline-block -top-10 -right-20 rotate-10 z-30 w-[100px]"
-            />
+            {/* {isLineBlack ? (
+              <Image
+                src={icons.curly_dotted_line_black}
+                alt="dotted line"
+                className="absolute lg:hidden inline-block -top-10 -right-20 rotate-10 z-30 w-[100px]"
+              />
+            ) : (
+              <Image
+                src={icons.curly_reverse_dotted_line_white}
+                alt="dotted line"
+                className="absolute lg:hidden inline-block -top-10 -right-20 rotate-10 z-30 w-[100px]"
+              />
+            )} */}
 
-            <SpeakingPhone />
+            <SpeakingPhone isLineBlack={isLineBlack} />
 
             {/* Listening Label - Left Side */}
             <div
@@ -115,11 +145,17 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
                 color: bgColor === "black" ? "black" : "white",
               }}
             >
-              <div className={`text-sm font-semibold tracking-[-3%] font-instrument whitespace-nowrap`}>
+              <div
+                className={`text-sm text-black font-semibold tracking-[-3%] font-instrument whitespace-nowrap ${listenTextClass}`}
+              >
                 Listening
               </div>
               <Image
-                src={icons.voice_blue}
+                src={
+                  voiceIconColor === "blue"
+                    ? icons.voice_blue
+                    : icons.voice_white
+                }
                 alt="voice"
                 width={20}
                 height={20}
@@ -134,11 +170,17 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
                 color: bgColor === "black" ? "black" : "#F0FEFF",
               }}
             >
-                <div className={"text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap"}>
+              <div
+                className={`text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap ${transcribedTextClass}`}
+              >
                 Transcribed
               </div>
               <Image
-                src={icons.check_filled_blue}
+                src={
+                  checkIconColor === "blue"
+                    ? icons.check_filled_blue
+                    : icons.check_filled_white
+                }
                 alt="check"
                 width={20}
                 height={20}
@@ -172,28 +214,28 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
           {/* Mobile Card */}
           <div className="relative">
             {/* Decorative Dotted Lines */}
-            <Image
+            {/* <Image
               src={icons.curly_reverse_dotted_line_white}
               alt="dotted line"
               className="absolute lg:hidden inline-block top-0 -right-6 rotate-10 z-30 w-[60px] sm:w-[80px]"
-            />
+            /> */}
 
             {/* Card */}
-            <SpeakingPhone />
+            <SpeakingPhone isLineBlack={isLineBlack} />
 
             {/* Listening Label - Left Side */}
             <div
-              className="absolute left-0 top-1/3 translate-y-2/3  -translate-x-1/4 sm:-translate-x-1/2 flex items-center gap-2 z-20 px-3 py-1.5 rounded-full"
+              className="absolute left-0 top-1/3 translate-y-2/3  -translate-x-1/4 sm:-translate-x-1/2 flex items-center gap-2 z-20 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full"
               style={{
                 backgroundColor: bgColor === "black" ? "white" : "black",
                 color: bgColor === "black" ? "black" : "white",
               }}
             >
-              <div className="text-[10px] sm:text-sm font-semibold tracking-[-3%] font-instrument whitespace-nowrap">
+              <div className={`text-[8px] sm:text-sm font-semibold tracking-[-3%] font-instrument whitespace-nowrap ${listenTextClass}`}>
                 Listening
               </div>
               <Image
-                src={icons.voice_blue}
+                src={voiceIconColor === 'blue' ? icons.voice_blue : icons.voice_white}
                 alt="voice"
                 className="w-4 h-4 sm:w-5 sm:h-5"
               />
@@ -201,17 +243,17 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
 
             {/* Transcribed Label - Right Side */}
             <div
-              className="absolute right-0 top-4/5 -translate-y-1/2 translate-x-1/4 sm:translate-x-1/2 flex items-center gap-2 z-20 px-3 py-1.5 rounded-full"
+              className="absolute right-0 top-4/5 -translate-y-1/2 translate-x-1/4 sm:translate-x-1/2 flex items-center gap-2 z-20 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full"
               style={{
                 backgroundColor: bgColor === "black" ? "#F0FEFF" : "black",
                 color: bgColor === "black" ? "black" : "#F0FEFF",
               }}
             >
-              <div className="text-[10px] sm:text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap">
+              <div className={`text-[8px] sm:text-sm text-[var(--blueBg)] font-semibold tracking-[-3%] font-instrument whitespace-nowrap ${transcribedTextClass}`}>
                 Transcribed
               </div>
               <Image
-                src={icons.check_filled_blue}
+                src={checkIconColor === 'blue' ? icons.check_filled_blue : icons.check_filled_white}
                 alt="check"
                 className="w-4 h-4 sm:w-5 sm:h-5"
               />

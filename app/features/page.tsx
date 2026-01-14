@@ -22,8 +22,11 @@ function Features() {
         borderColor="black"
         titleColor="black"
         textColor="black"
-        cardBgColor="blue"
         isLineBlack
+        listeningTextColor="white"
+        transcribedTextColor="white"
+        voiceIconColor="white"
+        checkIconColor="white"
       />
     </div>
   );
