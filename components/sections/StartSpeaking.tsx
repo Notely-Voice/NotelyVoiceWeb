@@ -25,7 +25,7 @@ interface StartSpeakingProps {
 
 const StartSpeaking: React.FC<StartSpeakingProps> = ({
   bgColor = "black",
-  borderColor = "black",
+  borderColor = "white",
   titleColor = "white",
   textColor = "white",
   cardBgColor = "#3E45FB",
@@ -103,39 +103,10 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
             />
           </div>
 
-          {/* Decorative Dotted Lines */}
-          {/* {isLineBlack ? (
-            <Image
-              src={icons.curly_dotted_line_black}
-              alt="dotted line"
-              className="absolute hidden lg:inline-block top-24 lg:right-16 xl:right-36 rotate-10 z-30 w-[120px] lg:w-[120px] xl:w-[150px]"
-            />
-          ) : (
-            <Image
-              src={icons.curly_reverse_dotted_line_white}
-              alt="dotted line"
-              className="absolute hidden lg:inline-block top-24 lg:right-16 xl:right-36 rotate-10 z-30 w-[120px] lg:w-[120px] xl:w-[150px]"
-            />
-          )} */}
-
           {/* Main Card Section */}
           <div className="relative">
-            {/* Decorative Dotted Lines */}
-            {/* {isLineBlack ? (
-              <Image
-                src={icons.curly_dotted_line_black}
-                alt="dotted line"
-                className="absolute lg:hidden inline-block -top-10 -right-20 rotate-10 z-30 w-[100px]"
-              />
-            ) : (
-              <Image
-                src={icons.curly_reverse_dotted_line_white}
-                alt="dotted line"
-                className="absolute lg:hidden inline-block -top-10 -right-20 rotate-10 z-30 w-[100px]"
-              />
-            )} */}
 
-            <SpeakingPhone isLineBlack={isLineBlack} />
+            <SpeakingPhone isLineBlack={isLineBlack} className={`border-${borderColor}`} />
 
             {/* Listening Label - Left Side */}
             <div
@@ -221,7 +192,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
             /> */}
 
             {/* Card */}
-            <SpeakingPhone isLineBlack={isLineBlack} />
+            <SpeakingPhone isLineBlack={isLineBlack} className={`border-${borderColor}`}/>
 
             {/* Listening Label - Left Side */}
             <div

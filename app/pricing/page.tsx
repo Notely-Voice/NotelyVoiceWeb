@@ -14,7 +14,7 @@ import PricingFaq from "@/components/sections/PricingFaq";
 
 function Pricing() {
   return (
-    <div className="bg-[#3E45FB] flex flex-col gap-[70px]">
+    <div className="bg-[#3E45FB] flex flex-col gap-10 sm:gap-[70px]">
       <div className="pt-3.5 px-4 sm:px-9 flex flex-col justify-center items-center relative">
         <div className="wrapper bg-inherit pt-12 xl:pt-20 px-6 sm:px-12 lg:px-16 xl:px-24 flex justify-center items-center w-full">
           <SectionIntro

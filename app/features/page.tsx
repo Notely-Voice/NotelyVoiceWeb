@@ -9,7 +9,7 @@ import CustomTheme from "@/components/sections/CustomTheme";
 
 function Features() {
   return (
-    <div className="bg-white flex flex-col gap-[70px]">
+    <div className="bg-white flex flex-col gap-10 sm:gap-[70px]">
       <FeaturesHero />
       <CreateNotes />
       <TextEdit />

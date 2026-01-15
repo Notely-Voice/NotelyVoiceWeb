@@ -19,7 +19,7 @@ export default function Home() {
       <HomeLanguage />
       <HomeTestimonials />
       <HomeNumbers />
-      <StartSpeaking bgColor="black" cardBgColor="#3E45FB" />
+      <StartSpeaking bgColor="black" cardBgColor="#3E45FB" borderColor="white" />
     </div>
   );
 }
