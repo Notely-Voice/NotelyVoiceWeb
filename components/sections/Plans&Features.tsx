@@ -14,25 +14,25 @@ const PlansFeatures = () => {
           PLANS & FEATURES
         </h1>
         {/* Header Section */}
-        <div className="w-full grid md:grid-cols-4 justify-between items-start gap-5 px-10">
+        <div className="w-full grid md:grid-cols-4 justify-between items-start gap-2.5 sm:px-4 md:px-5 xl:px-10">
           {/* Left Text */}
-          <h2 className="col-span-1 hidden md:inline-block font-varien text-[#F0FEFF] text-2xl sm:text-3xl lg:text-[34px] leading-tight tracking-[-3%] max-w-xs">
+          <h2 className="col-span-1 hidden md:inline-block font-varien text-[#F0FEFF] text-xl lg:text-3xl xl:text-[34px] leading-tight tracking-[-3%] max-w-xs">
             GET STARTED WITH NOTELY TODAY
           </h2>
 
 
           {/* Right - Plan Cards */}
-          <div className="col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-4 w-full lg:w-auto">
+          <div className="col-span-3 flex sm:grid sm:grid-cols-3 gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 w-full lg:w-auto">
             {plansInfo.map((plan) => (
               <div
                 key={plan.type}
                 className="flex flex-col items-center gap-3 flex-1 sm:flex-none"
               >
                 <div className="text-center flex flex-col items-start">
-                  <h3 className="font-varien text-[#F0FEFF] text-2xl sm:text-3xl lg:text-[34px] leading-tight tracking-[-3%] mb-3">
+                  <h3 className="font-varien text-[#F0FEFF] text-lg sm:text-3xl lg:text-[34px] leading-tight tracking-[-3%] mb-3">
                     {plan.type}
                   </h3>
-                  <p className="text-[#F0FEFF] text-base sm:text-lg font-black mb-5">
+                  <p className="text-[#F0FEFF] text-sm sm:text-lg font-black mb-5">
                     {plan.subtitle}
                     {plan.price && (
                       <span className="text-[#F0FEFF] font-normal">
@@ -43,7 +43,7 @@ const PlansFeatures = () => {
                 <Button
                   btnText={plan.buttonText}
                   isWhite
-                  className={`w-full sm:w-fit px-4 sm:px-6 py-2 text-sm border-2! ${plan.type === "FREE" ? "bg-transparent! text-white! hover:bg-[#2702C2]! focus:bg-[#2702C2]!" : ""}`}
+                  className={`w-full sm:w-fit px-1.5 sm:px-6 py-1 text-[10px] sm:text-sm border-2! ${plan.type === "FREE" ? "bg-transparent! text-white! hover:bg-[#2702C2]! focus:bg-[#2702C2]!" : ""}`}
                 />
                 </div>
               </div>
@@ -76,7 +76,7 @@ const PlansFeatures = () => {
                     <td className="px-6 py-4 text-center min-w-[120px]">
                       {typeof row.free === "boolean" ? (
                         row.free ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )
@@ -95,7 +95,7 @@ const PlansFeatures = () => {
                     <td className="px-6 py-4 text-center min-w-[120px]">
                       {typeof row.pro === "boolean" ? (
                         row.pro ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )
@@ -114,7 +114,7 @@ const PlansFeatures = () => {
                     <td className="px-6 py-4 text-center min-w-[120px]">
                       {typeof row.premium === "boolean" ? (
                         row.premium ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )
@@ -156,7 +156,7 @@ const PlansFeatures = () => {
                       {/*<div className="font-semibold mb-1">Free</div>*/}
                       {typeof row.free === "boolean" ? (
                         row.free ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )
@@ -174,7 +174,7 @@ const PlansFeatures = () => {
                       {/*<div className="font-semibold mb-1">Pro</div>*/}
                       {typeof row.pro === "boolean" ? (
                         row.pro ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )
@@ -192,7 +192,7 @@ const PlansFeatures = () => {
                       {/*<div className="font-semibold mb-1">Premium</div>*/}
                       {typeof row.premium === "boolean" ? (
                         row.premium ? (
-                          <Check className="w-5 h-5 text-teal-500 mx-auto" />
+                          <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
                         )

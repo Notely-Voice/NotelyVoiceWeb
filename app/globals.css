@@ -90,7 +90,7 @@ body {
 /* Horizontal scroll animation for testimonials */
 @keyframes nv-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-500%); }
 }
 
 /* Horizontal scroll animation for social row */
@@ -100,7 +100,7 @@ body {
 }
 
 .nv-scroll {
-  animation: nv-scroll 10s linear infinite;
+  animation: nv-scroll 50s linear infinite;
 }
 
 .sm-scroll {

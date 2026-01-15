@@ -9,6 +9,7 @@ import StartSpeaking from "@/components/sections/StartSpeaking";
 import SectionIntro from "@/components/layouts/SectionIntro";
 import Subscription from "@/components/sections/Subscription";
 import PlansFeatures from "@/components/sections/Plans&Features";
+import JoinUsers from "@/components/sections/JoinUsers";
 
 function Pricing() {
   return (
@@ -27,6 +28,7 @@ function Pricing() {
 
       <Subscription  />
       <PlansFeatures />
+      <JoinUsers />
 
       <StartSpeaking
         bgColor="#F0FEFF"

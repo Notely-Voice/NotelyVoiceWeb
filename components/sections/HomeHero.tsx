@@ -1,4 +1,3 @@
-import { heroCommentsData } from "@/contents/homeData";
 import { icons } from "@/lib/index";
 import Image from "next/image";
 import HomeHeroDesign from "../layouts/HomeHeroDesign";
@@ -21,64 +20,106 @@ const HomeHero = () => {
         <HomeHeroDesign />
       </div>
 
-{/* the dark part */}
+      {/* the dark part */}
       <div className="wrapper bg-black pt-[70px] pb-[20px] rounded-b-[20px] sm:rounded-b-[40px] -mt-14! relative z-10 overflow-hidden">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-2 sm:gap-4 px-4 sm:px-0">
           <div className="flex flex-col sm:flex-row items-center">
-
-          {/* Coming soon section */}
-          <div className="flex items-center gap-4">
-            <p className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">Coming soon on</p>
-            <div className="flex items-center">
-              <div className="w-10 h-10  flex items-center justify-center">
-                <Image src={icons.windows} alt="Windows" width={28} height={28} />
-              </div>
-              <div className="w-10 h-10  flex items-center justify-center">
-                <Image src={icons.linux} alt="Linux" width={28} height={28} />
-              </div>
-            </div>
-          </div>
-
-          {/* Available on section */}
-          <div className="flex items-center gap-4">
-            <p className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">Available on</p>
-            <div className="flex items-center">
-              <div className="w-10 h-10  flex items-center justify-center">
-                <Image src={icons.appstore} alt="appstore" width={28} height={28} />
-              </div>
-              <div className="w-10 h-10  flex items-center justify-center">
-                <Image src={icons.android} alt="android" width={28} height={28} />
-              </div>
-              <div className="w-10 h-10  flex items-center justify-center">
-                <Image src={icons.apple_white} alt="Apple" width={22} height={22} />
+            {/* Coming soon section */}
+            <div className="flex items-center gap-4">
+              <p className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                Coming soon on
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10  flex items-center justify-center">
+                  <Image
+                    src={icons.windows}
+                    alt="Windows"
+                    width={28}
+                    height={28}
+                  />
+                </div>
+                <div className="w-10 h-10  flex items-center justify-center">
+                  <Image src={icons.linux} alt="Linux" width={28} height={28} />
+                </div>
               </div>
             </div>
-          </div>
+
+            {/* Available on section */}
+            <div className="flex items-center gap-4">
+              <p className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                Available on
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10  flex items-center justify-center">
+                  <Image
+                    src={icons.appstore}
+                    alt="appstore"
+                    width={28}
+                    height={28}
+                  />
+                </div>
+                <div className="w-10 h-10  flex items-center justify-center">
+                  <Image
+                    src={icons.android}
+                    alt="android"
+                    width={28}
+                    height={28}
+                  />
+                </div>
+                <div className="w-10 h-10  flex items-center justify-center">
+                  <Image
+                    src={icons.apple_white}
+                    alt="Apple"
+                    width={22}
+                    height={22}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Ratings section */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             {/* AppStore rating */}
             <div className="flex items-center gap-1.5">
-              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">4.9</span>
+              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                4.9
+              </span>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                <Image key={i} src={icons.star_white} alt="Apple" width={16} height={16} />
+                  <Image
+                    key={i}
+                    src={icons.star_white}
+                    alt="Apple"
+                    width={16}
+                    height={16}
+                  />
                 ))}
               </div>
-              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">AppStore</span>
+              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                AppStore
+              </span>
             </div>
 
             {/* Play Store rating */}
             <div className="flex items-center gap-1.5">
-              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">4.9</span>
+              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                4.9
+              </span>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  
-                <Image key={i} src={icons.star_white} alt="Apple" width={16} height={16} />
+                  <Image
+                    key={i}
+                    src={icons.star_white}
+                    alt="Apple"
+                    width={16}
+                    height={16}
+                  />
                 ))}
               </div>
-              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">Play Store</span>
+              <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
+                Play Store
+              </span>
             </div>
           </div>
         </div>
