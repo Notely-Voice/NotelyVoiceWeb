@@ -62,7 +62,7 @@ const Subscription = () => {
                   {card.type}
                 </h3>
                 <p
-                  className={`text-xs md:text-sm font-medium mb-3 sm:mb-6 ${
+                  className={`text-xs sm:text-lg md:text-sm font-medium mb-3 sm:mb-6 ${
                     idx === 0 ? "text-[#F0FEFF]" : "text-black"
                   }`}
                 >
@@ -102,7 +102,7 @@ const Subscription = () => {
                         }`}
                       />
                       <span
-                        className={`text-[10px] sm:text-sm font-medium ${
+                        className={`text-[10px] sm:text-lg md::text-sm font-medium ${
                           idx === 0 ? "text-[#F0FEFF]" : "text-black"
                         }`}
                       >

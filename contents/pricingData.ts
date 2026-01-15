@@ -159,3 +159,32 @@ export const featuresData: FeatureRow[] = [
     premium: true,
   },
 ];
+
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export const pricingFaqData: FAQItem[] = [
+  {
+    question: "How do I upgrade from Basic to Pro?",
+    answer: "You can upgrade your plan directly from the app settings. Go to Plan & Billing, select the Pro plan, and follow the payment process. Your upgrade will be effective immediately.",
+  },
+  {
+    question: "Is there a free trial or free plan available?",
+    answer: "Yes! We offer a free Forever plan with 300 minutes of transcription per month. Additionally, Pro and Premium plans come with 7-day and 14-day free trials respectively.",
+  },
+  {
+    question: "Can I change or cancel my subscription at any time?",
+    answer: "Yes. You can manage your subscription under Plan & Billing in the Notely voice App.",
+  },
+  {
+    question: "Do you offer discounts for specific groups?",
+    answer: "We offer discounts for educational institutions, nonprofits, and large teams. Please contact our sales team for custom pricing options.",
+  },
+  {
+    question: "Can I use Notely for my whole team?",
+    answer: "Absolutely! Our Premium plan includes real-time collaboration features that allow you to share and edit notes with your team members in real-time.",
+  },
+];

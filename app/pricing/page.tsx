@@ -10,6 +10,7 @@ import SectionIntro from "@/components/layouts/SectionIntro";
 import Subscription from "@/components/sections/Subscription";
 import PlansFeatures from "@/components/sections/Plans&Features";
 import JoinUsers from "@/components/sections/JoinUsers";
+import PricingFaq from "@/components/sections/PricingFaq";
 
 function Pricing() {
   return (
@@ -29,6 +30,7 @@ function Pricing() {
       <Subscription  />
       <PlansFeatures />
       <JoinUsers />
+      <PricingFaq />
 
       <StartSpeaking
         bgColor="#F0FEFF"
