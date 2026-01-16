@@ -36,7 +36,7 @@ const Footer = ({
 
   return (
     // make this container relative so the absolute button is positioned inside the footer
-    <div className={`pb-8 px-4 sm:px-6 xl:px-8 pt-10 md:pt-20 lg:pt-32 ${wrapperBgColor}`}>
+    <div className={`pb-8 px-4 pt-10 sm:pt-18 ${wrapperBgColor}`}>
       <div
         className={`py-16 px-6 md:px-10 lg:px-16 xl:px-28 wrapper mx-auto rounded-4xl xl:rounded-[40px] ${bgColor}`}
       >

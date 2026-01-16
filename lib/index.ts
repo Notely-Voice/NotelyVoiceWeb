@@ -56,6 +56,9 @@ import recent from '../assets/icons/recent.svg';
 import voice_white from '../assets/icons/voice_white.svg';
 import check_filled_white from '../assets/icons/check_filled_white.svg';
 import curly_reverse_dotted_line_black from '../assets/icons/curly_reverse_dotted_line_black.svg';
+import arrow_target from '../assets/icons/arrow_target.svg';
+import big_question from '../assets/icons/big_question.svg';
+import book_circle from '../assets/icons/book_circle.svg';
 
 
 import down_dotted_line from '../assets/images/down_dotted_line.png';
@@ -150,6 +153,9 @@ export const icons = {
   recent,
   voice_white,
   check_filled_white,
+  arrow_target,
+  big_question,
+  book_circle,
 };
 
 export const images = {
