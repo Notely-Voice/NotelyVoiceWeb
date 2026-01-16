@@ -97,7 +97,7 @@ const FAQHero = () => {
                 className="w-full px-3 sm:px-5 py-2 sm:py-3 flex justify-between items-center hover:opacity-80 transition-opacity duration-300"
               >
                 <h3
-                  className={`text-[10px] sm:text-base lg:text-sm xl:text-base font-bold text-left ${
+                  className={`text-[11px] sm:text-base lg:text-sm xl:text-base font-bold text-left ${
                     expandedIdx === idx ? "text-white" : "text-black"
                   }`}
                 >
@@ -120,10 +120,12 @@ const FAQHero = () => {
               >
                 <div className="px-3 sm:px-5 pb-3 sm:pb-4">
                   {Array.isArray(faq.answer) ? (
-                    <ul className="space-y-2 text-sm sm:text-base text-white/90">
+                    <ul className={`space-y-2 text-xs sm:text-base lg:text-sm xl:text-base font-normal text-left ${
+                      expandedIdx === idx ? "text-white" : "text-black"
+                    }`}>
                       {faq.answer.map((item, itemIdx) => (
                         <li key={itemIdx} className="leading-relaxed flex items-center">
-                          {item !== "" && <div className="size-2 bg-white rounded-full mr-1.5"></div>}
+                          {item !== "" && <div className="size-2 min-w-2 min-h-2 bg-white rounded-full mr-1.5"></div>}
                           {item.startsWith("•") ? (
                             <span>{item}</span>
                           ) : item === "" ? (
@@ -137,7 +139,7 @@ const FAQHero = () => {
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-sm sm:text-base text-white/90 leading-relaxed">
+                    <p className="text-xs sm:text-base lg:text-sm xl:text-base font-semibold text-left">
                       {faq.answer}
                     </p>
                   )}

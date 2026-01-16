@@ -49,21 +49,21 @@ export const faqData: FAQCategory[] = [
         answer: "Yes! We support 50+ languages including English, Spanish, French, German, Mandarin, Arabic, Hindi, and many more. You can easily switch between languages in the app settings.",
       },
       {
-        question: "Does the app understand different accents?",
-        answer: "Yes! Here are some tips:\n" +
-          "Speak clearly and at a moderate pace\n" +
-          "Use a good quality microphone\n" +
-          "Minimize background noise\n" +
-          "Add custom vocabulary for industry-specific terms or names\n" +
-          "Review and correct transcriptions to help the AI learn",
-      },
-      {
         question: "Can I improve transcription accuracy?",
-        answer: "You can record as long as your subscription allows (based on your monthly transcription minutes). There's no limit on a single recording length—only on your total monthly allowance.",
+        answer: ["Yes! Here are some tips:",
+          "Speak clearly and at a moderate pace",
+          "Use a good quality microphone",
+          "Minimize background noise",
+          "Add custom vocabulary for industry-specific terms or names",
+          "Review and correct transcriptions to help the AI learn",]
       },
       {
-        question: "Can I edit the transcription?",
-        answer: "Absolutely! After transcription, you can edit the text directly in the app. Pro and Premium plans include rich text editing with bold, italics, headings, and more.",
+        question: "Does the app understand different accents?",
+        answer: "Absolutely. Our AI is trained on diverse speech patterns and handles a wide range of accents. The more you use the app, the better it adapts to your unique voice.",
+      },
+      {
+        question: "How do I add punctuation?",
+        answer: "You can add punctuation by speaking it aloud. Just say \"comma,\" \"period,\" \"question mark,\" or \"exclamation point\" and the app will insert them. You can also manually edit punctuation after transcription.",
       },
     ],
   },
@@ -100,6 +100,10 @@ export const faqData: FAQCategory[] = [
         question: "Can I edit my transcriptions?",
         answer: "Absolutely. After transcription, you can edit text, add formatting (bold, italics, headings, lists), highlight key points, and insert images or links. Changes are saved automatically.",
       },
+      {
+        question: "What are voice notes?",
+        answer: "Voice notes preserve your original audio recording alongside the transcription. This is perfect when you want to capture the emotion, tone, or nuance of spoken words that text alone can't convey.",
+      },
     ],
   },
   {
@@ -134,8 +138,34 @@ export const faqData: FAQCategory[] = [
           "Everything in Pro, plus:",
           "Batch audio transcription",
           "Advanced AI features",
+          "Real-time collaboration",
+          "Custom vocabulary",
+          "API access",
+          "Dedicated account manager",
         ],
       },
+      {
+        question: "Can I try the paid plans before committing?",
+        answer: "Yes! Pro includes a 7-day free trial, and Premium includes a 14-day free trial. No credit card required to start your trial.",
+      },
+      {
+        question: "Do you offer refunds?",
+        answer: "Yes! If you're not satisfied, we offer a 30-day money-back guarantee, no questions asked.",
+      },
+      {
+        question: "Can I change or cancel my plan anytime?",
+        answer: "Absolutely. Upgrade, downgrade, or cancel your subscription anytime from your Account Settings. Changes take effect immediately. If you cancel, you'll retain access until the end of your billing period.",
+      },
+      {
+        question: "What happens if I exceed my monthly minutes?",
+        answer: "Free users will need to wait until the next month or upgrade to a paid plan. Pro users can purchase additional minutes at $0.10/minute or upgrade to Premium for unlimited transcription.",
+      },
+    ],
+  },
+  {
+    id: "privacy-security",
+    label: "Privacy & Security",
+    faqs: [
       {
         question: "Is my data secure?",
         answer: "Yes. We use bank-level encryption (256-bit SSL) to protect your data. All transcriptions are stored securely on encrypted servers, and we're SOC 2 compliant.",
@@ -150,33 +180,7 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "Do you store my audio recordings?",
-        answer: "Audio files are stored securely in your account for as long as you keep them. You can delete recordings anytime, and they'll be permanently removed.",
-      },
-    ],
-  },
-  {
-    id: "privacy-security",
-    label: "Privacy & Security",
-    faqs: [
-      {
-        question: "How is my data secured?",
-        answer: "We use bank-level encryption (256-bit SSL) to protect all your data in transit and at rest. Your notes are encrypted on our secure servers.",
-      },
-      {
-        question: "Do you store my recordings?",
-        answer: "We only store the transcribed text, not the original audio. Audio files are deleted immediately after transcription unless you choose to save them.",
-      },
-      {
-        question: "Who can access my notes?",
-        answer: "Only you can access your notes by default. Premium users can use our collaboration feature to share and edit notes with team members.",
-      },
-      {
-        question: "Is my data GDPR compliant?",
-        answer: "Yes, Notely voice is fully GDPR compliant. We respect your privacy rights and give you full control over your data.",
-      },
-      {
-        question: "Can I delete my account?",
-        answer: "Yes, you can delete your account anytime from your settings. This will permanently delete all your notes and personal data from our servers.",
+        answer: "Audio files are stored securely in your account for as long as you keep them. You can delete recordings anytime, and they'll be permanently removed from our servers.",
       },
     ],
   },
@@ -222,16 +226,16 @@ export const faqData: FAQCategory[] = [
     label: "Account Management",
     faqs: [
       {
-        question: "How do I change my password?",
-        answer: "Go to Settings > Account Security and select 'Change Password'. Enter your current password and create a new one. Your new password takes effect immediately.",
+        question: "How do I update my profile or password?",
+        answer: "Go to Account Settings (tap your profile icon) and select \"Edit Profile\" or \"Change Password.\"",
       },
       {
-        question: "Can I link multiple email addresses?",
-        answer: "Currently, each account is linked to one email address. You can update your email in Account Settings, and we'll send you a verification link.",
+        question: "How do I delete my account?",
+        answer: "Go to Account Settings > Delete Account. Please note this action is permanent and will erase all your transcriptions and data.",
       },
       {
-        question: "How do I reset my password?",
-        answer: "Click 'Forgot Password' on the login screen. We'll send you a password reset link to your email. Click the link and create a new password.",
+        question: "Can I use my account on multiple devices?",
+        answer: "Yes! Your account syncs automatically across all your devices. Log in with the same credentials on any device to access your notes.",
       },
       {
         question: "Can I have multiple accounts?",
