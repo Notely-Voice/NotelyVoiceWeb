@@ -31,7 +31,7 @@ const SpeakingPhone = ({ isLineBlack, className }: { isLineBlack: boolean, class
   }[screenSize];
 
   return (
-    <div className={`mt-12 md:mt-0 -mb-32 min-h-[360px] md:min-h-[560px] xl:min-h-[600px] w-56 sm:w-80 md:w-120 lg:w-140 xl:w-160 bg-[var(--blueBg)] border-8 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] xl:rounded-[70px] py-5 px-5 flex flex-col justify-start items-center relative ${className}`}>
+    <div className={`mt-12 md:mt-0 -mb-32 min-h-[360px] md:min-h-[560px] xl:min-h-[600px] w-56 sm:w-80 md:w-120 lg:w-140 xl:w-160 bg-[var(--blueBg)] border-4 sm:border-8 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] xl:rounded-[70px] py-5 px-5 flex flex-col justify-start items-center relative ${className}`}>
       {isLineBlack ? (
         <Image
           src={icons.curly_reverse_dotted_line_black}
