@@ -115,7 +115,7 @@ const FAQHero = () => {
               {/* Answer */}
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  expandedIdx === idx ? "max-h-full" : "max-h-0"
+                  expandedIdx === idx ? "max-h-160 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-3 sm:px-5 pb-3 sm:pb-4">
