@@ -249,11 +249,14 @@ const PrivacyContent = () => {
             <div className="text-white prose prose-invert max-w-none">
               <ReactMarkdown
                 components={{
-                  h2: ({ node, children }: any) => (
-                    <h2 id={`section-${String(children).charAt(0)}`} className="text-xl md:text-2xl xl:text-3xl font-bold mt-8 sm:mt-10 mb-4 text-white">
-                      {children}
-                    </h2>
-                  ),
+                  h2: ({ node, children }: any) => {
+                    const sectionNum = String(children).match(/^(\d+)/)?.[1] || '';
+                    return (
+                      <h2 id={`section-${sectionNum}`} className="text-xl md:text-2xl xl:text-3xl font-bold mt-8 sm:mt-10 mb-4 text-white">
+                        {children}
+                      </h2>
+                    );
+                  },
                   h3: ({ children }: any) => (
                     <h3 className="text-base md:text-lg lg:text-xl font-bold mt-6 mb-3 text-white">
                       {children}
