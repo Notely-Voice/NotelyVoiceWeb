@@ -139,7 +139,9 @@ const FAQHero = () => {
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-xs sm:text-base lg:text-sm xl:text-base font-semibold text-left">
+                    <p className={`text-xs sm:text-base lg:text-sm xl:text-base font-semibold text-left ${
+                      expandedIdx === idx ? "text-white" : "text-black"
+                    }`}>
                       {faq.answer}
                     </p>
                   )}
