@@ -1,10 +1,12 @@
 import FAQHero from "@/components/sections/FAQHero"
+import FurtherQuestions from "@/components/sections/FurtherQuestions"
 import StartSpeaking from "@/components/sections/StartSpeaking"
 
 function FAQ() {
   return (
     <div className="bg-[#F0FEFF] flex flex-col gap-10 sm:gap-[70px]"> 
       <FAQHero />
+      <FurtherQuestions />
 
       <StartSpeaking
         bgColor="white"
