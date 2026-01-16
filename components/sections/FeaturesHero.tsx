@@ -68,7 +68,7 @@ const FeaturesHero = () => {
   }, [query]);
 
   return (
-    <div className="pt-3.5 px-4 sm:px-9 flex flex-col justify-center items-center relative">
+    <div className="mt-10 px-4 sm:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper overflow-hidden bg-[#F0FEFF] pt-12 xl:pt-20 px-6 sm:px-12 lg:px-16 xl:px-24 border-4 border-black rounded-[20px] sm:rounded-[40px] flex flex-col lg:flex-row justify-center lg:justify-between gap-4 lg:gap-6 z-20 relative">
         <div>
           <h1
