@@ -13,7 +13,7 @@ const FAQHero = () => {
   return (
     <div className="mt-10 px-4 sm:px-9 flex flex-col justify-center items-center relative">
       {/* Mobile Layout - Visible on sm: and below */}
-      <div className="md:hidden w-full">
+      <div className="lg:hidden w-full">
         <div className="wrapper bg-[#F0FEFF] py-6 px-4 border-4 border-black rounded-[20px] flex flex-col gap-4 z-20 relative">
           {/* Heading */}
           <h1 className="font-varien text-black text-2xl tracking-[-3%] leading-tight">
@@ -53,7 +53,7 @@ const FAQHero = () => {
                       <div
                         key={idx}
                         className={`bg-black overflow-hidden ${
-                          idx !== category.faqs.length - 1 ? "border-b border-white/20" : ""
+                          idx !== category.faqs.length - 0 ? "border-b border-white/20" : ""
                         }`}
                       >
                         <div className="w-full px-4 py-3">
@@ -109,7 +109,7 @@ const FAQHero = () => {
       </div>
 
       {/* Desktop Layout - Visible on md: and above */}
-      <div className="hidden md:block w-full wrapper">
+      <div className="hidden lg:block w-full wrapper">
         <div className="bg-[#F0FEFF] py-6 sm:py-8 md:py-10 xl:py-16 px-4 sm:px-8 md:px-10 lg:px-12 xl:px-14 border-4 border-black rounded-[20px] sm:rounded-[40px] flex flex-col lg:flex-row justify-center lg:justify-between gap-5 lg:gap-12 z-20 relative">
           {/* Left Side - Heading and Category Buttons */}
           <div className="flex flex-col item-center justify-center lg:justify-start gap-8">
