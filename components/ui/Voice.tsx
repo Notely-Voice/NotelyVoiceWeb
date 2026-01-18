@@ -23,20 +23,20 @@ const Voice: React.FC<VoiceProps> = ({
 
 // Dynamic bar dimensions based on screen size
   const barWidth = {
-    xxs: 6,
-    xs: 7,
-    sm: 8,
-    md: 9,
-    lmd: 9,
-    lg: 10,
-    xl: 11,
+    xxs: 4,
+    xs: 5,
+    sm: 6,
+    md: 7,
+    lmd: 8,
+    lg: 9,
+    xl: 10,
   }[screenSize];
 
   const barHeight = {
-    xxs: 'h-10',
-    xs: 'h-10',
-    sm: 'h-12',
-    md: 'h-13',
+    xxs: 'h-6',
+    xs: 'h-8',
+    sm: 'h-9',
+    md: 'h-12',
     lmd: 'h-13',
     lg: 'h-14',
     xl: 'h-16',

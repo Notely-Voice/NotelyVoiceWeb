@@ -81,7 +81,7 @@ const HomeHero = () => {
           {/* Ratings section */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
             {/* AppStore rating */}
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 lg:border-x border-[#939393] lg:px-4">
               <span className="text-[#F0FEFF] text-xs sm:text-sm lg:text-base xl:text-lg font-medium">
                 4.9
               </span>

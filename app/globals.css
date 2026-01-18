@@ -3,141 +3,191 @@
 @import "tailwindcss";
 
 :root {
-  /* Figma palette */
-  --color-deep-navy: rgba(31, 39, 71, 0.55); /* #1F27478C (semi-transparent) */
-  --color-pale-cyan: #f2ffff;
-  --color-royal-blue: #213be7;
-  --color-deep-indigo: #0221b4;
-  --color-electric-blue: #124ee0;
+    /* Figma palette */
+    --color-deep-navy: rgba(31, 39, 71, 0.55); /* #1F27478C (semi-transparent) */
+    --color-pale-cyan: #f2ffff;
+    --color-royal-blue: #213be7;
+    --color-deep-indigo: #0221b4;
+    --color-electric-blue: #124ee0;
 
-  /* App semantic tokens (defaults) */
-  --white_bg: #F0FEFF;
-  --blueBg: #3E45FB;
+    /* App semantic tokens (defaults) */
+    --white_bg: #F0FEFF;
+    --blueBg: #3E45FB;
 }
 
 body {
-  background: var(--white_bg);
-  color: var(--foreground);
-  font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--white_bg);
+    color: var(--foreground);
+    font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .font-satoshi {
-  font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-satoshi), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .font-varien {
-  font-family: var(--font-varien), serif;
+    font-family: var(--font-varien), serif;
 }
 
 .font-instrument {
-  font-family: var(--font-instrument-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-instrument-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .font-inter {
-  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .font-noto-serif-tamil {
-  font-family: var(--font-noto-serif-tamil), serif;
+    font-family: var(--font-noto-serif-tamil), serif;
 }
 
 .wrapper {
-  max-width: 1280px;
-  width: 100%;
+    max-width: 1280px;
+    width: 100%;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    height: 20px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 .custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
 
 /* Voice animation (global to avoid styled-jsx SSR hydration mismatches) */
 @keyframes nv-wave {
-  0% { transform: scaleY(1); }
-  25% { transform: scaleY(1.6); }
-  50% { transform: scaleY(1); }
-  75% { transform: scaleY(1.6); }
-  100% { transform: scaleY(1); }
+    0% {
+        transform: scaleY(1);
+    }
+    25% {
+        transform: scaleY(1.6);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    75% {
+        transform: scaleY(1.6);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 .nv-bar {
-  transform-origin: center center;
-  will-change: transform;
-  animation: nv-wave 2200ms cubic-bezier(.2,.8,.2,1) infinite;
-  animation-delay: var(--delay, 0ms);
+    transform-origin: center center;
+    will-change: transform;
+    animation: nv-wave 2200ms cubic-bezier(.2, .8, .2, 1) infinite;
+    animation-delay: var(--delay, 0ms);
 }
 
 /* Horizontal scroll animation for testimonials */
 @keyframes nv-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-500%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
 }
 
 /* Horizontal scroll animation for social row */
 @keyframes sm-scroll {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .nv-scroll {
-  animation: nv-scroll 50s linear infinite;
+    animation: nv-scroll 50s linear infinite;
 }
 
 .sm-scroll {
-  animation: sm-scroll 35s linear infinite;
+    animation: sm-scroll 35s linear infinite;
 }
 
 /* Character-by-character text reveal animation */
 @keyframes charReveal {
-  0% { color: #494747; }
-  5% { color: white; }
-  95% { color: white; }
-  100% { color: white; }
+    0% {
+        color: #494747;
+    }
+    5% {
+        color: white;
+    }
+    95% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
 }
 
 @keyframes charReset {
-  0% { color: #494747; }
+    0% {
+        color: #494747;
+    }
 }
 
 .char {
-  animation: charReveal 0.1s ease-out infinite;
+    animation: charReveal 0.1s ease-out infinite;
 }
 
 .reset-char {
-  color: #494747 !important;
+    color: #494747 !important;
 }
 
 
 @keyframes greeting-scroll {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-33.333%);
-  }
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-33.333%);
+    }
 }
 
 .greeting-scroll {
-  animation: greeting-scroll 7s linear infinite;
+    animation: greeting-scroll 7s linear infinite;
+}
+
+/* Mask gradient for smooth fade-in/fade-out as items scroll */
+.scroll-container {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    transition: all ease;
 }
 
