@@ -7,6 +7,7 @@ import SectionIntro from "@/components/layouts/SectionIntro";
 import HomeHeroDesign from "@/components/layouts/HomeHeroDesign";
 import Image from "next/image";
 import { icons } from "@/lib";
+import { useRouter } from "next/navigation";
 
 interface FeatureItem {
   label: string;
@@ -25,6 +26,8 @@ const FEATURES: FeatureItem[] = [
 const FeaturesHero = () => {
   const [activeFeatureIdx, setActiveFeatureIdx] = useState(0);
   const screenSize = useResponsive();
+
+  const router = useRouter();
 
   const [selected, setSelected] = useState<string>("English");
   const [expanded, setExpanded] = useState<boolean>(false);
@@ -86,7 +89,7 @@ const FeaturesHero = () => {
           </p>
 
           <div className={`${"mb-10 lg:mb-0"}`}>
-            <Button btnText="Start for free" className={`w-fit`} />
+            <Button btnText="Start for free" onClick={() => router.push("/pricing")} className={`w-fit`} />
           </div>
         </div>
 

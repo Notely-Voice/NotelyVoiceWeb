@@ -7,6 +7,7 @@ import Button from "../ui/Button";
 import { useState } from "react";
 import { useResponsive } from "@/hooks/useResponsive";
 import styles from "./Navbar.module.css";
+import { useRouter } from "next/navigation";
 
 const Navbar = ({
   logoColor,
@@ -27,6 +28,7 @@ const Navbar = ({
 } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const screenSize = useResponsive();
+  const router = useRouter();
 
   // Set defaults
   const effectiveTextColor = textColor || "text-black";
@@ -64,7 +66,7 @@ const Navbar = ({
         {/* Mobile Hamburger Menu & CTA */}
         <div className="flex items-center gap-2 sm:gap-4 md:gap-0">
           {/* CTA Button */}
-          <Button btnText="Start for free" className="inline-block md:hidden" />
+          <Button btnText="Start for free" onClick={() => router.push("/pricing")} className="inline-block md:hidden" />
 
 
           {/* Hamburger Menu Button */}
@@ -80,7 +82,7 @@ const Navbar = ({
 
 
           {/* CTA Button */}
-          <Button btnText="Start for free" className="hidden md:inline-block" />
+          <Button btnText="Start for free" onClick={() => router.push("/pricing")} className="hidden md:inline-block" />
 
         </div>
       </div>

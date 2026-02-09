@@ -1,7 +1,11 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Button from "../ui/Button";
 
-export const UseCases = {
-  students: (
+const StudentsUseCase = () => {
+  const router = useRouter();
+  return (
     <div>
       <h2 className="text-2xl sm:text-3xl tracking-[-3%] uppercase font-varien text-[#3E45FB] mb-1.5">
         For Students
@@ -10,11 +14,14 @@ export const UseCases = {
         Never miss a lecture again. Record classes, get instant transcripts, and
         focus on learning instead of note-taking.
       </p>
-      <Button btnText="Try for free now!" />
+      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
     </div>
-  ),
+  );
+};
 
-  creators: (
+const CreatorsUseCase = () => {
+  const router = useRouter();
+  return (
     <div>
       <h2 className="text-2xl sm:text-3xl tracking-[-3%] uppercase font-varien text-[#3E45FB] mb-1.5">
         For Creators
@@ -24,11 +31,14 @@ export const UseCases = {
         notes, quotes, and subtitles in minutes. Repurpose content faster than
         ever.
       </p>
-      <Button btnText="Try for free now!" />
+      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
     </div>
-  ),
+  );
+};
 
-  teams: (
+const TeamsUseCase = () => {
+  const router = useRouter();
+  return (
     <div>
       <h2 className="text-2xl sm:text-3xl tracking-[-3%] uppercase font-varien text-[#3E45FB] mb-1.5">
         For teams
@@ -37,11 +47,14 @@ export const UseCases = {
         Capture every meeting detail automatically. Share accurate transcripts
         with your team, track action items, and keep everyone aligned.
       </p>
-      <Button btnText="Try for free now!" />
+      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
     </div>
-  ),
+  );
+};
 
-  accessibility: (
+const AccessibilityUseCase = () => {
+  const router = useRouter();
+  return (
     <div>
       <h2 className="text-2xl sm:text-3xl tracking-[-3%] uppercase font-varien text-[#3E45FB] mb-1.5">
         For Accessibility
@@ -50,11 +63,14 @@ export const UseCases = {
         Make content accessible to everyone. Generate accurate captions and
         transcripts for videos, presentations, and live events.
       </p>
-      <Button btnText="Try for free now!" />
+      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
     </div>
-  ),
+  );
+};
 
-  journalist: (
+const JournalistUseCase = () => {
+  const router = useRouter();
+  return (
     <div>
       <h2 className="text-2xl sm:text-3xl tracking-[-3%] uppercase font-varien text-[#3E45FB] mb-1.5">
         For Journalist
@@ -63,7 +79,15 @@ export const UseCases = {
         Interview with confidence. Record conversations and get word-for-word
         transcripts instantly. Verify quotes and write stories faster.
       </p>
-      <Button btnText="Try for free now!" />
+      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
     </div>
-  ),
+  );
+};
+
+export const UseCases = {
+  students: <StudentsUseCase />,
+  creators: <CreatorsUseCase />,
+  teams: <TeamsUseCase />,
+  accessibility: <AccessibilityUseCase />,
+  journalist: <JournalistUseCase />,
 };

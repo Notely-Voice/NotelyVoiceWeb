@@ -6,6 +6,7 @@ import Voice from "../ui/Voice";
 import Button from "../ui/Button";
 import SectionIntro from "@/components/layouts/SectionIntro";
 import SpeakingPhone from "@/components/ui/SpeakingPhone";
+import { useRouter } from "next/navigation";
 
 interface StartSpeakingProps {
   bgColor?: "black" | "white" | "blue" | "#F0FEFF"; // Dynamic background based on page
@@ -38,6 +39,8 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
   voiceIconColor = "blue",
   checkIconColor = "blue",
 }) => {
+  const router = useRouter();
+  
   const bgClass =
     bgColor === "white"
       ? "bg-white"
@@ -179,7 +182,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
             </p>
 
             {/* Start for free button */}
-            <Button btnText="Start for free" isWhite className="w-fit" />
+            <Button btnText="Start for free" onClick={() => router.push("/pricing")} isWhite className="w-fit" />
           </div>
 
           {/* Mobile Card */}
