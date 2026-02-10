@@ -1,8 +1,13 @@
+'use client';
+
 import Button from "@/components/ui/Button";
 import { ctaData } from "@/contents/aboutData";
 import { icons } from "@/lib";
+import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 const AboutCTA = () => {
+  const router = useRouter()
   return (
     <div className="px-4 sm:px-9 flex flex-col justify-center items-center relative gap-10 sm:gap-[70px]">
       {/* Join Us Section */}
@@ -30,6 +35,7 @@ const AboutCTA = () => {
             downloadStore="Google Play"
             isDownload
             className="w-full sm:w-fit"
+            onClick={()  =>  router.push('https://play.google.com/store/apps/details?id=com.module.notelycompose.android')}
           />
           <Button
             storeIcon={icons.apple}
@@ -37,6 +43,7 @@ const AboutCTA = () => {
             downloadStore="App Store"
             isDownload
             className="w-full sm:w-fit"
+            onClick={()  =>  router.push('https://apps.apple.com/us/app/notely-voice-ai-voice-to-text/id6745835691')}
           />
         </div>
       </div>
@@ -54,9 +61,9 @@ const AboutCTA = () => {
         </p>
 
         {/* Email */}
-        <p className="text-[#F0FEFF] text-base sm:text-lg lg:text-xl xl:text-2xl text-center font-medium">
-          {ctaData.getInTouchEmail}
-        </p>
+        <Link href={`mailto:${encodeURIComponent(ctaData.getInTouchEmail.trim())}`} className="text-[#F0FEFF] text-base sm:text-lg lg:text-xl xl:text-2xl text-center font-medium">
+          Email us: {ctaData.getInTouchEmail}
+        </Link>
       </div>
     </div>
   );

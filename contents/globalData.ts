@@ -11,22 +11,22 @@ export const navbarItems: Array<{ label: string; href: string }> = [
 export const footerNavItems: Array<{ heading: string; navList: Array<{ label: string; href: string }> }> = [
   {heading: "COMPANY", navList: [
     { label: "About US", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Contact", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "#" },
   ]},
   {heading: "RESOURCES", navList: [
-    { label: "Help Center", href: "/help" },
-    { label: "Blog", href: "/blog" },
-    { label: "Tutorials", href: "/tutorials" },
-  { label: "System Status", href: "/system-status" },
-  { label: "Changelog", href: "/changelog" },
+    { label: "Help Center", href: "#" },
+    { label: "Blog", href: "#" },
+    { label: "Tutorials", href: "#" },
+  { label: "System Status", href: "#" },
+  { label: "Changelog", href: "#" },
   ]},
   {heading: "PRODUCT", navList: [
     { label: "Features", href: "/features" },
     { label: "Pricing", href: "/pricing" },
-    { label: "API Documentation", href: "/api-docs" },
-    { label: "Mobile Apps", href: "/mobile-apps" },
+    { label: "API Documentation", href: "#" },
+    { label: "Mobile Apps", href: "#" },
   ]},
 ]
 

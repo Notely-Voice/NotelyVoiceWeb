@@ -182,7 +182,7 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
             </p>
 
             {/* Download App button */}
-            <Button btnText="Download App" onClick={() => router.push("/pricing")} isWhite className="w-fit" />
+            <Button btnText="Download App"  isWhite className="w-fit" />
           </div>
 
           {/* Mobile Card */}

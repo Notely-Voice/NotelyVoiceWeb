@@ -89,7 +89,7 @@ const FeaturesHero = () => {
           </p>
 
           <div className={`${"mb-10 lg:mb-0"}`}>
-            <Button btnText="Download App" onClick={() => router.push("/pricing")} className={`w-fit`} />
+            <Button btnText="Download App"  className={`w-fit`} />
           </div>
         </div>
 

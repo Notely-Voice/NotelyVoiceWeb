@@ -1,5 +1,9 @@
+'use client'
+
 import { icons } from "@/lib";
 import Button from "../ui/Button";
+import {useDownloadModal} from "@/contexts/DownloadModalContext";
+import {useRouter} from "next/navigation";
 
 const SectionIntro = ({
   heading,
@@ -26,6 +30,8 @@ const SectionIntro = ({
   className?: string;
   bluetext?: string;
 }) => {
+  const { openModal } = useDownloadModal();
+  const router = useRouter()
   return (
     <div className={className}>
       <h1
@@ -47,6 +53,7 @@ const SectionIntro = ({
             isWhite
             isDownload
             className={`w-full sm:w-fit`}
+            onClick={()  =>  router.push('https://play.google.com/store/apps/details?id=com.module.notelycompose.android')}
           />
           <Button
             storeIcon={icons.apple}
@@ -55,6 +62,7 @@ const SectionIntro = ({
             isWhite
             isDownload
             className={`w-full sm:w-fit`}
+            onClick={()  =>  router.push('https://apps.apple.com/us/app/notely-voice-ai-voice-to-text/id6745835691')}
           />
         </div>
       ) : isBtnWhite ? (
