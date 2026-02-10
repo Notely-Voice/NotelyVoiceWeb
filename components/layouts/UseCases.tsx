@@ -14,7 +14,7 @@ const StudentsUseCase = () => {
         Never miss a lecture again. Record classes, get instant transcripts, and
         focus on learning instead of note-taking.
       </p>
-      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
+      <Button btnText="Download App now!" onClick={() => router.push("/pricing")} />
     </div>
   );
 };
@@ -31,7 +31,7 @@ const CreatorsUseCase = () => {
         notes, quotes, and subtitles in minutes. Repurpose content faster than
         ever.
       </p>
-      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
+      <Button btnText="Download App now!" onClick={() => router.push("/pricing")} />
     </div>
   );
 };
@@ -47,7 +47,7 @@ const TeamsUseCase = () => {
         Capture every meeting detail automatically. Share accurate transcripts
         with your team, track action items, and keep everyone aligned.
       </p>
-      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
+      <Button btnText="Download App now!" onClick={() => router.push("/pricing")} />
     </div>
   );
 };
@@ -63,7 +63,7 @@ const AccessibilityUseCase = () => {
         Make content accessible to everyone. Generate accurate captions and
         transcripts for videos, presentations, and live events.
       </p>
-      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
+      <Button btnText="Download App now!" onClick={() => router.push("/pricing")} />
     </div>
   );
 };
@@ -79,7 +79,7 @@ const JournalistUseCase = () => {
         Interview with confidence. Record conversations and get word-for-word
         transcripts instantly. Verify quotes and write stories faster.
       </p>
-      <Button btnText="Try for free now!" onClick={() => router.push("/pricing")} />
+      <Button btnText="Download App now!" onClick={() => router.push("/pricing")} />
     </div>
   );
 };

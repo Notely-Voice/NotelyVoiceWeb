@@ -59,9 +59,9 @@ const SpeakingPhone = ({ isLineBlack, className }: { isLineBlack: boolean, class
       />
 
       <Button
-        btnText="Start for free"
+        btnText="Download App"
         isWhite
-        className="hidden md:inline-block mt-10 xl:mt-12"
+        className="hidden md:flex mt-10 xl:mt-12"
       />
     </div>
   );

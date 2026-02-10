@@ -69,13 +69,13 @@ const Footer = ({
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-5">
           {isBlueLogo ? <Logo isBlue /> : <Logo isWhite />}
           {isBlueButton ? (
-            <Button btnText="Start for free" onClick={() => router.push("/pricing")} />
+            <Button btnText="Download App" onClick={() => router.push("/pricing")} />
           ) : isBlackText ? (
-            <Button btnText="Start for free" onClick={() => router.push("/pricing")} isBlackText />
+            <Button btnText="Download App" onClick={() => router.push("/pricing")} isBlackText />
           ) : isWhiteButton ? (
-            <Button btnText="Start for free" onClick={() => router.push("/pricing")} isWhite />
+            <Button btnText="Download App" onClick={() => router.push("/pricing")} isWhite />
           ) : (
-            <Button btnText="Start for free" onClick={() => router.push("/pricing")} isWhite />
+            <Button btnText="Download App" onClick={() => router.push("/pricing")} isWhite />
           )}
         </div>
         <div className="flex sm:flex-row flex-col-reverse justify-between sm:items-center gap-4">

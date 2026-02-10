@@ -23,6 +23,9 @@ import microphone_rounded from '../assets/icons/microphone_rounded.svg';
 import night from '../assets/icons/night.svg';
 import pause from '../assets/icons/pause.svg';
 import Playstore from '../assets/icons/Playstore.svg';
+import playstore_white from '../assets/icons/playstore_white.svg';
+import playstore_blue from '../assets/icons/playstore_blue.svg';
+import playstore_black from '../assets/icons/playstore_black.svg';
 import plus_circle from '../assets/icons/plus_circle.svg';
 import right_align from '../assets/icons/right_align.svg';
 import right_pointer from '../assets/icons/right_pointer.svg';
@@ -43,6 +46,7 @@ import windows from '../assets/icons/windows.svg';
 import linux from '../assets/icons/linux.svg';
 import android from '../assets/icons/android.svg';
 import apple_white from '../assets/icons/apple_white.svg';
+import apple_black from '../assets/icons/apple_black.svg';
 import appstore from '../assets/icons/appstore.svg';
 import linkedin_blue from '../assets/icons/linkedin_blue.svg';
 import instagram_blue from '../assets/icons/instagram_blue.svg';
@@ -94,6 +98,7 @@ import rounded_rectangle from '../assets/images/rounded_rectangle.png';
 
 export const icons = {
   apple,
+  apple_black,
   center_align,
   check_filled_blue,
   check_white,
@@ -120,6 +125,9 @@ export const icons = {
   night,
   pause,
   Playstore,
+  playstore_white,
+  playstore_blue,
+  playstore_black,
   plus_circle,
   right_align,
   right_pointer,

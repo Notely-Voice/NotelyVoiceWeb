@@ -181,8 +181,8 @@ const StartSpeaking: React.FC<StartSpeakingProps> = ({
               100% private free AI voice-to-text transcription
             </p>
 
-            {/* Start for free button */}
-            <Button btnText="Start for free" onClick={() => router.push("/pricing")} isWhite className="w-fit" />
+            {/* Download App button */}
+            <Button btnText="Download App" onClick={() => router.push("/pricing")} isWhite className="w-fit" />
           </div>
 
           {/* Mobile Card */}

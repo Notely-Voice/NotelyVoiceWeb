@@ -14,7 +14,7 @@ const HomeHero = () => {
           headingStyle="max-w-[280px]! sm:max-w-[420px]! mb-3! sm:mb-4! lg:mb-8! lg:max-w-[400px]! xl:max-w-[500px]! text-[42px] sm:text-[68px] lg:text-[60px]"
           textStyle="max-w-[490px]! lg:max-w-[400px]! xl:max-w-[509px]! mb-8! lg:mb-[45px]! text- sm:text-xl lg:text-2xl! lg:leading-[130%]! lg:mb-7!"
           isBtnWhite
-          btnText="Start for free"
+          btnText="Download App"
           buttonBlockStyle="mb-10 lg:mb-0"
         />
         <HomeHeroDesign />

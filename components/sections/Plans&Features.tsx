@@ -40,11 +40,11 @@ const PlansFeatures = () => {
                       </span>
                     )}
                   </p>
-                <Button
+                {/* <Button
                   btnText={plan.buttonText}
                   isWhite
                   className={`w-full sm:w-fit px-1.5 sm:px-6 py-1 text-[10px] sm:text-sm border-2! ${plan.type === "FREE" ? "bg-transparent! text-white! hover:bg-[#2702C2]! focus:bg-[#2702C2]!" : ""}`}
-                />
+                /> */}
                 </div>
               </div>
             ))}

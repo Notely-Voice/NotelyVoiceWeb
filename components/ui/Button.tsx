@@ -3,6 +3,7 @@
 import { icons } from "@/lib";
 import Image from "next/image";
 import { useState } from "react";
+import { useDownloadModal } from "@/contexts/DownloadModalContext";
 
 const Button = ({
   isRounded,
@@ -35,6 +36,7 @@ const Button = ({
 }) => {
   const [isHovering, setIsHovering] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const { openModal } = useDownloadModal();
 
   const showGlow = isHovering || isFocused || isActive;
 
@@ -115,10 +117,14 @@ const Button = ({
         </button>
       ) : (
         <button
-          onClick={onClick}
-          className={`font-satoshi py-2.5 px-2.5 sm:py-3 sm:px-3.5 lg:py-4 lg:px-6 rounded-xl ${
+          onClick={openModal}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          className={`font-satoshi py-2.5 px-2.5 sm:py-3 sm:px-3.5 lg:py-4 lg:px-6 rounded-full ${
             isWhite
-              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-wh7ite focus:border-white"
+              ? "bg-white hover:bg-[#2702C2] focus:bg-[#2702C2] border hover:border hover:border-white focus:border-white"
               : isBlackText
               ? "bg-white hover:bg-transparent border hover:border-white focus:border-white"  
               : "bg-[#2702C2] hover:bg-white focus:bg-white border hover:border hover:border-[#3E45FB] focus:border-[#3E45FB]"
@@ -128,8 +134,39 @@ const Button = ({
               : isBlackText
               ? "text-black hover:text-white focus:text-white"
               : "text-[#F2FFFF] hover:text-[#3E45FB] focus:text-[#3E45FB]"
-          } font-black cursor-pointer ${className}`}
+          } font-black cursor-pointer flex items-center justify-center gap-2 sm:gap-3 ${className}`}
         >
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <Image
+              src={
+                isWhite 
+                  ? ((isHovering || isFocused) ? icons.apple_white : icons.apple)
+                  : isBlackText
+                    ? ((isHovering || isFocused) ? icons.apple_white : icons.apple_black)
+                    : ((isHovering || isFocused) ? icons.apple : icons.apple_white)
+              }
+              alt="Apple"
+              className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+            />
+            <div className={`w-px h-4 sm:h-5 lg:h-6 ${
+              isWhite 
+                ? ((isHovering || isFocused) ? "bg-white" : "bg-[#3E45FB]")
+                : isBlackText
+                  ? ((isHovering || isFocused) ? "bg-white" : "bg-black")
+                  : ((isHovering || isFocused) ? "bg-[#3E45FB]" : "bg-white")
+            }`} />
+            <Image
+              src={
+                isWhite 
+                  ? ((isHovering || isFocused) ? icons.playstore_white : icons.playstore_blue)
+                  : isBlackText
+                    ? ((isHovering || isFocused) ? icons.playstore_white : icons.playstore_black)
+                    : ((isHovering || isFocused) ? icons.playstore_blue : icons.playstore_white)
+              }
+              alt="Play Store"
+              className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+            />
+          </div>
           {btnText}
         </button>
       )}

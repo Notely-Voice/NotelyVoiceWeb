@@ -5,6 +5,8 @@ import "./globals.css";
 import NavbarWrapper from "@/components/layouts/NavbarWrapper";
 import Footer from "@/components/layouts/Footer";
 import FooterWrapper from "@/components/layouts/FooterWrapper";
+import { DownloadModalProvider } from "@/contexts/DownloadModalContext";
+import DownloadModalWrapper from "@/components/ui/DownloadModalWrapper";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -119,11 +121,14 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${satoshi.variable} ${varien.variable} ${instrumentSans.variable} ${inter.variable} ${notoSerifTamil.variable} bg-white flex justify-center`}
       >
-        <div className="mx-auto flex flex-col justify-between min-h-screen w-full relative">
-          <NavbarWrapper />
-          {children}
-          <FooterWrapper />
-        </div>
+        <DownloadModalProvider>
+          <div className="mx-auto flex flex-col justify-between min-h-screen w-full relative">
+            <NavbarWrapper />
+            {children}
+            <FooterWrapper />
+          </div>
+          <DownloadModalWrapper />
+        </DownloadModalProvider>
       </body>
     </html>
   );
