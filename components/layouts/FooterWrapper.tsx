@@ -70,6 +70,9 @@ const FooterWrapper = () => {
     case "/terms":
       footerProps = dynamicColors[4];
       break;
+    case "/whatisnew":
+      footerProps = dynamicColors[4];
+      break;
     case "/about":
       footerProps = dynamicColors[5];
       break;

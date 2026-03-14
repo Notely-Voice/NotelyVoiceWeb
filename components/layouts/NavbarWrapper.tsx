@@ -72,6 +72,9 @@ const NavbarWrapper = () => {
     case "/terms":
       navbarProps = dynamicColors[4];
       break;
+    case "/whatisnew":
+      navbarProps = dynamicColors[4];
+      break;
     case "/about":
       navbarProps = dynamicColors[5];
       break;
