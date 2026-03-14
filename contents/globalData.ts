@@ -28,8 +28,8 @@ export const footerNavItems: Array<{ heading: string; navList: Array<{ label: st
 
 export const socialMediaLinks: Array<{ icon: string; href: string, width: number, height: number }> = [
   { icon: icons.linkedin, href: "https://www.linkedin.com/company/notely-voice-inc/", width: 40, height: 40 },
-  { icon: icons.twitter, href: "https://x.com/notelyvoice", width: 32, height: 32 },
-  { icon: icons.instagram, href: "https://www.instagram.com/notelyvoice", width: 40, height: 40 },
+  { icon: icons.twitter, href: "https://x.com/notelyvoiceai", width: 32, height: 32 },
+  { icon: icons.instagram, href: "https://www.instagram.com/notelyvoiceai", width: 40, height: 40 },
 ];
 
 export const blueSocialMediaLinks: Array<{ icon: string; href: string, width: number, height: number }> = [
