@@ -63,12 +63,12 @@ export const numberStatsData = [
     isRounded: true,
   },
   {
-    number: "500k+",
+    number: "250k+",
     label: "Active Users",
     isRounded: false,
   },
   {
-    number: "50M+",
+    number: "20M+",
     label: "Minutes Transcribed",
     isRounded: true,
   },
