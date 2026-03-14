@@ -66,5 +66,5 @@ export const ctaData: CTAContent = {
   joinUsSubheading: "Ready to give your voice a platform?",
   getInTouchHeading: "GET IN TOUCH",
   getInTouchDescription: "Questions? Ideas? Just want to say hi?",
-  getInTouchEmail: "hello@notelyvoice.com",
+  getInTouchEmail: "support@notelyvoice.ai",
 };
