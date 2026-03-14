@@ -16,8 +16,8 @@ export const footerNavItems: Array<{ heading: string; navList: Array<{ label: st
     { label: "Terms of Service", href: "/terms" },
   ]},
   {heading: "RESOURCES", navList: [
-    { label: "Faq", href: "faq" },
-    { label: "What is new", href: "whatisnew" },
+    { label: "FAQ", href: "faq" },
+    { label: "What Is New", href: "whatisnew" },
   ]},
   {heading: "PRODUCT", navList: [
     { label: "Features", href: "/features" },
