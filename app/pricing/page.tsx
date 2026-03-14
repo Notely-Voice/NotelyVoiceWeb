@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import FeaturesHero from "@/components/sections/FeaturesHero";
 import CreateNotes from "@/components/sections/CreateNotes";
 import TextEdit from "@/components/sections/TextEdit";
@@ -11,6 +12,22 @@ import Subscription from "@/components/sections/Subscription";
 import PlansFeatures from "@/components/sections/Plans&Features";
 import JoinUsers from "@/components/sections/JoinUsers";
 import PricingFaq from "@/components/sections/PricingFaq";
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Pricing",
+  description:
+    "Simple, transparent pricing for Notely Voice. Start free with unlimited access to core features. Upgrade to Pro for advanced capabilities and premium support.",
+  keywords: [
+    "pricing",
+    "subscription plans",
+    "free plan",
+    "pro plan",
+    "affordable transcription",
+    "pricing plans",
+  ],
+  path: "/pricing",
+});
 
 function Pricing() {
   return (

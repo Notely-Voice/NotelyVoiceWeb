@@ -1,0 +1,27 @@
+{
+  "name": "Notely Voice",
+  "short_name": "Notely Voice",
+  "description": "100% private AI voice-to-text transcription, everything on-device. Perfect for students, professionals & accessibility.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F2FFFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/notely_voice_logo_blue.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/notely_voice_logo_blue.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "education", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}
