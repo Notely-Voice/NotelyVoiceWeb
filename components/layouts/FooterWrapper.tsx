@@ -73,6 +73,9 @@ const FooterWrapper = () => {
     case "/about":
       footerProps = dynamicColors[5];
       break;
+    case "/contact":
+      footerProps = dynamicColors[5];
+      break;
     default:
       footerProps = dynamicColors[0];
   }

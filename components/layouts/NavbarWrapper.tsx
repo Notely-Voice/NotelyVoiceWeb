@@ -75,6 +75,9 @@ const NavbarWrapper = () => {
     case "/about":
       navbarProps = dynamicColors[5];
       break;
+    case "/contact":
+      navbarProps = dynamicColors[5];
+      break;
     default:
       navbarProps = dynamicColors[0];
   }
