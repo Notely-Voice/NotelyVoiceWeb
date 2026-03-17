@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { ChevronDown } from "lucide-react";
 
@@ -94,6 +94,18 @@ const PrivacyContent = () => {
     }
   };
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 300);
+    }
+  }, []);
+
   const currentSectionLabel = sections[activeSection].title;
 
   return (
@@ -185,11 +197,26 @@ const PrivacyContent = () => {
                       {children}
                     </ol>
                   ),
-                  li: ({ children }: any) => (
-                    <li className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
-                      {children}
-                    </li>
-                  ),
+                  li: ({ children, node }: any) => {
+                    // Extract text content recursively
+                    const getTextContent = (child: any): string => {
+                      if (typeof child === 'string') return child;
+                      if (Array.isArray(child)) return child.map(getTextContent).join('');
+                      if (child?.props?.children) return getTextContent(child.props.children);
+                      return '';
+                    };
+                    const content = getTextContent(children);
+                    const isGemma = content.includes('Gemma 3 (Google)');
+                    return (
+                      <li
+                        id={isGemma ? 'gemma' : undefined}
+                        className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
+                        style={isGemma ? { scrollMarginTop: '130px' } : undefined}
+                      >
+                        {children}
+                      </li>
+                    );
+                  },
                   strong: ({ children }: any) => (
                     <strong className="font-bold text-white">
                       {children}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { ChevronDown } from "lucide-react";
 
@@ -129,6 +129,18 @@ const TermsContent = () => {
     }
   };
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 300);
+    }
+  }, []);
+
   const currentSectionLabel = sections[activeSection].title;
 
   return (
@@ -194,8 +206,14 @@ const TermsContent = () => {
                 components={{
                   h2: ({ node, children }: any) => {
                     const sectionNum = String(children).match(/^(\d+)/)?.[1] || '';
+                    const content = String(children);
+                    const isGemma = content.includes('Gemma');
                     return (
-                      <h2 id={`section-${sectionNum}`} className="text-xl md:text-2xl xl:text-3xl font-bold mt-8 sm:mt-10 mb-4 text-white">
+                      <h2
+                        id={isGemma ? 'gemma' : `section-${sectionNum}`}
+                        className="text-xl md:text-2xl xl:text-3xl font-bold mt-8 sm:mt-10 mb-4 text-white"
+                        style={isGemma ? { scrollMarginTop: '130px' } : undefined}
+                      >
                         {children}
                       </h2>
                     );

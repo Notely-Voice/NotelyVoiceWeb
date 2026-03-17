@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import { Check } from "lucide-react";
 
 const Subscription = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [isYearly, setIsYearly] = useState(false);
 
   return (
     <div className="px-4 sm:px-9 flex flex-col justify-center items-center relative">
@@ -17,24 +17,24 @@ const Subscription = () => {
 
         <div className="grid grid-cols-2 items-center gap-1 bg-[#3E45FB] rounded-full p-1 w-fit">
           <button
-            onClick={() => setIsAnnual(false)}
+            onClick={() => setIsYearly(false)}
             className={`cursor-pointer px-2.5 sm:px-4 py-2 sm:py-3 rounded-full font-bold text-[10px] sm:text-lg transition-all duration-300 ${
-              !isAnnual
+              !isYearly
                 ? "bg-[#F0FEFF] text-[#3E45FB]"
                 : "text-[#F0FEFF]"
             }`}
           >
-            Monthly
+            Weekly
           </button>
           <button
-            onClick={() => setIsAnnual(true)}
+            onClick={() => setIsYearly(true)}
             className={`cursor-pointer px-2 sm:px-4 py-2 sm:py-3 rounded-full font-black text-[9px] sm:text-lg transition-all duration-300 ${
-              isAnnual
+              isYearly
                 ? "bg-[#F0FEFF] text-[#3E45FB]"
                 : "text-[#F0FEFF]"
             }`}
           >
-            Annually <span className="font-semibold">
+            Yearly <span className="font-semibold">
                 Save up to 20%
               </span>
           </button>
@@ -76,14 +76,14 @@ const Subscription = () => {
                       idx === 0 ? "text-[#F0FEFF]" : "text-[#3E45FB]"
                     }`}
                   >
-                    {isAnnual ? card.priceAnnually : card.priceMonthly}
+                    {isYearly ? card.priceYearly : card.priceWeekly}
                   </span>
                   <span
                     className={`text-3xl sm:text-4xl tracking-[-3%] font-normal ${
                       idx === 0 ? "text-[#F0FEFF]" : "text-[#3E45FB]"
                     }`}
                   >
-                    /month
+                    {isYearly ? '/year' : '/week'}
                   </span>
                 </div>
               </div>

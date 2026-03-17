@@ -124,7 +124,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "What's included in the paid plans?",
         answer: [
-          "Pro Plan ($9.99/month or $99/year):",
+          "Pro Plan ($1.99/week or $17.99/year):",
           "1,200 minutes per month",
           "Rich text editing",
           "Multi-language support (50+ languages)",

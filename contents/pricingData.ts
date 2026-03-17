@@ -3,10 +3,10 @@ export interface PricingFeature {
 }
 
 export interface PricingCard {
-  type: "FREE" | "PRO" | "PREMIUM";
+  type: "FREE" | "PRIVATE AI" | "CLOUD AI";
   description: string;
-  priceMonthly: string;
-  priceAnnually: string;
+  priceWeekly: string;
+  priceYearly: string;
   features: PricingFeature[];
   buttonText: string;
 }
@@ -15,10 +15,10 @@ export const pricingCards: PricingCard[] = [
   {
     type: "FREE",
     description: "Perfect for trying out voice-to-text and casual note-taking.",
-    priceMonthly: "$0",
-    priceAnnually: "$0",
+    priceWeekly: "$0",
+    priceYearly: "$0",
     features: [
-      { text: "300 minutes of transcription per month" },
+      { text: "Voice recording & exporting" },
       { text: "Basic notepad with voice input" },
       { text: "Search notes" },
       { text: "Recents and favorites" },
@@ -29,12 +29,12 @@ export const pricingCards: PricingCard[] = [
     buttonText: "Get Started Free",
   },
   {
-    type: "PRO",
+    type: "PRIVATE AI",
     description: "For power users who need more capacity and advanced features.",
-    priceMonthly: "$9.99",
-    priceAnnually: "$99.90",
+    priceWeekly: "$1.99",
+    priceYearly: "$17.99",
     features: [
-      { text: "1,200 minutes of transcription per month" },
+      { text: "150 minutes of transcription per week" },
       { text: "Everything in Free, plus:" },
       { text: "Rich text editing (bold, italics, headings, lists)" },
       { text: "Unlimited voice notes" },
@@ -45,16 +45,16 @@ export const pricingCards: PricingCard[] = [
       { text: "Priority support" },
       { text: "Export to multiple formats (PDF, DOCX, TXT)" },
     ],
-    buttonText: "Start 7-Day Free Trial",
+    buttonText: "Start 3-Day Free Trial",
   },
   {
-    type: "PREMIUM",
+    type: "CLOUD AI",
     description: "For professionals and teams who demand unlimited capacity and enterprise features.",
-    priceMonthly: "$24.99",
-    priceAnnually: "$249.90",
+    priceWeekly: "$6.99",
+    priceYearly: "$69.99",
     features: [
       { text: "Unlimited transcription minutes" },
-      { text: "Everything in Pro, plus:" },
+      { text: "Everything in Private AI, plus:" },
       { text: "Batch audio transcription" },
       { text: "Advanced AI summarization" },
       { text: "Real-time collaboration (share & edit with teams)" },
@@ -64,7 +64,7 @@ export const pricingCards: PricingCard[] = [
       { text: "Advanced export options" },
       { text: "Dedicated account manager" },
     ],
-    buttonText: "Start 14-Day Free Trial",
+    buttonText: "Start 3-Day Free Trial",
   },
 ];
 
@@ -74,13 +74,13 @@ export interface FeatureRow {
   category?: string;
   feature: string;
   free: string | boolean;
-  pro: string | boolean;
-  premium: string | boolean;
+  privateAi: string | boolean;
+  cloudAi: string | boolean;
   isCategoryHeader?: boolean;
 }
 
 export interface PlanInfo {
-  type: "FREE" | "PRO" | "PREMIUM";
+  type: "FREE" | "PRIVATE AI" | "CLOUD AI";
   subtitle: string;
   price: string;
   buttonText: string;
@@ -94,15 +94,15 @@ export const plansInfo: PlanInfo[] = [
     buttonText: "Get Started Free",
   },
   {
-    type: "PRO",
+    type: "PRIVATE AI",
     subtitle: "$9.99",
-    price: "/month",
+    price: "/week",
     buttonText: "Get Started",
   },
   {
-    type: "PREMIUM",
+    type: "CLOUD AI",
     subtitle: "$24.99",
-    price: "/month",
+    price: "/week",
     buttonText: "Get Started",
   },
 ];
@@ -111,52 +111,52 @@ export const featuresData: FeatureRow[] = [
   {
     feature: "Device & platform",
     free: "Free",
-    pro: "Pro",
-    premium: "Premium",
+    privateAi: "Private AI",
+    cloudAi: "Cloud AI",
     isCategoryHeader: true,
   },
   {
     feature: "iPhone (iOS)",
     free: true,
-    pro: true,
-    premium: true,
+    privateAi: true,
+    cloudAi: true,
   },
   {
     feature: "Android",
     free: true,
-    pro: true,
-    premium: true,
+    privateAi: true,
+    cloudAi: true,
   },
   {
     feature: "Effortless voice typing",
     free: "Free",
-    pro: "Pro",
-    premium: "Premium",
+    privateAi: "Private AI",
+    cloudAi: "Cloud AI",
     isCategoryHeader: true,
   },
   {
     feature: "Create Notes",
     free: true,
-    pro: true,
-    premium: true,
+    privateAi: true,
+    cloudAi: true,
   },
   {
     feature: "Word limit",
     free: "1,000/week",
-    pro: "Unlimited",
-    premium: "Unlimited",
+    privateAi: "Unlimited",
+    cloudAi: "Unlimited",
   },
   {
     feature: "Create Notes",
     free: false,
-    pro: true,
-    premium: true,
+    privateAi: true,
+    cloudAi: true,
   },
   {
     feature: "Support 100+ languages",
     free: true,
-    pro: true,
-    premium: true,
+    privateAi: true,
+    cloudAi: true,
   },
 ];
 
@@ -168,12 +168,12 @@ export interface FAQItem {
 
 export const pricingFaqData: FAQItem[] = [
   {
-    question: "How do I upgrade from Basic to Pro?",
-    answer: "You can upgrade your plan directly from the app settings. Go to Plan & Billing, select the Pro plan, and follow the payment process. Your upgrade will be effective immediately.",
+    question: "How do I upgrade from Basic to Private AI?",
+    answer: "You can upgrade your plan directly from the app settings. Go to Plan & Billing, select the Private AI plan, and follow the payment process. Your upgrade will be effective immediately.",
   },
   {
     question: "Is there a free trial or free plan available?",
-    answer: "Yes! We offer a free Forever plan with 300 minutes of transcription per month. Additionally, Pro and Premium plans come with 7-day and 14-day free trials respectively.",
+    answer: "Yes! We offer a free Forever plan with 300 minutes of transcription per week. Additionally, Private AI and Cloud AI plans come with 3-day free trials.",
   },
   {
     question: "Can I change or cancel my subscription at any time?",
@@ -185,6 +185,6 @@ export const pricingFaqData: FAQItem[] = [
   },
   {
     question: "Can I use Notely for my whole team?",
-    answer: "Absolutely! Our Premium plan includes real-time collaboration features that allow you to share and edit notes with your team members in real-time.",
+    answer: "Absolutely! Our Cloud AI plan includes real-time collaboration features that allow you to share and edit notes with your team members in real-time.",
   },
 ];
