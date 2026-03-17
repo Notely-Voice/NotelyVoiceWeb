@@ -38,7 +38,7 @@ The Application utilizes the following third-party services that have their own 
 - Google Play Services
 - Apple App Store
 - OpenAI Whisper (open-source speech recognition model) - operates entirely offline on your device
-- Gemma 3 (Generative AI from Google)
+- **Gemma 3 (Google):** The Application uses Google's Gemma 3B, a generative AI model developed by Google. The model runs entirely locally on your device — no data is sent to Google's servers during use. However, your use of Gemma 3 is subject to the Google Gemma Terms of Use (https://ai.google.dev/gemma/terms). Before the Gemma model is downloaded to your device, you will be presented with these terms and must explicitly accept them. This acceptance is required for every user and is enforced prior to any AI features being accessible.
 
 ## 4. Your Audio is Private
 

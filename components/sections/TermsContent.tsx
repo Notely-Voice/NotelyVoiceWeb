@@ -14,7 +14,7 @@ By downloading, installing, or operating the Application, you consent to these c
 
 ## 2. License to Use
 
-The Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal, non-commercial purposes only.
+The Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal use in accordance with these Terms and any applicable third-party terms.
 
 This license does not allow you to:
 - Transfer or assign the license to others
@@ -95,6 +95,14 @@ If you have any questions or concerns about these Terms of Service, please conta
 
 **Email:** support@notelyvoice.ai
 
+## 11. Third-Party AI Model (Google Gemma)
+
+Notely Voice incorporates Google's Gemma 3B AI model, which is distributed under the Google Gemma Terms of Use (https://ai.google.dev/gemma/terms). By downloading and using the AI features of this Application, you agree to be bound by the Gemma Terms of Use, including the use restrictions set out in Section 3.2 of that agreement.
+
+Before the Gemma model is downloaded to your device, you will be presented with the full Gemma Terms of Use and must explicitly accept them. The Gemma model operates entirely on-device; no data is transmitted to Google as a result of using this feature.
+
+You must not use the Gemma model in any way that violates Google's prohibited use policy. Notely Voice reserves the right to disable AI features for users who violate these terms.
+
 ---
 
 **Effective Date:** Jan, 2026
@@ -117,6 +125,7 @@ const TermsContent = () => {
     { id: "8", title: "8. Data Loss" },
     { id: "9", title: "9. Changes to Terms" },
     { id: "10", title: "10. Contact Information" },
+    { id: "11", title: "11. Third-Party AI Model (Google Gemma)" },
   ];
 
   const handleSectionClick = (index: number) => {
