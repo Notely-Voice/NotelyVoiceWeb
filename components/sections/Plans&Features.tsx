@@ -93,8 +93,8 @@ const PlansFeatures = () => {
 
                     {/* Pro Column */}
                     <td className="px-6 py-4 text-center min-w-[120px]">
-                      {typeof row.pro === "boolean" ? (
-                        row.pro ? (
+                      {typeof row.privateAi === "boolean" ? (
+                        row.privateAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -105,15 +105,15 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.pro}
+                          {row.privateAi}
                         </span>
                       )}
                     </td>
 
                     {/* Premium Column */}
                     <td className="px-6 py-4 text-center min-w-[120px]">
-                      {typeof row.premium === "boolean" ? (
-                        row.premium ? (
+                      {typeof row.cloudAi === "boolean" ? (
+                        row.cloudAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -124,7 +124,7 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.premium}
+                          {row.cloudAi}
                         </span>
                       )}
                     </td>
@@ -172,8 +172,8 @@ const PlansFeatures = () => {
                     </div>
                     <div className="text-center">
                       {/*<div className="font-semibold mb-1">Pro</div>*/}
-                      {typeof row.pro === "boolean" ? (
-                        row.pro ? (
+                      {typeof row.privateAi === "boolean" ? (
+                        row.privateAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -184,14 +184,14 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.pro}
+                          {row.privateAi}
                         </span>
                       )}
                     </div>
                     <div className="text-center">
                       {/*<div className="font-semibold mb-1">Premium</div>*/}
-                      {typeof row.premium === "boolean" ? (
-                        row.premium ? (
+                      {typeof row.cloudAi === "boolean" ? (
+                        row.cloudAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -202,7 +202,7 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.premium}
+                          {row.cloudAi}
                         </span>
                       )}
                     </div>
