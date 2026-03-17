@@ -67,25 +67,17 @@ You use the Application at your own risk.
 To the maximum extent permitted by law, the Service Provider shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
 
 - Your use or inability to use the Application
-- Any unauthorized access to or use of our servers and/or any personal information stored therein
-- Any interruption or cessation of transmission to or from the Application
-- Any bugs, viruses, or other harmful code that may be transmitted to or through the Application
+- Any unauthorized access to decompile the application
 
 ## 8. Data Loss
 
-You are solely responsible for backing up any voice recordings, transcriptions, and notes created using the Application.
+Notely Voice does not store on servers any voice recordings, transcriptions, and notes created using the Application.
 
-The Service Provider assumes no liability for:
-- Any loss of data or content
-- Corruption of stored data
-- Failure to store, transmit, or receive data
-- Any costs or expenses associated with data recovery
-
-We strongly recommend maintaining regular backups of all important data.
+- All data is stored on your device and Notely Voice has no access to it except user deletes it.
 
 ## 9. Changes to Terms
 
-The Service Provider reserves the right to modify or replace these Terms of Service at any time. Changes will take effect immediately upon posting.
+The Notely Voice reserves the right to modify or replace these Terms of Service at any time. Changes will take effect immediately upon posting.
 
 Your continued use of the Application after any changes to these Terms constitutes acceptance of those changes. It is your responsibility to review these Terms periodically.
 
