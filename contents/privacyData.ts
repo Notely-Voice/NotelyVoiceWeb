@@ -3,8 +3,7 @@ export const privacyData = `
 
 Account Information
 Name, email address, username, and password
-Payment information (securely processed by third-party providers like Stripe or PayPal—we don't store credit card numbers)
-Profile preferences and settings
+Your voice recordings, audio files, transcriptions, and notes are stored locally on your device. We do not store your audio or transcription data on external servers. Account and payment information is handled securely through Apple Pay and Google Pay.
 Audio & Transcription Data
 Voice recordings when you use transcription features
 Audio files you upload (MP3, WAV, M4A, MP4, etc.)

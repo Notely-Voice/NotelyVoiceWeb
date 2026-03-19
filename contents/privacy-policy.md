@@ -49,12 +49,8 @@ We do not sell your personal information. We only share data in these limited si
 
 ### Service Providers
 We work with trusted companies that help us operate:
-- Cloud hosting (AWS, Google Cloud)
-- Speech recognition (Google, Microsoft)
-- Payment processing (Stripe, PayPal)
 - Analytics (Google Analytics)
 
-These providers are contractually required to protect your data.
 
 ### Legal Requirements
 We may disclose information if required by law, court order, subpoena, or to protect against fraud or illegal activity.

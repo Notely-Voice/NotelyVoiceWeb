@@ -10,7 +10,7 @@ const privacyPolicyMD = `# Privacy Policy
 
 ### Account Information
 - Name, email address, username, and password
-- Payment information (securely processed officially by Google Pay & Apple Pay — we don't store credit card numbers)
+- Your voice recordings, audio files, transcriptions, and notes are stored locally on your device. We do not store your audio or transcription data on external servers. Account and payment information is handled securely through Apple Pay and Google Pay.
 - Profile preferences and settings
 
 ### Audio & Transcription Data
