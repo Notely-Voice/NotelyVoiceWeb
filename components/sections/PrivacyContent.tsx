@@ -208,11 +208,13 @@ const PrivacyContent = () => {
                     };
                     const content = getTextContent(children);
                     const isGemma = content.includes('Gemma 3 (Google)');
+                    const isOpenAI = content.includes('OpenAI:');
+                    const anchorId = isGemma ? 'gemma' : isOpenAI ? 'openai' : undefined;
                     return (
                       <li
-                        id={isGemma ? 'gemma' : undefined}
+                        id={anchorId}
                         className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
-                        style={isGemma ? { scrollMarginTop: '130px' } : undefined}
+                        style={(isGemma || isOpenAI) ? { scrollMarginTop: '130px' } : undefined}
                       >
                         {children}
                       </li>

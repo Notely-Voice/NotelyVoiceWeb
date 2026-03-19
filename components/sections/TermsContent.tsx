@@ -101,7 +101,7 @@ Cloud mode uses OpenAI's servers to transcribe your audio, delivering faster and
 
 ---
 
-**Effective Date:** Jan, 2026
+**Effective Date:** March, 2026
 
 **By using Notely Voice, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.**
 `;
@@ -213,11 +213,13 @@ const TermsContent = () => {
                     const sectionNum = String(children).match(/^(\d+)/)?.[1] || '';
                     const content = String(children);
                     const isGemma = content.includes('Gemma');
+                    const isOpenAI = content.includes('OpenAI');
+                    const anchorId = isGemma ? 'gemma' : isOpenAI ? 'openai' : `section-${sectionNum}`;
                     return (
                       <h2
-                        id={isGemma ? 'gemma' : `section-${sectionNum}`}
+                        id={anchorId}
                         className="text-xl md:text-2xl xl:text-3xl font-bold mt-8 sm:mt-10 mb-4 text-white"
-                        style={isGemma ? { scrollMarginTop: '130px' } : undefined}
+                        style={(isGemma || isOpenAI) ? { scrollMarginTop: '130px' } : undefined}
                       >
                         {children}
                       </h2>
