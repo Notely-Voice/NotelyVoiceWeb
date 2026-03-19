@@ -95,6 +95,10 @@ Before the Gemma model is downloaded to your device, you will be presented with 
 
 You must not use the Gemma model in any way that violates Google's prohibited use policy. Notely Voice reserves the right to disable AI features for users who violate these terms.
 
+## 12. Third-Party Service (OpenAI)
+
+Cloud mode uses OpenAI's servers to transcribe your audio, delivering faster and more accurate results. Audio is processed by OpenAI and not retained by this app. OpenAI does not use API data to train their models by default.
+
 ---
 
 **Effective Date:** Jan, 2026
@@ -118,6 +122,7 @@ const TermsContent = () => {
     { id: "9", title: "9. Changes to Terms" },
     { id: "10", title: "10. Contact Information" },
     { id: "11", title: "11. Third-Party AI Model (Google Gemma)" },
+    { id: "12", title: "12. Third-Party Service (OpenAI)" },
   ];
 
   const handleSectionClick = (index: number) => {
