@@ -51,7 +51,7 @@ export const pricingCards: PricingCard[] = [
   },
   {
     type: "CLOUD AI",
-    description: "For professionals and teams who demand unlimited capacity and enterprise features.",
+    description: "For professionals who demand Cloud transcription, enhanced accuracy and smart formatting.",
     priceWeekly: "$6.99",
     priceYearly: "$69.99",
     features: [
@@ -113,26 +113,7 @@ export const plansInfo: PlanInfo[] = [
 
 export const featuresData: FeatureRow[] = [
   {
-    feature: "Device & platform",
-    free: "Free",
-    privateAi: "Private AI",
-    cloudAi: "Cloud AI",
-    isCategoryHeader: true,
-  },
-  {
-    feature: "iPhone (iOS)",
-    free: true,
-    privateAi: true,
-    cloudAi: true,
-  },
-  {
-    feature: "Android",
-    free: true,
-    privateAi: true,
-    cloudAi: true,
-  },
-  {
-    feature: "Effortless voice typing",
+    feature: "",
     free: "Free",
     privateAi: "Private AI",
     cloudAi: "Cloud AI",
@@ -145,21 +126,33 @@ export const featuresData: FeatureRow[] = [
     cloudAi: true,
   },
   {
-    feature: "Word limit",
-    free: "1,000/week",
-    privateAi: "Unlimited",
-    cloudAi: "Unlimited",
+    feature: "Export & Import Notes",
+    free: true,
+    privateAi: true,
+    cloudAi: true,
   },
   {
-    feature: "Create Notes",
+    feature: "Transcription limit",
     free: false,
-    privateAi: true,
-    cloudAi: true,
+    privateAi: "On-device unlimited",
+    cloudAi: "150 minutes of cloud AI + On-device unlimited",
   },
   {
-    feature: "Support 100+ languages",
-    free: true,
-    privateAi: true,
+    feature: "Summaries",
+    free: false,
+    privateAi: "Supports English",
+    cloudAi: "Supports Summaries in 100+ languages",
+  },
+  {
+    feature: "Transcription Speed",
+    free: false,
+    privateAi: "Medium",
+    cloudAi: "Super Fast",
+  },
+  {
+    feature: "Custom prompt",
+    free: false,
+    privateAi: false,
     cloudAi: true,
   },
 ];
@@ -172,23 +165,23 @@ export interface FAQItem {
 
 export const pricingFaqData: FAQItem[] = [
   {
-    question: "How do I upgrade from Basic to Private AI?",
-    answer: "You can upgrade your plan directly from the app settings. Go to Plan & Billing, select the Private AI plan, and follow the payment process. Your upgrade will be effective immediately.",
+    question: "How do I upgrade from Private AI to Cloud AI?",
+    answer: "You can upgrade your plan directly from the app account page. Tap on \"Go Premium\" and select the Premium plan, and follow the payment process. Your upgrade will be effective when your current subscription is over.",
   },
   {
     question: "Is there a free trial or free plan available?",
-    answer: "Yes! We offer a free Forever plan with 300 minutes of transcription per week. Additionally, Private AI and Cloud AI plans come with 3-day free trials.",
+    answer: "There is a 3-day free trial which allows you to test both unlimited on-device Private AI, then Cloud AI transcription, with restriction to 10 minutes of cloud AI transcripts.",
   },
   {
     question: "Can I change or cancel my subscription at any time?",
-    answer: "Yes. You can manage your subscription under Plan & Billing in the Notely voice App.",
+    answer: "Yes and you have to allow your current subscription to expire",
   },
   {
     question: "Do you offer discounts for specific groups?",
-    answer: "We offer discounts for educational institutions, nonprofits, and large teams. Please contact our sales team for custom pricing options.",
+    answer: "Not yet, but we plan to roll out discounts for students to use",
   },
   {
     question: "Can I use Notely for my whole team?",
-    answer: "Absolutely! Our Cloud AI plan includes real-time collaboration features that allow you to share and edit notes with your team members in real-time.",
+    answer: "The feature will come very soon",
   },
 ];
