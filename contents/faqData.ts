@@ -20,15 +20,15 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "How do I get started?",
-        answer: "Simply download the app from the App Store or Google Play, create a free account, and you're ready to go. No credit card required for the free plan. Tap the microphone icon and start speaking—your words will appear as text in real time.",
+        answer: "Simply download the app from the App Store or Google Play, create a free account, and you're ready to go. No credit card required for the free plan. Tap the microphone icon and start speaking.",
       },
       {
         question: "Which devices are supported?",
-        answer: "Notely Voice works on iOS (iPhone and iPad), Android smartphones and tablets, and through web browsers on desktop computers (Chrome, Safari, Edge, Firefox).",
+        answer: "Notely Voice works on iOS (iPhone and iPad), Android smartphones and tablets, and on macOS (Beta).",
       },
       {
         question: "Do I need an internet connection?",
-        answer: "For best accuracy, we recommend an internet connection. However, basic transcription features work offline once you've downloaded the language packs for your device.",
+        answer: "For Private AI transcription and English summaries, no internet connection is required after downloading on-device model. For Cloud AI transcriptions, you require internet connections.",
       },
       // {
       //   question: "Can I use Notely on multiple devices?",
@@ -244,6 +244,46 @@ export const faqData: FAQCategory[] = [
       {
         question: "How do I manage my subscription?",
         answer: "Go to Settings > Plan & Billing to view your current plan, upgrade, downgrade, or cancel your subscription. Changes take effect at your next billing cycle.",
+      },
+    ],
+  },
+  {
+    id: "refunds",
+    label: "Refunds",
+    faqs: [
+      {
+        question: "Placeholder question for refunds",
+        answer: "Placeholder answer for refunds. This will be filled in later.",
+      },
+    ],
+  },
+  {
+    id: "creating-voice-notes",
+    label: "Creating Voice Notes",
+    faqs: [
+      {
+        question: "Placeholder question for creating voice notes",
+        answer: "Placeholder answer for creating voice notes. This will be filled in later.",
+      },
+    ],
+  },
+  {
+    id: "exporting-notes",
+    label: "Exporting Notes",
+    faqs: [
+      {
+        question: "Placeholder question for exporting notes",
+        answer: "Placeholder answer for exporting notes. This will be filled in later.",
+      },
+    ],
+  },
+  {
+    id: "on-device-model",
+    label: "On-device model",
+    faqs: [
+      {
+        question: "Placeholder question for on-device model",
+        answer: "Placeholder answer for on-device model. This will be filled in later.",
       },
     ],
   },
