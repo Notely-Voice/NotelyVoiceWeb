@@ -99,13 +99,13 @@ export const plansInfo: PlanInfo[] = [
   },
   {
     type: "PRIVATE AI",
-    subtitle: "$9.99",
+    subtitle: "$1.99",
     price: "/week",
     buttonText: "Get Started",
   },
   {
     type: "CLOUD AI",
-    subtitle: "$24.99",
+    subtitle: "$6.99",
     price: "/week",
     buttonText: "Get Started",
   },

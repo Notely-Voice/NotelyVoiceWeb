@@ -10,7 +10,7 @@ const HomeDownload = () => {
         <div className="px-5 sm:pl-10 xl:pl-20 sm:pr-12 w-fit">
           <SectionIntro
             heading="Write faster in all your apps, on any device"
-            text="Seamless speech-to-text in every application on your iPhone or computer"
+            text="Works everywhere you need it, every app, every message, every note."
             headingStyle="max-w-[280px] sm:max-w-full lg:max-w-[480px] xl:max-w-[565px] text-[40px] sm:text-[48px]! xl:text-[60px]! mb-4!"
             textStyle="max-w-[300px] sm:max-w-full lg:max-w-[480px] xl:max-w-[560px] text-xl mb-6!"
             buttonBlockStyle="grid grid-cols-2 sm:flex gap-2 sm:gap-4 items-center -ml-3"

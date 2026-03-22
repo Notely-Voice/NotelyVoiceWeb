@@ -13,7 +13,7 @@ const AboutHero = () => {
         {/* Left Section */}
         <SectionIntro
           heading="WE BELIEVE YOUR VOICE DESERVES TO BE HEARD"
-          text="In a world where ideas come fast and typing can't keep up, we created Notely Voice to help you capture every thought, every moment, and every brilliant idea—just by speaking"
+          text="In a world where ideas come fast and typing can't keep up, we created Notely Voice to help you capture every thought, every moment, and every brilliant idea, just by speaking"
           headingStyle="text-white max-w-xs! sm:max-w-full! md:max-w-md! lg:max-w-110! xl:max-w-140! text-3xl sm:text-[52px] md:text-[34px] lg:text-[44px]! xl:text-[60px]! mb-4! lg:mb-6!"
           textStyle="text-[#F0FEFF] max-w-[280px]! sm:max-w-sm! md:max-w-[300px]! lg:max-w-90! xl:max-w-100! text-xs sm:text-lg md:text-sm lg:text-lg! xl:text-xl! leading-tight! mb-6! lg:mb-16!"
           // className="flex-1"

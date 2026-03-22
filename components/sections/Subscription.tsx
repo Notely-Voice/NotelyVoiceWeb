@@ -35,7 +35,7 @@ const Subscription = () => {
             }`}
           >
             Yearly <span className="font-semibold">
-                Save up to 20%
+                Save up to 80%
               </span>
           </button>
         </div>
