@@ -29,11 +29,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "Do I need an internet connection?",
         answer: "For Private AI transcription and English summaries, no internet connection is required after downloading on-device model. For Cloud AI transcriptions, you require internet connections.",
-      },
-      // {
-      //   question: "Can I use Notely on multiple devices?",
-      //   answer: "Yes, you can use Notely voice on any iOS or Android device. Your notes sync across all your devices when you're logged into your account.",
-      // },
+      }
     ],
   },
   {
@@ -42,11 +38,11 @@ export const faqData: FAQCategory[] = [
     faqs: [
       {
         question: "How accurate is the transcription?",
-        answer: "Our AI-powered transcription delivers up to 95% accuracy in optimal conditions. Accuracy depends on factors like audio quality, background noise, speaker accents, and clarity of speech. For best results, speak clearly in a quiet environment.",
+        answer: "On-device private transcription delivers based on the AI model selected. Cloud transcription delivers up to 95% accuracy in optimal conditions. Accuracy depends on factors like audio quality, background noise, speaker accents, and clarity of speech. For best results, speak clearly in a quiet environment.",
       },
       {
         question: "Can I transcribe in different languages?",
-        answer: "Yes! We support 50+ languages including English, Spanish, French, German, Mandarin, Arabic, Hindi, and many more. You can easily switch between languages in the app settings.",
+        answer: "Yes! We support 100+ languages including English, Spanish, French, German, Chinese, Arabic, Hindi, and many more. You can easily switch between languages in the app settings.",
       },
       {
         question: "Can I improve transcription accuracy?",
@@ -59,11 +55,11 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "Does the app understand different accents?",
-        answer: "Absolutely. Our AI is trained on diverse speech patterns and handles a wide range of accents. The more you use the app, the better it adapts to your unique voice.",
+        answer: "Absolutely. The AI model is trained on diverse speech patterns and handles a wide range of accents.",
       },
       {
         question: "How do I add punctuation?",
-        answer: "You can add punctuation by speaking it aloud. Just say \"comma,\" \"period,\" \"question mark,\" or \"exclamation point\" and the app will insert them. You can also manually edit punctuation after transcription.",
+        answer: "Transcription are done with punctuations by default, but you can instruct the AI using custom prompts on cloud mode.",
       },
     ],
   },
@@ -73,7 +69,7 @@ export const faqData: FAQCategory[] = [
     faqs: [
       {
         question: "Can I transcribe pre-recorded audio files?",
-        answer: "Yes! Upload audio or video files in formats like MP3, WAV, M4A, MP4, and more. The app will transcribe them automatically. This feature is available on Pro and Premium plans.",
+        answer: "Yes! Upload audio or video files in formats like MP3, WAV, M4A, MP4, and more. The app will transcribe them automatically. This feature is available on Private AI and cloud AI Premium plans.",
       },
       {
         question: "How do I organize my notes?",
@@ -111,54 +107,47 @@ export const faqData: FAQCategory[] = [
     label: "Plans & Billing",
     faqs: [
       {
-        question: "Is there a free plan?",
-        answer: [
-          "Yes! Our free plan includes:",
-          "300 minutes of transcription per month",
-          "Basic notepad with voice input",
-          "Search, favorites, and recents",
-          "1 language support",
-          "Export to text format",
-        ],
-      },
-      {
         question: "What's included in the paid plans?",
         answer: [
-          "Pro Plan ($1.99/week or $17.99/year):",
-          "1,200 minutes per month",
-          "Rich text editing",
-          "Multi-language support (50+ languages)",
-          "Audio file transcription",
-          "Append & summarize features",
-          "Custom themes",
-          "Priority support",
+          "Private AI Plan ($1.99/week or $17.99/year):",
+          "Unlimited On-device private AI transcription in 100+ languages",
+          "On-device summaries in English",
+          "Audio & video transcription (upload recordings)",
+          "Bluetooth microphones in recording & many more",
           "",
-          "Premium Plan ($24.99/month or $239/year):",
-          "Unlimited transcription minutes",
-          "Everything in Pro, plus:",
-          "Batch audio transcription",
-          "Advanced AI features",
-          "Real-time collaboration",
-          "Custom vocabulary",
-          "API access",
-          "Dedicated account manager",
+          "Cloud AI Plan ($6.99/week or $69.99/year):",
+          "Custom Prompts for AI transcription",
+          "150 minutes of advanced AI cloud transcription in 100+ languages",
+          "Summarisation in 100+ languages",
+          "Unlimited on-device private transcription",
+          "Super fast cloud transcription & summaries",
+          "Bluetooth microphones in recording",
+          "Priority support",
         ],
       },
       {
         question: "Can I try the paid plans before committing?",
-        answer: "Yes! Pro includes a 7-day free trial, and Premium includes a 14-day free trial. No credit card required to start your trial.",
+        answer: "Yes! There is a 3-day free trial which allows you to test both unlimited on-device Private AI, then Cloud AI transcription, with restriction to 10 minutes of cloud AI transcripts.",
+      },
+      {
+        question: "How do I upgrade from Private AI to Cloud AI?",
+        answer: "You can upgrade your plan directly from the app account page. Tap on \"Go Premium\" and select the Premium plan, and follow the payment process. Your upgrade will be effective when your current subscription is over.",
       },
       {
         question: "Do you offer refunds?",
-        answer: "Yes! If you're not satisfied, we offer a 30-day money-back guarantee, no questions asked.",
+        answer: "Yes! If you're not satisfied, kindly reach out to support@notelyvoice.ai",
       },
       {
         question: "Can I change or cancel my plan anytime?",
-        answer: "Absolutely. Upgrade, downgrade, or cancel your subscription anytime from your Account Settings. Changes take effect immediately. If you cancel, you'll retain access until the end of your billing period.",
+        answer: "Yes and you have to allow your current subscription to expire",
       },
       {
-        question: "What happens if I exceed my monthly minutes?",
-        answer: "Free users will need to wait until the next month or upgrade to a paid plan. Pro users can purchase additional minutes at $0.10/minute or upgrade to Premium for unlimited transcription.",
+        question: "Do you offer discounts for specific groups?",
+        answer: "Not yet, but we plan to roll out discounts for students to use",
+      },
+      {
+        question: "Can I use Notely for my whole team?",
+        answer: "The feature will come very soon",
       },
     ],
   },
@@ -168,7 +157,7 @@ export const faqData: FAQCategory[] = [
     faqs: [
       {
         question: "Is my data secure?",
-        answer: "Yes. We use bank-level encryption (256-bit SSL) to protect your data. All transcriptions are stored securely on encrypted servers, and we're SOC 2 compliant.",
+        answer: "Yes. For private AI, your audio remains on your device unless deleted. For Cloud AI, your audios are transcribed by open AI API.",
       },
       {
         question: "Does the app listen to me all the time?",
@@ -176,11 +165,11 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "Who can see my transcriptions?",
-        answer: "Only you. Your notes and audio are private unless you choose to share them. We never sell or share your personal data with third parties.",
+        answer: "Only you. Your notes and audio are private unless you choose to share them. If you use Cloud AI, then you must consent to sharing your audio with Open AI",
       },
       {
         question: "Do you store my audio recordings?",
-        answer: "Audio files are stored securely in your account for as long as you keep them. You can delete recordings anytime, and they'll be permanently removed from our servers.",
+        answer: "Audio files are stored securely in your account for as long as you keep them. You can delete recordings anytime.",
       },
     ],
   },
@@ -191,18 +180,6 @@ export const faqData: FAQCategory[] = [
       {
         question: "What should I do if transcription isn't working?",
         answer: "First, check that you have a stable internet connection and the latest version of the app. Grant microphone permissions and try again. If the issue persists, contact support.",
-      },
-      {
-        question: "The app isn't transcribing accurately. What should I do?",
-        answer: [
-          "Try these troubleshooting steps:",
-          "Check your internet connection",
-          "Ensure microphone permissions are enabled",
-          "Update the app to the latest version",
-          "Clear the app cache (Settings > Apps > Notely Voice > Clear Cache)",
-          "Make sure no other apps are using the microphone",
-          "Verify that the correct language is selected",
-        ],
       },
       {
         question: "The microphone icon isn't showing. Why?",
@@ -217,7 +194,7 @@ export const faqData: FAQCategory[] = [
       },
       {
         question: "Can I use the app offline?",
-        answer: "Basic transcription works offline if you've downloaded language packs. However, features like AI summarization, cloud sync, and audio file uploads require an internet connection.",
+        answer: "Private AI transcription works offline if you've downloaded language packs. However, features like cloud AI transcription & summarization, require an internet connection.",
       },
     ],
   },
@@ -226,24 +203,20 @@ export const faqData: FAQCategory[] = [
     label: "Account Management",
     faqs: [
       {
-        question: "How do I update my profile or password?",
-        answer: "Go to Account Settings (tap your profile icon) and select \"Edit Profile\" or \"Change Password.\"",
+        question: "How do I update my password?",
+        answer: "Go to Account SignIn and use the \"Forgot Password.\" feature",
       },
       {
         question: "How do I delete my account?",
-        answer: "Go to Account Settings > Delete Account. Please note this action is permanent and will erase all your transcriptions and data.",
-      },
-      {
-        question: "Can I use my account on multiple devices?",
-        answer: "Yes! Your account syncs automatically across all your devices. Log in with the same credentials on any device to access your notes.",
+        answer: "Go to Account > Scroll to bottom > Delete Account. This will only delete your Login Details but preserve your local transcriptions and data.",
       },
       {
         question: "Can I have multiple accounts?",
-        answer: "Yes, you can create separate accounts with different email addresses. Log out and use a different email to create another account.",
+        answer: "Yes, but you can only subscribe with accounts tied to your Gmail or Appled ID.",
       },
       {
         question: "How do I manage my subscription?",
-        answer: "Go to Settings > Plan & Billing to view your current plan, upgrade, downgrade, or cancel your subscription. Changes take effect at your next billing cycle.",
+        answer: "Go to Account > Plans to view your current plan, use manage button to cancel your subscription. Changes take effect at your next billing cycle.",
       },
     ],
   },
@@ -252,8 +225,48 @@ export const faqData: FAQCategory[] = [
     label: "Refunds",
     faqs: [
       {
-        question: "Placeholder question for refunds",
-        answer: "Placeholder answer for refunds. This will be filled in later.",
+        question: "Do you offer refunds?",
+        answer: "Yes! If you're not satisfied, kindly reach out to support@notelyvoice.ai",
+      },
+      {
+        question: "How long does Refunds take from Google play or Apple pay?",
+        answer: "Usually it depends on which payment method you used and whether the refund is already approved. For Google Play Credit/debit card: usually 3–5 working days Sometimes your bank can take up to 10 working days. For Apple / Apple Pay Refund decision usually comes in 24–48 hours",
+      },
+    ],
+  },
+  {
+    id: "common-issues",
+    label: "Common Issues",
+    faqs: [
+      {
+        question: "Why don't I see all the features mentioned in this FAQ?",
+        answer: "You may be using an older version of the app. Please update to the latest version through the app stores to access current features.",
+      },
+      {
+        question: "Why is my model download stuck at 0%?",
+        answer: "Check your internet connection stability and restart the download. Review firewall settings, as security software may be blocking it.",
+      },
+    ],
+  },
+  {
+    id: "creating-text-notes",
+    label: "Creating Text Notes",
+    faqs: [
+      {
+        question: "How do I create some notes?",
+        answer: "Simply tap on the Plus (+) on the bottom right corner of the home screen and begin writing.",
+      },
+      {
+        question: "How to change the title of a note?",
+        answer: "The first paragraph is the title of the note. Edit the opening line to modify it.",
+      },
+      {
+        question: "How do I delete a note?",
+        answer: "You can tap X on each note on the home screen to delete.",
+      },
+      {
+        question: "Can I organize my voice notes into folders?",
+        answer: "This capability is not available at this time, feature still to come very soon.",
       },
     ],
   },
@@ -262,28 +275,74 @@ export const faqData: FAQCategory[] = [
     label: "Creating Voice Notes",
     faqs: [
       {
-        question: "Placeholder question for creating voice notes",
-        answer: "Placeholder answer for creating voice notes. This will be filled in later.",
+        question: "How do I record a voice note?",
+        answer: "Simply tap the microphone button on the text editing screen and begin speaking. Tap again to stop recording.",
+      },
+      {
+        question: "How do I delete ONLY a voice note?",
+        answer: "Open the text editing screen, swipe left to delete the voice note.",
+      },
+      {
+        question: "How do I Import an audio file?",
+        answer: "Simply tap the 3 dots(...) button at the top right of the editing screen and import your audio.",
+      },
+      {
+        question: "Can I import large audio files?",
+        answer: "Yes, though files exceeding 1GB should be divided into smaller segments for device processing.",
       },
     ],
   },
   {
     id: "exporting-notes",
-    label: "Exporting Notes",
+    label: "Exporting Texts & Voice Notes",
     faqs: [
       {
-        question: "Placeholder question for exporting notes",
-        answer: "Placeholder answer for exporting notes. This will be filled in later.",
+        question: "How do I Export all my notes & audio all at once?",
+        answer: "LONG PRESS any note card to enter selection mode, then export multiple notes at once.",
+      },
+      {
+        question: "How do I Export a single audio?",
+        answer: "Use the menu button and select export for your audio file.",
+      },
+      {
+        question: "How do I Export a single text as a .Txt file?",
+        answer: "Access the menu and choose the text file export option.",
+      },
+      {
+        question: "How do I Export a single text as a PDF file?",
+        answer: "Use the menu to export your note as a PDF.",
+      },
+      {
+        question: "How do I share a voice note?",
+        answer: "Click on the share icon on the top right of the note editor, a popup dialog opens up to share voice note.",
+      },
+      {
+        question: "Where are my recordings stored?",
+        answer: "All recordings are stored locally on your device. We don't upload your data to any external servers.",
       },
     ],
   },
   {
-    id: "on-device-model",
-    label: "On-device model",
+    id: "android-quick-settings",
+    label: "Android Quick Settings Tile",
     faqs: [
       {
-        question: "Placeholder question for on-device model",
-        answer: "Placeholder answer for on-device model. This will be filled in later.",
+        question: "How do I setup the Notely Voice quick setting tile?",
+        answer: "The feature allows stopping recordings via quick settings even when the screen is locked and automatically saves upon completion.",
+      },
+    ],
+  },
+  {
+    id: "internet-connectivity",
+    label: "Internet Connectivity",
+    faqs: [
+      {
+        question: "Do I need internet for voice transcriptions?",
+        answer: "Transcriptions can run locally without internet dependency once model is downloaded.",
+      },
+      {
+        question: "Does Notely Voice work offline?",
+        answer: "Absolutely! Since all data is stored locally on your device, you can record and access your voice notes without an internet connection.",
       },
     ],
   },
