@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import {
   COUNTRY_PRICING,
   CLOUD_AI_WEEKLY_PRICING,
+  PRIVATE_AI_YEARLY_PRICING,
   TIMEZONE_TO_COUNTRY,
   DEFAULT_PRICING,
   getCurrencySymbol,
@@ -14,12 +15,14 @@ interface UseLocalPriceReturn {
   currency: string;
   currencySymbol: string;
   privateAIWeeklyPrice: number;
+  privateAIYearlyPrice: number;
   cloudAIWeeklyPrice: number;
   isLoading: boolean;
 }
 
 export function useLocalPrice(): UseLocalPriceReturn {
-  const [privateAIPricing, setPrivateAIPricing] = useState<CountryPrice>(DEFAULT_PRICING);
+  const [privateAIWeeklyPricing, setPrivateAIWeeklyPricing] = useState<CountryPrice>(DEFAULT_PRICING);
+  const [privateAIYearlyPricing, setPrivateAIYearlyPricing] = useState<CountryPrice>({ currency: "USD", price: 19.99 });
   const [cloudAIPricing, setCloudAIPricing] = useState<CountryPrice>({ currency: "USD", price: 6.99 });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,11 +35,18 @@ export function useLocalPrice(): UseLocalPriceReturn {
       const country = TIMEZONE_TO_COUNTRY[timezone];
 
       if (country) {
-        // Set Private AI pricing
+        // Set Private AI Weekly pricing
         if (COUNTRY_PRICING[country]) {
-          setPrivateAIPricing(COUNTRY_PRICING[country]);
+          setPrivateAIWeeklyPricing(COUNTRY_PRICING[country]);
         } else {
-          setPrivateAIPricing(DEFAULT_PRICING);
+          setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+        }
+
+        // Set Private AI Yearly pricing
+        if (PRIVATE_AI_YEARLY_PRICING[country]) {
+          setPrivateAIYearlyPricing(PRIVATE_AI_YEARLY_PRICING[country]);
+        } else {
+          setPrivateAIYearlyPricing({ currency: "USD", price: 19.99 });
         }
 
         // Set Cloud AI pricing
@@ -47,13 +57,15 @@ export function useLocalPrice(): UseLocalPriceReturn {
         }
       } else {
         // Fallback to default USD pricing
-        setPrivateAIPricing(DEFAULT_PRICING);
+        setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+        setPrivateAIYearlyPricing({ currency: "USD", price: 19.99 });
         setCloudAIPricing({ currency: "USD", price: 6.99 });
       }
     } catch (error) {
       // If any error occurs, use default pricing
       console.error("Error detecting timezone:", error);
-      setPrivateAIPricing(DEFAULT_PRICING);
+      setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+      setPrivateAIYearlyPricing({ currency: "USD", price: 19.99 });
       setCloudAIPricing({ currency: "USD", price: 6.99 });
     } finally {
       setIsLoading(false);
@@ -61,9 +73,10 @@ export function useLocalPrice(): UseLocalPriceReturn {
   }, []);
 
   return {
-    currency: privateAIPricing.currency,
-    currencySymbol: getCurrencySymbol(privateAIPricing.currency),
-    privateAIWeeklyPrice: privateAIPricing.price,
+    currency: privateAIWeeklyPricing.currency,
+    currencySymbol: getCurrencySymbol(privateAIWeeklyPricing.currency),
+    privateAIWeeklyPrice: privateAIWeeklyPricing.price,
+    privateAIYearlyPrice: privateAIYearlyPricing.price,
     cloudAIWeeklyPrice: cloudAIPricing.price,
     isLoading,
   };

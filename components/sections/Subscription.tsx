@@ -8,7 +8,7 @@ import { useLocalPrice } from "@/hooks/useLocalPrice";
 
 const Subscription = () => {
   const [isYearly, setIsYearly] = useState(false);
-  const { currencySymbol, privateAIWeeklyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
+  const { currencySymbol, privateAIWeeklyPrice, privateAIYearlyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
 
   return (
     <div className="px-4 sm:px-9 flex flex-col justify-center items-center relative">
@@ -73,7 +73,7 @@ const Subscription = () => {
 
                 {/* Price */}
                 <div className="flex flex-col gap-1">
-                  {isLoading && (card.type === "PRIVATE AI" || card.type === "CLOUD AI") && !isYearly ? (
+                  {isLoading && (card.type === "PRIVATE AI" || card.type === "CLOUD AI") ? (
                     <div className="h-10 w-40 bg-gray-300 animate-pulse rounded" />
                   ) : (
                     <div className="flex items-baseline gap-1">
@@ -88,6 +88,8 @@ const Subscription = () => {
                           ? `${currencySymbol}0`
                           : card.type === "PRIVATE AI" && !isYearly
                           ? `${currencySymbol}${privateAIWeeklyPrice.toLocaleString()}`
+                          : card.type === "PRIVATE AI" && isYearly
+                          ? `${currencySymbol}${privateAIYearlyPrice.toLocaleString()}`
                           : card.type === "CLOUD AI" && !isYearly
                           ? `${currencySymbol}${cloudAIWeeklyPrice.toLocaleString()}`
                           : isYearly ? card.priceYearly : card.priceWeekly}
