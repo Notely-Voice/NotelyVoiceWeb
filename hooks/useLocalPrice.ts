@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import {
   COUNTRY_PRICING,
+  CLOUD_AI_WEEKLY_PRICING,
   TIMEZONE_TO_COUNTRY,
   DEFAULT_PRICING,
   getCurrencySymbol,
@@ -12,12 +13,14 @@ import {
 interface UseLocalPriceReturn {
   currency: string;
   currencySymbol: string;
-  weeklyPrice: number;
+  privateAIWeeklyPrice: number;
+  cloudAIWeeklyPrice: number;
   isLoading: boolean;
 }
 
 export function useLocalPrice(): UseLocalPriceReturn {
-  const [pricing, setPricing] = useState<CountryPrice>(DEFAULT_PRICING);
+  const [privateAIPricing, setPrivateAIPricing] = useState<CountryPrice>(DEFAULT_PRICING);
+  const [cloudAIPricing, setCloudAIPricing] = useState<CountryPrice>({ currency: "USD", price: 6.99 });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -28,26 +31,40 @@ export function useLocalPrice(): UseLocalPriceReturn {
       // Map timezone to country
       const country = TIMEZONE_TO_COUNTRY[timezone];
 
-      if (country && COUNTRY_PRICING[country]) {
-        // Found matching country pricing
-        setPricing(COUNTRY_PRICING[country]);
+      if (country) {
+        // Set Private AI pricing
+        if (COUNTRY_PRICING[country]) {
+          setPrivateAIPricing(COUNTRY_PRICING[country]);
+        } else {
+          setPrivateAIPricing(DEFAULT_PRICING);
+        }
+
+        // Set Cloud AI pricing
+        if (CLOUD_AI_WEEKLY_PRICING[country]) {
+          setCloudAIPricing(CLOUD_AI_WEEKLY_PRICING[country]);
+        } else {
+          setCloudAIPricing({ currency: "USD", price: 6.99 });
+        }
       } else {
         // Fallback to default USD pricing
-        setPricing(DEFAULT_PRICING);
+        setPrivateAIPricing(DEFAULT_PRICING);
+        setCloudAIPricing({ currency: "USD", price: 6.99 });
       }
     } catch (error) {
       // If any error occurs, use default pricing
       console.error("Error detecting timezone:", error);
-      setPricing(DEFAULT_PRICING);
+      setPrivateAIPricing(DEFAULT_PRICING);
+      setCloudAIPricing({ currency: "USD", price: 6.99 });
     } finally {
       setIsLoading(false);
     }
   }, []);
 
   return {
-    currency: pricing.currency,
-    currencySymbol: getCurrencySymbol(pricing.currency),
-    weeklyPrice: pricing.price,
+    currency: privateAIPricing.currency,
+    currencySymbol: getCurrencySymbol(privateAIPricing.currency),
+    privateAIWeeklyPrice: privateAIPricing.price,
+    cloudAIWeeklyPrice: cloudAIPricing.price,
     isLoading,
   };
 }
