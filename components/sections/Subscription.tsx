@@ -8,7 +8,7 @@ import { useLocalPrice } from "@/hooks/useLocalPrice";
 
 const Subscription = () => {
   const [isYearly, setIsYearly] = useState(false);
-  const { currencySymbol, privateAIWeeklyPrice, privateAIYearlyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
+  const { currencySymbol, privateAIWeeklyPrice, privateAIYearlyPrice, cloudAIWeeklyPrice, cloudAIYearlyPrice, isLoading } = useLocalPrice();
 
   return (
     <div className="px-4 sm:px-9 flex flex-col justify-center items-center relative">
@@ -92,6 +92,8 @@ const Subscription = () => {
                           ? `${currencySymbol}${privateAIYearlyPrice.toLocaleString()}`
                           : card.type === "CLOUD AI" && !isYearly
                           ? `${currencySymbol}${cloudAIWeeklyPrice.toLocaleString()}`
+                          : card.type === "CLOUD AI" && isYearly
+                          ? `${currencySymbol}${cloudAIYearlyPrice.toLocaleString()}`
                           : isYearly ? card.priceYearly : card.priceWeekly}
                       </span>
                       <span
