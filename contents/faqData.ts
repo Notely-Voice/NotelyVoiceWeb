@@ -231,32 +231,114 @@ export const faqData: FAQCategory[] = [
     ],
   },
   {
+    id: "common-issues",
+    label: "Common Issues",
+    faqs: [
+      {
+        question: "Why don't I see all the features mentioned in this FAQ?",
+        answer: "You may be using an older version of the app. Please update to the latest version through the app stores to access current features.",
+      },
+      {
+        question: "Why is my model download stuck at 0%?",
+        answer: "Check your internet connection stability and restart the download. Review firewall settings, as security software may be blocking it.",
+      },
+    ],
+  },
+  {
+    id: "creating-text-notes",
+    label: "Creating Text Notes",
+    faqs: [
+      {
+        question: "How do I create some notes?",
+        answer: "Simply tap on the Plus (+) on the bottom right corner of the home screen and begin writing.",
+      },
+      {
+        question: "How to change the title of a note?",
+        answer: "The first paragraph is the title of the note. Edit the opening line to modify it.",
+      },
+      {
+        question: "How do I delete a note?",
+        answer: "You can tap X on each note on the home screen to delete.",
+      },
+      {
+        question: "Can I organize my voice notes into folders?",
+        answer: "This capability is not available at this time, feature still to come very soon.",
+      },
+    ],
+  },
+  {
     id: "creating-voice-notes",
     label: "Creating Voice Notes",
     faqs: [
       {
-        question: "Placeholder question for creating voice notes",
-        answer: "Placeholder answer for creating voice notes. This will be filled in later.",
+        question: "How do I record a voice note?",
+        answer: "Simply tap the microphone button on the text editing screen and begin speaking. Tap again to stop recording.",
+      },
+      {
+        question: "How do I delete ONLY a voice note?",
+        answer: "Open the text editing screen, swipe left to delete the voice note.",
+      },
+      {
+        question: "How do I Import an audio file?",
+        answer: "Simply tap the 3 dots(...) button at the top right of the editing screen and import your audio.",
+      },
+      {
+        question: "Can I import large audio files?",
+        answer: "Yes, though files exceeding 1GB should be divided into smaller segments for device processing.",
       },
     ],
   },
   {
     id: "exporting-notes",
-    label: "Exporting Notes",
+    label: "Exporting Texts & Voice Notes",
     faqs: [
       {
-        question: "Placeholder question for exporting notes",
-        answer: "Placeholder answer for exporting notes. This will be filled in later.",
+        question: "How do I Export all my notes & audio all at once?",
+        answer: "LONG PRESS any note card to enter selection mode, then export multiple notes at once.",
+      },
+      {
+        question: "How do I Export a single audio?",
+        answer: "Use the menu button and select export for your audio file.",
+      },
+      {
+        question: "How do I Export a single text as a .Txt file?",
+        answer: "Access the menu and choose the text file export option.",
+      },
+      {
+        question: "How do I Export a single text as a PDF file?",
+        answer: "Use the menu to export your note as a PDF.",
+      },
+      {
+        question: "How do I share a voice note?",
+        answer: "Click on the share icon on the top right of the note editor, a popup dialog opens up to share voice note.",
+      },
+      {
+        question: "Where are my recordings stored?",
+        answer: "All recordings are stored locally on your device. We don't upload your data to any external servers.",
       },
     ],
   },
   {
-    id: "on-device-model",
-    label: "On-device model",
+    id: "android-quick-settings",
+    label: "Android Quick Settings Tile",
     faqs: [
       {
-        question: "Placeholder question for on-device model",
-        answer: "Placeholder answer for on-device model. This will be filled in later.",
+        question: "How do I setup the Notely Voice quick setting tile?",
+        answer: "The feature allows stopping recordings via quick settings even when the screen is locked and automatically saves upon completion.",
+      },
+    ],
+  },
+  {
+    id: "internet-connectivity",
+    label: "Internet Connectivity",
+    faqs: [
+      {
+        question: "Do I need internet for voice transcriptions?",
+        answer: "Transcriptions can run locally without internet dependency once model is downloaded.",
+      },
+      {
+        question: "Does Notely Voice work offline?",
+        answer: "Absolutely! Since all data is stored locally on your device, you can record and access your voice notes without an internet connection.",
       },
     ],
   },
