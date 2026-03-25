@@ -3,8 +3,10 @@
 import Button from "@/components/ui/Button";
 import { plansInfo, featuresData } from "@/contents/pricingData";
 import { Check, X } from "lucide-react";
+import { useLocalPrice } from "@/hooks/useLocalPrice";
 
 const PlansFeatures = () => {
+  const { currencySymbol, privateAIWeeklyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
   return (
     <div className="px-4 md:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[#3E45FB] border-4 border-[#3E45FB] rounded-[20px] sm:rounded-[40px] flex flex-col justify-center items-center gap-8 lg:gap-12 z-20 w-full">
@@ -32,14 +34,24 @@ const PlansFeatures = () => {
                   <h3 className="font-varien text-[#F0FEFF] text-lg sm:text-3xl lg:text-[34px] leading-tight tracking-[-3%] mb-3">
                     {plan.type}
                   </h3>
-                  <p className="text-[#F0FEFF] text-sm sm:text-lg font-black mb-5">
-                    {plan.subtitle}
-                    {plan.price && (
-                      <span className="text-[#F0FEFF] font-normal">
-                        {plan.price}
-                      </span>
-                    )}
-                  </p>
+                  {isLoading && (plan.type === "PRIVATE AI" || plan.type === "CLOUD AI") ? (
+                    <div className="h-6 w-24 bg-gray-300/30 animate-pulse rounded mb-5" />
+                  ) : (
+                    <p className="text-[#F0FEFF] text-sm sm:text-lg font-black mb-5">
+                      {plan.type === "FREE"
+                        ? "Free"
+                        : plan.type === "PRIVATE AI"
+                        ? `${currencySymbol}${privateAIWeeklyPrice.toLocaleString()}`
+                        : plan.type === "CLOUD AI"
+                        ? `${currencySymbol}${cloudAIWeeklyPrice.toLocaleString()}`
+                        : plan.subtitle}
+                      {plan.price && (
+                        <span className="text-[#F0FEFF] font-normal">
+                          {plan.price}
+                        </span>
+                      )}
+                    </p>
+                  )}
                 {/* <Button
                   btnText={plan.buttonText}
                   isWhite
