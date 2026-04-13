@@ -6,7 +6,7 @@ import { Check, X } from "lucide-react";
 import { useLocalPrice } from "@/hooks/useLocalPrice";
 
 const PlansFeatures = () => {
-  const { currencySymbol, privateAIWeeklyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
+  const { currencySymbol, privateAIMonthlyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
   return (
     <div className="px-4 md:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[#3E45FB] border-4 border-[#3E45FB] rounded-[20px] sm:rounded-[40px] flex flex-col justify-center items-center gap-8 lg:gap-12 z-20 w-full">
@@ -41,13 +41,13 @@ const PlansFeatures = () => {
                       {plan.type === "FREE"
                         ? "Free"
                         : plan.type === "PRIVATE AI"
-                        ? `${currencySymbol}${privateAIWeeklyPrice.toLocaleString()}`
+                        ? `${currencySymbol}${privateAIMonthlyPrice.toLocaleString()}`
                         : plan.type === "CLOUD AI"
                         ? `${currencySymbol}${cloudAIWeeklyPrice.toLocaleString()}`
                         : plan.subtitle}
                       {plan.price && (
                         <span className="text-[#F0FEFF] font-normal">
-                          {plan.price}
+                          {plan.type === "PRIVATE AI" ? "/month" : plan.price}
                         </span>
                       )}
                     </p>

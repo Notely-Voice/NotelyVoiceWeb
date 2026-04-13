@@ -15,7 +15,7 @@ import {
 interface UseLocalPriceReturn {
   currency: string;
   currencySymbol: string;
-  privateAIWeeklyPrice: number;
+  privateAIMonthlyPrice: number;
   privateAIYearlyPrice: number;
   cloudAIWeeklyPrice: number;
   cloudAIYearlyPrice: number;
@@ -23,7 +23,7 @@ interface UseLocalPriceReturn {
 }
 
 export function useLocalPrice(): UseLocalPriceReturn {
-  const [privateAIWeeklyPricing, setPrivateAIWeeklyPricing] = useState<CountryPrice>(DEFAULT_PRICING);
+  const [privateAIMonthlyPricing, setPrivateAIMonthlyPricing] = useState<CountryPrice>(DEFAULT_PRICING);
   const [privateAIYearlyPricing, setPrivateAIYearlyPricing] = useState<CountryPrice>({ currency: "USD", price: 19.99 });
   const [cloudAIWeeklyPricing, setCloudAIWeeklyPricing] = useState<CountryPrice>({ currency: "USD", price: 6.99 });
   const [cloudAIYearlyPricing, setCloudAIYearlyPricing] = useState<CountryPrice>({ currency: "USD", price: 69.99 });
@@ -38,11 +38,11 @@ export function useLocalPrice(): UseLocalPriceReturn {
       const country = TIMEZONE_TO_COUNTRY[timezone];
 
       if (country) {
-        // Set Private AI Weekly pricing
+        // Set Private AI Monthly pricing (using weekly pricing data, displayed as monthly)
         if (COUNTRY_PRICING[country]) {
-          setPrivateAIWeeklyPricing(COUNTRY_PRICING[country]);
+          setPrivateAIMonthlyPricing(COUNTRY_PRICING[country]);
         } else {
-          setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+          setPrivateAIMonthlyPricing(DEFAULT_PRICING);
         }
 
         // Set Private AI Yearly pricing
@@ -67,7 +67,7 @@ export function useLocalPrice(): UseLocalPriceReturn {
         }
       } else {
         // Fallback to default USD pricing
-        setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+        setPrivateAIMonthlyPricing(DEFAULT_PRICING);
         setPrivateAIYearlyPricing({ currency: "USD", price: 19.99 });
         setCloudAIWeeklyPricing({ currency: "USD", price: 6.99 });
         setCloudAIYearlyPricing({ currency: "USD", price: 69.99 });
@@ -75,7 +75,7 @@ export function useLocalPrice(): UseLocalPriceReturn {
     } catch (error) {
       // If any error occurs, use default pricing
       console.error("Error detecting timezone:", error);
-      setPrivateAIWeeklyPricing(DEFAULT_PRICING);
+      setPrivateAIMonthlyPricing(DEFAULT_PRICING);
       setPrivateAIYearlyPricing({ currency: "USD", price: 19.99 });
       setCloudAIWeeklyPricing({ currency: "USD", price: 6.99 });
       setCloudAIYearlyPricing({ currency: "USD", price: 69.99 });
@@ -85,9 +85,9 @@ export function useLocalPrice(): UseLocalPriceReturn {
   }, []);
 
   return {
-    currency: privateAIWeeklyPricing.currency,
-    currencySymbol: getCurrencySymbol(privateAIWeeklyPricing.currency),
-    privateAIWeeklyPrice: privateAIWeeklyPricing.price,
+    currency: privateAIMonthlyPricing.currency,
+    currencySymbol: getCurrencySymbol(privateAIMonthlyPricing.currency),
+    privateAIMonthlyPrice: privateAIMonthlyPricing.price,
     privateAIYearlyPrice: privateAIYearlyPricing.price,
     cloudAIWeeklyPrice: cloudAIWeeklyPricing.price,
     cloudAIYearlyPrice: cloudAIYearlyPricing.price,

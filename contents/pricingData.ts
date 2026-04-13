@@ -100,7 +100,7 @@ export const plansInfo: PlanInfo[] = [
   {
     type: "PRIVATE AI",
     subtitle: "$1.99",
-    price: "/week",
+    price: "/month",
     buttonText: "Get Started",
   },
   {
