@@ -109,7 +109,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "What's included in the paid plans?",
         answer: [
-          "Private AI Plan ($1.99/week or $17.99/year):",
+          "Private AI Plan ($3.99/week or $17.99/year):",
           "Unlimited On-device private AI transcription in 100+ languages",
           "On-device summaries in English",
           "Audio & video transcription (upload recordings)",

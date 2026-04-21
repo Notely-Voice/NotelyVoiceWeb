@@ -32,7 +32,7 @@ export const pricingCards: PricingCard[] = [
   {
     type: "PRIVATE AI",
     description: "For privacy-first users who prefer on-device local audio processing.",
-    priceWeekly: "$1.99",
+    priceWeekly: "$3.99",
     priceYearly: "$17.99",
     features: [
       { text: "Unlimited On-device private AI transcription in 100+ languages" },
@@ -99,7 +99,7 @@ export const plansInfo: PlanInfo[] = [
   },
   {
     type: "PRIVATE AI",
-    subtitle: "$1.99",
+    subtitle: "$3.99",
     price: "/month",
     buttonText: "Get Started",
   },
