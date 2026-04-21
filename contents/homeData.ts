@@ -64,7 +64,7 @@ export const numberStatsData = [
   },
   {
     number: "100k+",
-    label: "Active Users",
+    label: "App Downloads",
     isRounded: false,
   },
   {
