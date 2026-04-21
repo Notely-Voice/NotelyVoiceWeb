@@ -21,50 +21,50 @@ export const heroCommentsData = [
 export const testimonialData = [
   {
     image: images.person1,
-    name: "Ellen Parker",
-    role: "Content Creator",
+    name: "Dr. Chris Webster",
+    role: "Medical Professional",
     comment:
-      "As a podcaster, this is incredible. Real-time transcription and perfect notes for my episodes. My workflow is 10x faster now.",
+      "Recording issues fixed within days! Support team is incredibly responsive. This app is now essential for my medical practice.",
   },
   {
     image: images.person2,
-    name: "Alex Rodriguez",
-    role: "Software Developer",
+    name: "Rashesh Kamdar",
+    role: "Spiritual Teacher",
     comment:
-      "Amazing tool for documentation. I can now voice notes while coding and get transcribed text instantly. Productivity has skyrocketed!",
+      "Hindi support for transcribing spiritual teachings is perfect. Large file handling and PDF export make sharing so easy!",
   },
   {
     image: images.person3,
-    name: "Solomon Femi",
+    name: "Somit Biswas",
     role: "Business Consultant",
     comment:
-      "This app saved me 10+ hours a week. I record all my client meetings and have perfect notes instantly. Game changer for my consulting business.",
+      "Complete privacy with 100% on-device processing. No data leaves my phone. Exactly what I needed for sensitive client work!",
   },
   {
     image: images.person4,
-    name: "Emma Thompson",
-    role: "Journalist",
+    name: "Afnane Trab",
+    role: "Language Educator",
     comment:
-      "This has revolutionized my interview process. Perfect transcriptions instantly, and I can verify quotes without relistening to hours of tape.",
+      "Auto-detect language feature saves so much time! Seamlessly handles multilingual conversations without manual switching.",
   },
   {
     image: images.person5,
-    name: "Jordan Williams",
-    role: "Student",
+    name: "Nicholas Stockton",
+    role: "Content Creator",
     comment:
-      "Finally, I can focus on lectures instead of typing. Notely Voice captures everything accurately and I can study more effectively.",
+      "The summarize feature and import functionality are game changers. Updates keep making the app better and better!",
   },
 ];
 
 export const numberStatsData = [
   {
-    number: "98.5%",
-    label: "Average Accuracy Rate",
+    number: "~85–95%",
+    label: "Transcription Accuracy, varies by audio quality, language & model.",
     isRounded: true,
   },
   {
     number: "100k+",
-    label: "App Downloads",
+    label: "Downloads on Google Play",
     isRounded: false,
   },
   {
