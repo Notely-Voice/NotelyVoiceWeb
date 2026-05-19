@@ -16,10 +16,7 @@ const WhatsNewHero = () => {
         <div className="bg-[#F0FEFF] rounded-[20px] sm:rounded-[30px] px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
           <div className="space-y-4">
             <p className="text-black text-base sm:text-lg lg:text-lg leading-relaxed">
-              Stay up to date with the latest features and improvements in Notely Voice. We&apos;re constantly working to bring you the best voice transcription experience.
-            </p>
-            <p className="text-black text-base sm:text-lg lg:text-lg leading-relaxed">
-              Check out what&apos;s new in our latest releases for both Android and iOS platforms.
+              Stay up to date with the latest features and improvements in Notely Voice.
             </p>
           </div>
         </div>
