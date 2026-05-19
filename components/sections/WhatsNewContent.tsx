@@ -160,7 +160,6 @@ const whatsNewMD = `# What's New
 
 ### What is new on NotelyVoice?
 
-- **Brand new interface** - Completely redesigned user experience for better usability
 - **Cloud Transcription** - Enhanced cloud-based transcription for improved accuracy
 - **Cloud Summarization for 100+ languages** - Get summaries in over 100 languages
 - **On-device background transcription** - Transcribe audio even when the app is in the background

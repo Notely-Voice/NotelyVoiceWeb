@@ -8,6 +8,7 @@ const MoreInfoHero = () => {
         {/* Header with Title */}
         <div className="flex flex-col items-center gap-4 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
           <h1 className="font-varien text-center text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
+            <br />
             MORE INFO
           </h1>
           <p className="text-white text-center text-sm sm:text-base lg:text-lg font-medium max-w-3xl">
@@ -38,16 +39,7 @@ const MoreInfoHero = () => {
         </div>
 
         {/* Content Box */}
-        <div className="bg-[#F0FEFF] rounded-[20px] sm:rounded-[30px] px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
-          <div className="space-y-4">
-            <p className="text-black text-base sm:text-lg lg:text-lg leading-relaxed">
-              Notely Voice brings powerful AI transcription to your fingertips with features designed for both Android and iOS platforms.
-            </p>
-            <p className="text-black text-base sm:text-lg lg:text-lg leading-relaxed">
-              Discover all the amazing features that make Notely Voice the best voice-to-text solution for students, professionals, and content creators.
-            </p>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
