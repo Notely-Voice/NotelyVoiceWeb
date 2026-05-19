@@ -265,7 +265,7 @@ const WhatsNewContent = () => {
             <div className="text-white prose prose-invert max-w-none">
               <ReactMarkdown
                 components={{
-                  h2: ({ node, children }: any) => {
+                  h2: ({ children }: any) => {
                     const childrenStr = String(children);
                     const versionMatch = childrenStr.match(/Version ([\d.]+)/);
 
