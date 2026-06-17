@@ -16,7 +16,7 @@ export const faqData: FAQCategory[] = [
     faqs: [
       {
         question: "What is Notely voice?",
-        answer: "Notely voice is a voice-to-text transcription app that converts your spoken words into written notes instantly. Whether you're taking meeting notes, brainstorming ideas, or transcribing audio files, our app makes it easy to capture your thoughts without typing.",
+        answer: "Notely Voice is a voice note and transcription app. Recording, organizing, and exporting your notes is completely free. Whether you're taking meeting notes, brainstorming ideas, or transcribing audio files, our app makes it easy to capture your thoughts. AI transcription (converting speech to text) is available through our Private AI or Cloud AI plans, with a 3-day free trial.",
       },
       {
         question: "How do I get started?",
