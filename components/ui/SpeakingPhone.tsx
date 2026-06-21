@@ -5,9 +5,11 @@ import Button from "@/components/ui/Button";
 import { useResponsive } from "@/hooks/useResponsive";
 import Image from "next/image";
 import { icons } from "@/lib";
+import { useRouter } from "next/navigation";
 
 const SpeakingPhone = ({ isLineBlack, className }: { isLineBlack: boolean, className?: string }) => {
   const screenSize = useResponsive();
+  const router = useRouter();
 
   // Dynamic bar dimensions based on screen size
   const barWidth = {
@@ -61,6 +63,7 @@ const SpeakingPhone = ({ isLineBlack, className }: { isLineBlack: boolean, class
       <Button
         btnText="Download App"
         isWhite
+        onClick={() => router.push('/ourapps')}
         className="hidden md:flex mt-10 xl:mt-12"
       />
     </div>

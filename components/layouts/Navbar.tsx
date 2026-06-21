@@ -93,7 +93,7 @@ const Navbar = ({
           {/* CTA Button */}
           <Button
             btnText="Download App"
-            
+            onClick={() => router.push('/ourapps')}
             className="hidden md:flex"
           />
         </div>
@@ -122,7 +122,7 @@ const Navbar = ({
             {/* CTA Button */}
             <Button
               btnText="Download App"
-              
+              onClick={() => router.push('/ourapps')}
               className="md:hidden"
             />
           </div>

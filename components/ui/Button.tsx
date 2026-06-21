@@ -117,7 +117,7 @@ const Button = ({
         </button>
       ) : (
         <button
-          onClick={openModal}
+          onClick={onClick || openModal}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
           onFocus={() => setIsFocused(true)}

@@ -15,6 +15,7 @@ const HomeDownload = () => {
             textStyle="max-w-[300px] sm:max-w-full lg:max-w-[480px] xl:max-w-[560px] text-xl mb-6!"
             buttonBlockStyle="grid grid-cols-2 sm:flex gap-2 sm:gap-4 items-center -ml-3"
             isDownload
+            appType="notelytalk"
           />
         </div>
         
