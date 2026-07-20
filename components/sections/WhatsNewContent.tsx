@@ -6,7 +6,113 @@ import { ChevronDown } from "lucide-react";
 
 const whatsNewMD = `# What's New
 
-## Version 1.5.3 - Latest
+## Version 1.6.4 - Latest
+
+### What is new on NotelyVoice?
+
+- **New: Note list colors** - Customize your notes and folders with colors
+- **Fixed: Color picker now respects app's custom theme setting**
+- **Improved: Subscription status sync on login**
+- **Added: Taiwan language support**
+
+---
+
+## Version 1.6.3
+
+### What is new on NotelyVoice?
+
+- **New: Cantonese language support for transcription**
+- **New: Traditional Chinese language support**
+- **Improved: Language strings and translations**
+- **Enhanced: macOS UI improvements**
+
+---
+
+## Version 1.6.2
+
+### What is new on NotelyVoice?
+
+- **Updated: Simplified subscription options** - Removed monthly and cloud weekly plans
+
+---
+
+## Version 1.6.1
+
+### What is new on NotelyVoice?
+
+- **Stability improvements and bug fixes**
+
+---
+
+## Version 1.6.0
+
+### What is new on NotelyVoice?
+
+- **New: Modern Photo Picker for easier media selection**
+- **Privacy: Removed audio and video permissions requirement**
+- **Fixed: Create account button functionality**
+
+---
+
+## Version 1.5.9
+
+### What is new on NotelyVoice?
+
+- **Fixed: Full name incorrectly displaying as password in account creation**
+
+---
+
+## Version 1.5.8
+
+### What is new on NotelyVoice?
+
+- **Minor bug fixes and improvements**
+
+---
+
+## Version 1.5.7
+
+### What is new on NotelyVoice?
+
+- **Improved: Auto-transcribe prompt system**
+- **Enhanced: Authentication storage for better security**
+- **Updated: Move folder feature with new translations**
+
+---
+
+## Version 1.5.6
+
+### What is new on NotelyVoice?
+
+- **New: Move multiple notes to folder at once**
+- **Fixed: Delete action issues**
+- **Fixed: iOS compatibility improvements**
+
+---
+
+## Version 1.5.5
+
+### What is new on NotelyVoice?
+
+- **New: Traditional/Simplified Chinese text conversion**
+- **Added: Multi-language text segmentation support**
+
+---
+
+## Version 1.5.4
+
+### What is new on NotelyVoice?
+
+- **New: Multi-speaker transcription (speaker diarization) on iOS and Cloud**
+- **New: Rename speakers in transcriptions**
+- **New: Cloud summarization in your language**
+- **Fixed: Settings screen bug for non-English locales**
+- **Fixed: Rename speaker UI for long text**
+- **Improved: Transcription progress tracking accuracy**
+
+---
+
+## Version 1.5.3
 
 ### What is new on NotelyVoice?
 
@@ -175,22 +281,33 @@ const WhatsNewContent = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const sections = [
-    { id: "1", title: "Version 1.5.3" },
-    { id: "2", title: "Version 1.5.2" },
-    { id: "3", title: "Version 1.5.1" },
-    { id: "4", title: "Version 1.5.0" },
-    { id: "5", title: "Version 1.4.9" },
-    { id: "6", title: "Version 1.4.8" },
-    { id: "7", title: "Version 1.4.7" },
-    { id: "8", title: "Version 1.4.6" },
-    { id: "9", title: "Version 1.4.5" },
-    { id: "10", title: "Version 1.4.4" },
-    { id: "11", title: "Version 1.4.3" },
-    { id: "12", title: "Version 1.4.2" },
-    { id: "13", title: "Version 1.4.1" },
-    { id: "14", title: "Version 1.4.0" },
-    { id: "15", title: "Version 1.3.6" },
-    { id: "16", title: "Version 1.3.4" },
+    { id: "1", title: "Version 1.6.4" },
+    { id: "2", title: "Version 1.6.3" },
+    { id: "3", title: "Version 1.6.2" },
+    { id: "4", title: "Version 1.6.1" },
+    { id: "5", title: "Version 1.6.0" },
+    { id: "6", title: "Version 1.5.9" },
+    { id: "7", title: "Version 1.5.8" },
+    { id: "8", title: "Version 1.5.7" },
+    { id: "9", title: "Version 1.5.6" },
+    { id: "10", title: "Version 1.5.5" },
+    { id: "11", title: "Version 1.5.4" },
+    { id: "12", title: "Version 1.5.3" },
+    { id: "13", title: "Version 1.5.2" },
+    { id: "14", title: "Version 1.5.1" },
+    { id: "15", title: "Version 1.5.0" },
+    { id: "16", title: "Version 1.4.9" },
+    { id: "17", title: "Version 1.4.8" },
+    { id: "18", title: "Version 1.4.7" },
+    { id: "19", title: "Version 1.4.6" },
+    { id: "20", title: "Version 1.4.5" },
+    { id: "21", title: "Version 1.4.4" },
+    { id: "22", title: "Version 1.4.3" },
+    { id: "23", title: "Version 1.4.2" },
+    { id: "24", title: "Version 1.4.1" },
+    { id: "25", title: "Version 1.4.0" },
+    { id: "26", title: "Version 1.3.6" },
+    { id: "27", title: "Version 1.3.4" },
   ];
 
   const handleSectionClick = (index: number) => {
@@ -271,22 +388,33 @@ const WhatsNewContent = () => {
 
                     // Map version numbers to section IDs
                     const versionToId: Record<string, string> = {
-                      '1.5.3': '1',
-                      '1.5.2': '2',
-                      '1.5.1': '3',
-                      '1.5.0': '4',
-                      '1.4.9': '5',
-                      '1.4.8': '6',
-                      '1.4.7': '7',
-                      '1.4.6': '8',
-                      '1.4.5': '9',
-                      '1.4.4': '10',
-                      '1.4.3': '11',
-                      '1.4.2': '12',
-                      '1.4.1': '13',
-                      '1.4.0': '14',
-                      '1.3.6': '15',
-                      '1.3.4': '16',
+                      '1.6.4': '1',
+                      '1.6.3': '2',
+                      '1.6.2': '3',
+                      '1.6.1': '4',
+                      '1.6.0': '5',
+                      '1.5.9': '6',
+                      '1.5.8': '7',
+                      '1.5.7': '8',
+                      '1.5.6': '9',
+                      '1.5.5': '10',
+                      '1.5.4': '11',
+                      '1.5.3': '12',
+                      '1.5.2': '13',
+                      '1.5.1': '14',
+                      '1.5.0': '15',
+                      '1.4.9': '16',
+                      '1.4.8': '17',
+                      '1.4.7': '18',
+                      '1.4.6': '19',
+                      '1.4.5': '20',
+                      '1.4.4': '21',
+                      '1.4.3': '22',
+                      '1.4.2': '23',
+                      '1.4.1': '24',
+                      '1.4.0': '25',
+                      '1.3.6': '26',
+                      '1.3.4': '27',
                     };
 
                     const version = versionMatch ? versionMatch[1] : '';
