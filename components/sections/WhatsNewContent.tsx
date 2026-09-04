@@ -6,7 +6,39 @@ import { ChevronDown } from "lucide-react";
 
 const whatsNewMD = `# What's New
 
-## Version 1.6.4 - Latest
+## Version 1.7.2 - Latest
+
+### Major Feature Update: Daily Reminders & Widgets
+
+- **Daily Reminders** - Create custom notification schedules
+- **AI Weekly Review** - Sunday summaries of your week
+- **Home Screen Widgets** - Quick access to notes & recording
+- **Date Strip Navigation** - Browse notes by date
+- **Better transcription visibility**
+- **Bug fixes & performance improvements**
+
+---
+
+## Version 1.6.7
+
+### Critical Subscription Fix
+
+- **Fixed: Critical payment issue with Lifetime Purchase**
+- **Improved: Subscription reliability**
+
+---
+
+## Version 1.6.5
+
+### Lifetime Subscription Support
+
+- **Added: Lifetime purchase option to Payments**
+- **New: UI elements for subscription screen**
+- **Minor UI improvements**
+
+---
+
+## Version 1.6.4
 
 ### What is new on NotelyVoice?
 
@@ -281,33 +313,36 @@ const WhatsNewContent = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const sections = [
-    { id: "1", title: "Version 1.6.4" },
-    { id: "2", title: "Version 1.6.3" },
-    { id: "3", title: "Version 1.6.2" },
-    { id: "4", title: "Version 1.6.1" },
-    { id: "5", title: "Version 1.6.0" },
-    { id: "6", title: "Version 1.5.9" },
-    { id: "7", title: "Version 1.5.8" },
-    { id: "8", title: "Version 1.5.7" },
-    { id: "9", title: "Version 1.5.6" },
-    { id: "10", title: "Version 1.5.5" },
-    { id: "11", title: "Version 1.5.4" },
-    { id: "12", title: "Version 1.5.3" },
-    { id: "13", title: "Version 1.5.2" },
-    { id: "14", title: "Version 1.5.1" },
-    { id: "15", title: "Version 1.5.0" },
-    { id: "16", title: "Version 1.4.9" },
-    { id: "17", title: "Version 1.4.8" },
-    { id: "18", title: "Version 1.4.7" },
-    { id: "19", title: "Version 1.4.6" },
-    { id: "20", title: "Version 1.4.5" },
-    { id: "21", title: "Version 1.4.4" },
-    { id: "22", title: "Version 1.4.3" },
-    { id: "23", title: "Version 1.4.2" },
-    { id: "24", title: "Version 1.4.1" },
-    { id: "25", title: "Version 1.4.0" },
-    { id: "26", title: "Version 1.3.6" },
-    { id: "27", title: "Version 1.3.4" },
+    { id: "1", title: "Version 1.7.2" },
+    { id: "2", title: "Version 1.6.7" },
+    { id: "3", title: "Version 1.6.5" },
+    { id: "4", title: "Version 1.6.4" },
+    { id: "5", title: "Version 1.6.3" },
+    { id: "6", title: "Version 1.6.2" },
+    { id: "7", title: "Version 1.6.1" },
+    { id: "8", title: "Version 1.6.0" },
+    { id: "9", title: "Version 1.5.9" },
+    { id: "10", title: "Version 1.5.8" },
+    { id: "11", title: "Version 1.5.7" },
+    { id: "12", title: "Version 1.5.6" },
+    { id: "13", title: "Version 1.5.5" },
+    { id: "14", title: "Version 1.5.4" },
+    { id: "15", title: "Version 1.5.3" },
+    { id: "16", title: "Version 1.5.2" },
+    { id: "17", title: "Version 1.5.1" },
+    { id: "18", title: "Version 1.5.0" },
+    { id: "19", title: "Version 1.4.9" },
+    { id: "20", title: "Version 1.4.8" },
+    { id: "21", title: "Version 1.4.7" },
+    { id: "22", title: "Version 1.4.6" },
+    { id: "23", title: "Version 1.4.5" },
+    { id: "24", title: "Version 1.4.4" },
+    { id: "25", title: "Version 1.4.3" },
+    { id: "26", title: "Version 1.4.2" },
+    { id: "27", title: "Version 1.4.1" },
+    { id: "28", title: "Version 1.4.0" },
+    { id: "29", title: "Version 1.3.6" },
+    { id: "30", title: "Version 1.3.4" },
   ];
 
   const handleSectionClick = (index: number) => {
@@ -388,33 +423,36 @@ const WhatsNewContent = () => {
 
                     // Map version numbers to section IDs
                     const versionToId: Record<string, string> = {
-                      '1.6.4': '1',
-                      '1.6.3': '2',
-                      '1.6.2': '3',
-                      '1.6.1': '4',
-                      '1.6.0': '5',
-                      '1.5.9': '6',
-                      '1.5.8': '7',
-                      '1.5.7': '8',
-                      '1.5.6': '9',
-                      '1.5.5': '10',
-                      '1.5.4': '11',
-                      '1.5.3': '12',
-                      '1.5.2': '13',
-                      '1.5.1': '14',
-                      '1.5.0': '15',
-                      '1.4.9': '16',
-                      '1.4.8': '17',
-                      '1.4.7': '18',
-                      '1.4.6': '19',
-                      '1.4.5': '20',
-                      '1.4.4': '21',
-                      '1.4.3': '22',
-                      '1.4.2': '23',
-                      '1.4.1': '24',
-                      '1.4.0': '25',
-                      '1.3.6': '26',
-                      '1.3.4': '27',
+                      '1.7.2': '1',
+                      '1.6.7': '2',
+                      '1.6.5': '3',
+                      '1.6.4': '4',
+                      '1.6.3': '5',
+                      '1.6.2': '6',
+                      '1.6.1': '7',
+                      '1.6.0': '8',
+                      '1.5.9': '9',
+                      '1.5.8': '10',
+                      '1.5.7': '11',
+                      '1.5.6': '12',
+                      '1.5.5': '13',
+                      '1.5.4': '14',
+                      '1.5.3': '15',
+                      '1.5.2': '16',
+                      '1.5.1': '17',
+                      '1.5.0': '18',
+                      '1.4.9': '19',
+                      '1.4.8': '20',
+                      '1.4.7': '21',
+                      '1.4.6': '22',
+                      '1.4.5': '23',
+                      '1.4.4': '24',
+                      '1.4.3': '25',
+                      '1.4.2': '26',
+                      '1.4.1': '27',
+                      '1.4.0': '28',
+                      '1.3.6': '29',
+                      '1.3.4': '30',
                     };
 
                     const version = versionMatch ? versionMatch[1] : '';
