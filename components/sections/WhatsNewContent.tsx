@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 const whatsNewMD = `# What's New
 
-## Version 1.7.2 - Latest
+## Version 1.7.4 - Latest
 
 ### Major Feature Update: Daily Reminders & Widgets
 
@@ -313,7 +313,7 @@ const WhatsNewContent = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const sections = [
-    { id: "1", title: "Version 1.7.2" },
+    { id: "1", title: "Version 1.7.4" },
     { id: "2", title: "Version 1.6.7" },
     { id: "3", title: "Version 1.6.5" },
     { id: "4", title: "Version 1.6.4" },
@@ -423,7 +423,7 @@ const WhatsNewContent = () => {
 
                     // Map version numbers to section IDs
                     const versionToId: Record<string, string> = {
-                      '1.7.2': '1',
+                      '1.7.4': '1',
                       '1.6.7': '2',
                       '1.6.5': '3',
                       '1.6.4': '4',
