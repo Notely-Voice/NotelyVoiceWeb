@@ -327,8 +327,67 @@ export const faqData: FAQCategory[] = [
     label: "Android Quick Settings Tile",
     faqs: [
       {
-        question: "How do I setup the Notely Voice quick setting tile?",
-        answer: "The feature allows stopping recordings via quick settings even when the screen is locked and automatically saves upon completion.",
+        question: "What is Android Quick Settings Tile?",
+        answer: "The Android Quick Settings Tile gives you instant access to stop recordings directly from your notification panel.",
+      },
+      {
+        question: "How to Setup Android Quick Settings Tile",
+        answer: [
+          "Setup Instructions:",
+          "",
+          "1. Swipe down twice from the top of your Android screen to open the full Quick Settings panel",
+          "2. Tap the Edit button (usually a pencil icon) at the bottom of the Quick Settings panel to enter edit mode",
+          "3. Find \"Notely Voice\" in the list of available tiles (scroll down if needed)",
+          "4. Drag the Notely Voice tile from the \"Available tiles\" section up to the \"Active tiles\" section",
+          "   - Or tap the + icon next to \"Notely Voice\" to add it",
+          "5. Tap \"Done\" or swipe up to close the edit panel",
+        ],
+      },
+    ],
+  },
+  {
+    id: "home-screen-widgets",
+    label: "Home Screen Widgets",
+    faqs: [
+      {
+        question: "What are the Home Screen Widgets?",
+        answer: [
+          "Notely Voice provides two Android home screen widgets that bring voice note capturing and access directly to your home screen:",
+          "",
+          "1. Quick Capture Widget - A compact single-line widget showing your latest note with quick action buttons",
+          "2. Recent Notes Dashboard - A full-featured widget displaying a scrollable list of your 15 most recent notes",
+          "",
+          "Both widgets update automatically whenever you create, update, or delete notes in the app.",
+        ],
+      },
+      {
+        question: "What does the Quick Capture Widget show?",
+        answer: [
+          "The Quick Capture Widget displays:",
+          "- Latest note title with type indicator (Voice Note or Note)",
+          "- Relative timestamp (e.g., \"10 minutes ago\")",
+          "- Quick action buttons:",
+          "  - Bell icon → Opens Daily Reminders",
+          "  - Pencil icon → Create new text note",
+          "  - Green mic icon → Start voice recording immediately",
+          "- Tapping the note area opens that specific note in the app",
+        ],
+      },
+      {
+        question: "What can I do from the widgets?",
+        answer: [
+          "All Quick Actions Available:",
+          "1. Open specific notes - Tap any note to view/edit it",
+          "2. Start voice recording - Tap the green mic button",
+          "3. Create text note - Tap the pencil icon",
+          "4. Open Daily Reminders - Tap the bell icon",
+          "5. Open app - Tap the logo (Dashboard widget)",
+          "6. Scroll through notes - Swipe the notes list (Dashboard widget)",
+        ],
+      },
+      {
+        question: "Is this a premium feature?",
+        answer: "No! Home Screen Widgets are completely free and available to all users. There are no premium requirements, paywalls, or subscription limitations.",
       },
     ],
   },
