@@ -109,7 +109,7 @@ export const faqData: FAQCategory[] = [
       {
         question: "What's included in the paid plans?",
         answer: [
-          "Private AI Plan ($3.99/week or $17.99/year):",
+          "Private AI Plan ($1.99/week or $19.99/year):",
           "Unlimited On-device private AI transcription in 100+ languages",
           "On-device summaries in English",
           "Audio & video transcription (upload recordings)",
@@ -343,6 +343,71 @@ export const faqData: FAQCategory[] = [
       {
         question: "Does Notely Voice work offline?",
         answer: "Absolutely! Since all data is stored locally on your device, you can record and access your voice notes without an internet connection.",
+      },
+    ],
+  },
+  {
+    id: "daily-reminders",
+    label: "Daily Reminders",
+    faqs: [
+      {
+        question: "What is the Daily Reminders feature?",
+        answer: "Daily Reminders helps users build a consistent voice journaling habit by sending thoughtful, context-specific prompts at scheduled times throughout the day. Users receive rotating AI-curated prompts designed to capture reflections, priorities, and thoughts via voice notes.",
+      },
+      {
+        question: "What types of reminders are available?",
+        answer: [
+          "The app offers four prompt themes:",
+          "",
+          "1. Morning Intention (5 rotating prompts)",
+          "   - Examples: \"What is your #1 priority for today?\", \"What would make today feel like a true success?\"",
+          "",
+          "2. Afternoon Check-in (4 rotating prompts)",
+          "   - Examples: \"How are you tracking toward your goals today?\", \"What needs adjusting before the day ends?\"",
+          "",
+          "3. Evening Reflection (5 rotating prompts)",
+          "   - Examples: \"What gave you energy today, and what drained it?\", \"What are you grateful for this evening?\"",
+          "",
+          "4. Custom/Reflection - Add unlimited number of reminders",
+          "   - Examples: \"Take a quick moment to record your thoughts\", \"What is on your mind right now?\"",
+        ],
+      },
+      {
+        question: "How do I set up Daily Reminders?",
+        answer: [
+          "1. Navigate to Settings → Daily Reminders",
+          "2. Enable one or more reminder slots using the toggle switch",
+          "3. Set your preferred time for each reminder",
+          "4. Grant notification permissions when prompted",
+          "5. On Android, allow \"Exact Alarm\" permission for precise timing",
+          "",
+          "The app includes two default slots (Morning at 8:00 AM and Evening at 9:00 PM), but you can add unlimited custom reminders.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "sunday-weekly-review",
+    label: "Sunday Weekly Review",
+    faqs: [
+      {
+        question: "What is the Sunday Weekly Review?",
+        answer: [
+          "The Sunday Weekly Review is a special premium feature that:",
+          "- Sends a notification every Sunday at 7:00 PM",
+          "- Provides an AI-generated synthesis of your week's voice notes",
+          "- Creates an \"editorial AI story\" of your weekly reflections",
+          "- Must be enabled separately from daily reminders",
+        ],
+      },
+      {
+        question: "How do notifications work?",
+        answer: [
+          "- Each reminder displays a randomly selected prompt from its theme category",
+          "- Notifications appear with sound and vibration (configurable via system settings)",
+          "- Tapping a notification opens the app to start recording a voice note",
+          "- Reminders automatically repeat daily at the scheduled time",
+        ],
       },
     ],
   },
