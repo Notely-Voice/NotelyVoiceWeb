@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <HomeHero  />
-      <HomeDownload />
+      {/* <HomeDownload /> */}
       {/* <HomeTyping /> */}
       <HomeTranscription />
       {/* <HomeWork /> */}
