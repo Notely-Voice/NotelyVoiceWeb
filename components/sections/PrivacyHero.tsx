@@ -8,7 +8,7 @@ const PrivacyHero = () => {
             PRIVACY POLICY
           </h1>
           <p className="text-white text-sm sm:text-base lg:text-lg font-medium">
-            Effective Date: January 2026
+            Effective Date: March 2026
           </p>
         </div>
 

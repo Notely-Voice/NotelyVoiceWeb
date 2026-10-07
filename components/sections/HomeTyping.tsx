@@ -40,9 +40,9 @@ const HomeTyping = () => {
       <div
         className="wrapper bg-[var(--white_bg)] px-0 sm:px-6 lg:px-10 xl:px-14 rounded-3xl sm:rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
-          bluetext="4x faster"
-          heading="than typing"
-          text="After 150 years of using the same keyboard, voice that actually works is finally here. When you create, code, and respond faster, you free up time for more. Speak naturally at the speed you think and let Flow handle the rest."
+          bluetext="Think it."
+          heading="Say it."
+          text="You think faster than you type, so why slow down? Notely turns your voice into perfectly written notes, messages, and ideas in seconds. Just speak, and let Notely keep up with you."
           headingStyle="text-black text-[42px] sm:text-[52px] lg:text-[70px] max-w-full mb-4! lg:mb-6!"
           textStyle="text-black text-base sm:text-xl md:text-2xl max-w-full mb-0!"
           // className="px-9"

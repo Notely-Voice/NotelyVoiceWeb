@@ -17,6 +17,8 @@ const SectionIntro = ({
   btnText,
   className,
   bluetext,
+  appType = "notelyvoice",
+  onButtonClick,
 }: {
   heading?: string;
   text?: string;
@@ -29,6 +31,8 @@ const SectionIntro = ({
   btnText?: string;
   className?: string;
   bluetext?: string;
+  appType?: "notelyvoice" | "notelytalk";
+  onButtonClick?: () => void;
 }) => {
   const { openModal } = useDownloadModal();
   const router = useRouter()
@@ -53,25 +57,31 @@ const SectionIntro = ({
             isWhite
             isDownload
             className={`w-full sm:w-fit`}
-            onClick={()  =>  router.push('https://play.google.com/store/apps/details?id=com.module.notelycompose.android')}
+            onClick={()  =>  router.push(
+              appType === "notelytalk"
+                ? 'https://play.google.com/store/apps/details?id=com.notelytalk.dictation'
+                : 'https://play.google.com/store/apps/details?id=com.module.notelycompose.android'
+            )}
           />
-          <Button
-            storeIcon={icons.apple}
-            downloadCta="Download on the"
-            downloadStore="App Store"
-            isWhite
-            isDownload
-            className={`w-full sm:w-fit`}
-            onClick={()  =>  router.push('https://apps.apple.com/us/app/notely-voice-ai-voice-to-text/id6745835691')}
-          />
+          {appType === "notelyvoice" && (
+            <Button
+              storeIcon={icons.apple}
+              downloadCta="Download on the"
+              downloadStore="App Store"
+              isWhite
+              isDownload
+              className={`w-full sm:w-fit`}
+              onClick={()  =>  router.push('https://apps.apple.com/us/app/notely-voice-ai-voice-to-text/id6745835691')}
+            />
+          )}
         </div>
       ) : isBtnWhite ? (
         <div className={`${buttonBlockStyle}`}>
-          <Button btnText={btnText} isWhite className={`w-fit`} />
+          <Button btnText={btnText} isWhite className={`w-fit`} onClick={onButtonClick || (() => router.push('/ourapps'))} />
         </div>
       ) : isBtnBlue ? (
         <div className={`${buttonBlockStyle}`}>
-          <Button btnText={btnText} isWhite className={`w-fit`} />
+          <Button btnText={btnText} isWhite className={`w-fit`} onClick={onButtonClick || (() => router.push('/ourapps'))} />
         </div>
       ) : null}
     </div>

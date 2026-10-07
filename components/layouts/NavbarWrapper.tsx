@@ -69,7 +69,16 @@ const NavbarWrapper = () => {
     case "/privacy":
       navbarProps = dynamicColors[4];
       break;
+    case "/terms":
+      navbarProps = dynamicColors[4];
+      break;
+    case "/whatisnew":
+      navbarProps = dynamicColors[4];
+      break;
     case "/about":
+      navbarProps = dynamicColors[5];
+      break;
+    case "/contact":
       navbarProps = dynamicColors[5];
       break;
     default:

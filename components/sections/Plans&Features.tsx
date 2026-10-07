@@ -3,8 +3,10 @@
 import Button from "@/components/ui/Button";
 import { plansInfo, featuresData } from "@/contents/pricingData";
 import { Check, X } from "lucide-react";
+import { useLocalPrice } from "@/hooks/useLocalPrice";
 
 const PlansFeatures = () => {
+  const { currencySymbol, privateAIMonthlyPrice, cloudAIWeeklyPrice, isLoading } = useLocalPrice();
   return (
     <div className="px-4 md:px-9 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[#3E45FB] border-4 border-[#3E45FB] rounded-[20px] sm:rounded-[40px] flex flex-col justify-center items-center gap-8 lg:gap-12 z-20 w-full">
@@ -32,14 +34,24 @@ const PlansFeatures = () => {
                   <h3 className="font-varien text-[#F0FEFF] text-lg sm:text-3xl lg:text-[34px] leading-tight tracking-[-3%] mb-3">
                     {plan.type}
                   </h3>
-                  <p className="text-[#F0FEFF] text-sm sm:text-lg font-black mb-5">
-                    {plan.subtitle}
-                    {plan.price && (
-                      <span className="text-[#F0FEFF] font-normal">
-                        {plan.price}
-                      </span>
-                    )}
-                  </p>
+                  {isLoading && (plan.type === "PRIVATE AI" || plan.type === "CLOUD AI") ? (
+                    <div className="h-6 w-24 bg-gray-300/30 animate-pulse rounded mb-5" />
+                  ) : (
+                    <p className="text-[#F0FEFF] text-sm sm:text-lg font-black mb-5">
+                      {plan.type === "FREE"
+                        ? "Free"
+                        : plan.type === "PRIVATE AI"
+                        ? `${currencySymbol}${privateAIMonthlyPrice.toLocaleString()}`
+                        : plan.type === "CLOUD AI"
+                        ? `${currencySymbol}${cloudAIWeeklyPrice.toLocaleString()}`
+                        : plan.subtitle}
+                      {plan.price && (
+                        <span className="text-[#F0FEFF] font-normal">
+                          {plan.type === "PRIVATE AI" ? "/month" : plan.price}
+                        </span>
+                      )}
+                    </p>
+                  )}
                 {/* <Button
                   btnText={plan.buttonText}
                   isWhite
@@ -93,8 +105,8 @@ const PlansFeatures = () => {
 
                     {/* Pro Column */}
                     <td className="px-6 py-4 text-center min-w-[120px]">
-                      {typeof row.pro === "boolean" ? (
-                        row.pro ? (
+                      {typeof row.privateAi === "boolean" ? (
+                        row.privateAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -105,15 +117,15 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.pro}
+                          {row.privateAi}
                         </span>
                       )}
                     </td>
 
                     {/* Premium Column */}
                     <td className="px-6 py-4 text-center min-w-[120px]">
-                      {typeof row.premium === "boolean" ? (
-                        row.premium ? (
+                      {typeof row.cloudAi === "boolean" ? (
+                        row.cloudAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -124,7 +136,7 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.premium}
+                          {row.cloudAi}
                         </span>
                       )}
                     </td>
@@ -172,8 +184,8 @@ const PlansFeatures = () => {
                     </div>
                     <div className="text-center">
                       {/*<div className="font-semibold mb-1">Pro</div>*/}
-                      {typeof row.pro === "boolean" ? (
-                        row.pro ? (
+                      {typeof row.privateAi === "boolean" ? (
+                        row.privateAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -184,14 +196,14 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.pro}
+                          {row.privateAi}
                         </span>
                       )}
                     </div>
                     <div className="text-center">
                       {/*<div className="font-semibold mb-1">Premium</div>*/}
-                      {typeof row.premium === "boolean" ? (
-                        row.premium ? (
+                      {typeof row.cloudAi === "boolean" ? (
+                        row.cloudAi ? (
                           <Check className="w-5 h-5 text-black mx-auto" />
                         ) : (
                           <X className="w-5 h-5 text-[#DD2E44] mx-auto" />
@@ -202,7 +214,7 @@ const PlansFeatures = () => {
                             row.isCategoryHeader ? "font-bold text-base sm:text-xl lg:text-3xl" : "font-medium text-xs sm:text-base md:text-lg lg:text-xl"
                           } text-black`}
                         >
-                          {row.premium}
+                          {row.cloudAi}
                         </span>
                       )}
                     </div>

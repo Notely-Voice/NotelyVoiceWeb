@@ -37,7 +37,8 @@ const HomeTranscription = () => {
   };
 
   return (
-    <div className="px-4 sm:px-6 xl:px-9 mb-12 sm:mb-24 flex flex-col justify-center items-center relative">
+    // Added top margin for spacing between download section and transcription toolkit
+    <div className="px-4 sm:px-6 xl:px-9 mt-12 sm:mt-24 mb-12 sm:mb-24 flex flex-col justify-center items-center relative">
       <div className="wrapper bg-[var(--white_bg)] rounded-[40px] flex flex-col justify-center z-20 relative">
         <SectionIntro
           bluetext="Your Smarter Transcription Toolkit"
