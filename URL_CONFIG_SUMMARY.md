@@ -52,7 +52,7 @@ npm run build
 ### For Production:
 ```bash
 # Edit .env.local
-NEXT_PUBLIC_SITE_URL=https://notelyvoice.com
+NEXT_PUBLIC_SITE_URL=https://notelyvoice.ai
 
 # Build and deploy
 npm run build
@@ -75,7 +75,7 @@ To switch to localhost:
 ## 📊 What This Fixes
 
 **Before**: 
-- All URLs hardcoded to `https://notelyvoice.com`
+- All URLs hardcoded to `https://notelyvoice.ai`
 - Had to manually find/replace in multiple files
 - Easy to miss files when switching environments
 
@@ -126,7 +126,7 @@ Just edit `.env.local` when you need to switch environments!
 
 **Next Steps**:
 1. Test locally: Change to `http://localhost:3000` and verify
-2. When ready for production: Change to `https://notelyvoice.com`
+2. When ready for production: Change to `https://notelyvoice.ai`
 3. Update Netlify environment variables for production deploy
 
 Read `BASE_URL_GUIDE.md` for detailed instructions!

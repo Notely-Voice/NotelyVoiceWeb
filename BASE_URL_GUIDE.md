@@ -19,7 +19,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_SITE_URL=https://notelyvoicepreview.netlify.app
 
 # For production
-NEXT_PUBLIC_SITE_URL=https://notelyvoice.com
+NEXT_PUBLIC_SITE_URL=https://notelyvoice.ai
 ```
 
 3. Restart your dev server: `npm run dev`
@@ -30,7 +30,7 @@ If you don't set `NEXT_PUBLIC_SITE_URL`, the system automatically detects:
 
 - **Development**: Uses `http://localhost:3000`
 - **Netlify**: Automatically uses the preview URL
-- **Production**: Falls back to `https://notelyvoice.com`
+- **Production**: Falls back to `https://notelyvoice.ai`
 
 ## What Uses the Base URL?
 
@@ -67,7 +67,7 @@ npm start
 ### Test for Production:
 ```bash
 # .env.local
-NEXT_PUBLIC_SITE_URL=https://notelyvoice.com
+NEXT_PUBLIC_SITE_URL=https://notelyvoice.ai
 
 # Build and test
 npm run build
@@ -79,7 +79,7 @@ npm start
 For Netlify, you can set environment variables in the Netlify dashboard:
 
 1. Go to: Site settings → Environment variables
-2. Add: `NEXT_PUBLIC_SITE_URL` = `https://notelyvoice.com` (for production)
+2. Add: `NEXT_PUBLIC_SITE_URL` = `https://notelyvoice.ai` (for production)
 3. For preview deployments, Netlify auto-sets `URL` which is detected automatically
 
 ## Verifying the Current URL
