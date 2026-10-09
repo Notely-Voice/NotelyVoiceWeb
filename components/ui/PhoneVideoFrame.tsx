@@ -53,7 +53,7 @@ const PhoneVideoFrame = ({
     <div
       role="img"
       aria-label={ariaLabel}
-      className={`relative aspect-[187/392] shrink-0 overflow-hidden rounded-[21%/10%] bg-black shadow-[0_40px_70px_-30px_rgba(62,69,251,0.55)] ring-1 ring-white/10 [container-type:inline-size] ${className}`}
+      className={`relative aspect-187/392 shrink-0 overflow-hidden rounded-[21%/10%] bg-black shadow-[0_40px_70px_-30px_rgba(62,69,251,0.55)] ring-1 ring-white/10 @container ${className}`}
     >
       {src ? (
         <video

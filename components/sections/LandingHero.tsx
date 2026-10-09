@@ -33,7 +33,7 @@ const StoreBadge = ({
     target="_blank"
     rel="noopener noreferrer"
     aria-label={`${label} ${store}`}
-    className="group flex h-11 items-center gap-2.5 rounded-lg bg-black px-3 text-white outline-offset-2 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(62,69,251,0.7)] focus-visible:outline-2 focus-visible:outline-[#3E45FB] sm:h-[52px] sm:px-4"
+    className="group flex h-13 items-center gap-2.5 rounded-lg bg-black px-3 text-white outline-offset-2 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(62,69,251,0.7)] focus-visible:outline-2 focus-visible:outline-[#3E45FB] sm:h-14 sm:px-4"
   >
     <Image src={icon} alt={alt} width={28} height={28} className="h-6 w-6 sm:h-7 sm:w-7" />
     <span className="flex flex-col leading-none">
@@ -55,9 +55,9 @@ const LandingHero = ({
       aria-labelledby="landing-hero-heading"
       className="relative flex w-full justify-center px-5 py-6 sm:px-10 lg:py-12"
     >
-      <div className="wrapper flex flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-8 lg:px-10 xl:px-16">
+      <div className="wrapper flex flex-col items-center gap-12 md:flex-row lg:justify-between lg:gap-8 lg:px-10 xl:px-16">
         {/* Copy */}
-        <div className="flex max-w-[560px] flex-col items-center text-center lg:items-start lg:text-left">
+        <div className="flex max-w-148 flex-col items-center text-center md:items-start md:text-left">
           <h1
             id="landing-hero-heading"
             className="font-varien text-[46px] font-normal uppercase leading-[0.98] tracking-[-0.03em] text-[#3E45FB] sm:text-[68px] lg:text-[72px] xl:text-[88px]"
@@ -66,7 +66,7 @@ const LandingHero = ({
             <br />
             Don&apos;t type
           </h1>
-          <p className="mt-6 max-w-[460px] text-lg font-medium leading-[1.55] text-black sm:text-xl lg:mt-8 lg:text-2xl lg:leading-[1.5]">
+          <p className="mt-6 max-w-200 text-lg font-medium leading-relaxed text-black sm:text-xl lg:mt-8 lg:text-2xl lg:leading-normal">
             100% private AI voice-to-text transcription, everything on-device.
             Perfect for students, pros &amp; accessibility.
           </p>
@@ -98,7 +98,7 @@ const LandingHero = ({
             src={phoneVideoSrc}
             webmSrc={phoneVideoWebmSrc}
             poster={phoneVideoPoster}
-            className="relative w-[210px] sm:w-[240px] lg:w-[260px] xl:w-[290px]"
+            className="relative min-w-64 lg:min-w-80 lg:max-w-80 "
           />
         </div>
       </div>

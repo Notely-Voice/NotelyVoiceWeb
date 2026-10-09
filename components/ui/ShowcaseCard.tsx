@@ -20,7 +20,7 @@ export const ShowcaseCard = ({
   <div
     role="img"
     aria-label={label}
-    className={`relative h-[250px] w-full overflow-hidden rounded-[22px] sm:h-[290px] sm:rounded-[28px] lg:h-[300px] ${
+    className={`relative h-[340px] w-full overflow-hidden rounded-[22px] sm:h-[340px] sm:rounded-[28px] ${
       tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]"
     }`}
   >
@@ -99,10 +99,10 @@ export const CardPhone = ({
   widthClass?: string;
 }) => (
   <div
-    className={`absolute left-1/2 top-[16%] z-10 -translate-x-1/2 [container-type:inline-size] ${widthClass}`}
+    className={`absolute left-1/2 -bottom-[1%] z-10 -translate-x-1/2 [container-type:inline-size] ${widthClass}`}
   >
     <div
-      className={`relative h-[150cqw] overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 bg-white ${borderClass} ${
+      className={`relative overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 bg-inherit ${borderClass} ${
         dashed ? "border-dashed" : ""
       }`}
     >

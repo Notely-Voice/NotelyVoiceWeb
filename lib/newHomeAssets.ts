@@ -23,6 +23,8 @@ import telegramLogo from "../assets/new_home_page_assets/telegram_logo.svg";
 import whatsappLogo from "../assets/new_home_page_assets/whatsapp_logo.svg";
 import xLogoBlack from "../assets/new_home_page_assets/x_logo_black.svg";
 import blueShieldLogo from "../assets/new_home_page_assets/blue_shield_logo.svg";
+import calendarLogo from "../assets/new_home_page_assets/calendar_logo.svg";
+import chromeLogo from "../assets/new_home_page_assets/chrome_logo.svg";
 
 // Phone screens / chips
 import meetingTranscriptScreen from "../assets/new_home_page_assets/meeting_transcript_screen.png";
@@ -52,6 +54,8 @@ export const homeAssets = {
     whatsappLogo,
     xLogoBlack,
     blueShieldLogo,
+    calendarLogo,
+    chromeLogo
   },
   screens: {
     meetingTranscriptScreen,

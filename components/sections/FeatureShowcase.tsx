@@ -150,12 +150,12 @@ const FeatureShowcase = () => {
               <article
                 key={id}
                 id={`feature-${id}`}
-                className="scroll-mt-32 lg:scroll-mt-36 mx-auto lg:mx-0 sm:w-7/8"
+                className="scroll-mt-44 lg:scroll-mt-36 mx-auto lg:mx-0 sm:w-7/8"
               >
                 <h3 className="font-varien text-[26px] uppercase leading-[1.05] tracking-[-0.03em] text-white sm:text-[34px] lg:text-[40px]">
                   {title}
                 </h3>
-                <p className="mb-6 mt-3 max-w-[560px] text-base font-normal leading-[1.6] text-white sm:text-lg lg:text-xl">
+                <p className="mb-6 mt-3 max-w-5/6 text-base font-normal leading-[1.6] text-white sm:text-lg lg:text-xl">
                   {text}
                 </p>
                 <Visual />

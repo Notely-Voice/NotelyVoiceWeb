@@ -1,6 +1,5 @@
 import {
-  AudioLines,
-  Check,
+  CheckCheck,
   Cloud,
   Delete,
   Languages,
@@ -35,7 +34,7 @@ export const MeetingsVisual = () => (
       </span>
     </FloatingTile>
 
-    <div className="absolute left-1/2 top-[16%] z-10 w-[44%] min-w-[150px] max-w-[210px] -translate-x-1/2">
+    <div className="absolute left-1/2 -bottom-[1%] z-10 w-[44%] min-w-[150px] max-w-[210px] -translate-x-1/2">
       <Image
         src={screens.meetingTranscriptScreen}
         alt="Meeting transcript screen"
@@ -69,6 +68,105 @@ export const MeetingsVisual = () => (
 /*  2. Hands-free typing on any app                                            */
 /* -------------------------------------------------------------------------- */
 
+const LiveAudioLines = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
+  >
+    <line x1="2" y1="10" x2="2" y2="13">
+      <animate
+        attributeName="y1"
+        values="10;8.5;10.5;7.5;10"
+        dur="1.2s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="13;14.5;12.5;15.5;13"
+        dur="1.2s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="6" y1="6" x2="6" y2="17">
+      <animate
+        attributeName="y1"
+        values="6;8.5;4;7.5;6"
+        dur="0.95s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="17;14.5;19;15.5;17"
+        dur="0.95s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="10" y1="3" x2="10" y2="21">
+      <animate
+        attributeName="y1"
+        values="3;7;2;5.5;3"
+        dur="1.1s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="21;17;22;18.5;21"
+        dur="1.1s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="14" y1="8" x2="14" y2="15">
+      <animate
+        attributeName="y1"
+        values="8;4.5;9.5;6;8"
+        dur="0.85s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="15;18.5;13.5;17;15"
+        dur="0.85s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="18" y1="5" x2="18" y2="18">
+      <animate
+        attributeName="y1"
+        values="5;8;4;7;5"
+        dur="1.05s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="18;15;19;16;18"
+        dur="1.05s"
+        repeatCount="indefinite"
+      />
+    </line>
+    <line x1="22" y1="10" x2="22" y2="13">
+      <animate
+        attributeName="y1"
+        values="10;8;10.5;8.5;10"
+        dur="1.25s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="y2"
+        values="13;15;12.5;14.5;13"
+        dur="1.25s"
+        repeatCount="indefinite"
+      />
+    </line>
+  </svg>
+);
+
 export const KeyboardVisual = () => (
   <ShowcaseCard label="Notely Voice keyboard dictating a message into WhatsApp, surrounded by messaging app icons">
     <Rings />
@@ -80,47 +178,50 @@ export const KeyboardVisual = () => (
     <FloatingTile src={apps.xLogoBlack} x={85} y={81} index={5} />
 
     <CardPhone>
-      <div className="flex h-full flex-col gap-[3.5cqw] p-[5cqw] pt-[6cqw]">
+      <div className="flex h-[150cqw] flex-col gap-[3.5cqw] p-[5cqw] pt-[6cqw]">
         {/* Received bubble */}
-        <div className="rounded-[2.4cqw] bg-[#0E5A41] p-[2.6cqw] text-white">
-          <p className="text-[3.1cqw] leading-[1.35]">
+        <div className="rounded-[5cqw] bg-[#0E5A41] p-[4cqw] text-white">
+          <p className="text-[4cqw] leading-[1.35]">
             Industry&apos;s standard dummy text ever since the 1500s, when an
             unknown printer took a galley of type and scrambled it to make a
             type specimen book, unchanged.
           </p>
           <p className="mt-[1cqw] flex items-center justify-end gap-[1cqw] text-[2.4cqw] text-[#7be3bf]">
             12:10 pm
-            <Check className="h-[3cqw] w-[3cqw]" strokeWidth={3} />
+            <CheckCheck className="h-[3cqw] w-[3cqw]" strokeWidth={3} />
           </p>
         </div>
 
         {/* Input */}
         <div className="rounded-[2cqw] border-[0.4cqw] border-[#b9c6ff] bg-white px-[3cqw] py-[2.2cqw]">
           <p className="flex items-center gap-[1.6cqw] text-[2.7cqw] font-medium text-black">
-            <span className="h-[1.8cqw] w-[1.8cqw] rounded-full bg-[#25D366]" />
+            <Image src={apps.whatsappLogo} alt="" className="h-2.5 w-2.5" />
             WhatsApp
           </p>
-          <span className="mt-[1.6cqw] block h-[4cqw] w-[0.35cqw] bg-black" />
+          <span
+            className="nv-blink mt-[1.6cqw] block h-[4cqw] w-[0.35cqw] bg-black"
+            style={{ animation: "nv-blink 1s steps(1) infinite" }}
+          />
         </div>
 
-        {/* Notely keyboard */}
-        <div className="mt-auto rounded-t-[5cqw] bg-black px-[5cqw] pb-[14cqw] pt-[4.5cqw] text-white">
+        {/* Notely voice recorder */}
+        <div className="mt-auto rounded-2xl lg:rounded-3xl bg-black px-[5cqw] pb-[10cqw] pt-[8cqw] mb-[4cqw] text-white">
           <div className="flex items-center justify-between">
-            <span className="text-[3.2cqw] font-medium">Notely Voice</span>
-            <span className="flex items-center gap-[1cqw] rounded-full bg-white px-[1.6cqw] py-[1cqw] text-black">
-              <AudioLines className="h-[3.2cqw] w-[3.2cqw]" />
-              <Languages className="h-[3.2cqw] w-[3.2cqw]" />
+            <span className="text-[10px] font-medium">Notely Voice</span>
+            <span className="flex items-center gap-1 rounded-full bg-white px-[1.6cqw] py-[1cqw] text-black">
+              <LiveAudioLines className="h-3 w-3 bg-black text-white rounded-full p-0.5" />
+              <Languages className="h-2 w-2" />
             </span>
           </div>
           <p className="mt-[5cqw] text-center text-[2.4cqw] text-white/60">
             Tap to speak
           </p>
           <div className="mt-[2cqw] flex items-center justify-between gap-[3cqw]">
-            <Delete className="h-[4.2cqw] w-[4.2cqw] text-white/80" />
-            <span className="flex h-[11cqw] flex-1 items-center justify-center rounded-full bg-white text-black">
-              <AudioLines className="h-[5.5cqw] w-[5.5cqw]" />
+            <Delete className="h-[8cqw] w-[8cqw] text-white/80" />
+            <span className="flex h-[18cqw] w-[40cqw] items-center justify-center rounded-full bg-white text-black">
+              <LiveAudioLines className="h-[12cqw] w-[18cqw]" />
             </span>
-            <Undo2 className="h-[4.2cqw] w-[4.2cqw] text-white/80" />
+            <Undo2 className="h-[8cqw] w-[8cqw] text-white/80" />
           </div>
         </div>
       </div>
@@ -132,16 +233,12 @@ export const KeyboardVisual = () => (
 /*  3. AI queries using personal context                                       */
 /* -------------------------------------------------------------------------- */
 
-const SourceChip = ({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) => (
-  <span className="flex items-center gap-[1.2cqw] rounded-[1.4cqw] border-[0.3cqw] border-[#e5ecef] px-[1.8cqw] py-[1cqw] text-[2.2cqw] text-black/70">
+const SourceChip = ({ label, children, }: { label: string; children: React.ReactNode; }) => (
+  <span className="flex items-center gap-[1.2cqw] bg-white rounded-xl px-[2cqw] py-[1cqw] text-[2.2cqw] text-black/70">
     {children}
+    <span>
     {label}
+    </span>
   </span>
 );
 
@@ -153,39 +250,41 @@ export const AskVisual = () => (
     <FloatingTile src={apps.mcpLogo} x={18} y={54} index={2} />
     <FloatingTile src={apps.claudeLogo} x={82} y={59} index={3} />
 
-    <CardPhone borderClass="border-[#16203b]" widthClass="w-[40%] min-w-[150px] max-w-[200px]">
-      <div className="flex flex-col gap-[3.5cqw] p-[5cqw] pt-[6cqw]">
-        <p className="rounded-[2cqw] bg-black px-[3cqw] py-[2.6cqw] text-[2.7cqw] leading-[1.35] text-white">
+    <CardPhone borderClass="border-[#16203b]" widthClass="md:h-4/5 w-[40%] min-w-[150px] max-w-60">
+      <div className="flex flex-col gap-[3.5cqw] p-[5cqw] pt-[16cqw]">
+        <p className="rounded-[5cqw] bg-black px-[4cqw] py-[3cqw] text-[4cqw] leading-[1.35] text-white">
           Summarize what I did last week across my Slack, Calendar, and browser
           history.
         </p>
         <p className="text-[2.4cqw] text-black/45">Sources</p>
-        <div className="flex flex-wrap gap-[1.6cqw]">
+        <div className="flex flex-wrap gap-[1.6cqw] my-2">
           <SourceChip label="Calendar">
-            <span className="h-[2.4cqw] w-[2.4cqw] rounded-[0.6cqw] bg-black" />
+            <Image
+              src={apps.calendarLogo}
+              alt=""
+              className="h-2 w-2"
+            />
           </SourceChip>
           <SourceChip label="Slack">
             <Image
               src={apps.slackLogo}
               alt=""
-              className="h-[3cqw] w-[3cqw]"
+              className="h-2 w-2"
             />
           </SourceChip>
           <SourceChip label="Browser">
-            <span
-              className="h-[2.6cqw] w-[2.6cqw] rounded-full"
-              style={{
-                background:
-                  "conic-gradient(#ea4335 0 33%, #fbbc04 0 66%, #34a853 0)",
-              }}
+            <Image
+              src={apps.chromeLogo}
+              alt=""
+              className="h-2 w-2"
             />
           </SourceChip>
         </div>
-        <p className="text-[2.7cqw] leading-[1.45] text-black">
+        <p className="text-[5cqw] leading-[1.45] text-black">
           I went through last week&apos;s memories, emails, and the web.
           Here&apos;s where things stand:
         </p>
-        <p className="text-[2.7cqw] leading-[1.45] text-black">
+        <p className="text-[5cqw] leading-[1.45] text-black">
           Last week, you primarily focused on finalizing the Q3 Product Launch.
           According to your Slack activity, you approved the final design
           assets with the marketing team and resolved two critical deployment
@@ -200,24 +299,62 @@ export const AskVisual = () => (
 /*  4. Bring your ideas to life                                                */
 /* -------------------------------------------------------------------------- */
 
+const GmailMIcon = ({ className = "h-3.5 w-3.5" }: { className?: string }) => (
+  <svg
+    viewBox="10 14 40 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+  >
+    <path
+      d="M19.6364 44.3573V29.4952L15.0831 25.2785L11 22.9385V41.7345C11 43.1857 12.1615 44.3573 13.591 44.3573H19.6364Z"
+      fill="#4285F4"
+    />
+    <path
+      d="M40.3633 44.3573H46.4087C47.8425 44.3573 48.9997 43.1813 48.9997 41.7345V22.9386L44.375 25.6188L40.3633 29.4952V44.3573Z"
+      fill="#34A853"
+    />
+    <path
+      d="M19.6352 29.4951L19.0156 23.6881L19.6352 18.1301L29.9988 25.9983L40.3624 18.1301L41.0555 23.388L40.3624 29.4951L29.9988 37.3633L19.6352 29.4951Z"
+      fill="#EA4335"
+    />
+    <path
+      d="M40.3633 18.1301V29.4951L48.9997 22.9384V19.4414C48.9997 16.1981 45.3422 14.3491 42.7816 16.2942L40.3633 18.1301Z"
+      fill="#FBBC04"
+    />
+    <path
+      d="M11 22.9384L14.972 25.9541L19.6364 29.4952V18.1302L17.218 16.2943C14.653 14.349 11 16.1981 11 19.4413V22.9384Z"
+      fill="#C5221F"
+    />
+  </svg>
+);
+
 export const CreateVisual = () => (
   <ShowcaseCard label="A prompt asking Gmail to find a contract thread and reply, surrounded by productivity app icons">
     <Rings />
-    <FloatingTile src={apps.slackLogo} x={19} y={31} index={0} />
-    <FloatingTile src={apps.chatgptLogo} x={13} y={55} index={1} />
-    <FloatingTile src={apps.notionLogo} x={19} y={80} index={2} />
-    <FloatingTile src={apps.gmailLogo} x={80} y={31} index={3} highlighted />
-    <FloatingTile src={apps.whatsappLogo} x={85} y={55} index={4} />
-    <FloatingTile src={apps.telegramLogo} x={80} y={80} index={5} />
+    <FloatingTile src={apps.slackLogo} x={14} y={24} index={0} />
+    <FloatingTile src={apps.chatgptLogo} x={10} y={50} index={1} />
+    <FloatingTile src={apps.notionLogo} x={14} y={86} index={2} />
+    <FloatingTile src={apps.gmailLogo} x={86} y={24} index={3} highlighted />
+    <FloatingTile src={apps.whatsappLogo} x={90} y={50} index={4} />
+    <FloatingTile src={apps.telegramLogo} x={86} y={86} index={5} />
 
-    <CardPhone widthClass="w-[40%] min-w-[150px] max-w-[200px]" />
+    {/* Phone */}
+    <CardPhone
+      borderClass="border-black"
+      widthClass="w-[44%] min-w-[165px] max-w-[220px]"
+    >
+      <div className="h-[135cqw] sm:h-[125cqw] w-full" />
+    </CardPhone>
 
-    <div className="absolute left-1/2 top-[44%] z-20 w-[56%] min-w-[210px] max-w-[300px] -translate-x-1/2 overflow-hidden rounded-md border border-[#c9d0ff] bg-white shadow-[0_14px_30px_-14px_rgba(62,69,251,0.35)]">
-      <p className="flex items-center gap-1.5 bg-[#f6f8fb] px-3 py-1.5 text-[9px] font-medium text-black sm:text-[10px]">
-        <Image src={apps.gmailLogo} alt="" className="h-3.5 w-3.5" />
-        Gmail
-      </p>
-      <p className="px-3 py-2.5 text-[10px] text-black sm:text-[11px] lg:text-xs">
+    {/* Gmail prompt text block floating over the phone */}
+    <div className="absolute left-1/2 top-[67%] z-20 w-[82%] sm:w-[64%] min-w-[260px] max-w-[370px] -translate-x-1/2 -translate-y-1/2 rounded-[18px] border-[1.5px] border-[#BAC6FF] bg-white p-3.5 sm:p-4 shadow-[0_12px_28px_rgba(62,69,251,0.08)]">
+      <div className="inline-flex items-center gap-1.5 rounded-[7px] bg-[#F4F5F8] px-2.5 py-1">
+        <GmailMIcon className="h-3 w-3.5 shrink-0" />
+        <span className="text-[11px] font-medium text-black">Gmail</span>
+      </div>
+      <p className="mt-3 text-[10px] sm:text-[13px] font-normal leading-snug text-black whitespace-normal">
         Find the contract thread and reply with what we decided
       </p>
     </div>
