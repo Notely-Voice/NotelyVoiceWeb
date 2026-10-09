@@ -11,13 +11,16 @@ export const ShowcaseCard = ({
   tone = "light",
   children,
   label,
+  cardRef,
 }: {
   tone?: Tone;
   children: ReactNode;
   /** Accessible description of the illustration. */
   label: string;
+  cardRef?: React.Ref<HTMLDivElement>;
 }) => (
   <div
+    ref={cardRef}
     role="img"
     aria-label={label}
     className={`relative h-[340px] w-full overflow-hidden rounded-[22px] sm:h-[340px] sm:rounded-[28px] ${
@@ -48,6 +51,7 @@ export const FloatingTile = ({
   index = 0,
   highlighted = false,
   children,
+  tileRef,
 }: {
   src?: StaticImageData | string;
   alt?: string;
@@ -56,8 +60,10 @@ export const FloatingTile = ({
   index?: number;
   highlighted?: boolean;
   children?: ReactNode;
+  tileRef?: React.Ref<HTMLDivElement>;
 }) => (
   <div
+    ref={tileRef}
     className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
     style={{ left: `${x}%`, top: `${y}%` }}
   >

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CheckCheck,
   Cloud,
@@ -6,7 +8,7 @@ import {
   Undo2,
 } from "lucide-react";
 import Image from "next/image";
-import type { CSSProperties } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { homeAssets } from "@/lib/newHomeAssets";
 import {
   CardPhone,
@@ -365,48 +367,156 @@ export const CreateVisual = () => (
 /*  5. Daily personal synthesis                                                */
 /* -------------------------------------------------------------------------- */
 
-export const JournalsVisual = () => (
-  <ShowcaseCard
-    tone="blue"
-    label="The Notely Voice notes app connected to Notion, ChatGPT and Claude"
-  >
-    {/* Dashed connectors, drawn in card-percentage space */}
-    <svg
-      aria-hidden
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-      className="pointer-events-none absolute inset-0 h-full w-full"
+export const JournalsVisual = () => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const notionRef = useRef<HTMLDivElement>(null);
+  const chatgptRef = useRef<HTMLDivElement>(null);
+  const claudeRef = useRef<HTMLDivElement>(null);
+
+  const [lines, setLines] = useState<Array<{
+    x1: number;
+    y1: number;
+    x2: number;
+    y2: number;
+  }> | null>(null);
+
+  useEffect(() => {
+    const updateLines = () => {
+      if (!cardRef.current || !phoneRef.current) return;
+      const cardRect = cardRef.current.getBoundingClientRect();
+      const phoneRect = phoneRef.current.getBoundingClientRect();
+
+      const newLines = [];
+
+      // 1. Notion -> Phone Left Edge
+      if (notionRef.current) {
+        const tileRect = notionRef.current.getBoundingClientRect();
+        newLines.push({
+          x1: tileRect.right - cardRect.left,
+          y1: tileRect.top + tileRect.height / 2 - cardRect.top,
+          x2: phoneRect.left - cardRect.left,
+          y2: phoneRect.top + phoneRect.height * 0.32 - cardRect.top,
+        });
+      }
+
+      // 2. ChatGPT -> Phone Top-Right Edge
+      if (chatgptRef.current) {
+        const tileRect = chatgptRef.current.getBoundingClientRect();
+        newLines.push({
+          x1: tileRect.left + tileRect.width * 0.18 - cardRect.left,
+          y1: tileRect.bottom - tileRect.height * 0.12 - cardRect.top,
+          x2: phoneRect.right - cardRect.left,
+          y2: phoneRect.top + phoneRect.height * 0.12 - cardRect.top,
+        });
+      }
+
+      // 3. Claude -> Phone Right Edge
+      if (claudeRef.current) {
+        const tileRect = claudeRef.current.getBoundingClientRect();
+        newLines.push({
+          x1: tileRect.left - cardRect.left,
+          y1: tileRect.top + tileRect.height / 2 - cardRect.top,
+          x2: phoneRect.right - cardRect.left,
+          y2: phoneRect.top + phoneRect.height * 0.50 - cardRect.top,
+        });
+      }
+
+      setLines(newLines);
+    };
+
+    updateLines();
+
+    const ro = new ResizeObserver(updateLines);
+    if (cardRef.current) ro.observe(cardRef.current);
+    if (phoneRef.current) ro.observe(phoneRef.current);
+    window.addEventListener("resize", updateLines);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", updateLines);
+    };
+  }, []);
+
+  return (
+    <ShowcaseCard
+      cardRef={cardRef}
+      tone="blue"
+      label="The Notely Voice notes app connected to Notion, ChatGPT and Claude"
     >
-      {[
-        [17, 41, 30, 48],
-        [78, 24, 70, 32],
-        [81, 74, 71, 62],
-      ].map(([x1, y1, x2, y2]) => (
-        <line
-          key={`${x1}-${y1}`}
-          x1={x1}
-          y1={y1}
-          x2={x2}
-          y2={y2}
-          stroke="white"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          vectorEffect="non-scaling-stroke"
-          opacity="0.85"
-        />
-      ))}
-    </svg>
+      {/* Dashed connectors that dynamically stay attached to the phone */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full"
+      >
+        {lines ? (
+          lines.map((l, i) => (
+            <line
+              key={i}
+              x1={l.x1}
+              y1={l.y1}
+              x2={l.x2}
+              y2={l.y2}
+              stroke="white"
+              strokeWidth="1.5"
+              strokeDasharray="4 4"
+              opacity="0.85"
+            />
+          ))
+        ) : (
+          [
+            [17, 40, 28, 44],
+            [78, 26, 72, 26],
+            [81, 76, 72, 62],
+          ].map(([x1, y1, x2, y2]) => (
+            <line
+              key={`${x1}-${y1}`}
+              x1={`${x1}%`}
+              y1={`${y1}%`}
+              x2={`${x2}%`}
+              y2={`${y2}%`}
+              stroke="white"
+              strokeWidth="1.5"
+              strokeDasharray="4 4"
+              opacity="0.85"
+            />
+          ))
+        )}
+      </svg>
 
-    <FloatingTile src={apps.notionLogoBlue} x={14} y={40} index={0} />
-    <FloatingTile src={apps.chatgptLogoBlue} x={81} y={21} index={1} />
-    <FloatingTile src={apps.claudeLogo} x={84} y={76} index={2} />
-
-    <div className="absolute left-1/2 top-[16%] z-10 w-[42%] min-w-[160px] max-w-[220px] -translate-x-1/2 overflow-hidden rounded-t-[26px] border-2 border-b-0 border-dashed border-white sm:rounded-t-[30px]">
-      <Image
-        src={screens.notesAppScreen}
-        alt="Notes app screen"
-        className="h-auto w-full"
+      <FloatingTile
+        tileRef={notionRef}
+        src={apps.notionLogoBlue}
+        x={14}
+        y={40}
+        index={0}
       />
-    </div>
-  </ShowcaseCard>
-);
+      <FloatingTile
+        tileRef={chatgptRef}
+        src={apps.chatgptLogoBlue}
+        x={81}
+        y={21}
+        index={1}
+      />
+      <FloatingTile
+        tileRef={claudeRef}
+        src={apps.claudeLogo}
+        x={84}
+        y={76}
+        index={2}
+      />
+
+      <div
+        ref={phoneRef}
+        className="absolute left-1/2 -bottom-[1%] z-10 w-[44%] min-w-[150px] max-w-[210px] -translate-x-1/2 overflow-hidden rounded-t-[26px] border-2 border-b-0 border-dashed border-white sm:rounded-t-[30px]"
+      >
+        <Image
+          src={screens.notesAppScreen}
+          alt="Notes app screen"
+          className="h-auto w-full"
+          priority={false}
+        />
+      </div>
+    </ShowcaseCard>
+  );
+};
