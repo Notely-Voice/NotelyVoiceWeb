@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import HomeDownload from "@/components/sections/HomeDownload";
 import HomeHero from "@/components/sections/HomeHero";
+import LandingHero from "@/components/sections/LandingHero";
+import FeaturedIn from "@/components/sections/FeaturedIn";
+import FeatureShowcase from "@/components/sections/FeatureShowcase";
+import DeviceSync from "@/components/sections/DeviceSync";
 // import HomeLanguage from "@/components/sections/HomeLanguage";
 import HomeTranscription from "@/components/sections/HomeTranscription";
 // import HomeTyping from "@/components/sections/HomeTyping";
@@ -28,11 +32,17 @@ export const metadata: Metadata = generatePageMetadata({
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
-      <HomeHero  />
+    <div className="overflow-x-clip space-y-16">
+      <LandingHero />
+      <FeaturedIn />
+      <FeatureShowcase />
+      <DeviceSync />
+
+      {/* Previous design (kept for reference) */}
+      {/* <HomeHero /> */}
       {/* <HomeDownload /> */}
       {/* <HomeTyping /> */}
-      <HomeTranscription />
+      {/* <HomeTranscription /> */}
       {/* <HomeWork /> */}
       {/* <HomeLanguage /> */}
       {/* <HomeTestimonials /> */}
