@@ -11,7 +11,7 @@ const BAR_COUNT = 46;
 // Deterministic heights (no Math.random) so SSR and client markup match.
 const BARS = Array.from({ length: BAR_COUNT }, (_, i) => ({
   height: Math.round(
-    22 + 78 * Math.abs(Math.sin(i * 0.9) * Math.cos(i * 0.31)),
+    2 + 28 * Math.abs(Math.sin(i * 0.9) * Math.cos(i * 0.31)),
   ),
   delay: (i % 9) * 140,
 }));

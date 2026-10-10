@@ -23,7 +23,7 @@ export const ShowcaseCard = ({
     ref={cardRef}
     role="img"
     aria-label={label}
-    className={`relative h-[340px] w-full overflow-hidden rounded-[22px] sm:h-[340px] sm:rounded-[28px] ${
+    className={`relative h-85 w-full overflow-hidden rounded-[22px] sm:h-85 sm:rounded-[28px] ${
       tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]"
     }`}
   >
@@ -37,8 +37,8 @@ export const Rings = () => (
     aria-hidden
     className="pointer-events-none absolute left-1/2 top-[58%] -translate-x-1/2 -translate-y-1/2"
   >
-    <div className="absolute left-1/2 top-1/2 aspect-square w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-[340px]" />
-    <div className="absolute left-1/2 top-1/2 aspect-square w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-[520px]" />
+    <div className="absolute left-1/2 top-1/2 aspect-square w-65 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-85" />
+    <div className="absolute left-1/2 top-1/2 aspect-square w-100 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-130" />
   </div>
 );
 
@@ -75,7 +75,7 @@ export const FloatingTile = ({
         <Image
           src={src}
           alt={alt ?? ""}
-          className={`h-auto w-[34px] rounded-[10px] sm:w-[40px] lg:w-[44px] ${
+          className={`h-auto w-8.5 rounded-[10px] sm:w-10 lg:w-11 ${
             highlighted
               ? "shadow-[0_0_0_2px_#3E45FB,0_8px_18px_-6px_rgba(62,69,251,0.5)]"
               : "drop-shadow-[0_6px_10px_rgba(20,30,80,0.08)]"
@@ -105,7 +105,7 @@ export const CardPhone = ({
   widthClass?: string;
 }) => (
   <div
-    className={`absolute left-1/2 -bottom-[1%] z-10 -translate-x-1/2 [container-type:inline-size] ${widthClass}`}
+    className={`absolute left-1/2 -bottom-[1%] z-10 -translate-x-1/2 @container ${widthClass}`}
   >
     <div
       className={`relative overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 bg-inherit ${borderClass} ${

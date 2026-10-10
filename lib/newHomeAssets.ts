@@ -7,6 +7,9 @@
 import youtubeLogo from "../assets/new_home_page_assets/youtube_logo.svg";
 import gigazineLogo from "../assets/new_home_page_assets/GIGAZINE_logo.svg";
 import punchLogo from "../assets/new_home_page_assets/PUNCH_logo.svg";
+import youtubeLogoColored from "../assets/new_home_page_assets/youtube_logo_colored.svg";
+import gigazineLogoColored from "../assets/new_home_page_assets/GIGAZINE_logo_colored.svg";
+import punchLogoColored from "../assets/new_home_page_assets/PUNCH_logo_colored.svg";
 
 // App / brand tiles (each SVG already includes its rounded tile background)
 import chatgptLogo from "../assets/new_home_page_assets/chatgpt_logo.svg";
@@ -38,7 +41,7 @@ import omniPendant from "../assets/new_home_page_assets/omni_pendant.svg";
 import appleWatch from "../assets/new_home_page_assets/apple_watch.svg";
 
 export const homeAssets = {
-  press: { youtubeLogo, gigazineLogo, punchLogo },
+  press: { youtubeLogo, gigazineLogo, punchLogo, youtubeLogoColored, gigazineLogoColored, punchLogoColored },
   apps: {
     chatgptLogo,
     chatgptLogoBlue,

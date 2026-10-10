@@ -488,14 +488,14 @@ export const JournalsVisual = () => {
         tileRef={notionRef}
         src={apps.notionLogoBlue}
         x={14}
-        y={40}
+        y={60}
         index={0}
       />
       <FloatingTile
         tileRef={chatgptRef}
         src={apps.chatgptLogoBlue}
         x={81}
-        y={21}
+        y={41}
         index={1}
       />
       <FloatingTile
