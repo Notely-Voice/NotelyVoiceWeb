@@ -26,8 +26,8 @@ export interface PhoneVideoFrameProps {
  */
 const PhoneVideoFrame = ({
   src,
-  webmSrc,
-  poster,
+  // webmSrc,
+  // poster,
   loop = true,
   fallback,
   ariaLabel = "Notely Voice app recording screen",
@@ -47,27 +47,28 @@ const PhoneVideoFrame = ({
     sync();
     query.addEventListener("change", sync);
     return () => query.removeEventListener("change", sync);
-  }, []);
+  }, [src]);
 
   return (
     <div
       role="img"
       aria-label={ariaLabel}
-      className={`relative aspect-187/392 shrink-0 overflow-hidden rounded-[21%/10%] bg-black shadow-[0_40px_70px_-30px_rgba(62,69,251,0.55)] ring-1 ring-white/10 @container ${className}`}
+      className={`relative aspect-187/392 shrink-0 overflow-hidden rounded-tl-[54px] rounded-tr-[50px] rounded-bl-[64px] rounded-br-[60px] bg-black shadow-[0_40px_70px_-30px_rgba(62,69,251,0.55)] @container ${className}`}
     >
       {src ? (
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute h-full w-full scale-x-[1.155] scale-y-[1.17] object-cover object-bottom"
           autoPlay
           muted
           loop={loop}
           playsInline
           preload="metadata"
-          poster={poster}
+          // poster={poster}
           aria-hidden
+          src={src}
         >
-          {webmSrc && <source src={webmSrc} type="video/webm" />}
+          {/* {webmSrc && <source src={webmSrc} type="video/webm" />} */}
           <source src={src} type="video/mp4" />
         </video>
       ) : (

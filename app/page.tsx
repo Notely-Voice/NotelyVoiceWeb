@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import HomeDownload from "@/components/sections/HomeDownload";
-import HomeHero from "@/components/sections/HomeHero";
 import LandingHero from "@/components/sections/LandingHero";
 import FeaturedIn from "@/components/sections/FeaturedIn";
 import FeatureShowcase from "@/components/sections/FeatureShowcase";
 import DeviceSync from "@/components/sections/DeviceSync";
+// import HomeDownload from "@/components/sections/HomeDownload";
+// import HomeHero from "@/components/sections/HomeHero";
 // import HomeLanguage from "@/components/sections/HomeLanguage";
-import HomeTranscription from "@/components/sections/HomeTranscription";
+// import HomeTranscription from "@/components/sections/HomeTranscription";
 // import HomeTyping from "@/components/sections/HomeTyping";
 // import HomeWork from "@/components/sections/HomeWork";
 // import HomeTestimonials from "@/components/sections/HomeTestimonials";
 // import HomeNumbers from "@/components/sections/HomeNumbers";
 // import StartSpeaking from "@/components/sections/StartSpeaking";
-import { generatePageMetadata } from "@/lib/seo";
 
+import { generatePageMetadata } from "@/lib/seo";
 export const metadata: Metadata = generatePageMetadata({
   title: "Notely Voice — Private AI Voice-to-Text Transcription",
   description:

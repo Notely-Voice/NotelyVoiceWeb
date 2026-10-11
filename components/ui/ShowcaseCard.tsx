@@ -1,10 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 
-/* -------------------------------------------------------------------------- */
-/*  Primitives shared by the feature-showcase cards                            */
-/* -------------------------------------------------------------------------- */
-
 type Tone = "light" | "blue";
 
 export const ShowcaseCard = ({
@@ -15,7 +11,6 @@ export const ShowcaseCard = ({
 }: {
   tone?: Tone;
   children: ReactNode;
-  /** Accessible description of the illustration. */
   label: string;
   cardRef?: React.Ref<HTMLDivElement>;
 }) => (
@@ -23,7 +18,7 @@ export const ShowcaseCard = ({
     ref={cardRef}
     role="img"
     aria-label={label}
-    className={`relative h-85 w-full overflow-hidden rounded-[22px] sm:h-85 sm:rounded-[28px] ${
+    className={`relative h-65 w-full md:w-[620px] lg:w-full xl:w-[807px] overflow-hidden rounded-[22px] sm:h-80 md:h-90 lg:h-86 xl:h-[430px] sm:rounded-[28px] ${
       tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]"
     }`}
   >
@@ -31,7 +26,6 @@ export const ShowcaseCard = ({
   </div>
 );
 
-/** Faint concentric rings behind the phone. */
 export const Rings = () => (
   <div
     aria-hidden
@@ -42,7 +36,6 @@ export const Rings = () => (
   </div>
 );
 
-/** An app tile positioned by percentage so it scales with the card. */
 export const FloatingTile = ({
   src,
   alt,
@@ -68,7 +61,7 @@ export const FloatingTile = ({
     style={{ left: `${x}%`, top: `${y}%` }}
   >
     <div
-      className="nv-float"
+      // className="nv-float"
       style={{ "--float-delay": `${index * -0.9}s` } as CSSProperties}
     >
       {src ? (
@@ -88,16 +81,11 @@ export const FloatingTile = ({
   </div>
 );
 
-/**
- * A phone drawn in code, cropped by the bottom edge of the card.
- * The wrapper is the container-query context, so children can size
- * themselves with `cqw` units and scale with the phone.
- */
 export const CardPhone = ({
   children,
   borderClass = "border-black",
   dashed = false,
-  widthClass = "w-[44%] min-w-[150px] max-w-[210px]",
+  widthClass = "w-[44%] min-w-[150px] max-w-[310px]",
 }: {
   children?: ReactNode;
   borderClass?: string;
@@ -108,7 +96,7 @@ export const CardPhone = ({
     className={`absolute left-1/2 -bottom-[1%] z-10 -translate-x-1/2 @container ${widthClass}`}
   >
     <div
-      className={`relative overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 bg-inherit ${borderClass} ${
+      className={`relative overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 ${borderClass} ${
         dashed ? "border-dashed" : ""
       }`}
     >

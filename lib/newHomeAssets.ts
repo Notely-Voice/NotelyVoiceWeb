@@ -1,7 +1,6 @@
-/**
- * Asset registry for the redesigned home page.
- * Kept separate from `lib/index.ts` so the legacy pages are untouched.
- */
+// icons
+import googlePlayDownload from "../assets/new_home_page_assets/google_play_download.png"
+import appStoreDownload from "../assets/new_home_page_assets/app_store_download.png"
 
 // Press logos
 import youtubeLogo from "../assets/new_home_page_assets/youtube_logo.svg";
@@ -40,7 +39,12 @@ import advancedAi from "../assets/new_home_page_assets/advanced_ai.png";
 import omniPendant from "../assets/new_home_page_assets/omni_pendant.svg";
 import appleWatch from "../assets/new_home_page_assets/apple_watch.svg";
 
+
 export const homeAssets = {
+  icons: {
+    googlePlayDownload,
+    appStoreDownload
+  },
   press: { youtubeLogo, gigazineLogo, punchLogo, youtubeLogoColored, gigazineLogoColored, punchLogoColored },
   apps: {
     chatgptLogo,

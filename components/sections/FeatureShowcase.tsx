@@ -109,7 +109,7 @@ const FeatureShowcase = () => {
           {/* Tabs: horizontal & sticky on mobile, vertical & sticky on desktop */}
           <nav
             aria-label="Feature sections"
-            className="sticky top-[64px] z-30 -mx-5 mb-8 bg-black/90 px-5 py-6 backdrop-blur sm:-mx-8 sm:px-8 lg:static lg:top-auto lg:mx-0 lg:mb-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none"
+            className="sticky top-[64px] z-30 -mx-5 mb-4 bg-black/90 px-5 py-6 backdrop-blur sm:-mx-8 sm:px-8 lg:static lg:top-auto lg:mx-0 lg:mb-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none"
           >
             <ul className="no-scrollbar flex gap-5 overflow-x-auto lg:sticky lg:top-36 lg:flex-col lg:gap-6 lg:overflow-visible">
               {FEATURES.map((feature) => {
@@ -150,12 +150,12 @@ const FeatureShowcase = () => {
               <article
                 key={id}
                 id={`feature-${id}`}
-                className="scroll-mt-44 lg:scroll-mt-36 mx-auto lg:mx-0 sm:w-7/8"
+                className="scroll-mt-44 lg:scroll-mt-36 mx-auto lg:mx-0 xl:w-7/8"
               >
                 <h3 className="font-varien text-[26px] uppercase leading-[1.05] tracking-[-0.03em] text-white sm:text-[34px] lg:text-[40px]">
                   {title}
                 </h3>
-                <p className="mb-6 mt-3 max-w-5/6 text-base font-normal leading-[1.6] text-white sm:text-lg lg:text-xl">
+                <p className="mb-6 mt-3 md:max-w-4/5 xl:max-w-5/6 text-sm font-normal leading-[1.6] text-white sm:text-lg lg:text-xl">
                   {text}
                 </p>
                 <Visual />
