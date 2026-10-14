@@ -21,19 +21,32 @@ import {
 const { apps, screens } = homeAssets;
 
 export const MeetingsVisual = () => (
-  <ShowcaseCard label="A meeting transcript on a phone, with Private AI and Advanced AI transcription options">
-    <FloatingTile src={apps.blueShieldLogo} alt="" x={20} y={22} index={0} />
-    <FloatingTile x={79} y={31} index={1}>
-      <span className="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-black sm:h-[40px] sm:w-[40px] lg:h-[44px] lg:w-[44px]">
+  <ShowcaseCard
+    xlHeightClass="xl:h-[418px]"
+    bgClass="bg-[#F1F9F6]"
+    label="A meeting transcript on a phone, with Private AI and Advanced AI transcription options"
+  >
+    <FloatingTile src={apps.blueShieldLogo} alt="" x={19.9} y={19.4} index={0} />
+    <FloatingTile x={78.8} y={31.3} index={1}>
+      <span className="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-black sm:h-[40px] sm:w-[40px] lg:h-[44px] lg:w-[44px] xl:h-[38px] xl:w-[38px]">
+        <svg aria-hidden width="0" height="0" className="absolute">
+          <defs>
+            <linearGradient id="nv-cloud-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stopColor="#6CB3F6" />
+              <stop offset="1" stopColor="#7763E4" />
+            </linearGradient>
+          </defs>
+        </svg>
         <Cloud
-          className="h-[55%] w-[55%] text-[#2F88FF]"
-          fill="currentColor"
+          className="h-[66%] w-[66%]"
+          fill="url(#nv-cloud-grad)"
+          stroke="url(#nv-cloud-grad)"
           strokeWidth={1.5}
         />
       </span>
     </FloatingTile>
 
-    <div className="absolute left-1/2 -bottom-[1%] z-10 w-[44%] min-w-[150px] max-w-[310px] -translate-x-1/2">
+    <div className="absolute left-1/2 -bottom-[1%] z-10 w-[44%] min-w-[150px] max-w-[307px] -translate-x-1/2">
       <Image
         src={screens.meetingTranscriptScreen}
         alt="Meeting transcript screen"
@@ -42,21 +55,21 @@ export const MeetingsVisual = () => (
       />
     </div>
 
-    <div className="absolute left-[24%] top-[50%] z-20 -translate-x-1/2 -translate-y-1/2 sm:left-[27%]">
+    <div className="absolute left-[24%] top-[50%] z-20 -translate-x-1/2 -translate-y-1/2 sm:left-[27%] xl:left-[25.97%]">
       <div  style={{ "--float-delay": "-1.4s" } as CSSProperties}>
         <Image
           src={screens.privateAi}
           alt="Private AI transcription"
-          className="h-auto w-[62px] sm:w-[78px] lg:w-[88px]"
+          className="h-auto w-[62px] sm:w-[78px] lg:w-[88px] xl:w-[98px]"
         />
       </div>
     </div>
-    <div className="absolute left-[75%] top-[77%] z-20 -translate-x-1/2 -translate-y-1/2 sm:left-[72%]">
+    <div className="absolute left-[75%] top-[77.5%] z-20 -translate-x-1/2 -translate-y-1/2 sm:left-[72%] xl:left-[72.66%]">
       <div style={{ "--float-delay": "-3s" } as CSSProperties}>
         <Image
           src={screens.advancedAi}
           alt="Advanced AI transcription"
-          className="h-auto w-[62px] sm:w-[78px] lg:w-[88px]"
+          className="h-auto w-[62px] sm:w-[78px] lg:w-[88px] xl:w-[98px]"
         />
       </div>
     </div>

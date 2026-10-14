@@ -8,18 +8,22 @@ export const ShowcaseCard = ({
   children,
   label,
   cardRef,
+  xlHeightClass = "xl:h-[430px]",
+  bgClass,
 }: {
   tone?: Tone;
   children: ReactNode;
   label: string;
   cardRef?: React.Ref<HTMLDivElement>;
+  xlHeightClass?: string;
+  bgClass?: string;
 }) => (
   <div
     ref={cardRef}
     role="img"
     aria-label={label}
-    className={`relative h-65 w-full md:w-[620px] lg:w-full xl:w-[807px] overflow-hidden rounded-[22px] sm:h-80 md:h-90 lg:h-86 xl:h-[430px] sm:rounded-[28px] ${
-      tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]"
+    className={`relative h-65 w-full md:w-[620px] lg:w-full xl:w-[807px] overflow-hidden rounded-[22px] sm:h-80 md:h-90 lg:h-86 sm:rounded-[28px] ${xlHeightClass} ${
+      bgClass ?? (tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]")
     }`}
   >
     {children}
