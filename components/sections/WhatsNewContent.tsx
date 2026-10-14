@@ -10,6 +10,7 @@ const whatsNewMD = `# What's New
 
 ### Notely on your wrist, plus a voice keyboard
 
+- **Note Creation date** - You can now tap on note date on your editor to show "created note date" or "updated note date".
 - **Apple & Android Watch & Wear OS support** - Record a note from your watch and it shows up on your phone
 - **Voice keyboard** - Dictate in any app, on both Android and iPhone
 - **New Dictations tab** - All your dictations in one place, with the option to save them automatically
