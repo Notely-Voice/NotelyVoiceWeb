@@ -365,10 +365,10 @@ export const JournalsVisual = () => {
       if (notionRef.current) {
         const tileRect = notionRef.current.getBoundingClientRect();
         newLines.push({
-          x1: tileRect.right - cardRect.left,
-          y1: tileRect.top + tileRect.height / 2 - cardRect.top,
+          x1: tileRect.right + 2 - cardRect.left,
+          y1: tileRect.top + tileRect.height * 0.612 - cardRect.top,
           x2: phoneRect.left - cardRect.left,
-          y2: phoneRect.top + phoneRect.height * 0.32 - cardRect.top,
+          y2: phoneRect.top + phoneRect.height * 0.293 - cardRect.top,
         });
       }
 
@@ -376,10 +376,10 @@ export const JournalsVisual = () => {
       if (chatgptRef.current) {
         const tileRect = chatgptRef.current.getBoundingClientRect();
         newLines.push({
-          x1: tileRect.left + tileRect.width * 0.18 - cardRect.left,
-          y1: tileRect.bottom - tileRect.height * 0.12 - cardRect.top,
+          x1: tileRect.left + tileRect.width * 0.033 - cardRect.left,
+          y1: tileRect.bottom - tileRect.height * 0.092 - cardRect.top,
           x2: phoneRect.right - cardRect.left,
-          y2: phoneRect.top + phoneRect.height * 0.12 - cardRect.top,
+          y2: phoneRect.top + phoneRect.height * 0.208 - cardRect.top,
         });
       }
 
@@ -388,9 +388,9 @@ export const JournalsVisual = () => {
         const tileRect = claudeRef.current.getBoundingClientRect();
         newLines.push({
           x1: tileRect.left - cardRect.left,
-          y1: tileRect.top + tileRect.height / 2 - cardRect.top,
+          y1: tileRect.top + tileRect.height * 0.413 - cardRect.top,
           x2: phoneRect.right - cardRect.left,
-          y2: phoneRect.top + phoneRect.height * 0.50 - cardRect.top,
+          y2: phoneRect.top + phoneRect.height * 0.58 - cardRect.top,
         });
       }
 
@@ -414,6 +414,8 @@ export const JournalsVisual = () => {
     <ShowcaseCard
       cardRef={cardRef}
       tone="blue"
+      xlHeightClass="xl:h-[424px]"
+      bgClass="bg-[#3F45F1]"
       label="The Notely Voice notes app connected to Notion, ChatGPT and Claude"
     >
       {/* Dashed connectors that dynamically stay attached to the phone */}
@@ -429,10 +431,9 @@ export const JournalsVisual = () => {
               y1={l.y1}
               x2={l.x2}
               y2={l.y2}
-              stroke="white"
-              strokeWidth="1.5"
-              strokeDasharray="4 4"
-              opacity="0.85"
+              stroke="#F3FEFF"
+              strokeWidth="1"
+              strokeDasharray="6 4"
             />
           ))
         ) : (
@@ -447,10 +448,9 @@ export const JournalsVisual = () => {
               y1={`${y1}%`}
               x2={`${x2}%`}
               y2={`${y2}%`}
-              stroke="white"
-              strokeWidth="1.5"
-              strokeDasharray="4 4"
-              opacity="0.85"
+              stroke="#F3FEFF"
+              strokeWidth="1"
+              strokeDasharray="6 4"
             />
           ))
         )}
@@ -458,29 +458,32 @@ export const JournalsVisual = () => {
 
       <FloatingTile
         tileRef={notionRef}
-        src={apps.notionLogoBlue}
-        x={10}
-        y={60}
+        src={apps.notionLogoJournal}
+        x={14.25}
+        y={39.86}
         index={0}
+        xlClass="xl:w-[60px] xl:drop-shadow-none"
       />
       <FloatingTile
         tileRef={chatgptRef}
-        src={apps.chatgptLogoBlue}
-        x={88}
-        y={16}
+        src={apps.chatgptLogoJournal}
+        x={80.92}
+        y={21.46}
         index={1}
+        xlClass="xl:w-[60px] xl:drop-shadow-none"
       />
       <FloatingTile
         tileRef={claudeRef}
-        src={apps.claudeLogo}
-        x={90}
-        y={76}
+        src={apps.claudeLogoFlat}
+        x={84.39}
+        y={76.65}
         index={2}
+        xlClass="xl:w-[56px] xl:drop-shadow-none"
       />
 
       <div
         ref={phoneRef}
-        className="absolute left-1/2 -bottom-[1%] z-10 min-w-[180px] -translate-x-1/2 overflow-hidden rounded-t-[26px] border-2 border-b-0 border-dashed border-transparent sm:rounded-t-[30px]"
+        className="absolute left-1/2 -bottom-[1%] z-10 min-w-[180px] -translate-x-1/2 overflow-hidden rounded-t-[26px] border-2 border-b-0 border-dashed border-transparent sm:rounded-t-[30px] xl:bottom-auto xl:top-[104px] xl:w-[330px] xl:rounded-none xl:border-0"
       >
         <Image
           src={screens.notesAppScreen}

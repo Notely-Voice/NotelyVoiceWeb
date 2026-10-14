@@ -39,7 +39,7 @@ const DeviceSync = () => {
           <DeviceCard
             label={
               <>
-                OMNI
+                Wearable
                 <br />
                 pendant
               </>

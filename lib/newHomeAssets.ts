@@ -15,12 +15,15 @@ import chatgptLogo from "../assets/new_home_page_assets/chatgpt_logo.svg";
 import chatgptLogoBlue from "../assets/new_home_page_assets/chatgpt_logo_blue.svg";
 import claudeLogo from "../assets/new_home_page_assets/claude_logo.svg";
 import claudeLogoTile from "../assets/new_home_page_assets/claude_logo_tile.svg";
+import claudeLogoFlat from "../assets/new_home_page_assets/claude_logo_flat.svg";
 import geminiLogo from "../assets/new_home_page_assets/gemini_logo.svg";
 import gmailLogo from "../assets/new_home_page_assets/gmail_logo.svg";
 import imessageLogo from "../assets/new_home_page_assets/imessage_logo.svg";
 import imessageLogoTile from "../assets/new_home_page_assets/imessage_logo_tile.svg";
 import mcpLogo from "../assets/new_home_page_assets/mcp_logo.svg";
 import notionLogo from "../assets/new_home_page_assets/notion_logo.svg";
+import notionLogoJournal from "../assets/new_home_page_assets/notion_logo_journal.svg";
+import chatgptLogoJournal from "../assets/new_home_page_assets/chatgpt_logo_journal.svg";
 import notionLogoBlue from "../assets/new_home_page_assets/notion_logo_blue.svg";
 import slackLogo from "../assets/new_home_page_assets/slack_logo.svg";
 import telegramLogo from "../assets/new_home_page_assets/telegram_logo.svg";
@@ -55,6 +58,9 @@ export const homeAssets = {
     chatgptLogoBlue,
     claudeLogo,
     claudeLogoTile,
+    claudeLogoFlat,
+    notionLogoJournal,
+    chatgptLogoJournal,
     geminiLogo,
     gmailLogo,
     imessageLogo,
