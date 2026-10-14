@@ -6,7 +6,29 @@ import { ChevronDown } from "lucide-react";
 
 const whatsNewMD = `# What's New
 
-## Version 1.7.5 - Latest
+## Version 1.7.8 - Latest
+
+### Notely on your wrist, plus a voice keyboard
+
+- **Apple & Android Watch & Wear OS support** - Record a note from your watch and it shows up on your phone
+- **Voice keyboard** - Dictate in any app, on both Android and iPhone
+- **New Dictations tab** - All your dictations in one place, with the option to save them automatically
+- **More keyboard languages** - Including Hindi, Japanese, Korean, Chinese, Cantonese and Gujarati
+- **Free 30 minutes** of transcription for free users, and you can see what's left in your account
+- **Bring your own key for dictations** - Use your own AssemblyAI, ElevenLabs and Gemini keys
+- **Fresh new look** - Redesigned Settings, new dark theme colors and an animated recording wave
+- **Smoother setup** - A new welcome flow that walks you through the keyboard, and you can skip any step
+- **Push notifications** - Tap one and it takes you straight to the right screen
+- **Reminders open the recorder** - Tap a reminder and start recording right away
+- **Weekly AI Review** - Your Sunday recap now shows on your notes list
+- **Fixed: iPhone recording keeps going when your phone is locked**
+- **Fixed: Note titles not updating**
+- **More translations** - More of the app in more languages
+- **Fewer pop-ups** - The "don't ask again" box is now always ticked
+
+---
+
+## Version 1.7.5
 
 ### AI Weekly Review Enhancement
 
@@ -321,6 +343,7 @@ const WhatsNewContent = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const sections = [
+    { id: "34", title: "Version 1.7.8" },
     { id: "1", title: "Version 1.7.5" },
     { id: "2", title: "Version 1.7.4" },
     { id: "3", title: "Version 1.6.7" },
@@ -432,6 +455,7 @@ const WhatsNewContent = () => {
 
                     // Map version numbers to section IDs
                     const versionToId: Record<string, string> = {
+                      '1.7.8': '34',
                       '1.7.5': '1',
                       '1.7.4': '2',
                       '1.6.7': '3',
