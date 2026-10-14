@@ -88,11 +88,11 @@ export const KeyboardVisual = () => (
     label="Notely Voice keyboard dictating a message into WhatsApp, surrounded by messaging app icons"
   >
     <Rings exact />
-    <FloatingTile src={apps.telegramLogo} x={20.72} y={19.62} index={0} xlClass={TILE_XL} />
+    <FloatingTile src={apps.telegramLogoTile} x={20.72} y={19.62} index={0} xlClass={TILE_XL} />
     <FloatingTile src={apps.gmailLogo} x={79.28} y={19.62} index={1} xlClass={TILE_XL} />
     <FloatingTile src={apps.slackLogo} x={13.8} y={50.24} index={2} xlClass={TILE_XL} />
-    <FloatingTile src={apps.imessageLogo} x={86.27} y={50.24} index={3} xlClass={TILE_XL} />
-    <FloatingTile src={apps.whatsappLogo} x={15.48} y={81.82} index={4} xlClass={TILE_XL} />
+    <FloatingTile src={apps.imessageLogoTile} x={86.27} y={50.24} index={3} xlClass={TILE_XL} />
+    <FloatingTile src={apps.whatsappLogoTile} x={15.48} y={81.82} index={4} xlClass={TILE_XL} />
     <FloatingTile src={apps.xLogoBlack} x={84.52} y={81.82} index={5} xlClass={TILE_XL} />
 
     <CardPhone
@@ -286,30 +286,49 @@ const GmailMIcon = ({ className = "h-3.5 w-3.5" }: { className?: string }) => (
 );
 
 export const CreateVisual = () => (
-  <ShowcaseCard label="A prompt asking Gmail to find a contract thread and reply, surrounded by productivity app icons">
-    <Rings />
-    <FloatingTile src={apps.slackLogo} x={14} y={24} index={0} />
-    <FloatingTile src={apps.chatgptLogo} x={10} y={50} index={1} />
-    <FloatingTile src={apps.notionLogo} x={14} y={86} index={2} />
-    <FloatingTile src={apps.gmailLogo} x={86} y={24} index={3} highlighted />
-    <FloatingTile src={apps.whatsappLogo} x={90} y={50} index={4} />
-    <FloatingTile src={apps.telegramLogo} x={86} y={86} index={5} />
+  <ShowcaseCard
+    xlHeightClass="xl:h-[418px]"
+    xlWidthClass="xl:w-[801px]"
+    bgClass="bg-[#F1F9F6]"
+    label="A prompt asking Gmail to find a contract thread and reply, surrounded by productivity app icons"
+  >
+    <Rings
+      posClass="xl:left-[49.22%] xl:top-[115.4%]"
+      innerClass="xl:w-[445.5px] xl:border-[3px] xl:border-[#E8EFF6]"
+      outerClass="xl:w-[547.5px] xl:border-[3px] xl:border-[#E8EFF6]"
+    />
+    <FloatingTile src={apps.slackLogo} x={19.41} y={31.34} index={0} xlClass={TILE_XL} />
+    <FloatingTile src={apps.chatgptLogo} x={12.48} y={55.5} index={1} xlClass={TILE_XL} />
+    <FloatingTile src={apps.notionLogo} x={19.35} y={79.67} index={2} xlClass={TILE_XL} />
+    <FloatingTile
+      src={apps.gmailLogo}
+      x={80.7}
+      y={31.34}
+      index={3}
+      highlighted
+      xlClass={`${TILE_XL} xl:shadow-[0_6px_16px_rgba(0,0,0,0.08)] xl:outline-2 xl:outline-[#3F45F1] xl:outline-offset-[-1.75px]`}
+    />
+    <FloatingTile src={apps.whatsappLogoTile} x={85.5} y={55.5} index={4} xlClass={TILE_XL} />
+    <FloatingTile src={apps.telegramLogoTile} x={80.7} y={79.67} index={5} xlClass={TILE_XL} />
 
     {/* Phone */}
     <CardPhone
-      borderClass="border-black bg-[#F0FEFF]"
-      widthClass="w-[44%] min-w-[165px] max-w-[301px]"
+      bgClass="bg-[#F3FEFF]"
+      radiusClass="rounded-t-[9.8cqw]"
+      widthClass="xl:top-[18.66%] w-[44%] min-w-[165px] max-w-[301px] xl:max-w-[307px]"
     >
-      <div className="h-[105cqw] sm:h-[115cqw] w-full" />
+      <div className="h-[105cqw] sm:h-[115cqw] xl:h-[140cqw] w-full" />
     </CardPhone>
 
     {/* Gmail prompt text block floating over the phone */}
-    <div className="absolute left-1/2 top-[65%] md:top-[55%] z-20 w-[82%] sm:w-[84%] min-w-[260px] max-w-[424px] -translate-x-1/2 -translate-y-1/2 rounded-[18px] border-[1.5px] border-[#BAC6FF] bg-white p-2.5 md:p-4 shadow-[0_12px_28px_rgba(62,69,251,0.08)]">
-      <div className="inline-flex items-center gap-1.5 rounded-[7px] bg-[#F4F5F8] px-2.5 py-1">
-        <GmailMIcon className="h-3 w-3.5 shrink-0" />
-        <span className="text-[11px] font-medium text-black">Gmail</span>
+    <div className="font-inter absolute left-1/2 top-[65%] md:top-[55%] z-20 w-[82%] sm:w-[84%] min-w-[260px] max-w-[424px] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[18px] border border-[#7B86EA] bg-white xl:left-[22.97%] xl:top-[44%] xl:h-[97px] xl:w-[424px] xl:translate-x-0 xl:translate-y-0 xl:rounded-[14px]">
+      <div className="h-[49.5px] bg-[#FBFBFF] pl-[13px] pt-[13px]">
+        <span className="flex h-[29px] w-fit items-center gap-[10.5px] rounded-[10px] bg-white pl-[10px] pr-[5.5px]">
+          <GmailMIcon className="h-[8.5px] w-[11px] shrink-0" />
+          <span className="text-[11px] font-medium leading-none text-black">Gmail</span>
+        </span>
       </div>
-      <p className="mt-3 text-[10px] sm:text-[13px] font-normal leading-snug text-black whitespace-normal">
+      <p className="mt-[18.25px] pl-[21px] text-[13px] font-normal leading-none text-black whitespace-nowrap">
         Find the contract thread and reply with what we decided
       </p>
     </div>

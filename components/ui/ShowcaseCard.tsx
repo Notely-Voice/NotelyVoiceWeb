@@ -32,22 +32,32 @@ export const ShowcaseCard = ({
   </div>
 );
 
-export const Rings = ({ exact = false }: { exact?: boolean }) => (
+export const Rings = ({
+  exact = false,
+  posClass = "",
+  innerClass = "",
+  outerClass = "",
+}: {
+  exact?: boolean;
+  posClass?: string;
+  innerClass?: string;
+  outerClass?: string;
+}) => (
   <div
     aria-hidden
     className={`pointer-events-none absolute left-1/2 top-[58%] -translate-x-1/2 -translate-y-1/2 ${
       exact ? "xl:left-[51.2%] xl:top-[80.6%]" : ""
-    }`}
+    } ${posClass}`}
   >
     <div
       className={`absolute left-1/2 top-1/2 aspect-square w-65 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-85 ${
         exact ? "xl:w-[446px] xl:border-[3px] xl:border-[#E8EFF6]" : ""
-      }`}
+      } ${innerClass}`}
     />
     <div
       className={`absolute left-1/2 top-1/2 aspect-square w-100 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-130 ${
         exact ? "xl:w-[578px] xl:border-[3px] xl:border-[#E8EFF6]" : ""
-      }`}
+      } ${outerClass}`}
     />
   </div>
 );

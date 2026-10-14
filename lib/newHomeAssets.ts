@@ -18,12 +18,15 @@ import claudeLogoTile from "../assets/new_home_page_assets/claude_logo_tile.svg"
 import geminiLogo from "../assets/new_home_page_assets/gemini_logo.svg";
 import gmailLogo from "../assets/new_home_page_assets/gmail_logo.svg";
 import imessageLogo from "../assets/new_home_page_assets/imessage_logo.svg";
+import imessageLogoTile from "../assets/new_home_page_assets/imessage_logo_tile.svg";
 import mcpLogo from "../assets/new_home_page_assets/mcp_logo.svg";
 import notionLogo from "../assets/new_home_page_assets/notion_logo.svg";
 import notionLogoBlue from "../assets/new_home_page_assets/notion_logo_blue.svg";
 import slackLogo from "../assets/new_home_page_assets/slack_logo.svg";
 import telegramLogo from "../assets/new_home_page_assets/telegram_logo.svg";
+import telegramLogoTile from "../assets/new_home_page_assets/telegram_logo_tile.svg";
 import whatsappLogo from "../assets/new_home_page_assets/whatsapp_logo.svg";
+import whatsappLogoTile from "../assets/new_home_page_assets/whatsapp_logo_tile.svg";
 import xLogoBlack from "../assets/new_home_page_assets/x_logo_black.svg";
 import blueShieldLogo from "../assets/new_home_page_assets/blue_shield_logo.svg";
 import calendarLogo from "../assets/new_home_page_assets/calendar_logo.svg";
@@ -55,12 +58,15 @@ export const homeAssets = {
     geminiLogo,
     gmailLogo,
     imessageLogo,
+    imessageLogoTile,
     mcpLogo,
     notionLogo,
     notionLogoBlue,
     slackLogo,
     telegramLogo,
+    telegramLogoTile,
     whatsappLogo,
+    whatsappLogoTile,
     xLogoBlack,
     blueShieldLogo,
     calendarLogo,
