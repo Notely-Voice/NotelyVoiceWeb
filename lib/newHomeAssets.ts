@@ -14,6 +14,7 @@ import punchLogoColored from "../assets/new_home_page_assets/PUNCH_logo_colored.
 import chatgptLogo from "../assets/new_home_page_assets/chatgpt_logo.svg";
 import chatgptLogoBlue from "../assets/new_home_page_assets/chatgpt_logo_blue.svg";
 import claudeLogo from "../assets/new_home_page_assets/claude_logo.svg";
+import claudeLogoTile from "../assets/new_home_page_assets/claude_logo_tile.svg";
 import geminiLogo from "../assets/new_home_page_assets/gemini_logo.svg";
 import gmailLogo from "../assets/new_home_page_assets/gmail_logo.svg";
 import imessageLogo from "../assets/new_home_page_assets/imessage_logo.svg";
@@ -50,6 +51,7 @@ export const homeAssets = {
     chatgptLogo,
     chatgptLogoBlue,
     claudeLogo,
+    claudeLogoTile,
     geminiLogo,
     gmailLogo,
     imessageLogo,

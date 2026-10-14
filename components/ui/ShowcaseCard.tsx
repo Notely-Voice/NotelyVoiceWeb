@@ -41,12 +41,12 @@ export const Rings = ({ exact = false }: { exact?: boolean }) => (
   >
     <div
       className={`absolute left-1/2 top-1/2 aspect-square w-65 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-85 ${
-        exact ? "xl:w-[446px] xl:border-[#E8EFF6]" : ""
+        exact ? "xl:w-[446px] xl:border-[3px] xl:border-[#E8EFF6]" : ""
       }`}
     />
     <div
       className={`absolute left-1/2 top-1/2 aspect-square w-100 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-130 ${
-        exact ? "xl:w-[578px] xl:border-[#E8EFF6]" : ""
+        exact ? "xl:w-[578px] xl:border-[3px] xl:border-[#E8EFF6]" : ""
       }`}
     />
   </div>

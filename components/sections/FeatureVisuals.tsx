@@ -103,7 +103,7 @@ export const KeyboardVisual = () => (
       <div className="flex h-[129.3cqw] flex-col gap-[5.2cqw] px-[6cqw] pt-[6.25cqw]">
         {/* Received bubble */}
         <div className="relative h-[24.75cqw] shrink-0 rounded-[4.9cqw] bg-[#1F4D37] pl-[5.2cqw] pt-[4.07cqw] text-white">
-          <p className="whitespace-nowrap text-[3.63cqw] leading-[3.9cqw]">
+          <p className="font-inter whitespace-nowrap text-[3.29cqw] leading-[3.9cqw]">
             industry&apos;s standard dummy text ever since
             <br />
             the 1500s, when an unknown printer took a
@@ -112,9 +112,9 @@ export const KeyboardVisual = () => (
             <br />
             type specimen book.unchanged.
           </p>
-          <p className="absolute right-[4.9cqw] top-[16.9cqw] flex items-center gap-[1.5cqw] text-[3.55cqw] leading-[4.2cqw] text-[#87A79A]">
+          <p className="absolute right-[4.9cqw] top-[16.9cqw] flex items-center gap-[1.5cqw] font-inter text-[3.37cqw] leading-[4.2cqw] text-[#87A79A]">
             12.10 pm
-            <CheckCheck className="h-[4.9cqw] w-[4.9cqw] text-[#56BDE6]" strokeWidth={2} />
+            <CheckCheck className="h-[5.6cqw] w-[5.6cqw] text-[#56BDE6]" strokeWidth={2.2} />
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const KeyboardVisual = () => (
                   className="h-full w-full mix-blend-multiply"
                 />
               </span>
-              <span className="text-[3.76cqw] font-medium leading-none text-black">
+              <span className="font-inter text-[3.58cqw] font-medium leading-none text-black">
                 WHatsapp
               </span>
             </span>
@@ -139,7 +139,7 @@ export const KeyboardVisual = () => (
 
         {/* Notely voice recorder */}
         <div className="relative h-[57.3cqw] shrink-0 rounded-[11.4cqw] bg-black text-white mt-[1.3cqw]">
-          <span className="absolute left-[7.8cqw] top-[8.3cqw] text-[4.43cqw] font-medium leading-[5.2cqw]">
+          <span className="absolute left-[7.8cqw] top-[8.3cqw] font-inter text-[4.07cqw] font-medium leading-[5.2cqw]">
             Notely Talk
           </span>
           <span className="absolute right-[9.8cqw] top-[9.1cqw] h-[8.14cqw] w-[16.6cqw] rounded-full bg-white">
@@ -148,7 +148,7 @@ export const KeyboardVisual = () => (
             </span>
             <Languages className="absolute left-[10.3cqw] top-[2.1cqw] h-[3.9cqw] w-[3.9cqw] text-black" strokeWidth={2} />
           </span>
-          <p className="absolute inset-x-0 top-[20.2cqw] text-center text-[2.6cqw] font-medium leading-[3.26cqw]">
+          <p className="absolute inset-x-0 top-[20.2cqw] text-center font-inter text-[2.44cqw] font-medium leading-[3.26cqw]">
             Tap to speak
           </p>
           <svg
@@ -183,8 +183,8 @@ export const KeyboardVisual = () => (
   </ShowcaseCard>
 );
 
-const SourceChip = ({ label, children, }: { label: string; children: React.ReactNode; }) => (
-  <span className="flex items-center gap-[1.2cqw] bg-white rounded-xl px-[3cqw] py-[1cqw] text-[3cqw] text-black/70">
+const SourceChip = ({ label, children, widthClass = "", }: { label: string; children: React.ReactNode; widthClass?: string; }) => (
+  <span className={`flex h-[6.7cqw] ${widthClass} items-center gap-[1.47cqw] rounded-[3.26cqw] bg-white px-[3.42cqw] text-[3.26cqw] leading-none text-black`}>
     {children}
     <span>
     {label}
@@ -193,52 +193,60 @@ const SourceChip = ({ label, children, }: { label: string; children: React.React
 );
 
 export const AskVisual = () => (
-  <ShowcaseCard label="An AI assistant answering a question using Slack, Calendar and browser history, with ChatGPT, Gemini and Claude icons around it">
-    <Rings />
-    <FloatingTile src={apps.geminiLogo} x={32} y={18} index={0} />
-    <FloatingTile src={apps.chatgptLogo} x={77} y={23} index={1} />
-    <FloatingTile src={apps.mcpLogo} x={18} y={54} index={2} />
-    <FloatingTile src={apps.claudeLogo} x={82} y={59} index={3} />
+  <ShowcaseCard
+    xlHeightClass="xl:h-[418px]"
+    xlWidthClass="xl:w-[801px]"
+    bgClass="bg-[#F1F9F6]"
+    label="An AI assistant answering a question using Slack, Calendar and browser history, with ChatGPT, Gemini and Claude icons around it"
+  >
+    <Rings exact />
+    <FloatingTile src={apps.geminiLogo} x={32} y={18.4} index={0} xlClass={TILE_XL} />
+    <FloatingTile src={apps.chatgptLogo} x={77.03} y={23.7} index={1} xlClass={TILE_XL} />
+    <FloatingTile src={apps.mcpLogo} x={17.73} y={54.07} index={2} xlClass={TILE_XL} />
+    <FloatingTile src={apps.claudeLogoTile} x={81.9} y={59.57} index={3} xlClass={TILE_XL} />
 
-    <CardPhone borderClass="border-[#16203b] bg-[#F0FEFF]" widthClass="-bottom-[5%] sm:-bottom-[1%] h-6/7 md:h-4/5 xl:h-8/9 w-[40%] min-w-[150px] max-w-80">
-      <div className="flex flex-col gap-[3.5cqw] p-[5cqw] pt-[16cqw]">
-        <p className="rounded-[5cqw] bg-black px-[4cqw] py-[3cqw] text-[4cqw] leading-[1.35] text-white">
-          Summarize what I did last week across my Slack, Calendar, and browser
-          history.
+    <CardPhone
+      widthClass="top-[20.1%] w-[44%] min-w-[150px] max-w-[307px] xl:-ml-px"
+      bgClass="bg-[#F3FEFF]"
+      radiusClass="rounded-t-[9.8cqw]"
+    >
+      <div className="flex h-[140cqw] flex-col items-start pl-[6.83cqw] pt-[16.4cqw]">
+        <p className="font-inter h-[17.9cqw] w-[86cqw] shrink-0 rounded-[4.56cqw] rounded-tr-none bg-black pl-[4.7cqw] pt-[3.75cqw] text-[3.29cqw] leading-[3.9cqw] text-white">
+          Summarize what I did last week across my
+          <br />
+          Slack, Calendar, and browser history.
         </p>
-        <p className="text-[2.4cqw] text-black/45">Sources</p>
-        <div className="flex flex-wrap gap-[1.6cqw] my-2">
-          <SourceChip label="Calendar">
-            <Image
-              src={apps.calendarLogo}
-              alt=""
-              className="h-2 w-2"
-            />
+        <p className="mt-[5.7cqw] text-[4.23cqw] leading-[5.2cqw] text-[#494747]">Sources</p>
+        <div className="mt-[1.8cqw] flex gap-[3.42cqw]">
+          <SourceChip label="Calendar" widthClass="w-[24.27cqw]">
+            <Image src={apps.calendarLogo} alt="" className="-mx-[0.15cqw] h-[3.2cqw] w-[3.2cqw] max-w-none" />
           </SourceChip>
-          <SourceChip label="Slack">
-            <Image
-              src={apps.slackLogo}
-              alt=""
-              className="h-2 w-2"
-            />
+          <SourceChip label="Slack" widthClass="w-[18.4cqw]">
+            <Image src={apps.slackLogo} alt="" className="-mx-[0.9cqw] h-[4.7cqw] w-[4.7cqw] max-w-none" />
           </SourceChip>
-          <SourceChip label="Browser">
-            <Image
-              src={apps.chromeLogo}
-              alt=""
-              className="h-2 w-2"
-            />
+          <SourceChip label="Browser" widthClass="w-[21.3cqw]">
+            <Image src={apps.chromeLogo} alt="" className="-ml-[0.7cqw] -mr-[0.55cqw] h-[3.3cqw] w-[3.3cqw] max-w-none" />
           </SourceChip>
         </div>
-        <p className="text-[5cqw] leading-[1.45] text-black">
-          I went through last week&apos;s memories, emails, and the web.
-          Here&apos;s where things stand:
+        <p className="mt-[3.9cqw] whitespace-nowrap text-[4.24cqw] leading-[5.86cqw] text-black">
+          I went through last week&apos;s memories,
+          <br />
+          emails, and the web. Here&apos;s where
+          <br />
+          things stand:
         </p>
-        <p className="text-[5cqw] leading-[1.45] text-black">
-          Last week, you primarily focused on finalizing the Q3 Product Launch.
-          According to your Slack activity, you approved the final design
-          assets with the marketing team and resolved two critical deployment
-          blockers.
+        <p className="mt-[1.6cqw] ml-[0.3cqw] whitespace-nowrap text-[4.24cqw] leading-[5.86cqw] text-black">
+          Last week, you primarily focused on
+          <br />
+          finalizing the Q3 Product Launch.
+          <br />
+          According to your Slack activity, you
+          <br />
+          approved the final design assets with the
+          <br />
+          marketing team and resolved two critical
+          <br />
+          deployment blockers. Your calendar shows
         </p>
       </div>
     </CardPhone>
