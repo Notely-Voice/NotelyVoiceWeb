@@ -23,6 +23,7 @@ const { apps, screens } = homeAssets;
 export const MeetingsVisual = () => (
   <ShowcaseCard
     xlHeightClass="xl:h-[418px]"
+    xlWidthClass="xl:w-[801px]"
     bgClass="bg-[#F1F9F6]"
     label="A meeting transcript on a phone, with Private AI and Advanced AI transcription options"
   >
@@ -77,61 +78,105 @@ export const MeetingsVisual = () => (
 );
 
 
-export const KeyboardVisual = () => (
-  <ShowcaseCard label="Notely Voice keyboard dictating a message into WhatsApp, surrounded by messaging app icons">
-    <Rings />
-    <FloatingTile src={apps.telegramLogo} x={21} y={19} index={0} />
-    <FloatingTile src={apps.gmailLogo} x={79} y={19} index={1} />
-    <FloatingTile src={apps.slackLogo} x={14} y={50} index={2} />
-    <FloatingTile src={apps.imessageLogo} x={86} y={50} index={3} />
-    <FloatingTile src={apps.whatsappLogo} x={15} y={81} index={4} />
-    <FloatingTile src={apps.xLogoBlack} x={85} y={81} index={5} />
+const TILE_XL = "xl:w-[59.5px] xl:rounded-[14px] xl:drop-shadow-none";
 
-    <CardPhone>
-      <div className="flex h-[130cqw] flex-col gap-[3.5cqw] p-[5cqw] pt-[6cqw]">
+export const KeyboardVisual = () => (
+  <ShowcaseCard
+    xlHeightClass="xl:h-[418px]"
+    xlWidthClass="xl:w-[801px]"
+    bgClass="bg-[#F1F9F6]"
+    label="Notely Voice keyboard dictating a message into WhatsApp, surrounded by messaging app icons"
+  >
+    <Rings exact />
+    <FloatingTile src={apps.telegramLogo} x={20.72} y={19.62} index={0} xlClass={TILE_XL} />
+    <FloatingTile src={apps.gmailLogo} x={79.28} y={19.62} index={1} xlClass={TILE_XL} />
+    <FloatingTile src={apps.slackLogo} x={13.8} y={50.24} index={2} xlClass={TILE_XL} />
+    <FloatingTile src={apps.imessageLogo} x={86.27} y={50.24} index={3} xlClass={TILE_XL} />
+    <FloatingTile src={apps.whatsappLogo} x={15.48} y={81.82} index={4} xlClass={TILE_XL} />
+    <FloatingTile src={apps.xLogoBlack} x={84.52} y={81.82} index={5} xlClass={TILE_XL} />
+
+    <CardPhone
+      widthClass="w-[44%] min-w-[150px] max-w-[307px]"
+      bgClass="bg-[#F3FEFF]"
+      radiusClass="rounded-t-[9.8cqw]"
+    >
+      <div className="flex h-[129.3cqw] flex-col gap-[5.2cqw] px-[6cqw] pt-[6.25cqw]">
         {/* Received bubble */}
-        <div className="rounded-[5cqw] bg-[#0E5A41] p-[4cqw] text-white">
-          <p className="text-[3.5cqw] leading-[1.35]">
-            Industry&apos;s standard dummy text ever since the 1500s, when an
-            unknown printer took a galley of type and scrambled it to make a
-            type specimen book, unchanged.
+        <div className="relative h-[24.75cqw] shrink-0 rounded-[4.9cqw] bg-[#1F4D37] pl-[5.2cqw] pt-[4.07cqw] text-white">
+          <p className="whitespace-nowrap text-[3.63cqw] leading-[3.9cqw]">
+            industry&apos;s standard dummy text ever since
+            <br />
+            the 1500s, when an unknown printer took a
+            <br />
+            galley of type and scrambled it to make a
+            <br />
+            type specimen book.unchanged.
           </p>
-          <p className="mt-[1cqw] flex items-center justify-end gap-[1cqw] text-[2.4cqw] text-[#7be3bf]">
-            12:10 pm
-            <CheckCheck className="h-[3cqw] w-[3cqw] text-blue-400" strokeWidth={3} />
+          <p className="absolute right-[4.9cqw] top-[16.9cqw] flex items-center gap-[1.5cqw] text-[3.55cqw] leading-[4.2cqw] text-[#87A79A]">
+            12.10 pm
+            <CheckCheck className="h-[4.9cqw] w-[4.9cqw] text-[#56BDE6]" strokeWidth={2} />
           </p>
         </div>
 
         {/* Input */}
-        <div className="rounded-[2cqw] border-[0.4cqw] border-[#b9c6ff] bg-white px-[3cqw] py-[2.2cqw]">
-          <p className="flex items-center gap-[1.6cqw] text-[2.7cqw] font-medium text-black">
-            <Image src={apps.whatsappLogo} alt="" className="h-2.5 w-2.5" />
-            WhatsApp
-          </p>
-          <span
-            className=" mt-[1.6cqw] block h-[4cqw] w-[0.35cqw] bg-black"
-          />
+        <div className="relative h-[20.8cqw] shrink-0 overflow-hidden rounded-[4.56cqw] border-[0.33cqw] border-[#7B86EA] bg-white">
+          <div className="h-[10.4cqw] bg-[#FBFBFF] pl-[3.9cqw] pt-[2.77cqw]">
+            <span className="flex h-[6.2cqw] w-fit items-center gap-[2.1cqw] rounded-[1.6cqw] bg-white pl-[1cqw] pr-[1.2cqw]">
+              <span className="h-[4.2cqw] w-[4.2cqw] overflow-hidden rounded-[1cqw] bg-[#BFEBBA]">
+                <Image
+                  src={apps.whatsappLogo}
+                  alt=""
+                  className="h-full w-full mix-blend-multiply"
+                />
+              </span>
+              <span className="text-[3.76cqw] font-medium leading-none text-black">
+                WHatsapp
+              </span>
+            </span>
+          </div>
+          <span className="absolute left-[4.2cqw] top-[13cqw] block h-[4.9cqw] w-[0.65cqw] bg-[#3773F6]" />
         </div>
 
         {/* Notely voice recorder */}
-        <div className="mt-auto rounded-2xl lg:rounded-3xl bg-black px-[5cqw] pb-[10cqw] pt-[8cqw] mb-[4cqw] text-white">
-          <div className="flex items-center justify-between">
-            <span className="text-[10px] font-medium">Notely Voice</span>
-            <span className="flex items-center gap-1 rounded-full bg-white px-[1.6cqw] py-[1cqw] text-black">
-              <AudioLines className="h-3 w-3 bg-black text-white rounded-full p-0.5" />
-              <Languages className="h-2 w-2" />
+        <div className="relative h-[57.3cqw] shrink-0 rounded-[11.4cqw] bg-black text-white mt-[1.3cqw]">
+          <span className="absolute left-[7.8cqw] top-[8.3cqw] text-[4.43cqw] font-medium leading-[5.2cqw]">
+            Notely Talk
+          </span>
+          <span className="absolute right-[9.8cqw] top-[9.1cqw] h-[8.14cqw] w-[16.6cqw] rounded-full bg-white">
+            <span className="absolute left-[0.98cqw] top-[0.8cqw] flex h-[6.5cqw] w-[6.5cqw] items-center justify-center rounded-full bg-black">
+              <AudioLines className="h-[3.9cqw] w-[3.9cqw] text-white" strokeWidth={2.4} />
             </span>
-          </div>
-          <p className="mt-[5cqw] text-center text-[2.4cqw] text-white/60">
+            <Languages className="absolute left-[10.3cqw] top-[2.1cqw] h-[3.9cqw] w-[3.9cqw] text-black" strokeWidth={2} />
+          </span>
+          <p className="absolute inset-x-0 top-[20.2cqw] text-center text-[2.6cqw] font-medium leading-[3.26cqw]">
             Tap to speak
           </p>
-          <div className="mt-[2cqw] flex items-center justify-between gap-[3cqw]">
-            <Delete className="h-[8cqw] w-[8cqw] text-white/80" />
-            <span className="flex h-[18cqw] w-[40cqw] items-center justify-center rounded-full bg-white text-black">
-              <AudioLines className="h-[12cqw] w-[18cqw]" />
-            </span>
-            <Undo2 className="h-[8cqw] w-[8cqw] text-white/80" />
-          </div>
+          <svg
+            aria-hidden
+            viewBox="0 0 19.5 12"
+            className="absolute left-[9.7cqw] top-[33.2cqw] h-[3.9cqw] w-[6.35cqw]"
+          >
+            <path
+              d="M0 6 L4.6 0.6 Q5 0 5.8 0 H17.5 Q19.5 0 19.5 2 V10 Q19.5 12 17.5 12 H5.8 Q5 12 4.6 11.4 Z"
+              fill="white"
+            />
+            <path d="M9.6 3.9 L13.4 7.7 M13.4 3.9 L9.6 7.7" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+          <span className="absolute left-1/2 top-[25.7cqw] flex h-[18.9cqw] w-[40.7cqw] -translate-x-1/2 items-center justify-center rounded-full bg-white">
+            <svg aria-hidden viewBox="0 0 26 26" className="h-[8.14cqw] w-[8.14cqw]">
+              <g stroke="black" strokeWidth="3.1" strokeLinecap="round">
+                <path d="M2 18.3V7.7" />
+                <path d="M7.5 22.5V3.5" />
+                <path d="M13 24V2" />
+                <path d="M18.5 21.5V4.5" />
+                <path d="M24 17.5V8.5" />
+              </g>
+            </svg>
+          </span>
+          <Undo2
+            className="absolute left-[69.5cqw] top-[32.2cqw] h-[5.9cqw] w-[5.9cqw] text-white"
+            strokeWidth={2.2}
+          />
         </div>
       </div>
     </CardPhone>

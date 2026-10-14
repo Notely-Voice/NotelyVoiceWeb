@@ -9,6 +9,7 @@ export const ShowcaseCard = ({
   label,
   cardRef,
   xlHeightClass = "xl:h-[430px]",
+  xlWidthClass = "xl:w-[807px]",
   bgClass,
 }: {
   tone?: Tone;
@@ -16,13 +17,14 @@ export const ShowcaseCard = ({
   label: string;
   cardRef?: React.Ref<HTMLDivElement>;
   xlHeightClass?: string;
+  xlWidthClass?: string;
   bgClass?: string;
 }) => (
   <div
     ref={cardRef}
     role="img"
     aria-label={label}
-    className={`relative h-65 w-full md:w-[620px] lg:w-full xl:w-[807px] overflow-hidden rounded-[22px] sm:h-80 md:h-90 lg:h-86 sm:rounded-[28px] ${xlHeightClass} ${
+    className={`relative h-65 w-full md:w-[620px] lg:w-full overflow-hidden rounded-[22px] sm:h-80 md:h-90 lg:h-86 sm:rounded-[28px] ${xlHeightClass} ${xlWidthClass} ${
       bgClass ?? (tone === "blue" ? "bg-[#3E45FB]" : "bg-[#F0FEFF]")
     }`}
   >
@@ -30,13 +32,23 @@ export const ShowcaseCard = ({
   </div>
 );
 
-export const Rings = () => (
+export const Rings = ({ exact = false }: { exact?: boolean }) => (
   <div
     aria-hidden
-    className="pointer-events-none absolute left-1/2 top-[58%] -translate-x-1/2 -translate-y-1/2"
+    className={`pointer-events-none absolute left-1/2 top-[58%] -translate-x-1/2 -translate-y-1/2 ${
+      exact ? "xl:left-[51.2%] xl:top-[80.6%]" : ""
+    }`}
   >
-    <div className="absolute left-1/2 top-1/2 aspect-square w-65 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-85" />
-    <div className="absolute left-1/2 top-1/2 aspect-square w-100 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-130" />
+    <div
+      className={`absolute left-1/2 top-1/2 aspect-square w-65 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D5EEF1] sm:w-85 ${
+        exact ? "xl:w-[446px] xl:border-[#E8EFF6]" : ""
+      }`}
+    />
+    <div
+      className={`absolute left-1/2 top-1/2 aspect-square w-100 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#E1F4F6] sm:w-130 ${
+        exact ? "xl:w-[578px] xl:border-[#E8EFF6]" : ""
+      }`}
+    />
   </div>
 );
 
@@ -47,6 +59,7 @@ export const FloatingTile = ({
   y,
   index = 0,
   highlighted = false,
+  xlClass = "",
   children,
   tileRef,
 }: {
@@ -56,6 +69,7 @@ export const FloatingTile = ({
   y: number;
   index?: number;
   highlighted?: boolean;
+  xlClass?: string;
   children?: ReactNode;
   tileRef?: React.Ref<HTMLDivElement>;
 }) => (
@@ -72,7 +86,7 @@ export const FloatingTile = ({
         <Image
           src={src}
           alt={alt ?? ""}
-          className={`h-auto w-8.5 rounded-[10px] sm:w-10 lg:w-11 ${
+          className={`h-auto w-8.5 rounded-[10px] sm:w-10 lg:w-11 ${xlClass} ${
             highlighted
               ? "shadow-[0_0_0_2px_#3E45FB,0_8px_18px_-6px_rgba(62,69,251,0.5)]"
               : "drop-shadow-[0_6px_10px_rgba(20,30,80,0.08)]"
@@ -90,17 +104,21 @@ export const CardPhone = ({
   borderClass = "border-black",
   dashed = false,
   widthClass = "w-[44%] min-w-[150px] max-w-[310px]",
+  bgClass = "",
+  radiusClass = "rounded-t-[14cqw]",
 }: {
   children?: ReactNode;
   borderClass?: string;
   dashed?: boolean;
   widthClass?: string;
+  bgClass?: string;
+  radiusClass?: string;
 }) => (
   <div
     className={`absolute left-1/2 -bottom-[1%] z-10 -translate-x-1/2 @container ${widthClass}`}
   >
     <div
-      className={`relative overflow-hidden rounded-t-[14cqw] border-[0.9cqw] border-b-0 ${borderClass} ${
+      className={`relative overflow-hidden ${radiusClass} border-[0.9cqw] border-b-0 ${borderClass} ${bgClass} ${
         dashed ? "border-dashed" : ""
       }`}
     >
