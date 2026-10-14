@@ -1,6 +1,6 @@
 // icons
-import googlePlayDownload from "../assets/new_home_page_assets/google_play_download.png"
-import appStoreDownload from "../assets/new_home_page_assets/app_store_download.png"
+import googlePlayDownload from "../assets/new_home_page_assets/download_on_playstore.png"
+import appStoreDownload from "../assets/new_home_page_assets/download_on_appstore.png"
 
 // Press logos
 import youtubeLogo from "../assets/new_home_page_assets/youtube_logo.svg";

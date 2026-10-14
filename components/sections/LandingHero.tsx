@@ -78,11 +78,11 @@ const LandingHero = () => {
             /> */}
 
             <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
-              <Image src={homeAssets.icons.appStoreDownload} alt="Apple logo" />
+              <Image src={homeAssets.icons.appStoreDownload} alt="Download on the App Store" className="h-12 w-auto sm:h-14" />
             </a>
 
             <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-              <Image src={homeAssets.icons.googlePlayDownload} alt="Google Play logo" />
+              <Image src={homeAssets.icons.googlePlayDownload} alt="Get it on Google Play" className="h-12 w-auto sm:h-14" />
             </a>
           </div>
         </div>
