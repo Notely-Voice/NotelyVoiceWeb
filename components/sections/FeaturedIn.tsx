@@ -31,7 +31,7 @@ const FeaturedIn = () => {
   return (
     <section
       aria-labelledby="featured-in-heading"
-      className="flex w-full justify-center bg-[#E6FCFD] px-5 py-8 sm:px-10 sm:py-10"
+      className="flex w-full justify-center bg-[#E6FCFD] px-4 py-8 sm:px-6 xl:px-9 sm:py-10"
     >
       <div className="wrapper flex flex-col items-center gap-5">
         <h2

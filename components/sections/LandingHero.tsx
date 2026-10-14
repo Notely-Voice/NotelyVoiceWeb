@@ -43,7 +43,7 @@ const LandingHero = () => {
   return (
     <section
       aria-labelledby="landing-hero-heading"
-      className="relative flex w-full justify-center px-5 py-6 sm:px-10 lg:py-12"
+      className="relative flex w-full justify-center px-4 py-6 sm:px-[36px] lg:py-12"
     >
       <div className="wrapper flex flex-col items-center gap-12 md:flex-row lg:justify-center md:gap-16 xl:gap-28 lg:px-10 xl:px-16">
         

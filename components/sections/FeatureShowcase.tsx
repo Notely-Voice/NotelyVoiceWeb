@@ -98,7 +98,7 @@ const FeatureShowcase = () => {
   return (
     <section
       aria-labelledby="features-heading"
-      className="flex w-full justify-center px-3 sm:px-6 lg:px-8"
+      className="flex w-full justify-center px-4 sm:px-6 xl:px-9"
     >
       <div className="wrapper rounded-[26px] bg-black px-5 py-8 sm:rounded-[36px] sm:px-8 lg:rounded-[40px] lg:px-12 lg:py-16">
         <h2 id="features-heading" className="sr-only">

@@ -24,7 +24,7 @@ const DeviceSync = () => {
   return (
     <section
       aria-labelledby="device-sync-heading"
-      className="flex w-full flex-col items-center px-3 pb-12 pt-10 sm:px-6 lg:px-8 lg:pb-20 lg:pt-16"
+      className="flex w-full flex-col items-center px-4 pb-12 pt-10 sm:px-6 xl:px-9 lg:pb-20 lg:pt-16"
     >
       <h2
         id="device-sync-heading"
