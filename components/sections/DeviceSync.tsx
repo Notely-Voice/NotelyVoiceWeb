@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { homeAssets } from "@/lib/newHomeAssets";
 
-const { omniPendant, appleWatch } = homeAssets.devices;
+const { wearablePendant, appleWatch } = homeAssets.devices;
 const { phoneAppsGrid } = homeAssets.screens;
 
 const DeviceCard = ({
@@ -46,8 +46,8 @@ const DeviceSync = () => {
             }
           >
             <Image
-              src={omniPendant}
-              alt="OMNI pendant with a Notely Voice microphone button"
+              src={wearablePendant}
+              alt="Wearable pendant with a Notely Voice microphone button"
               className="absolute left-1/2 -top-[1%] md:-top-[10%] lg:-top-[2%] h-auto xl:h-[90%] w-full -translate-x-1/2"
             />
           </DeviceCard>

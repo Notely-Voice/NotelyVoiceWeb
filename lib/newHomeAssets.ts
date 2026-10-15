@@ -43,7 +43,7 @@ import privateAi from "../assets/new_home_page_assets/private_ai.png";
 import advancedAi from "../assets/new_home_page_assets/advanced_ai.png";
 
 // Device illustrations
-import omniPendant from "../assets/new_home_page_assets/omni_pendant.svg";
+import wearablePendant from "../assets/new_home_page_assets/wearable_pendant.svg";
 import appleWatch from "../assets/new_home_page_assets/apple_watch.svg";
 
 
@@ -85,7 +85,7 @@ export const homeAssets = {
     privateAi,
     advancedAi,
   },
-  devices: { omniPendant, appleWatch },
+  devices: { wearablePendant, appleWatch },
 };
 
 export default homeAssets;
