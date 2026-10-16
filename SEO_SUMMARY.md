@@ -40,7 +40,7 @@ Created reusable SEO functions in `lib/seo.ts`:
 1. **Submit to Search Consoles**
    - [ ] Google Search Console: https://search.google.com/search-console
    - [ ] Bing Webmaster Tools: https://www.bing.com/webmasters
-   - [ ] Submit sitemap: `https://notelyvoice.com/sitemap.xml`
+   - [ ] Submit sitemap: `https://notelyvoice.ai/sitemap.xml`
 
 2. **Get Verification Codes**
    - [ ] Google Search Console verification

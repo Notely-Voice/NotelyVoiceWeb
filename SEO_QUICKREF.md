@@ -1,8 +1,8 @@
 # SEO Quick Reference Card 🚀
 
 ## 🔗 Important URLs
-- **Sitemap**: https://notelyvoice.com/sitemap.xml
-- **Robots**: https://notelyvoice.com/robots.txt
+- **Sitemap**: https://notelyvoice.ai/sitemap.xml
+- **Robots**: https://notelyvoice.ai/robots.txt
 - **Google Search Console**: https://search.google.com/search-console
 - **Bing Webmaster**: https://www.bing.com/webmasters
 - **PageSpeed Insights**: https://pagespeed.web.dev/

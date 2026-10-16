@@ -6,7 +6,7 @@
 - Automatic XML sitemap generation
 - Includes all pages with proper priorities
 - Updates dynamically on build
-- Accessible at: `https://notelyvoice.com/sitemap.xml`
+- Accessible at: `https://notelyvoice.ai/sitemap.xml`
 
 ### 2. **Robots.txt (`app/robots.ts`)**
 - Proper crawler instructions
@@ -84,13 +84,13 @@ Replace `/notely_voice_logo_white.png` with a proper OG image:
 **Google:**
 ```
 https://search.google.com/search-console
-→ Sitemaps → Add new sitemap → https://notelyvoice.com/sitemap.xml
+→ Sitemaps → Add new sitemap → https://notelyvoice.ai/sitemap.xml
 ```
 
 **Bing:**
 ```
 https://www.bing.com/webmasters
-→ Sitemaps → Submit sitemap → https://notelyvoice.com/sitemap.xml
+→ Sitemaps → Submit sitemap → https://notelyvoice.ai/sitemap.xml
 ```
 
 ### 4. **Optimize Images**

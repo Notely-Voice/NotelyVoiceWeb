@@ -24,7 +24,7 @@ export function getBaseUrl(): string {
   }
 
   // 4. Default to production domain
-  return "https://notelyvoice.com";
+  return "https://notelyvoice.ai";
 }
 
 export const siteConfig = {
