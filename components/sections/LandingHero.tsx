@@ -89,13 +89,9 @@ const LandingHero = () => {
 
         {/* Phone (video slot) */}
         <div className="relative flex justify-center lg:pr-6 xl:pr-16">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 h-[75%] w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3E45FB]/10 blur-3xl"
-          />
           <PhoneVideoFrame
             src="/notely_phone_screen.mp4"
-            className="relative min-w-64 lg:min-w-80 lg:max-w-80"
+            className="relative w-80 sm:w-96 lg:w-[440px]"
           />
         </div>
       </div>

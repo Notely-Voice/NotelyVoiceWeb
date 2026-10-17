@@ -21,8 +21,8 @@ export interface PhoneVideoFrameProps {
 /**
  * A phone frame with a screen slot built for a looping, muted walkthrough
  * video. Pass `src` (and optionally `poster` / `webmSrc`) and the video
- * fills the screen. The frame keeps a fixed 187:392 aspect ratio, so the
- * video should be exported at that ratio (it is cropped with object-cover).
+ * fills the screen. The frame keeps the video's native 1080:1750 aspect ratio; the video already
+ * contains the phone bezel, so it is shown uncropped.
  */
 const PhoneVideoFrame = ({
   src,
@@ -53,12 +53,12 @@ const PhoneVideoFrame = ({
     <div
       role="img"
       aria-label={ariaLabel}
-      className={`relative aspect-187/392 shrink-0 overflow-hidden rounded-tl-[54px] rounded-tr-[50px] rounded-bl-[64px] rounded-br-[60px] bg-black shadow-[0_40px_70px_-30px_rgba(62,69,251,0.55)] @container ${className}`}
+      className={`relative aspect-1080/1750 shrink-0 @container ${className}`}
     >
       {src ? (
         <video
           ref={videoRef}
-          className="absolute h-full w-full scale-x-[1.155] scale-y-[1.17] object-cover object-bottom"
+          className="absolute h-full w-full object-contain [clip-path:inset(0_1%_1%_0)]"
           autoPlay
           muted
           loop={loop}
