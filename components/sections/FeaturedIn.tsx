@@ -8,14 +8,14 @@ const PRESS = [
     name: "YouTube",
     defaultSrc: youtubeLogo,
     coloredSrc: youtubeLogoColored,
-    href: "#",
+    href: "https://www.youtube.com/@notelyvoiceai",
     className: "h-6 sm:h-8",
   },
   {
     name: "Gigazine",
     defaultSrc: gigazineLogo,
     coloredSrc: gigazineLogoColored,
-    href: "#",
+    href: "https://gigazine.net/gsc_news/en/20260315-notely-voice-ai-transcription/",
     className: "h-7 sm:h-9",
   },
   {
