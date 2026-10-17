@@ -3,11 +3,9 @@
 import { navbarItems } from "@/contents/globalData";
 import Logo from "../ui/Logo";
 import Link from "next/link";
-import Button from "../ui/Button";
 import { useState } from "react";
 import { useResponsive } from "@/hooks/useResponsive";
 import styles from "./Navbar.module.css";
-import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = ({
   logoColor,
@@ -28,8 +26,6 @@ const Navbar = ({
 } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const screenSize = useResponsive();
-  const router = useRouter();
-  const isHomePage = usePathname() === "/";
 
   // Set defaults
   const effectiveTextColor = textColor || "text-black";
@@ -56,7 +52,7 @@ const Navbar = ({
         )}
 
         {/* Desktop Navigation */}
-        <div className={`hidden md:flex items-center gap-3 lg:gap-5 xl:gap-8 ${isHomePage ? "pr-10" : ""}`}>
+        <div className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-8 pr-10">
           {navbarItems.map((item) => (
             <Link
               key={item.href}
@@ -72,8 +68,8 @@ const Navbar = ({
           ))}
         </div>
 
-        {/* Mobile Hamburger Menu & CTA */}
-        <div className={`flex items-center gap-2 sm:gap-4 md:gap-0 ${isHomePage ? "md:hidden" : ""}`}>
+        {/* Mobile Hamburger Menu */}
+        <div className="flex items-center gap-2 sm:gap-4 md:hidden">
 
           {/* Hamburger Menu Button */}
           <button
@@ -92,12 +88,6 @@ const Navbar = ({
             ></span>
           </button>
 
-          {/* CTA Button */}
-          <Button
-            btnText="Download App"
-            onClick={() => router.push('/ourapps')}
-            className="hidden md:flex"
-          />
         </div>
       </div>
 
@@ -121,12 +111,6 @@ const Navbar = ({
                 {item.label}
               </Link>
             ))}
-            {/* CTA Button */}
-            <Button
-              btnText="Download App"
-              onClick={() => router.push('/ourapps')}
-              className="md:hidden"
-            />
           </div>
         </div>
       )}
